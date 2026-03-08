@@ -10,7 +10,7 @@ const debug = new AppDebugger('Middleware');
 /**
  * Middleware for initial page loads.
  *
- * You won't be able to easily handle sequential page loads because they will be
+ * You won't be able to easily handle sequential page loads because they will be!
  * called under `path.data`
  *
  * Example an initial page load would be `/documents` then if the user click templates
