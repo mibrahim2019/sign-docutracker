@@ -64,8 +64,11 @@ const secureCookiePrefix = useSecureCookies ? '__Secure-' : '';
 
 export const formatSecureCookieName = (name: string) => `${secureCookiePrefix}${name}`;
 
-export const getCookieDomain = () => {
-  const url = new URL(NEXT_PUBLIC_WEBAPP_URL());
-
+export const getCookieDomain = (): string | undefined => {
+  const raw = NEXT_PUBLIC_WEBAPP_URL();
+  if (!raw || typeof raw !== 'string' || raw.trim() === '') {
+    return undefined;
+  }
+  const url = new URL(raw);
   return url.hostname;
 };
