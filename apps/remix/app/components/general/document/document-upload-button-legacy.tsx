@@ -62,10 +62,6 @@ export const DocumentUploadButtonLegacy = ({
   const { mutateAsync: createTemplate } = trpc.template.createTemplate.useMutation();
 
   const disabledMessage = useMemo(() => {
-    if (!user.emailVerified) {
-      return msg`Verify your email to upload documents.`;
-    }
-
     // No errors for templates.
     if (type === EnvelopeType.TEMPLATE) {
       return;
@@ -80,7 +76,7 @@ export const DocumentUploadButtonLegacy = ({
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [remaining.documents, user.emailVerified, team, type]);
+  }, [remaining.documents, team, type]);
 
   const onFileDrop = async (file: File) => {
     try {

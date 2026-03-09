@@ -14,7 +14,6 @@ import { AppBanner } from '~/components/general/app-banner';
 import { Header } from '~/components/general/app-header';
 import { GenericErrorLayout } from '~/components/general/generic-error-layout';
 import { OrganisationBillingBanner } from '~/components/general/organisations/organisation-billing-banner';
-import { VerifyEmailBanner } from '~/components/general/verify-email-banner';
 import { TeamProvider } from '~/providers/team';
 
 import type { Route } from './+types/_layout';
@@ -111,8 +110,6 @@ export default function Layout({ loaderData, params, matches }: Route.ComponentP
     <OrganisationProvider organisation={currentOrganisation}>
       <TeamProvider team={currentTeam || null}>
         <OrganisationBillingBanner />
-
-        {!user.emailVerified && <VerifyEmailBanner email={user.email} />}
 
         {banner && !hideHeader && <AppBanner banner={banner} />}
 

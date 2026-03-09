@@ -228,19 +228,6 @@ export const SignInForm = ({
         return;
       }
 
-      if (error.code === AuthenticationErrorCode.UnverifiedEmail) {
-        await navigate('/unverified-account');
-
-        toast({
-          title: _(msg`Unable to sign in`),
-          description: _(
-            msg`This account has not been verified. Please verify your account before signing in.`,
-          ),
-        });
-
-        return;
-      }
-
       const errorMessage = match(error.code)
         .with(
           AuthenticationErrorCode.InvalidCredentials,

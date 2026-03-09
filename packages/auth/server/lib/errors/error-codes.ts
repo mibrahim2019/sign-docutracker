@@ -7,7 +7,6 @@ export const AuthenticationErrorCode = {
   InvalidToken: 'INVALID_TOKEN',
   MissingToken: 'MISSING_TOKEN',
   InvalidRequest: 'INVALID_REQUEST',
-  UnverifiedEmail: 'UNVERIFIED_EMAIL',
   NotFound: 'NOT_FOUND',
   NotSetup: 'NOT_SETUP',
 

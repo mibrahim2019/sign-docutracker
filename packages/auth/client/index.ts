@@ -17,11 +17,9 @@ import type {
 } from '../server/routes/two-factor.types';
 import type {
   TForgotPasswordSchema,
-  TResendVerifyEmailSchema,
   TResetPasswordSchema,
   TSignUpSchema,
   TUpdatePasswordSchema,
-  TVerifyEmailSchema,
 } from '../server/types/email-password';
 
 type AuthClientType = ReturnType<typeof hc<AuthAppType>>;
@@ -196,30 +194,6 @@ export class AuthClient {
 
         throw AppError.parseError(error);
       }
-    },
-
-    resendVerifyEmail: async (data: TResendVerifyEmailSchema) => {
-      const response = await this.client['email-password']['resend-verify-email'].$post({
-        json: data,
-      });
-
-      if (!response.ok) {
-        const error = await response.json();
-
-        throw AppError.parseError(error);
-      }
-    },
-
-    verifyEmail: async (data: TVerifyEmailSchema) => {
-      const response = await this.client['email-password']['verify-email'].$post({ json: data });
-
-      if (!response.ok) {
-        const error = await response.json();
-
-        throw AppError.parseError(error);
-      }
-
-      return response.json();
     },
   };
 

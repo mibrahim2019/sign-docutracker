@@ -67,12 +67,8 @@ export const EnvelopeUploadButton = ({ className, type, folderId }: EnvelopeUplo
       return msg`You have reached your document limit.`;
     }
 
-    if (!user.emailVerified) {
-      return msg`Verify your email to upload documents.`;
-    }
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [remaining.documents, user.emailVerified, team]);
+  }, [remaining.documents, team]);
 
   const onFileDrop = async (files: File[]) => {
     try {
@@ -182,7 +178,7 @@ export const EnvelopeUploadButton = ({ className, type, folderId }: EnvelopeUplo
             <div>
               <DocumentUploadButton
                 loading={isLoading}
-                disabled={remaining.documents === 0 || !user.emailVerified}
+                disabled={remaining.documents === 0}
                 disabledMessage={disabledMessage}
                 onDrop={onFileDrop}
                 onDropRejected={onFileDropRejected}

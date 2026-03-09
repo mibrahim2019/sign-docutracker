@@ -62,7 +62,7 @@ export const EnvelopeDropZoneWrapper = ({
 
   const { mutateAsync: createEnvelope } = trpc.envelope.create.useMutation();
 
-  const isUploadDisabled = remaining.documents === 0 || !user.emailVerified;
+  const isUploadDisabled = remaining.documents === 0;
 
   const onFileDrop = async (files: File[]) => {
     if (isUploadDisabled && IS_BILLING_ENABLED()) {

@@ -3,12 +3,9 @@ import { compare } from '@node-rs/bcrypt';
 import { UserSecurityAuditLogType } from '@prisma/client';
 import { Hono } from 'hono';
 import { HTTPException } from 'hono/http-exception';
-import { DateTime } from 'luxon';
 import { z } from 'zod';
 
-import { EMAIL_VERIFICATION_STATE } from '@documenso/lib/constants/email';
 import { AppError } from '@documenso/lib/errors/app-error';
-import { jobsClient } from '@documenso/lib/jobs/client';
 import { disableTwoFactorAuthentication } from '@documenso/lib/server-only/2fa/disable-2fa';
 import { enableTwoFactorAuthentication } from '@documenso/lib/server-only/2fa/enable-2fa';
 import { isTwoFactorAuthenticationEnabled } from '@documenso/lib/server-only/2fa/is-2fa-availble';
@@ -19,20 +16,16 @@ import { rateLimitResponse } from '@documenso/lib/server-only/rate-limit/rate-li
 import {
   forgotPasswordRateLimit,
   loginRateLimit,
-  resendVerifyEmailRateLimit,
   resetPasswordRateLimit,
   signupRateLimit,
-  verifyEmailRateLimit,
 } from '@documenso/lib/server-only/rate-limit/rate-limits';
 import { createUser } from '@documenso/lib/server-only/user/create-user';
 import { forgotPassword } from '@documenso/lib/server-only/user/forgot-password';
-import { getMostRecentEmailVerificationToken } from '@documenso/lib/server-only/user/get-most-recent-email-verification-token';
 import { getUserByResetToken } from '@documenso/lib/server-only/user/get-user-by-reset-token';
 import { resetPassword } from '@documenso/lib/server-only/user/reset-password';
 import { deletedServiceAccountEmail } from '@documenso/lib/server-only/user/service-accounts/deleted-account';
 import { legacyServiceAccountEmail } from '@documenso/lib/server-only/user/service-accounts/legacy-service-account';
 import { updatePassword } from '@documenso/lib/server-only/user/update-password';
-import { verifyEmail } from '@documenso/lib/server-only/user/verify-email';
 import { env } from '@documenso/lib/utils/env';
 import { prisma } from '@documenso/prisma';
 
@@ -44,12 +37,10 @@ import { getSession } from '../lib/utils/get-session';
 import type { HonoAuthContext } from '../types/context';
 import {
   ZForgotPasswordSchema,
-  ZResendVerifyEmailSchema,
   ZResetPasswordSchema,
   ZSignInSchema,
   ZSignUpSchema,
   ZUpdatePasswordSchema,
-  ZVerifyEmailSchema,
 } from '../types/email-password';
 
 export const emailPasswordRoute = new Hono<HonoAuthContext>()
@@ -138,29 +129,6 @@ export const emailPasswordRoute = new Hono<HonoAuthContext>()
       }
     }
 
-    if (!user.emailVerified) {
-      const mostRecentToken = await getMostRecentEmailVerificationToken({
-        userId: user.id,
-      });
-
-      if (
-        !mostRecentToken ||
-        mostRecentToken.expires.valueOf() <= Date.now() ||
-        DateTime.fromJSDate(mostRecentToken.createdAt).diffNow('minutes').minutes > -5
-      ) {
-        await jobsClient.triggerJob({
-          name: 'send.signup.confirmation.email',
-          payload: {
-            email: user.email,
-          },
-        });
-      }
-
-      throw new AppError('UNVERIFIED_EMAIL', {
-        message: 'Unverified email',
-      });
-    }
-
     if (user.disabled) {
       throw new AppError('ACCOUNT_DISABLED', {
         message: 'Account disabled',
@@ -202,11 +170,9 @@ export const emailPasswordRoute = new Hono<HonoAuthContext>()
       throw err;
     });
 
-    await jobsClient.triggerJob({
-      name: 'send.signup.confirmation.email',
-      payload: {
-        email: user.email,
-      },
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { emailVerified: new Date() },
     });
 
     return c.text('OK', 201);
@@ -249,68 +215,6 @@ export const emailPasswordRoute = new Hono<HonoAuthContext>()
         isRevoke: true,
       });
     }
-
-    return c.text('OK', 201);
-  })
-  /**
-   * Verify email endpoint.
-   */
-  .post('/verify-email', sValidator('json', ZVerifyEmailSchema), async (c) => {
-    const requestMetadata = c.get('requestMetadata');
-
-    const { token } = c.req.valid('json');
-
-    const verifyLimitResult = await verifyEmailRateLimit.check({
-      ip: requestMetadata.ipAddress ?? 'unknown',
-      identifier: token,
-    });
-
-    const verifyLimited = rateLimitResponse(c, verifyLimitResult);
-
-    if (verifyLimited) {
-      throw new HTTPException(429, {
-        res: verifyLimited,
-      });
-    }
-
-    const { state, userId } = await verifyEmail({ token });
-
-    // If email is verified, automatically authenticate user.
-    if (state === EMAIL_VERIFICATION_STATE.VERIFIED && userId !== null) {
-      await onAuthorize({ userId }, c);
-    }
-
-    return c.json({
-      state,
-    });
-  })
-  /**
-   * Resend verification email endpoint.
-   */
-  .post('/resend-verify-email', sValidator('json', ZResendVerifyEmailSchema), async (c) => {
-    const requestMetadata = c.get('requestMetadata');
-
-    const { email } = c.req.valid('json');
-
-    const resendLimitResult = await resendVerifyEmailRateLimit.check({
-      ip: requestMetadata.ipAddress ?? 'unknown',
-      identifier: email,
-    });
-
-    const resendLimited = rateLimitResponse(c, resendLimitResult);
-
-    if (resendLimited) {
-      throw new HTTPException(429, {
-        res: resendLimited,
-      });
-    }
-
-    await jobsClient.triggerJob({
-      name: 'send.signup.confirmation.email',
-      payload: {
-        email,
-      },
-    });
 
     return c.text('OK', 201);
   })

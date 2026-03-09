@@ -229,7 +229,7 @@ export const validateOauth = async (options: HandleOAuthCallbackUrlOptions) => {
   }
 
   if (claims.email_verified !== true && !clientOptions.bypassEmailVerification) {
-    throw new AppError(AuthenticationErrorCode.UnverifiedEmail, {
+    throw new AppError('UNVERIFIED_EMAIL', {
       message: 'Account email is not verified',
     });
   }
