@@ -140,7 +140,7 @@
   }
 
   .dark:not(.dark-mode-disabled) {
-    --background: 0 0% 14.9%;
+    --background: 0 0% 4.7%;
     --foreground: 0 0% 97%;
 
     --muted: 0 0% 23.4%;

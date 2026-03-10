@@ -70,7 +70,7 @@
 }
 
 .dark {
-  --background: hsl(0 0% 14.902%);
+  --background: hsl(0 0% 4.7%);
   --foreground: hsl(0 0% 96.8627%);
   --card: hsl(0 0% 14.902%);
   --card-foreground: hsl(0 0% 94.902%);
