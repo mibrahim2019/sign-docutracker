@@ -9,20 +9,20 @@ import { useForm } from 'react-hook-form';
 import { useSearchParams } from 'react-router';
 import type { z } from 'zod';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
 import {
   IS_BILLING_ENABLED,
   NEXT_PUBLIC_WEBAPP_URL,
   SUPPORT_EMAIL,
-} from '@documenso/lib/constants/app';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { trpc } from '@documenso/trpc/react';
-import { ZCreateTeamRequestSchema } from '@documenso/trpc/server/team-router/create-team.types';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
+} from '@docutracker/lib/constants/app';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { trpc } from '@docutracker/trpc/react';
+import { ZCreateTeamRequestSchema } from '@docutracker/trpc/server/team-router/create-team.types';
+import { Alert, AlertDescription } from '@docutracker/ui/primitives/alert';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
 import {
   Dialog,
   DialogContent,
@@ -31,7 +31,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -39,10 +39,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { SpinnerBox } from '@docutracker/ui/primitives/spinner';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export type TeamCreateDialogProps = {
   trigger?: React.ReactNode;

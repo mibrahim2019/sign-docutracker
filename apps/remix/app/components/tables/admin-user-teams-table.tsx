@@ -4,18 +4,22 @@ import { useLingui } from '@lingui/react';
 import { useLingui as useLinguiMacro } from '@lingui/react/macro';
 import { Link, useSearchParams } from 'react-router';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { TEAM_MEMBER_ROLE_MAP } from '@documenso/lib/constants/teams-translations';
-import { ZUrlSearchParamsSchema } from '@documenso/lib/types/search-params';
-import type { TeamMemberRole } from '@documenso/prisma/generated/types';
-import { trpc } from '@documenso/trpc/react';
-import { Badge } from '@documenso/ui/primitives/badge';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '@documenso/ui/primitives/hover-card';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import { TEAM_MEMBER_ROLE_MAP } from '@docutracker/lib/constants/teams-translations';
+import { ZUrlSearchParamsSchema } from '@docutracker/lib/types/search-params';
+import type { TeamMemberRole } from '@docutracker/prisma/generated/types';
+import { trpc } from '@docutracker/trpc/react';
+import { Badge } from '@docutracker/ui/primitives/badge';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { DataTablePagination } from '@docutracker/ui/primitives/data-table-pagination';
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from '@docutracker/ui/primitives/hover-card';
+import { Skeleton } from '@docutracker/ui/primitives/skeleton';
+import { TableCell } from '@docutracker/ui/primitives/table';
 
 type AdminUserTeamsTableProps = {
   userId: number;

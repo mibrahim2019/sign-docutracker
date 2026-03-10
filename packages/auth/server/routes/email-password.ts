@@ -5,29 +5,29 @@ import { Hono } from 'hono';
 import { HTTPException } from 'hono/http-exception';
 import { z } from 'zod';
 
-import { AppError } from '@documenso/lib/errors/app-error';
-import { disableTwoFactorAuthentication } from '@documenso/lib/server-only/2fa/disable-2fa';
-import { enableTwoFactorAuthentication } from '@documenso/lib/server-only/2fa/enable-2fa';
-import { isTwoFactorAuthenticationEnabled } from '@documenso/lib/server-only/2fa/is-2fa-availble';
-import { setupTwoFactorAuthentication } from '@documenso/lib/server-only/2fa/setup-2fa';
-import { validateTwoFactorAuthentication } from '@documenso/lib/server-only/2fa/validate-2fa';
-import { viewBackupCodes } from '@documenso/lib/server-only/2fa/view-backup-codes';
-import { rateLimitResponse } from '@documenso/lib/server-only/rate-limit/rate-limit-middleware';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { disableTwoFactorAuthentication } from '@docutracker/lib/server-only/2fa/disable-2fa';
+import { enableTwoFactorAuthentication } from '@docutracker/lib/server-only/2fa/enable-2fa';
+import { isTwoFactorAuthenticationEnabled } from '@docutracker/lib/server-only/2fa/is-2fa-availble';
+import { setupTwoFactorAuthentication } from '@docutracker/lib/server-only/2fa/setup-2fa';
+import { validateTwoFactorAuthentication } from '@docutracker/lib/server-only/2fa/validate-2fa';
+import { viewBackupCodes } from '@docutracker/lib/server-only/2fa/view-backup-codes';
+import { rateLimitResponse } from '@docutracker/lib/server-only/rate-limit/rate-limit-middleware';
 import {
   forgotPasswordRateLimit,
   loginRateLimit,
   resetPasswordRateLimit,
   signupRateLimit,
-} from '@documenso/lib/server-only/rate-limit/rate-limits';
-import { createUser } from '@documenso/lib/server-only/user/create-user';
-import { forgotPassword } from '@documenso/lib/server-only/user/forgot-password';
-import { getUserByResetToken } from '@documenso/lib/server-only/user/get-user-by-reset-token';
-import { resetPassword } from '@documenso/lib/server-only/user/reset-password';
-import { deletedServiceAccountEmail } from '@documenso/lib/server-only/user/service-accounts/deleted-account';
-import { legacyServiceAccountEmail } from '@documenso/lib/server-only/user/service-accounts/legacy-service-account';
-import { updatePassword } from '@documenso/lib/server-only/user/update-password';
-import { env } from '@documenso/lib/utils/env';
-import { prisma } from '@documenso/prisma';
+} from '@docutracker/lib/server-only/rate-limit/rate-limits';
+import { createUser } from '@docutracker/lib/server-only/user/create-user';
+import { forgotPassword } from '@docutracker/lib/server-only/user/forgot-password';
+import { getUserByResetToken } from '@docutracker/lib/server-only/user/get-user-by-reset-token';
+import { resetPassword } from '@docutracker/lib/server-only/user/reset-password';
+import { deletedServiceAccountEmail } from '@docutracker/lib/server-only/user/service-accounts/deleted-account';
+import { legacyServiceAccountEmail } from '@docutracker/lib/server-only/user/service-accounts/legacy-service-account';
+import { updatePassword } from '@docutracker/lib/server-only/user/update-password';
+import { env } from '@docutracker/lib/utils/env';
+import { prisma } from '@docutracker/prisma';
 
 import { AuthenticationErrorCode } from '../lib/errors/error-codes';
 import { invalidateSessions } from '../lib/session/session';

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import { Button } from '@documenso/ui/primitives/button';
-import { Card, CardContent } from '@documenso/ui/primitives/card';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Card, CardContent } from '@docutracker/ui/primitives/card';
 
 type CallToActionProps = {
   className?: string;

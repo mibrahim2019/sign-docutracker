@@ -3,11 +3,11 @@ import { useLingui } from '@lingui/react';
 import { Trans, useLingui as useLinguiMacro } from '@lingui/react/macro';
 import { RecipientRole } from '@prisma/client';
 
-import type { TDefaultRecipient } from '@documenso/lib/types/default-recipients';
-import { isRecipientEmailValidForSending } from '@documenso/lib/utils/recipients';
-import { trpc } from '@documenso/trpc/react';
-import { MultiSelect, type Option } from '@documenso/ui/primitives/multiselect';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import type { TDefaultRecipient } from '@docutracker/lib/types/default-recipients';
+import { isRecipientEmailValidForSending } from '@docutracker/lib/utils/recipients';
+import { trpc } from '@docutracker/trpc/react';
+import { MultiSelect, type Option } from '@docutracker/ui/primitives/multiselect';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 type DefaultRecipientsMultiSelectComboboxProps = {
   listValues: TDefaultRecipient[];

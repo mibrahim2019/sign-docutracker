@@ -19,18 +19,18 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import type { TDocumentMany as TDocumentRow } from '@documenso/lib/types/document';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { formatDocumentsPath } from '@documenso/lib/utils/teams';
-import { DocumentShareButton } from '@documenso/ui/components/document/document-share-button';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import type { TDocumentMany as TDocumentRow } from '@docutracker/lib/types/document';
+import { isDocumentCompleted } from '@docutracker/lib/utils/document';
+import { formatDocumentsPath } from '@docutracker/lib/utils/teams';
+import { DocumentShareButton } from '@docutracker/ui/components/document/document-share-button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
+} from '@docutracker/ui/primitives/dropdown-menu';
 
 import { DocumentDeleteDialog } from '~/components/dialogs/document-delete-dialog';
 import { DocumentDuplicateDialog } from '~/components/dialogs/document-duplicate-dialog';
@@ -76,7 +76,7 @@ export const DocumentsTableActionDropdown = ({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger data-testid="document-table-action-btn">
-        <MoreHorizontal className="text-muted-foreground h-5 w-5" />
+        <MoreHorizontal className="h-5 w-5 text-muted-foreground" />
       </DropdownMenuTrigger>
 
       <DropdownMenuContent className="w-52" align="start" forceMount>

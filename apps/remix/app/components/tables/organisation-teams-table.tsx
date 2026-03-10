@@ -6,19 +6,19 @@ import { Trans } from '@lingui/react/macro';
 import { useSearchParams } from 'react-router';
 import { Link } from 'react-router';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { ZUrlSearchParamsSchema } from '@documenso/lib/types/search-params';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { trpc } from '@documenso/trpc/react';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Button } from '@documenso/ui/primitives/button';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { ZUrlSearchParamsSchema } from '@docutracker/lib/types/search-params';
+import { formatAvatarUrl } from '@docutracker/lib/utils/avatars';
+import { trpc } from '@docutracker/trpc/react';
+import { AvatarWithText } from '@docutracker/ui/primitives/avatar';
+import { Button } from '@docutracker/ui/primitives/button';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { DataTablePagination } from '@docutracker/ui/primitives/data-table-pagination';
+import { Skeleton } from '@docutracker/ui/primitives/skeleton';
+import { TableCell } from '@docutracker/ui/primitives/table';
 
 import { TeamDeleteDialog } from '../dialogs/team-delete-dialog';
 
@@ -64,7 +64,7 @@ export const OrganisationTeamsTable = () => {
               avatarClass="h-12 w-12"
               avatarFallback={row.original.name.slice(0, 1).toUpperCase()}
               primaryText={
-                <span className="text-foreground/80 font-semibold">{row.original.name}</span>
+                <span className="font-semibold text-foreground/80">{row.original.name}</span>
               }
               secondaryText={`${NEXT_PUBLIC_WEBAPP_URL()}/t/${row.original.url}`}
             />

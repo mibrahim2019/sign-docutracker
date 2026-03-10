@@ -1,9 +1,9 @@
 import { msg } from '@lingui/core/macro';
 import { z } from 'zod';
 
-import { RecipientSchema } from '@documenso/prisma/generated/zod/modelSchema/RecipientSchema';
-import { TeamSchema } from '@documenso/prisma/generated/zod/modelSchema/TeamSchema';
-import { UserSchema } from '@documenso/prisma/generated/zod/modelSchema/UserSchema';
+import { RecipientSchema } from '@docutracker/prisma/generated/zod/modelSchema/RecipientSchema';
+import { TeamSchema } from '@docutracker/prisma/generated/zod/modelSchema/TeamSchema';
+import { UserSchema } from '@docutracker/prisma/generated/zod/modelSchema/UserSchema';
 
 import { ZFieldSchema } from './field';
 

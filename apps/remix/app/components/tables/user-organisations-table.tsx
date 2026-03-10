@@ -5,18 +5,21 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { Link } from 'react-router';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { ORGANISATION_MEMBER_ROLE_MAP } from '@documenso/lib/constants/organisations-translations';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { canExecuteOrganisationAction, isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { trpc } from '@documenso/trpc/react';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Button } from '@documenso/ui/primitives/button';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { ORGANISATION_MEMBER_ROLE_MAP } from '@docutracker/lib/constants/organisations-translations';
+import { formatAvatarUrl } from '@docutracker/lib/utils/avatars';
+import {
+  canExecuteOrganisationAction,
+  isPersonalLayout,
+} from '@docutracker/lib/utils/organisations';
+import { trpc } from '@docutracker/trpc/react';
+import { AvatarWithText } from '@docutracker/ui/primitives/avatar';
+import { Button } from '@docutracker/ui/primitives/button';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { Skeleton } from '@docutracker/ui/primitives/skeleton';
+import { TableCell } from '@docutracker/ui/primitives/table';
 
 import { OrganisationLeaveDialog } from '../dialogs/organisation-leave-dialog';
 
@@ -55,7 +58,7 @@ export const UserOrganisationsTable = () => {
               avatarClass="h-12 w-12"
               avatarFallback={row.original.name.slice(0, 1).toUpperCase()}
               primaryText={
-                <span className="text-foreground/80 font-semibold">
+                <span className="font-semibold text-foreground/80">
                   {isPersonalLayoutMode
                     ? _(
                         msg({

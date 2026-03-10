@@ -10,11 +10,11 @@ import { Link } from 'react-router';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { TEAM_MEMBER_ROLE_HIERARCHY } from '@documenso/lib/constants/teams';
-import { TEAM_MEMBER_ROLE_MAP } from '@documenso/lib/constants/teams-translations';
-import { trpc } from '@documenso/trpc/react';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { TEAM_MEMBER_ROLE_HIERARCHY } from '@docutracker/lib/constants/teams';
+import { TEAM_MEMBER_ROLE_MAP } from '@docutracker/lib/constants/teams-translations';
+import { trpc } from '@docutracker/trpc/react';
+import { Alert, AlertDescription } from '@docutracker/ui/primitives/alert';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -23,7 +23,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -32,18 +32,18 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { MultiSelectCombobox } from '@documenso/ui/primitives/multi-select-combobox';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { MultiSelectCombobox } from '@docutracker/ui/primitives/multi-select-combobox';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/select';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@docutracker/ui/primitives/tooltip';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { OrganisationMemberInviteDialog } from '~/components/dialogs/organisation-member-invite-dialog';
 import { useCurrentTeam } from '~/providers/team';
@@ -194,7 +194,7 @@ export const TeamMemberCreateDialog = ({ trigger, ...props }: TeamMemberCreateDi
                       To be able to add members to a team, you must first add them to the
                       organisation. For more information, please see the{' '}
                       <Link
-                        to="https://docs.documenso.com/users/organisations/members"
+                        to="https://docs.docutracker.io/users/organisations/members"
                         target="_blank"
                         rel="noreferrer"
                         className="text-documenso-700 hover:text-documenso-600 hover:underline"

@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-import { ZFindResultResponse, ZFindSearchParamsSchema } from '@documenso/lib/types/search-params';
-import PasskeySchema from '@documenso/prisma/generated/zod/modelSchema/PasskeySchema';
+import { ZFindResultResponse, ZFindSearchParamsSchema } from '@docutracker/lib/types/search-params';
+import PasskeySchema from '@docutracker/prisma/generated/zod/modelSchema/PasskeySchema';
 
 export const ZFindPasskeysRequestSchema = ZFindSearchParamsSchema.extend({
   orderBy: z

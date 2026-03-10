@@ -5,9 +5,9 @@ import { Trans } from '@lingui/react/macro';
 import { useForm, useWatch } from 'react-hook-form';
 import type { z } from 'zod';
 
-import { DEFAULT_SIGNATURE_TEXT_FONT_SIZE } from '@documenso/lib/constants/pdf';
-import { type TSignatureFieldMeta, ZSignatureFieldMeta } from '@documenso/lib/types/field-meta';
-import { Form } from '@documenso/ui/primitives/form/form';
+import { DEFAULT_SIGNATURE_TEXT_FONT_SIZE } from '@docutracker/lib/constants/pdf';
+import { type TSignatureFieldMeta, ZSignatureFieldMeta } from '@docutracker/lib/types/field-meta';
+import { Form } from '@docutracker/ui/primitives/form/form';
 
 import { EditorGenericFontSizeField } from './editor-field-generic-field-forms';
 
@@ -60,7 +60,7 @@ export const EditorFieldSignatureForm = ({
         <fieldset className="flex flex-col gap-2">
           <div>
             <EditorGenericFontSizeField formControl={form.control} />
-            <p className="text-muted-foreground mt-0.5 text-xs">
+            <p className="mt-0.5 text-xs text-muted-foreground">
               <Trans>The typed signature font size</Trans>
             </p>
           </div>

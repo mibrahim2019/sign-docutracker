@@ -9,22 +9,22 @@ import { useForm } from 'react-hook-form';
 import { useRevalidator } from 'react-router';
 import { P, match } from 'ts-pattern';
 
-import { unsafe_useEffectOnce } from '@documenso/lib/client-only/hooks/use-effect-once';
-import { AUTO_SIGNABLE_FIELD_TYPES } from '@documenso/lib/constants/autosign';
-import { DocumentAuth } from '@documenso/lib/types/document-auth';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
+import { unsafe_useEffectOnce } from '@docutracker/lib/client-only/hooks/use-effect-once';
+import { AUTO_SIGNABLE_FIELD_TYPES } from '@docutracker/lib/constants/autosign';
+import { DocumentAuth } from '@docutracker/lib/types/document-auth';
+import { extractInitials } from '@docutracker/lib/utils/recipient-formatter';
+import { trpc } from '@docutracker/trpc/react';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
-import { FRIENDLY_FIELD_TYPE } from '@documenso/ui/primitives/document-flow/types';
-import { Form } from '@documenso/ui/primitives/form/form';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/dialog';
+import { FRIENDLY_FIELD_TYPE } from '@docutracker/ui/primitives/document-flow/types';
+import { Form } from '@docutracker/ui/primitives/form/form';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { DocumentSigningDisclosure } from '~/components/general/document-signing/document-signing-disclosure';
 
@@ -167,7 +167,7 @@ export const DocumentSigningAutoSign = ({ recipient, fields }: DocumentSigningAu
           </DialogTitle>
         </DialogHeader>
 
-        <div className="text-muted-foreground max-w-[50ch]">
+        <div className="max-w-[50ch] text-muted-foreground">
           <p>
             <Trans>
               When you sign a document, we can automatically fill in and sign the following fields

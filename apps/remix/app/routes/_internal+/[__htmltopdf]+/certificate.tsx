@@ -9,21 +9,21 @@ import { match } from 'ts-pattern';
 import { UAParser } from 'ua-parser-js';
 import { renderSVG } from 'uqr';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { APP_I18N_OPTIONS, ZSupportedLanguageCodeSchema } from '@documenso/lib/constants/i18n';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { APP_I18N_OPTIONS, ZSupportedLanguageCodeSchema } from '@docutracker/lib/constants/i18n';
 import {
   RECIPIENT_ROLES_DESCRIPTION,
   RECIPIENT_ROLE_SIGNING_REASONS,
-} from '@documenso/lib/constants/recipient-roles';
-import { unsafeGetEntireEnvelope } from '@documenso/lib/server-only/admin/get-entire-document';
-import { decryptSecondaryData } from '@documenso/lib/server-only/crypto/decrypt';
-import { getDocumentCertificateAuditLogs } from '@documenso/lib/server-only/document/get-document-certificate-audit-logs';
-import { getOrganisationClaimByTeamId } from '@documenso/lib/server-only/organisation/get-organisation-claims';
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import { extractDocumentAuthMethods } from '@documenso/lib/utils/document-auth';
-import { mapSecondaryIdToDocumentId } from '@documenso/lib/utils/envelope';
-import { getTranslations } from '@documenso/lib/utils/i18n';
-import { Card, CardContent } from '@documenso/ui/primitives/card';
+} from '@docutracker/lib/constants/recipient-roles';
+import { unsafeGetEntireEnvelope } from '@docutracker/lib/server-only/admin/get-entire-document';
+import { decryptSecondaryData } from '@docutracker/lib/server-only/crypto/decrypt';
+import { getDocumentCertificateAuditLogs } from '@docutracker/lib/server-only/document/get-document-certificate-audit-logs';
+import { getOrganisationClaimByTeamId } from '@docutracker/lib/server-only/organisation/get-organisation-claims';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@docutracker/lib/types/document-audit-logs';
+import { extractDocumentAuthMethods } from '@docutracker/lib/utils/document-auth';
+import { mapSecondaryIdToDocumentId } from '@docutracker/lib/utils/envelope';
+import { getTranslations } from '@docutracker/lib/utils/i18n';
+import { Card, CardContent } from '@docutracker/ui/primitives/card';
 import {
   Table,
   TableBody,
@@ -31,7 +31,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@documenso/ui/primitives/table';
+} from '@docutracker/ui/primitives/table';
 
 import { BrandingLogo } from '~/components/general/branding-logo';
 

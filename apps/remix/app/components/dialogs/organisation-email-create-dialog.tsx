@@ -6,10 +6,10 @@ import type * as DialogPrimitive from '@radix-ui/react-dialog';
 import { useForm } from 'react-hook-form';
 import type { z } from 'zod';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { trpc } from '@documenso/trpc/react';
-import { ZCreateOrganisationEmailRequestSchema } from '@documenso/trpc/server/enterprise-router/create-organisation-email.types';
-import { Button } from '@documenso/ui/primitives/button';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { trpc } from '@docutracker/trpc/react';
+import { ZCreateOrganisationEmailRequestSchema } from '@docutracker/trpc/server/enterprise-router/create-organisation-email.types';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -18,7 +18,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -27,9 +27,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 type EmailDomain = {
   id: string;
@@ -176,14 +176,14 @@ export const OrganisationEmailCreateDialog = ({
                           }}
                           placeholder={t`support`}
                         />
-                        <div className="bg-muted text-muted-foreground absolute bottom-0 right-0 top-0 flex items-center rounded-r-md border px-3 py-2 text-sm">
+                        <div className="absolute bottom-0 right-0 top-0 flex items-center rounded-r-md border bg-muted px-3 py-2 text-sm text-muted-foreground">
                           @{emailDomain.domain}
                         </div>
                       </div>
                     </FormControl>
                     <FormMessage />
                     {!form.formState.errors.email && (
-                      <span className="text-foreground/50 text-xs font-normal">
+                      <span className="text-xs font-normal text-foreground/50">
                         {field.value ? (
                           field.value
                         ) : (

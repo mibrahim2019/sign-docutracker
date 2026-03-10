@@ -1,6 +1,6 @@
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@docutracker/prisma';
 
-const LEGACY_SERVICE_ACCOUNT_EMAIL = 'serviceaccount@documenso.com';
+const LEGACY_SERVICE_ACCOUNT_EMAIL = 'serviceaccount@docutracker.io';
 
 export const legacyServiceAccountEmail = () => {
   try {

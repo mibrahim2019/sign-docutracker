@@ -1,13 +1,13 @@
 import { DocumentSigningOrder, DocumentStatus, EnvelopeType, SigningStatus } from '@prisma/client';
 import { z } from 'zod';
 
-import { prisma } from '@documenso/prisma';
-import DocumentMetaSchema from '@documenso/prisma/generated/zod/modelSchema/DocumentMetaSchema';
-import EnvelopeItemSchema from '@documenso/prisma/generated/zod/modelSchema/EnvelopeItemSchema';
-import EnvelopeSchema from '@documenso/prisma/generated/zod/modelSchema/EnvelopeSchema';
-import SignatureSchema from '@documenso/prisma/generated/zod/modelSchema/SignatureSchema';
-import TeamSchema from '@documenso/prisma/generated/zod/modelSchema/TeamSchema';
-import UserSchema from '@documenso/prisma/generated/zod/modelSchema/UserSchema';
+import { prisma } from '@docutracker/prisma';
+import DocumentMetaSchema from '@docutracker/prisma/generated/zod/modelSchema/DocumentMetaSchema';
+import EnvelopeItemSchema from '@docutracker/prisma/generated/zod/modelSchema/EnvelopeItemSchema';
+import EnvelopeSchema from '@docutracker/prisma/generated/zod/modelSchema/EnvelopeSchema';
+import SignatureSchema from '@docutracker/prisma/generated/zod/modelSchema/SignatureSchema';
+import TeamSchema from '@docutracker/prisma/generated/zod/modelSchema/TeamSchema';
+import UserSchema from '@docutracker/prisma/generated/zod/modelSchema/UserSchema';
 
 import { AppError, AppErrorCode } from '../../errors/app-error';
 import type { TDocumentAuthMethods } from '../../types/document-auth';

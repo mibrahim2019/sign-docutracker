@@ -1,12 +1,12 @@
 import { EnvelopeType } from '@prisma/client';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import type { FindResultResponse } from '@documenso/lib/types/search-params';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import type { FindResultResponse } from '@docutracker/lib/types/search-params';
 import {
   mapSecondaryIdToDocumentId,
   unsafeBuildEnvelopeIdQuery,
-} from '@documenso/lib/utils/envelope';
-import { prisma } from '@documenso/prisma';
+} from '@docutracker/lib/utils/envelope';
+import { prisma } from '@docutracker/prisma';
 
 import { adminProcedure } from '../trpc';
 import {

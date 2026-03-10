@@ -7,26 +7,26 @@ import { OrganisationGroupType } from '@prisma/client';
 import { Edit, MoreHorizontal, Trash2 } from 'lucide-react';
 import { useSearchParams } from 'react-router';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { EXTENDED_ORGANISATION_MEMBER_ROLE_MAP } from '@documenso/lib/constants/organisations-translations';
-import { ZUrlSearchParamsSchema } from '@documenso/lib/types/search-params';
-import { isOrganisationRoleWithinUserHierarchy } from '@documenso/lib/utils/organisations';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { trpc } from '@documenso/trpc/react';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { EXTENDED_ORGANISATION_MEMBER_ROLE_MAP } from '@docutracker/lib/constants/organisations-translations';
+import { ZUrlSearchParamsSchema } from '@docutracker/lib/types/search-params';
+import { isOrganisationRoleWithinUserHierarchy } from '@docutracker/lib/utils/organisations';
+import { extractInitials } from '@docutracker/lib/utils/recipient-formatter';
+import { trpc } from '@docutracker/trpc/react';
+import { AvatarWithText } from '@docutracker/ui/primitives/avatar';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { DataTablePagination } from '@docutracker/ui/primitives/data-table-pagination';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+} from '@docutracker/ui/primitives/dropdown-menu';
+import { Skeleton } from '@docutracker/ui/primitives/skeleton';
+import { TableCell } from '@docutracker/ui/primitives/table';
 
 import { OrganisationMemberDeleteDialog } from '~/components/dialogs/organisation-member-delete-dialog';
 import { OrganisationMemberUpdateDialog } from '~/components/dialogs/organisation-member-update-dialog';
@@ -80,7 +80,7 @@ export const OrganisationMembersDataTable = () => {
               avatarClass="h-12 w-12"
               avatarFallback={avatarFallbackText}
               primaryText={
-                <span className="text-foreground/80 font-semibold">{row.original.name}</span>
+                <span className="font-semibold text-foreground/80">{row.original.name}</span>
               }
               secondaryText={row.original.email}
             />
@@ -110,7 +110,7 @@ export const OrganisationMembersDataTable = () => {
         cell: ({ row }) => (
           <DropdownMenu>
             <DropdownMenuTrigger>
-              <MoreHorizontal className="text-muted-foreground h-5 w-5" />
+              <MoreHorizontal className="h-5 w-5 text-muted-foreground" />
             </DropdownMenuTrigger>
 
             <DropdownMenuContent className="w-52" align="start" forceMount>

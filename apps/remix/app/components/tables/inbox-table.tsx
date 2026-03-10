@@ -10,18 +10,18 @@ import { DateTime } from 'luxon';
 import { Link, useSearchParams } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { trpc } from '@documenso/trpc/react';
-import type { TFindInboxResponse } from '@documenso/trpc/server/document-router/find-inbox.types';
-import { Button } from '@documenso/ui/primitives/button';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { isDocumentCompleted } from '@docutracker/lib/utils/document';
+import { trpc } from '@docutracker/trpc/react';
+import type { TFindInboxResponse } from '@docutracker/trpc/server/document-router/find-inbox.types';
+import { Button } from '@docutracker/ui/primitives/button';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { DataTablePagination } from '@docutracker/ui/primitives/data-table-pagination';
+import { Skeleton } from '@docutracker/ui/primitives/skeleton';
+import { TableCell } from '@docutracker/ui/primitives/table';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { DocumentStatus } from '~/components/general/document/document-status';
 import { useOptionalCurrentTeam } from '~/providers/team';
@@ -130,7 +130,7 @@ export const InboxTable = () => {
           enable: isLoadingError || false,
         }}
         emptyState={
-          <div className="text-muted-foreground/60 flex h-60 flex-col items-center justify-center gap-y-4">
+          <div className="flex h-60 flex-col items-center justify-center gap-y-4 text-muted-foreground/60">
             <p>
               <Trans>Documents that require your attention will appear here</Trans>
             </p>
@@ -170,8 +170,8 @@ export const InboxTable = () => {
       </DataTable>
 
       {isPending && (
-        <div className="bg-background/50 absolute inset-0 flex items-center justify-center">
-          <Loader className="text-muted-foreground h-8 w-8 animate-spin" />
+        <div className="absolute inset-0 flex items-center justify-center bg-background/50">
+          <Loader className="h-8 w-8 animate-spin text-muted-foreground" />
         </div>
       )}
     </div>

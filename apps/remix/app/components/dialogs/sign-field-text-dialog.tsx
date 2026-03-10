@@ -6,9 +6,9 @@ import { createCallable } from 'react-call';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import type { TTextFieldMeta } from '@documenso/lib/types/field-meta';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import type { TTextFieldMeta } from '@docutracker/lib/types/field-meta';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -16,15 +16,15 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Textarea } from '@documenso/ui/primitives/textarea';
+} from '@docutracker/ui/primitives/form/form';
+import { Textarea } from '@docutracker/ui/primitives/textarea';
 
 const ZSignFieldTextFormSchema = z.object({
   text: z.string().min(1, { message: msg`Text is required`.id }),

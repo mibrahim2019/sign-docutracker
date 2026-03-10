@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { ZEnvelopeExpirationPeriod } from '@documenso/lib/constants/envelope-expiration';
-import { SUPPORTED_LANGUAGE_CODES } from '@documenso/lib/constants/i18n';
-import { ZDefaultRecipientsSchema } from '@documenso/lib/types/default-recipients';
-import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';
+import { ZEnvelopeExpirationPeriod } from '@docutracker/lib/constants/envelope-expiration';
+import { SUPPORTED_LANGUAGE_CODES } from '@docutracker/lib/constants/i18n';
+import { ZDefaultRecipientsSchema } from '@docutracker/lib/types/default-recipients';
+import { ZDocumentEmailSettingsSchema } from '@docutracker/lib/types/document-email';
 import {
   ZDocumentMetaDateFormatSchema,
   ZDocumentMetaTimezoneSchema,
-} from '@documenso/lib/types/document-meta';
-import { DocumentVisibility } from '@documenso/lib/types/document-visibility';
+} from '@docutracker/lib/types/document-meta';
+import { DocumentVisibility } from '@docutracker/lib/types/document-visibility';
 
 export const ZUpdateOrganisationSettingsRequestSchema = z.object({
   organisationId: z.string(),

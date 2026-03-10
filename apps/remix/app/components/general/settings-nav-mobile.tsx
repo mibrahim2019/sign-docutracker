@@ -15,11 +15,14 @@ import {
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import { canExecuteOrganisationAction, isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { IS_BILLING_ENABLED } from '@docutracker/lib/constants/app';
+import {
+  canExecuteOrganisationAction,
+  isPersonalLayout,
+} from '@docutracker/lib/utils/organisations';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
 
 export type SettingsMobileNavProps = HTMLAttributes<HTMLDivElement>;
 

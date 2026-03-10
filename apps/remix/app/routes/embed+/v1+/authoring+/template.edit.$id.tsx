@@ -8,17 +8,17 @@ import { redirect, useLoaderData } from 'react-router';
 import {
   DEFAULT_DOCUMENT_DATE_FORMAT,
   isValidDateFormat,
-} from '@documenso/lib/constants/date-formats';
-import { DocumentSignatureType } from '@documenso/lib/constants/document';
-import { isValidLanguageCode } from '@documenso/lib/constants/i18n';
-import { DEFAULT_DOCUMENT_TIME_ZONE } from '@documenso/lib/constants/time-zones';
-import { verifyEmbeddingPresignToken } from '@documenso/lib/server-only/embedding-presign/verify-embedding-presign-token';
-import { getTemplateById } from '@documenso/lib/server-only/template/get-template-by-id';
-import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';
-import { nanoid } from '@documenso/lib/universal/id';
-import { trpc } from '@documenso/trpc/react';
-import { Stepper } from '@documenso/ui/primitives/stepper';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/lib/constants/date-formats';
+import { DocumentSignatureType } from '@docutracker/lib/constants/document';
+import { isValidLanguageCode } from '@docutracker/lib/constants/i18n';
+import { DEFAULT_DOCUMENT_TIME_ZONE } from '@docutracker/lib/constants/time-zones';
+import { verifyEmbeddingPresignToken } from '@docutracker/lib/server-only/embedding-presign/verify-embedding-presign-token';
+import { getTemplateById } from '@docutracker/lib/server-only/template/get-template-by-id';
+import { ZDocumentEmailSettingsSchema } from '@docutracker/lib/types/document-email';
+import { nanoid } from '@docutracker/lib/universal/id';
+import { trpc } from '@docutracker/trpc/react';
+import { Stepper } from '@docutracker/ui/primitives/stepper';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { ConfigureDocumentProvider } from '~/components/embed/authoring/configure-document-context';
 import { ConfigureDocumentView } from '~/components/embed/authoring/configure-document-view';

@@ -9,18 +9,18 @@ import {
   SigningStatus,
 } from '@prisma/client';
 
-import { mailer } from '@documenso/email/mailer';
-import { DocumentInviteEmailTemplate } from '@documenso/email/templates/document-invite';
-import { resolveExpiresAt } from '@documenso/lib/constants/envelope-expiration';
+import { mailer } from '@docutracker/email/mailer';
+import { DocumentInviteEmailTemplate } from '@docutracker/email/templates/document-invite';
+import { resolveExpiresAt } from '@docutracker/lib/constants/envelope-expiration';
 import {
   RECIPIENT_ROLES_DESCRIPTION,
   RECIPIENT_ROLE_TO_EMAIL_TYPE,
-} from '@documenso/lib/constants/recipient-roles';
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import type { ApiRequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { renderCustomEmailTemplate } from '@documenso/lib/utils/render-custom-email-template';
-import { prisma } from '@documenso/prisma';
+} from '@docutracker/lib/constants/recipient-roles';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@docutracker/lib/types/document-audit-logs';
+import type { ApiRequestMetadata } from '@docutracker/lib/universal/extract-request-metadata';
+import { createDocumentAuditLogData } from '@docutracker/lib/utils/document-audit-logs';
+import { renderCustomEmailTemplate } from '@docutracker/lib/utils/render-custom-email-template';
+import { prisma } from '@docutracker/prisma';
 
 import { getI18nInstance } from '../../client-only/providers/i18n-server';
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';

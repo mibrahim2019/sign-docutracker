@@ -5,15 +5,15 @@ import type { Organisation, Prisma } from '@prisma/client';
 import { OrganisationMemberInviteStatus } from '@prisma/client';
 import { nanoid } from 'nanoid';
 
-import { syncMemberCountWithStripeSeatPlan } from '@documenso/ee/server-only/stripe/update-subscription-item-quantity';
-import { mailer } from '@documenso/email/mailer';
-import { OrganisationInviteEmailTemplate } from '@documenso/email/templates/organisation-invite';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP } from '@documenso/lib/constants/organisations';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { isOrganisationRoleWithinUserHierarchy } from '@documenso/lib/utils/organisations';
-import { prisma } from '@documenso/prisma';
-import type { TCreateOrganisationMemberInvitesRequestSchema } from '@documenso/trpc/server/organisation-router/create-organisation-member-invites.types';
+import { syncMemberCountWithStripeSeatPlan } from '@docutracker/ee/server-only/stripe/update-subscription-item-quantity';
+import { mailer } from '@docutracker/email/mailer';
+import { OrganisationInviteEmailTemplate } from '@docutracker/email/templates/organisation-invite';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP } from '@docutracker/lib/constants/organisations';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { isOrganisationRoleWithinUserHierarchy } from '@docutracker/lib/utils/organisations';
+import { prisma } from '@docutracker/prisma';
+import type { TCreateOrganisationMemberInvitesRequestSchema } from '@docutracker/trpc/server/organisation-router/create-organisation-member-invites.types';
 
 import { getI18nInstance } from '../../client-only/providers/i18n-server';
 import { generateDatabaseId } from '../../universal/id';

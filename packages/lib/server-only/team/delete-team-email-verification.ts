@@ -1,5 +1,5 @@
-import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '@documenso/lib/constants/teams';
-import { prisma } from '@documenso/prisma';
+import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '@docutracker/lib/constants/teams';
+import { prisma } from '@docutracker/prisma';
 
 import { buildTeamWhereQuery } from '../../utils/teams';
 

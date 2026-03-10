@@ -1,11 +1,11 @@
 import { EnvelopeType } from '@prisma/client';
 
-import { PDF_SIZE_A4_72PPI } from '@documenso/lib/constants/pdf';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { getEnvelopeWhereInput } from '@documenso/lib/server-only/envelope/get-envelope-by-id';
-import { generateCertificatePdf } from '@documenso/lib/server-only/pdf/generate-certificate-pdf';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { prisma } from '@documenso/prisma';
+import { PDF_SIZE_A4_72PPI } from '@docutracker/lib/constants/pdf';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { getEnvelopeWhereInput } from '@docutracker/lib/server-only/envelope/get-envelope-by-id';
+import { generateCertificatePdf } from '@docutracker/lib/server-only/pdf/generate-certificate-pdf';
+import { isDocumentCompleted } from '@docutracker/lib/utils/document';
+import { prisma } from '@docutracker/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import {

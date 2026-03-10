@@ -4,9 +4,9 @@ import path from 'node:path';
 import {
   DIRECT_TEMPLATE_RECIPIENT_EMAIL,
   DIRECT_TEMPLATE_RECIPIENT_NAME,
-} from '@documenso/lib/constants/direct-templates';
-import { incrementTemplateId } from '@documenso/lib/server-only/envelope/increment-id';
-import { prefixedId } from '@documenso/lib/universal/id';
+} from '@docutracker/lib/constants/direct-templates';
+import { incrementTemplateId } from '@docutracker/lib/server-only/envelope/increment-id';
+import { prefixedId } from '@docutracker/lib/universal/id';
 
 import { prisma } from '..';
 import type { Prisma, User } from '../client';

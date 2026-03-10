@@ -5,19 +5,19 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { ChevronDown, ChevronUp, Trash } from 'lucide-react';
 
-import { validateDropdownField } from '@documenso/lib/advanced-fields-validation/validate-dropdown';
-import { type TDropdownFieldMeta as DropdownFieldMeta } from '@documenso/lib/types/field-meta';
-import { Button } from '@documenso/ui/primitives/button';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
+import { validateDropdownField } from '@docutracker/lib/advanced-fields-validation/validate-dropdown';
+import { type TDropdownFieldMeta as DropdownFieldMeta } from '@docutracker/lib/types/field-meta';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Input } from '@docutracker/ui/primitives/input';
+import { Label } from '@docutracker/ui/primitives/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { Switch } from '@documenso/ui/primitives/switch';
+} from '@docutracker/ui/primitives/select';
+import { Switch } from '@docutracker/ui/primitives/switch';
 
 type DropdownFieldAdvancedSettingsProps = {
   fieldState: DropdownFieldMeta;
@@ -114,7 +114,7 @@ export const DropdownFieldAdvancedSettings = ({
             handleFieldChange('defaultValue', val);
           }}
         >
-          <SelectTrigger className="text-muted-foreground bg-background mt-2 w-full">
+          <SelectTrigger className="mt-2 w-full bg-background text-muted-foreground">
             <SelectValue defaultValue={defaultValue} placeholder={`-- ${_(msg`Select`)} --`} />
           </SelectTrigger>
           <SelectContent position="popper">
@@ -152,7 +152,7 @@ export const DropdownFieldAdvancedSettings = ({
         </div>
       </div>
       <Button
-        className="bg-foreground/10 hover:bg-foreground/5 border-foreground/10 mt-2 border"
+        className="mt-2 border border-foreground/10 bg-foreground/10 hover:bg-foreground/5"
         variant="outline"
         onClick={() => setShowValidation((prev) => !prev)}
       >
@@ -183,7 +183,7 @@ export const DropdownFieldAdvancedSettings = ({
             </div>
           ))}
           <Button
-            className="bg-foreground/10 hover:bg-foreground/5 border-foreground/10 ml-9 mt-4 border"
+            className="ml-9 mt-4 border border-foreground/10 bg-foreground/10 hover:bg-foreground/5"
             variant="outline"
             onClick={addValue}
           >

@@ -1,14 +1,14 @@
 import { z } from 'zod';
 
-import { ZOrganisationSchema } from '@documenso/lib/types/organisation';
-import OrganisationClaimSchema from '@documenso/prisma/generated/zod/modelSchema/OrganisationClaimSchema';
-import OrganisationGlobalSettingsSchema from '@documenso/prisma/generated/zod/modelSchema/OrganisationGlobalSettingsSchema';
-import OrganisationGroupMemberSchema from '@documenso/prisma/generated/zod/modelSchema/OrganisationGroupMemberSchema';
-import OrganisationGroupSchema from '@documenso/prisma/generated/zod/modelSchema/OrganisationGroupSchema';
-import OrganisationMemberSchema from '@documenso/prisma/generated/zod/modelSchema/OrganisationMemberSchema';
-import SubscriptionSchema from '@documenso/prisma/generated/zod/modelSchema/SubscriptionSchema';
-import TeamSchema from '@documenso/prisma/generated/zod/modelSchema/TeamSchema';
-import UserSchema from '@documenso/prisma/generated/zod/modelSchema/UserSchema';
+import { ZOrganisationSchema } from '@docutracker/lib/types/organisation';
+import OrganisationClaimSchema from '@docutracker/prisma/generated/zod/modelSchema/OrganisationClaimSchema';
+import OrganisationGlobalSettingsSchema from '@docutracker/prisma/generated/zod/modelSchema/OrganisationGlobalSettingsSchema';
+import OrganisationGroupMemberSchema from '@docutracker/prisma/generated/zod/modelSchema/OrganisationGroupMemberSchema';
+import OrganisationGroupSchema from '@docutracker/prisma/generated/zod/modelSchema/OrganisationGroupSchema';
+import OrganisationMemberSchema from '@docutracker/prisma/generated/zod/modelSchema/OrganisationMemberSchema';
+import SubscriptionSchema from '@docutracker/prisma/generated/zod/modelSchema/SubscriptionSchema';
+import TeamSchema from '@docutracker/prisma/generated/zod/modelSchema/TeamSchema';
+import UserSchema from '@docutracker/prisma/generated/zod/modelSchema/UserSchema';
 
 export const ZGetAdminOrganisationRequestSchema = z.object({
   organisationId: z.string(),

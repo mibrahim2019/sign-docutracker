@@ -5,7 +5,7 @@ import { Trans, useLingui } from '@lingui/react/macro';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { Button } from '@documenso/ui/primitives/button';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -13,7 +13,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -21,8 +21,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
 
 import { DocumentSigningDisclosure } from '../general/document-signing/document-signing-disclosure';
 
@@ -115,7 +115,7 @@ export function AssistantConfirmationDialog({
                   <div className="mt-4 flex flex-col gap-4">
                     {!isEditingNextSigner && (
                       <div>
-                        <p className="text-muted-foreground text-sm">
+                        <p className="text-sm text-muted-foreground">
                           <Trans>
                             The next recipient to sign this document will be{' '}
                             <span className="font-semibold">{form.watch('name')}</span> (

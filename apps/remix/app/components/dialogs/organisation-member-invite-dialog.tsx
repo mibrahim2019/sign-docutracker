@@ -11,18 +11,18 @@ import Papa, { type ParseResult } from 'papaparse';
 import { useFieldArray, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { downloadFile } from '@documenso/lib/client-only/download-file';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { IS_BILLING_ENABLED, SUPPORT_EMAIL } from '@documenso/lib/constants/app';
-import { ORGANISATION_MEMBER_ROLE_HIERARCHY } from '@documenso/lib/constants/organisations';
-import { ORGANISATION_MEMBER_ROLE_MAP } from '@documenso/lib/constants/organisations-translations';
-import { INTERNAL_CLAIM_ID } from '@documenso/lib/types/subscription';
-import { trpc } from '@documenso/trpc/react';
-import { ZCreateOrganisationMemberInvitesRequestSchema } from '@documenso/trpc/server/organisation-router/create-organisation-member-invites.types';
-import { cn } from '@documenso/ui/lib/utils';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { Card, CardContent } from '@documenso/ui/primitives/card';
+import { downloadFile } from '@docutracker/lib/client-only/download-file';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { IS_BILLING_ENABLED, SUPPORT_EMAIL } from '@docutracker/lib/constants/app';
+import { ORGANISATION_MEMBER_ROLE_HIERARCHY } from '@docutracker/lib/constants/organisations';
+import { ORGANISATION_MEMBER_ROLE_MAP } from '@docutracker/lib/constants/organisations-translations';
+import { INTERNAL_CLAIM_ID } from '@docutracker/lib/types/subscription';
+import { trpc } from '@docutracker/trpc/react';
+import { ZCreateOrganisationMemberInvitesRequestSchema } from '@docutracker/trpc/server/organisation-router/create-organisation-member-invites.types';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Alert, AlertDescription } from '@docutracker/ui/primitives/alert';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Card, CardContent } from '@docutracker/ui/primitives/card';
 import {
   Dialog,
   DialogContent,
@@ -31,7 +31,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -39,18 +39,18 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@documenso/ui/primitives/tabs';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/select';
+import { SpinnerBox } from '@docutracker/ui/primitives/spinner';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@docutracker/ui/primitives/tabs';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export type OrganisationMemberInviteDialogProps = {
   trigger?: React.ReactNode;
@@ -253,9 +253,9 @@ export const OrganisationMemberInviteDialog = ({
 
   const downloadTemplate = () => {
     const data = [
-      { email: 'admin@documenso.com', role: 'Admin' },
-      { email: 'manager@documenso.com', role: 'Manager' },
-      { email: 'member@documenso.com', role: 'Member' },
+      { email: 'admin@docutracker.io', role: 'Admin' },
+      { email: 'manager@docutracker.io', role: 'Manager' },
+      { email: 'member@docutracker.io', role: 'Member' },
     ];
 
     const csvContent =
@@ -329,12 +329,12 @@ export const OrganisationMemberInviteDialog = ({
             onValueChange={(value) => setInvitationType(value as TabTypes)}
           >
             <TabsList className="w-full">
-              <TabsTrigger value="INDIVIDUAL" className="hover:text-foreground w-full">
+              <TabsTrigger value="INDIVIDUAL" className="w-full hover:text-foreground">
                 <MailIcon size={20} className="mr-2" />
                 <Trans>Invite Members</Trans>
               </TabsTrigger>
 
-              <TabsTrigger value="BULK" className="hover:text-foreground w-full">
+              <TabsTrigger value="BULK" className="w-full hover:text-foreground">
                 <UsersIcon size={20} className="mr-2" /> <Trans>Bulk Import</Trans>
               </TabsTrigger>
             </TabsList>
@@ -382,7 +382,7 @@ export const OrganisationMemberInviteDialog = ({
                                 )}
                                 <FormControl>
                                   <Select {...field} onValueChange={field.onChange}>
-                                    <SelectTrigger className="text-muted-foreground max-w-[200px]">
+                                    <SelectTrigger className="max-w-[200px] text-muted-foreground">
                                       <SelectValue />
                                     </SelectTrigger>
 
@@ -447,7 +447,7 @@ export const OrganisationMemberInviteDialog = ({
               <div className="mt-4 space-y-4">
                 <Card gradient className="h-32">
                   <CardContent
-                    className="text-muted-foreground/80 hover:text-muted-foreground/90 flex h-full cursor-pointer flex-col items-center justify-center rounded-lg p-0 transition-colors"
+                    className="flex h-full cursor-pointer flex-col items-center justify-center rounded-lg p-0 text-muted-foreground/80 transition-colors hover:text-muted-foreground/90"
                     onClick={() => fileInputRef.current?.click()}
                   >
                     <Upload className="h-5 w-5" />

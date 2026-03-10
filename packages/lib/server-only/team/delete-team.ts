@@ -4,11 +4,11 @@ import { msg } from '@lingui/core/macro';
 import { OrganisationGroupType, type Team } from '@prisma/client';
 import { uniqueBy } from 'remeda';
 
-import { mailer } from '@documenso/email/mailer';
-import { TeamDeleteEmailTemplate } from '@documenso/email/templates/team-delete';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { prisma } from '@documenso/prisma';
+import { mailer } from '@docutracker/email/mailer';
+import { TeamDeleteEmailTemplate } from '@docutracker/email/templates/team-delete';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { prisma } from '@docutracker/prisma';
 
 import { getI18nInstance } from '../../client-only/providers/i18n-server';
 import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '../../constants/teams';

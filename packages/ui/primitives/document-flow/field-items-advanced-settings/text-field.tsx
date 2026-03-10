@@ -1,18 +1,18 @@
 import { Trans, useLingui } from '@lingui/react/macro';
 
-import { validateTextField } from '@documenso/lib/advanced-fields-validation/validate-text';
-import { type TTextFieldMeta as TextFieldMeta } from '@documenso/lib/types/field-meta';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
+import { validateTextField } from '@docutracker/lib/advanced-fields-validation/validate-text';
+import { type TTextFieldMeta as TextFieldMeta } from '@docutracker/lib/types/field-meta';
+import { Input } from '@docutracker/ui/primitives/input';
+import { Label } from '@docutracker/ui/primitives/label';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { Switch } from '@documenso/ui/primitives/switch';
-import { Textarea } from '@documenso/ui/primitives/textarea';
+} from '@docutracker/ui/primitives/select';
+import { Switch } from '@docutracker/ui/primitives/switch';
+import { Textarea } from '@docutracker/ui/primitives/textarea';
 
 type TextFieldAdvancedSettingsProps = {
   fieldState: TextFieldMeta;
@@ -55,7 +55,7 @@ export const TextFieldAdvancedSettings = ({
         </Label>
         <Input
           id="label"
-          className="bg-background mt-2"
+          className="mt-2 bg-background"
           placeholder={t`Field label`}
           value={fieldState.label}
           onChange={(e) => handleFieldChange('label', e.target.value)}
@@ -67,7 +67,7 @@ export const TextFieldAdvancedSettings = ({
         </Label>
         <Input
           id="placeholder"
-          className="bg-background mt-2"
+          className="mt-2 bg-background"
           placeholder={t`Field placeholder`}
           value={fieldState.placeholder}
           onChange={(e) => handleFieldChange('placeholder', e.target.value)}
@@ -80,7 +80,7 @@ export const TextFieldAdvancedSettings = ({
         </Label>
         <Textarea
           id="text"
-          className="bg-background mt-2"
+          className="mt-2 bg-background"
           placeholder={t`Add text to the field`}
           value={fieldState.text}
           onChange={(e) => handleInput('text', e.target.value)}
@@ -95,7 +95,7 @@ export const TextFieldAdvancedSettings = ({
           id="characterLimit"
           type="number"
           min={0}
-          className="bg-background mt-2"
+          className="mt-2 bg-background"
           placeholder={t`Field character limit`}
           value={fieldState.characterLimit}
           onChange={(e) => handleInput('characterLimit', e.target.value)}
@@ -109,7 +109,7 @@ export const TextFieldAdvancedSettings = ({
         <Input
           id="fontSize"
           type="number"
-          className="bg-background mt-2"
+          className="mt-2 bg-background"
           placeholder={t`Field font size`}
           value={fieldState.fontSize}
           onChange={(e) => handleInput('fontSize', e.target.value)}
@@ -133,7 +133,7 @@ export const TextFieldAdvancedSettings = ({
             handleInput('textAlign', value);
           }}
         >
-          <SelectTrigger className="bg-background mt-2">
+          <SelectTrigger className="mt-2 bg-background">
             <SelectValue placeholder={t`Select text align`} />
           </SelectTrigger>
 

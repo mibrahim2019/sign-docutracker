@@ -5,25 +5,25 @@ import { Trans } from '@lingui/react/macro';
 import { EditIcon, MoreHorizontalIcon, Trash2Icon } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import type { TLicenseClaim } from '@documenso/lib/types/license';
-import { ZUrlSearchParamsSchema } from '@documenso/lib/types/search-params';
-import { SUBSCRIPTION_CLAIM_FEATURE_FLAGS } from '@documenso/lib/types/subscription';
-import { trpc } from '@documenso/trpc/react';
-import { CopyTextButton } from '@documenso/ui/components/common/copy-text-button';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import type { TLicenseClaim } from '@docutracker/lib/types/license';
+import { ZUrlSearchParamsSchema } from '@docutracker/lib/types/search-params';
+import { SUBSCRIPTION_CLAIM_FEATURE_FLAGS } from '@docutracker/lib/types/subscription';
+import { trpc } from '@docutracker/trpc/react';
+import { CopyTextButton } from '@docutracker/ui/components/common/copy-text-button';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { DataTablePagination } from '@docutracker/ui/primitives/data-table-pagination';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/dropdown-menu';
+import { Skeleton } from '@docutracker/ui/primitives/skeleton';
+import { TableCell } from '@docutracker/ui/primitives/table';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { ClaimDeleteDialog } from '../dialogs/claim-delete-dialog';
 import { ClaimUpdateDialog } from '../dialogs/claim-update-dialog';

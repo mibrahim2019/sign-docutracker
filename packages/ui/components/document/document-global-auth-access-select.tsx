@@ -5,10 +5,10 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { InfoIcon } from 'lucide-react';
 
-import { DOCUMENT_AUTH_TYPES } from '@documenso/lib/constants/document-auth';
-import { DocumentAccessAuth } from '@documenso/lib/types/document-auth';
-import { MultiSelect, type Option } from '@documenso/ui/primitives/multiselect';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
+import { DOCUMENT_AUTH_TYPES } from '@docutracker/lib/constants/document-auth';
+import { DocumentAccessAuth } from '@docutracker/lib/types/document-auth';
+import { MultiSelect, type Option } from '@docutracker/ui/primitives/multiselect';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@docutracker/ui/primitives/tooltip';
 
 export interface DocumentGlobalAuthAccessSelectProps {
   value?: string[];
@@ -79,7 +79,7 @@ export const DocumentGlobalAuthAccessTooltip = () => (
       <InfoIcon className="mx-2 h-4 w-4" />
     </TooltipTrigger>
 
-    <TooltipContent className="text-foreground max-w-md space-y-2 p-4">
+    <TooltipContent className="max-w-md space-y-2 p-4 text-foreground">
       <h2>
         <strong>
           <Trans>Document access</Trans>

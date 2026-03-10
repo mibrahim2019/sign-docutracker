@@ -9,8 +9,8 @@ import { DateTime } from 'luxon';
 import { Link, redirect } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { generateEmailDomainRecords } from '@documenso/lib/utils/email-domains';
-import { trpc } from '@documenso/trpc/react';
+import { generateEmailDomainRecords } from '@docutracker/lib/utils/email-domains';
+import { trpc } from '@docutracker/trpc/react';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -21,12 +21,12 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from '@documenso/ui/primitives/alert-dialog';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/alert-dialog';
+import { Badge } from '@docutracker/ui/primitives/badge';
+import { Button } from '@docutracker/ui/primitives/button';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import type { Route } from './+types/email-domains.$id';
 

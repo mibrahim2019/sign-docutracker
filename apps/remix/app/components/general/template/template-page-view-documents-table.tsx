@@ -10,16 +10,16 @@ import { DateTime } from 'luxon';
 import { useSearchParams } from 'react-router';
 import { z } from 'zod';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { ZUrlSearchParamsSchema } from '@documenso/lib/types/search-params';
-import { trpc } from '@documenso/trpc/react';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
-import { SelectItem } from '@documenso/ui/primitives/select';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import { ZUrlSearchParamsSchema } from '@docutracker/lib/types/search-params';
+import { trpc } from '@docutracker/trpc/react';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { DataTablePagination } from '@docutracker/ui/primitives/data-table-pagination';
+import { SelectItem } from '@docutracker/ui/primitives/select';
+import { Skeleton } from '@docutracker/ui/primitives/skeleton';
+import { TableCell } from '@docutracker/ui/primitives/table';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@docutracker/ui/primitives/tooltip';
 
 import { SearchParamSelector } from '~/components/forms/search-param-selector';
 import { DocumentSearch } from '~/components/general/document/document-search';
@@ -133,8 +133,8 @@ export const TemplatePageViewDocumentsTable = ({
                 <InfoIcon className="mx-2 h-4 w-4" />
               </TooltipTrigger>
 
-              <TooltipContent className="text-foreground max-w-md space-y-2 !p-0">
-                <ul className="text-muted-foreground space-y-0.5 divide-y [&>li]:p-4">
+              <TooltipContent className="max-w-md space-y-2 !p-0 text-foreground">
+                <ul className="space-y-0.5 divide-y text-muted-foreground [&>li]:p-4">
                   <li>
                     <h2 className="mb-2 flex flex-row items-center font-semibold">
                       <Trans>Template</Trans>

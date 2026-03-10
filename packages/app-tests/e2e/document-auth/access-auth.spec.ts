@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 
-import { createDocumentAuthOptions } from '@documenso/lib/utils/document-auth';
-import { prisma } from '@documenso/prisma';
-import { seedPendingDocument } from '@documenso/prisma/seed/documents';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { createDocumentAuthOptions } from '@docutracker/lib/utils/document-auth';
+import { prisma } from '@docutracker/prisma';
+import { seedPendingDocument } from '@docutracker/prisma/seed/documents';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 

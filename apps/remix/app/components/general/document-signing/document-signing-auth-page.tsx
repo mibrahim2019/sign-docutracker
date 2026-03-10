@@ -4,9 +4,9 @@ import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 
-import { authClient } from '@documenso/auth/client';
-import { Button } from '@documenso/ui/primitives/button';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { authClient } from '@docutracker/auth/client';
+import { Button } from '@docutracker/ui/primitives/button';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export type DocumentSigningAuthPageViewProps = {
   email?: string;
@@ -54,7 +54,7 @@ export const DocumentSigningAuthPageView = ({
           <Trans>Authentication required</Trans>
         </h1>
 
-        <p className="text-muted-foreground mt-2 text-sm">
+        <p className="mt-2 text-sm text-muted-foreground">
           {email ? (
             <Trans>
               You need to be logged in as <strong>{email}</strong> to view this page.

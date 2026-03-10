@@ -4,12 +4,12 @@ import { msg } from '@lingui/macro';
 import { parse } from 'csv-parse/sync';
 import { z } from 'zod';
 
-import { mailer } from '@documenso/email/mailer';
-import { BulkSendCompleteEmail } from '@documenso/email/templates/bulk-send-complete';
-import { sendDocument } from '@documenso/lib/server-only/document/send-document';
-import { createDocumentFromTemplate } from '@documenso/lib/server-only/template/create-document-from-template';
-import { getTemplateById } from '@documenso/lib/server-only/template/get-template-by-id';
-import { prisma } from '@documenso/prisma';
+import { mailer } from '@docutracker/email/mailer';
+import { BulkSendCompleteEmail } from '@docutracker/email/templates/bulk-send-complete';
+import { sendDocument } from '@docutracker/lib/server-only/document/send-document';
+import { createDocumentFromTemplate } from '@docutracker/lib/server-only/template/create-document-from-template';
+import { getTemplateById } from '@docutracker/lib/server-only/template/get-template-by-id';
+import { prisma } from '@docutracker/prisma';
 
 import { getI18nInstance } from '../../../client-only/providers/i18n-server';
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../../constants/app';

@@ -1,8 +1,8 @@
 import { Trans, useLingui } from '@lingui/react/macro';
 import type { TeamGroup } from '@prisma/client';
 
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
+import { trpc } from '@docutracker/trpc/react';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogClose,
@@ -12,8 +12,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/dialog';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 

@@ -9,8 +9,8 @@ import {
   type TDateFieldMeta as DateFieldMeta,
   FIELD_DEFAULT_GENERIC_ALIGN,
   ZDateFieldMeta,
-} from '@documenso/lib/types/field-meta';
-import { Form } from '@documenso/ui/primitives/form/form';
+} from '@docutracker/lib/types/field-meta';
+import { Form } from '@docutracker/ui/primitives/form/form';
 
 import {
   EditorGenericFontSizeField,

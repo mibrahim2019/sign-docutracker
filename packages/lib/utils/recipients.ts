@@ -2,7 +2,7 @@ import type { Envelope } from '@prisma/client';
 import { type Field, type Recipient, RecipientRole, SigningStatus } from '@prisma/client';
 import { z } from 'zod';
 
-import { isSignatureFieldType } from '@documenso/prisma/guards/is-signature-field';
+import { isSignatureFieldType } from '@docutracker/prisma/guards/is-signature-field';
 
 import { NEXT_PUBLIC_WEBAPP_URL } from '../constants/app';
 import { AppError, AppErrorCode } from '../errors/app-error';

@@ -1,10 +1,10 @@
 import { DeleteEmailIdentityCommand } from '@aws-sdk/client-sesv2';
 import { EmailDomainStatus } from '@prisma/client';
 
-import { DOCUMENSO_ENCRYPTION_KEY } from '@documenso/lib/constants/crypto';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { symmetricDecrypt } from '@documenso/lib/universal/crypto';
-import { prisma } from '@documenso/prisma';
+import { DOCUTRACKER_ENCRYPTION_KEY } from '@docutracker/lib/constants/crypto';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { symmetricDecrypt } from '@docutracker/lib/universal/crypto';
+import { prisma } from '@docutracker/prisma';
 
 import { getSesClient, verifyDomainWithDKIM } from './create-email-domain';
 
@@ -21,10 +21,10 @@ type ReregisterEmailDomainOptions = {
  * Permission is assumed to be checked in the caller.
  */
 export const reregisterEmailDomain = async ({ emailDomainId }: ReregisterEmailDomainOptions) => {
-  const encryptionKey = DOCUMENSO_ENCRYPTION_KEY;
+  const encryptionKey = DOCUTRACKER_ENCRYPTION_KEY;
 
   if (!encryptionKey) {
-    throw new Error('Missing DOCUMENSO_ENCRYPTION_KEY');
+    throw new Error('Missing DOCUTRACKER_ENCRYPTION_KEY');
   }
 
   const emailDomain = await prisma.emailDomain.findUnique({

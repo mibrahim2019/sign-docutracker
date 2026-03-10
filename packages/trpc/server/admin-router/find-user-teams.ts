@@ -1,8 +1,8 @@
 import { Prisma } from '@prisma/client';
 
-import type { FindResultResponse } from '@documenso/lib/types/search-params';
-import { getHighestTeamRoleInGroup } from '@documenso/lib/utils/teams';
-import { prisma } from '@documenso/prisma';
+import type { FindResultResponse } from '@docutracker/lib/types/search-params';
+import { getHighestTeamRoleInGroup } from '@docutracker/lib/utils/teams';
+import { prisma } from '@docutracker/prisma';
 
 import { adminProcedure } from '../trpc';
 import { ZFindUserTeamsRequestSchema, ZFindUserTeamsResponseSchema } from './find-user-teams.types';

@@ -5,9 +5,9 @@ import {
   formatSecureCookieName,
   getCookieDomain,
   useSecureCookies,
-} from '@documenso/lib/constants/auth';
-import { appLog } from '@documenso/lib/utils/debugger';
-import { env } from '@documenso/lib/utils/env';
+} from '@docutracker/lib/constants/auth';
+import { appLog } from '@docutracker/lib/utils/debugger';
+import { env } from '@docutracker/lib/utils/env';
 
 import { AUTH_SESSION_LIFETIME } from '../../config';
 import { extractCookieFromHeaders } from '../utils/cookies';

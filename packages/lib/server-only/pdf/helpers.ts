@@ -2,7 +2,7 @@ import { FieldType } from '@prisma/client';
 import type { Recipient } from '@prisma/client';
 import { match } from 'ts-pattern';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
 
 type RecipientPlaceholderInfo = {
   email: string;

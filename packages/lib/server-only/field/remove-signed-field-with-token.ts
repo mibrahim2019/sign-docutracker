@@ -1,10 +1,10 @@
 import { DocumentStatus, RecipientRole, SigningStatus } from '@prisma/client';
 
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import type { RequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { assertRecipientNotExpired } from '@documenso/lib/utils/recipients';
-import { prisma } from '@documenso/prisma';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@docutracker/lib/types/document-audit-logs';
+import type { RequestMetadata } from '@docutracker/lib/universal/extract-request-metadata';
+import { createDocumentAuditLogData } from '@docutracker/lib/utils/document-audit-logs';
+import { assertRecipientNotExpired } from '@docutracker/lib/utils/recipients';
+import { prisma } from '@docutracker/prisma';
 
 export type RemovedSignedFieldWithTokenOptions = {
   token: string;

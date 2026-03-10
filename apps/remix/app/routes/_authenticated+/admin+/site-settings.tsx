@@ -6,14 +6,14 @@ import { useForm } from 'react-hook-form';
 import { useRevalidator } from 'react-router';
 import type { z } from 'zod';
 
-import { getSiteSettings } from '@documenso/lib/server-only/site-settings/get-site-settings';
+import { getSiteSettings } from '@docutracker/lib/server-only/site-settings/get-site-settings';
 import {
   SITE_SETTINGS_BANNER_ID,
   ZSiteSettingsBannerSchema,
-} from '@documenso/lib/server-only/site-settings/schemas/banner';
-import { trpc as trpcReact } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
-import { ColorPicker } from '@documenso/ui/primitives/color-picker';
+} from '@docutracker/lib/server-only/site-settings/schemas/banner';
+import { trpc as trpcReact } from '@docutracker/trpc/react';
+import { Button } from '@docutracker/ui/primitives/button';
+import { ColorPicker } from '@docutracker/ui/primitives/color-picker';
 import {
   Form,
   FormControl,
@@ -22,10 +22,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Switch } from '@documenso/ui/primitives/switch';
-import { Textarea } from '@documenso/ui/primitives/textarea';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { Switch } from '@docutracker/ui/primitives/switch';
+import { Textarea } from '@docutracker/ui/primitives/textarea';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { SettingsHeader } from '~/components/general/settings-header';
 
@@ -106,7 +106,7 @@ export default function AdminBannerPage({ loaderData }: Route.ComponentProps) {
           <h2 className="font-semibold">
             <Trans>Site Banner</Trans>
           </h2>
-          <p className="text-muted-foreground mt-2 text-sm">
+          <p className="mt-2 text-sm text-muted-foreground">
             <Trans>
               The site banner is a message that is shown at the top of the site. It can be used to
               display important information to your users.

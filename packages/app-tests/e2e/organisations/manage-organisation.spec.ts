@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 
-import { createTeam } from '@documenso/lib/server-only/team/create-team';
-import { nanoid } from '@documenso/lib/universal/id';
-import { seedOrganisationMembers } from '@documenso/prisma/seed/organisations';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { createTeam } from '@docutracker/lib/server-only/team/create-team';
+import { nanoid } from '@docutracker/lib/universal/id';
+import { seedOrganisationMembers } from '@docutracker/prisma/seed/organisations';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin, apiSignout } from '../fixtures/authentication';
 import {

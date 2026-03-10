@@ -1,6 +1,6 @@
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@docutracker/prisma';
 
-const LEGACY_DELETED_ACCOUNT_EMAIL = 'deleted-account@documenso.com';
+const LEGACY_DELETED_ACCOUNT_EMAIL = 'deleted-account@docutracker.io';
 
 export const deletedServiceAccountEmail = () => {
   try {

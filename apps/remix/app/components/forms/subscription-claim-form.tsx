@@ -5,11 +5,11 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router';
 import type { z } from 'zod';
 
-import type { TLicenseClaim } from '@documenso/lib/types/license';
-import { SUBSCRIPTION_CLAIM_FEATURE_FLAGS } from '@documenso/lib/types/subscription';
-import { ZCreateSubscriptionClaimRequestSchema } from '@documenso/trpc/server/admin-router/create-subscription-claim.types';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
+import type { TLicenseClaim } from '@docutracker/lib/types/license';
+import { SUBSCRIPTION_CLAIM_FEATURE_FLAGS } from '@docutracker/lib/types/subscription';
+import { ZCreateSubscriptionClaimRequestSchema } from '@docutracker/trpc/server/admin-router/create-subscription-claim.types';
+import { Alert, AlertDescription } from '@docutracker/ui/primitives/alert';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
 import {
   Form,
   FormControl,
@@ -18,8 +18,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
 
 export type SubscriptionClaimFormValues = z.infer<typeof ZCreateSubscriptionClaimRequestSchema>;
 
@@ -196,7 +196,7 @@ export const SubscriptionClaimForm = ({
                   <span>¹&nbsp;</span>
                   <Trans>Your current license does not include these features.</Trans>{' '}
                   <Link
-                    to="https://docs.documenso.com/users/licenses/enterprise-edition"
+                    to="https://docs.docutracker.io/users/licenses/enterprise-edition"
                     target="_blank"
                     className="text-foreground underline hover:opacity-80"
                   >

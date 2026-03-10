@@ -6,22 +6,22 @@ import { Trans } from '@lingui/react/macro';
 import { EditIcon, MoreHorizontalIcon, Trash2Icon } from 'lucide-react';
 import { Link } from 'react-router';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import { generateEmailDomainRecords } from '@documenso/lib/utils/email-domains';
-import { trpc } from '@documenso/trpc/react';
-import type { TGetOrganisationEmailDomainResponse } from '@documenso/trpc/server/enterprise-router/get-organisation-email-domain.types';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { DataTable, type DataTableColumnDef } from '@documenso/ui/primitives/data-table';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { IS_BILLING_ENABLED } from '@docutracker/lib/constants/app';
+import { generateEmailDomainRecords } from '@docutracker/lib/utils/email-domains';
+import { trpc } from '@docutracker/trpc/react';
+import type { TGetOrganisationEmailDomainResponse } from '@docutracker/trpc/server/enterprise-router/get-organisation-email-domain.types';
+import { Alert, AlertDescription, AlertTitle } from '@docutracker/ui/primitives/alert';
+import { Button } from '@docutracker/ui/primitives/button';
+import { DataTable, type DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
+} from '@docutracker/ui/primitives/dropdown-menu';
+import { SpinnerBox } from '@docutracker/ui/primitives/spinner';
 
 import { OrganisationEmailCreateDialog } from '~/components/dialogs/organisation-email-create-dialog';
 import { OrganisationEmailDeleteDialog } from '~/components/dialogs/organisation-email-delete-dialog';
@@ -65,7 +65,7 @@ export default function OrganisationEmailDomainSettingsPage({ params }: Route.Co
         cell: ({ row }) => (
           <DropdownMenu>
             <DropdownMenuTrigger>
-              <MoreHorizontalIcon className="text-muted-foreground h-5 w-5" />
+              <MoreHorizontalIcon className="h-5 w-5 text-muted-foreground" />
             </DropdownMenuTrigger>
 
             <DropdownMenuContent className="w-52" align="start" forceMount>

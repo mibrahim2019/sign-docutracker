@@ -3,13 +3,13 @@ import { DateTime } from 'luxon';
 import { isDeepEqual } from 'remeda';
 import { match } from 'ts-pattern';
 
-import { validateCheckboxField } from '@documenso/lib/advanced-fields-validation/validate-checkbox';
-import { validateDropdownField } from '@documenso/lib/advanced-fields-validation/validate-dropdown';
-import { validateNumberField } from '@documenso/lib/advanced-fields-validation/validate-number';
-import { validateRadioField } from '@documenso/lib/advanced-fields-validation/validate-radio';
-import { validateTextField } from '@documenso/lib/advanced-fields-validation/validate-text';
-import { fromCheckboxValue } from '@documenso/lib/universal/field-checkbox';
-import { prisma } from '@documenso/prisma';
+import { validateCheckboxField } from '@docutracker/lib/advanced-fields-validation/validate-checkbox';
+import { validateDropdownField } from '@docutracker/lib/advanced-fields-validation/validate-dropdown';
+import { validateNumberField } from '@docutracker/lib/advanced-fields-validation/validate-number';
+import { validateRadioField } from '@docutracker/lib/advanced-fields-validation/validate-radio';
+import { validateTextField } from '@docutracker/lib/advanced-fields-validation/validate-text';
+import { fromCheckboxValue } from '@docutracker/lib/universal/field-checkbox';
+import { prisma } from '@docutracker/prisma';
 
 import { AUTO_SIGNABLE_FIELD_TYPES } from '../../constants/autosign';
 import { DEFAULT_DOCUMENT_DATE_FORMAT } from '../../constants/date-formats';

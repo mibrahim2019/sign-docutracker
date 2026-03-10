@@ -12,18 +12,21 @@ import {
 import { TemplateType } from '@prisma/client';
 import { z } from 'zod';
 
-import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';
-import { SUPPORTED_LANGUAGE_CODES } from '@documenso/lib/constants/i18n';
-import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@documenso/lib/constants/time-zones';
-import { ZUrlSchema } from '@documenso/lib/schemas/common';
+import {
+  DATE_FORMATS,
+  DEFAULT_DOCUMENT_DATE_FORMAT,
+} from '@docutracker/lib/constants/date-formats';
+import { SUPPORTED_LANGUAGE_CODES } from '@docutracker/lib/constants/i18n';
+import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@docutracker/lib/constants/time-zones';
+import { ZUrlSchema } from '@docutracker/lib/schemas/common';
 import {
   ZDocumentAccessAuthTypesSchema,
   ZDocumentActionAuthTypesSchema,
   ZRecipientActionAuthTypesSchema,
-} from '@documenso/lib/types/document-auth';
-import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';
-import { ZEnvelopeAttachmentTypeSchema } from '@documenso/lib/types/envelope-attachment';
-import { ZFieldMetaPrefillFieldsSchema, ZFieldMetaSchema } from '@documenso/lib/types/field-meta';
+} from '@docutracker/lib/types/document-auth';
+import { ZDocumentEmailSettingsSchema } from '@docutracker/lib/types/document-email';
+import { ZEnvelopeAttachmentTypeSchema } from '@docutracker/lib/types/envelope-attachment';
+import { ZFieldMetaPrefillFieldsSchema, ZFieldMetaSchema } from '@docutracker/lib/types/field-meta';
 
 extendZodWithOpenApi(z);
 

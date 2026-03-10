@@ -5,13 +5,13 @@ import { EnvelopeType } from '@prisma/client';
 import { Bird } from 'lucide-react';
 import { useParams, useSearchParams } from 'react-router';
 
-import { useSessionStorage } from '@documenso/lib/client-only/hooks/use-session-storage';
-import { FolderType } from '@documenso/lib/types/folder-type';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { formatDocumentsPath, formatTemplatesPath } from '@documenso/lib/utils/teams';
-import { trpc } from '@documenso/trpc/react';
-import { Avatar, AvatarFallback, AvatarImage } from '@documenso/ui/primitives/avatar';
-import type { RowSelectionState } from '@documenso/ui/primitives/data-table';
+import { useSessionStorage } from '@docutracker/lib/client-only/hooks/use-session-storage';
+import { FolderType } from '@docutracker/lib/types/folder-type';
+import { formatAvatarUrl } from '@docutracker/lib/utils/avatars';
+import { formatDocumentsPath, formatTemplatesPath } from '@docutracker/lib/utils/teams';
+import { trpc } from '@docutracker/trpc/react';
+import { Avatar, AvatarFallback, AvatarImage } from '@docutracker/ui/primitives/avatar';
+import type { RowSelectionState } from '@docutracker/ui/primitives/data-table';
 
 import { EnvelopesBulkDeleteDialog } from '~/components/dialogs/envelopes-bulk-delete-dialog';
 import { EnvelopesBulkMoveDialog } from '~/components/dialogs/envelopes-bulk-move-dialog';

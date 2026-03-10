@@ -4,10 +4,10 @@ import { Trans } from '@lingui/react/macro';
 import { AlertCircle } from 'lucide-react';
 import { useRevalidator } from 'react-router';
 
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
-import { PopoverHover } from '@documenso/ui/primitives/popover';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { trpc } from '@docutracker/trpc/react';
+import { Button } from '@docutracker/ui/primitives/button';
+import { PopoverHover } from '@docutracker/ui/primitives/popover';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export type LegacyFieldWarningPopoverProps = {
   type?: 'document' | 'template';
@@ -83,7 +83,7 @@ export const LegacyFieldWarningPopover = ({
         </Button>
       }
     >
-      <p className="text-muted-foreground text-sm">
+      <p className="text-sm text-muted-foreground">
         {type === 'document' ? (
           <Trans>
             This document is using legacy field insertion, we recommend using the new field

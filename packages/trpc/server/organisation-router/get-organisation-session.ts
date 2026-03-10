@@ -1,10 +1,10 @@
-import { getHighestOrganisationRoleInGroup } from '@documenso/lib/utils/organisations';
+import { getHighestOrganisationRoleInGroup } from '@docutracker/lib/utils/organisations';
 import {
   buildTeamWhereQuery,
   extractDerivedTeamSettings,
   getHighestTeamRoleInGroup,
-} from '@documenso/lib/utils/teams';
-import { prisma } from '@documenso/prisma';
+} from '@docutracker/lib/utils/teams';
+import { prisma } from '@docutracker/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import type { TGetOrganisationSessionResponse } from './get-organisation-session.types';

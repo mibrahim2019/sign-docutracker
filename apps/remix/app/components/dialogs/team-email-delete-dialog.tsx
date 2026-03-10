@@ -6,12 +6,12 @@ import { Trans } from '@lingui/react/macro';
 import type { Prisma } from '@prisma/client';
 import { useRevalidator } from 'react-router';
 
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { trpc } from '@documenso/trpc/react';
-import { Alert } from '@documenso/ui/primitives/alert';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Button } from '@documenso/ui/primitives/button';
+import { formatAvatarUrl } from '@docutracker/lib/utils/avatars';
+import { extractInitials } from '@docutracker/lib/utils/recipient-formatter';
+import { trpc } from '@docutracker/trpc/react';
+import { Alert } from '@docutracker/ui/primitives/alert';
+import { AvatarWithText } from '@docutracker/ui/primitives/avatar';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -20,8 +20,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/dialog';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export type TeamEmailDeleteDialogProps = {
   trigger?: React.ReactNode;
@@ -129,7 +129,7 @@ export const TeamEmailDeleteDialog = ({ trigger, teamName, team }: TeamEmailDele
               (team.teamEmail?.name || team.emailVerification?.name) ?? '',
             )}
             primaryText={
-              <span className="text-foreground/80 text-sm font-semibold">
+              <span className="text-sm font-semibold text-foreground/80">
                 {team.teamEmail?.name || team.emailVerification?.name}
               </span>
             }

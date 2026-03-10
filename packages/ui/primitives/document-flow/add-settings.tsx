@@ -14,37 +14,40 @@ import { InfoIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
 
-import { useAutoSave } from '@documenso/lib/client-only/hooks/use-autosave';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';
-import { DOCUMENT_SIGNATURE_TYPES } from '@documenso/lib/constants/document';
-import { SUPPORTED_LANGUAGES } from '@documenso/lib/constants/i18n';
-import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@documenso/lib/constants/time-zones';
-import type { TDocument } from '@documenso/lib/types/document';
-import { extractDocumentAuthMethods } from '@documenso/lib/utils/document-auth';
-import { extractTeamSignatureSettings } from '@documenso/lib/utils/teams';
+import { useAutoSave } from '@docutracker/lib/client-only/hooks/use-autosave';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import {
+  DATE_FORMATS,
+  DEFAULT_DOCUMENT_DATE_FORMAT,
+} from '@docutracker/lib/constants/date-formats';
+import { DOCUMENT_SIGNATURE_TYPES } from '@docutracker/lib/constants/document';
+import { SUPPORTED_LANGUAGES } from '@docutracker/lib/constants/i18n';
+import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@docutracker/lib/constants/time-zones';
+import type { TDocument } from '@docutracker/lib/types/document';
+import { extractDocumentAuthMethods } from '@docutracker/lib/utils/document-auth';
+import { extractTeamSignatureSettings } from '@docutracker/lib/utils/teams';
 import {
   DocumentGlobalAuthAccessSelect,
   DocumentGlobalAuthAccessTooltip,
-} from '@documenso/ui/components/document/document-global-auth-access-select';
+} from '@docutracker/ui/components/document/document-global-auth-access-select';
 import {
   DocumentGlobalAuthActionSelect,
   DocumentGlobalAuthActionTooltip,
-} from '@documenso/ui/components/document/document-global-auth-action-select';
+} from '@docutracker/ui/components/document/document-global-auth-action-select';
 import {
   DocumentReadOnlyFields,
   mapFieldsWithRecipients,
-} from '@documenso/ui/components/document/document-read-only-fields';
+} from '@docutracker/ui/components/document/document-read-only-fields';
 import {
   DocumentVisibilitySelect,
   DocumentVisibilityTooltip,
-} from '@documenso/ui/components/document/document-visibility-select';
+} from '@docutracker/ui/components/document/document-visibility-select';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@documenso/ui/primitives/accordion';
+} from '@docutracker/ui/primitives/accordion';
 import {
   Form,
   FormControl,
@@ -52,8 +55,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { MultiSelectCombobox } from '@documenso/ui/primitives/multi-select-combobox';
+} from '@docutracker/ui/primitives/form/form';
+import { MultiSelectCombobox } from '@docutracker/ui/primitives/multi-select-combobox';
 
 import { DocumentSignatureSettingsTooltip } from '../../components/document/document-signature-settings-tooltip';
 import { Combobox } from '../combobox';
@@ -242,7 +245,7 @@ export const AddSettingsFormPartial = ({
                         <InfoIcon className="mx-2 h-4 w-4" />
                       </TooltipTrigger>
 
-                      <TooltipContent className="text-foreground max-w-md space-y-2 p-4">
+                      <TooltipContent className="max-w-md space-y-2 p-4 text-foreground">
                         <Trans>
                           Controls the language for the document, including the language to be used
                           for email notifications, and the final certificate that is generated and
@@ -361,11 +364,11 @@ export const AddSettingsFormPartial = ({
 
             <Accordion type="multiple" className="mt-6">
               <AccordionItem value="advanced-options" className="border-none">
-                <AccordionTrigger className="text-foreground mb-2 rounded border px-3 py-2 text-left hover:bg-neutral-200/30 hover:no-underline">
+                <AccordionTrigger className="mb-2 rounded border px-3 py-2 text-left text-foreground hover:bg-neutral-200/30 hover:no-underline">
                   <Trans>Advanced Options</Trans>
                 </AccordionTrigger>
 
-                <AccordionContent className="text-muted-foreground -mx-1 px-1 pt-2 text-sm leading-relaxed">
+                <AccordionContent className="-mx-1 px-1 pt-2 text-sm leading-relaxed text-muted-foreground">
                   <div className="flex flex-col space-y-6">
                     <FormField
                       control={form.control}
@@ -379,7 +382,7 @@ export const AddSettingsFormPartial = ({
                                 <InfoIcon className="mx-2 h-4 w-4" />
                               </TooltipTrigger>
 
-                              <TooltipContent className="text-muted-foreground max-w-xs">
+                              <TooltipContent className="max-w-xs text-muted-foreground">
                                 <Trans>
                                   Add an external ID to the document. This can be used to identify
                                   the document in external systems.
@@ -418,7 +421,7 @@ export const AddSettingsFormPartial = ({
                                 field.onChange(value);
                                 void handleAutoSave();
                               }}
-                              className="bg-background w-full"
+                              className="w-full bg-background"
                               emptySelectionPlaceholder={t`Select signature types`}
                             />
                           </FormControl>
@@ -506,7 +509,7 @@ export const AddSettingsFormPartial = ({
                                 <InfoIcon className="mx-2 h-4 w-4" />
                               </TooltipTrigger>
 
-                              <TooltipContent className="text-muted-foreground max-w-xs">
+                              <TooltipContent className="max-w-xs text-muted-foreground">
                                 <Trans>
                                   Add a URL to redirect the user to once the document is signed
                                 </Trans>

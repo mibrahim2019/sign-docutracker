@@ -10,8 +10,8 @@ import {
   DEFAULT_FIELD_FONT_SIZE,
   type TRadioFieldMeta as RadioFieldMeta,
   ZRadioFieldMeta,
-} from '@documenso/lib/types/field-meta';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
+} from '@docutracker/lib/types/field-meta';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
 import {
   Form,
   FormControl,
@@ -19,16 +19,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { Separator } from '@documenso/ui/primitives/separator';
+} from '@docutracker/ui/primitives/select';
+import { Separator } from '@docutracker/ui/primitives/separator';
 
 import {
   EditorGenericFontSizeField,
@@ -140,7 +140,7 @@ export const EditorFieldRadioForm = ({
                 </FormLabel>
                 <FormControl>
                   <Select value={field.value} onValueChange={field.onChange}>
-                    <SelectTrigger className="text-muted-foreground bg-background w-full">
+                    <SelectTrigger className="w-full bg-background text-muted-foreground">
                       <SelectValue placeholder={t`Select direction`} />
                     </SelectTrigger>
                     <SelectContent position="popper">
@@ -187,7 +187,7 @@ export const EditorFieldRadioForm = ({
                       <FormItem>
                         <FormControl>
                           <Checkbox
-                            className="data-[state=checked]:bg-primary border-foreground/30 h-5 w-5"
+                            className="h-5 w-5 border-foreground/30 data-[state=checked]:bg-primary"
                             checked={field.value}
                             onCheckedChange={(value) => {
                               // Uncheck all other values.

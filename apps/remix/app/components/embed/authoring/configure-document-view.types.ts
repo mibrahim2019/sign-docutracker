@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';
+import { ZDocumentEmailSettingsSchema } from '@docutracker/lib/types/document-email';
 import {
   ZDocumentMetaDateFormatSchema,
   ZDocumentMetaLanguageSchema,
-} from '@documenso/lib/types/document-meta';
-import { ZRecipientEmailSchema } from '@documenso/lib/types/recipient';
-import { DocumentDistributionMethod } from '@documenso/prisma/generated/types';
+} from '@docutracker/lib/types/document-meta';
+import { ZRecipientEmailSchema } from '@docutracker/lib/types/recipient';
+import { DocumentDistributionMethod } from '@docutracker/prisma/generated/types';
 
 // Define the schema for configuration
 export type TConfigureEmbedFormSchema = z.infer<typeof ZConfigureEmbedFormSchema>;

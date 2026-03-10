@@ -1,7 +1,7 @@
 import { Trans } from '@lingui/react/macro';
 import { Link } from 'react-router';
 
-import { Button } from '@documenso/ui/primitives/button';
+import { Button } from '@docutracker/ui/primitives/button';
 
 import { appMetaTags } from '~/utils/meta';
 
@@ -17,7 +17,7 @@ export default function ResetPasswordPage() {
           <Trans>Unable to reset password</Trans>
         </h1>
 
-        <p className="text-muted-foreground mt-2 text-sm">
+        <p className="mt-2 text-sm text-muted-foreground">
           <Trans>
             The token you have used to reset your password is either expired or it never existed. If
             you have still forgotten your password, please request a new reset link.

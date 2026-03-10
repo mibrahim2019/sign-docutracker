@@ -2,12 +2,12 @@ import { expect, test } from '@playwright/test';
 import type { Team, User } from '@prisma/client';
 import { EnvelopeType, FolderType } from '@prisma/client';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
-import { prisma } from '@documenso/prisma';
-import { seedBlankDocument } from '@documenso/prisma/seed/documents';
-import { seedBlankFolder } from '@documenso/prisma/seed/folders';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { createApiToken } from '@docutracker/lib/server-only/public-api/create-api-token';
+import { prisma } from '@docutracker/prisma';
+import { seedBlankDocument } from '@docutracker/prisma/seed/documents';
+import { seedBlankFolder } from '@docutracker/prisma/seed/folders';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 const WEBAPP_BASE_URL = NEXT_PUBLIC_WEBAPP_URL();
 

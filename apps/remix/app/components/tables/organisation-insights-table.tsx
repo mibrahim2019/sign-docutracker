@@ -6,14 +6,14 @@ import { Building2, Loader, TrendingUp, Users } from 'lucide-react';
 import { Link } from 'react-router';
 import { useNavigation } from 'react-router';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import type { OrganisationDetailedInsights } from '@documenso/lib/server-only/admin/get-organisation-detailed-insights';
-import type { DateRange } from '@documenso/lib/types/search-params';
-import type { ExtendedDocumentStatus } from '@documenso/prisma/types/extended-document-status';
-import { Button } from '@documenso/ui/primitives/button';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import type { OrganisationDetailedInsights } from '@docutracker/lib/server-only/admin/get-organisation-detailed-insights';
+import type { DateRange } from '@docutracker/lib/types/search-params';
+import type { ExtendedDocumentStatus } from '@docutracker/prisma/types/extended-document-status';
+import { Button } from '@docutracker/ui/primitives/button';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { DataTablePagination } from '@docutracker/ui/primitives/data-table-pagination';
 
 import { DateRangeFilter } from '~/components/filters/date-range-filter';
 import { DocumentStatus } from '~/components/general/document/document-status';
@@ -276,12 +276,12 @@ const SummaryCard = ({
   value: number;
   subtitle?: string;
 }) => (
-  <div className="bg-card flex items-start gap-x-2 rounded-lg border px-4 py-3">
-    <Icon className="text-muted-foreground h-4 w-4 items-start" />
+  <div className="flex items-start gap-x-2 rounded-lg border bg-card px-4 py-3">
+    <Icon className="h-4 w-4 items-start text-muted-foreground" />
     <div className="-mt-0.5 space-y-2">
-      <p className="text-muted-foreground text-sm font-medium">{title}</p>
+      <p className="text-sm font-medium text-muted-foreground">{title}</p>
       <p className="text-2xl font-bold">{value}</p>
-      {subtitle && <p className="text-muted-foreground text-xs">{subtitle}</p>}
+      {subtitle && <p className="text-xs text-muted-foreground">{subtitle}</p>}
     </div>
   </div>
 );

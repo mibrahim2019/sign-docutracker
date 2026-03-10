@@ -1,6 +1,6 @@
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { prisma } from '@documenso/prisma';
-import type { DocumentVisibility } from '@documenso/prisma/generated/types';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { prisma } from '@docutracker/prisma';
+import type { DocumentVisibility } from '@docutracker/prisma/generated/types';
 
 import { TEAM_DOCUMENT_VISIBILITY_MAP } from '../../constants/teams';
 import { buildTeamWhereQuery } from '../../utils/teams';

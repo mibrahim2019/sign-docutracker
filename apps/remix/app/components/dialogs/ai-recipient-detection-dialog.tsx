@@ -5,18 +5,18 @@ import { useLingui } from '@lingui/react';
 import { Plural, Trans } from '@lingui/react/macro';
 import { CheckIcon, ShieldCheckIcon, UserIcon, XIcon } from 'lucide-react';
 
-import { RECIPIENT_ROLES_DESCRIPTION } from '@documenso/lib/constants/recipient-roles';
-import type { TDetectedRecipientSchema } from '@documenso/lib/server-only/ai/envelope/detect-recipients/schema';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Button } from '@documenso/ui/primitives/button';
+import { RECIPIENT_ROLES_DESCRIPTION } from '@docutracker/lib/constants/recipient-roles';
+import type { TDetectedRecipientSchema } from '@docutracker/lib/server-only/ai/envelope/detect-recipients/schema';
+import { Alert, AlertDescription } from '@docutracker/ui/primitives/alert';
+import { AvatarWithText } from '@docutracker/ui/primitives/avatar';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 
 import {
   AiApiError,

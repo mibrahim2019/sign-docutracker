@@ -1,14 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { ALIGNMENT_TEST_FIELDS } from '@documenso/app-tests/constants/field-alignment-pdf';
-import { FIELD_META_TEST_FIELDS } from '@documenso/app-tests/constants/field-meta-pdf';
-import { isBase64Image } from '@documenso/lib/constants/signatures';
+import { ALIGNMENT_TEST_FIELDS } from '@docutracker/app-tests/constants/field-alignment-pdf';
+import { FIELD_META_TEST_FIELDS } from '@docutracker/app-tests/constants/field-meta-pdf';
+import { isBase64Image } from '@docutracker/lib/constants/signatures';
 import {
   incrementDocumentId,
   incrementTemplateId,
-} from '@documenso/lib/server-only/envelope/increment-id';
-import { nanoid, prefixedId } from '@documenso/lib/universal/id';
+} from '@docutracker/lib/server-only/envelope/increment-id';
+import { nanoid, prefixedId } from '@docutracker/lib/universal/id';
 
 import { prisma } from '..';
 import {

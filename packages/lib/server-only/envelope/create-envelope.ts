@@ -9,17 +9,17 @@ import {
   WebhookTriggerEvents,
 } from '@prisma/client';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import type { PlaceholderInfo } from '@documenso/lib/server-only/pdf/auto-place-fields';
-import { convertPlaceholdersToFieldInputs } from '@documenso/lib/server-only/pdf/auto-place-fields';
-import { findRecipientByPlaceholder } from '@documenso/lib/server-only/pdf/helpers';
-import { normalizePdf as makeNormalizedPdf } from '@documenso/lib/server-only/pdf/normalize-pdf';
-import { ZDefaultRecipientsSchema } from '@documenso/lib/types/default-recipients';
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import type { ApiRequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { nanoid, prefixedId } from '@documenso/lib/universal/id';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { prisma } from '@documenso/prisma';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import type { PlaceholderInfo } from '@docutracker/lib/server-only/pdf/auto-place-fields';
+import { convertPlaceholdersToFieldInputs } from '@docutracker/lib/server-only/pdf/auto-place-fields';
+import { findRecipientByPlaceholder } from '@docutracker/lib/server-only/pdf/helpers';
+import { normalizePdf as makeNormalizedPdf } from '@docutracker/lib/server-only/pdf/normalize-pdf';
+import { ZDefaultRecipientsSchema } from '@docutracker/lib/types/default-recipients';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@docutracker/lib/types/document-audit-logs';
+import type { ApiRequestMetadata } from '@docutracker/lib/universal/extract-request-metadata';
+import { nanoid, prefixedId } from '@docutracker/lib/universal/id';
+import { createDocumentAuditLogData } from '@docutracker/lib/utils/document-audit-logs';
+import { prisma } from '@docutracker/prisma';
 
 import type {
   TDocumentAccessAuthTypes,

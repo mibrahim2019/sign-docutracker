@@ -8,10 +8,10 @@ import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { TEAM_MEMBER_ROLE_HIERARCHY } from '@documenso/lib/constants/teams';
-import { TEAM_MEMBER_ROLE_MAP } from '@documenso/lib/constants/teams-translations';
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
+import { TEAM_MEMBER_ROLE_HIERARCHY } from '@docutracker/lib/constants/teams';
+import { TEAM_MEMBER_ROLE_MAP } from '@docutracker/lib/constants/teams-translations';
+import { trpc } from '@docutracker/trpc/react';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -20,7 +20,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -29,17 +29,17 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { MultiSelectCombobox } from '@documenso/ui/primitives/multi-select-combobox';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { MultiSelectCombobox } from '@docutracker/ui/primitives/multi-select-combobox';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/select';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 
@@ -198,7 +198,7 @@ export const TeamGroupCreateDialog = ({ ...props }: TeamGroupCreateDialogProps) 
                                 })),
                               );
                             }}
-                            className="bg-background w-full"
+                            className="w-full bg-background"
                             emptySelectionPlaceholder={t`Select groups`}
                           />
                         </FormControl>

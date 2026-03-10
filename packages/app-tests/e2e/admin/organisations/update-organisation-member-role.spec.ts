@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 
-import { nanoid } from '@documenso/lib/universal/id';
-import { seedOrganisationMembers } from '@documenso/prisma/seed/organisations';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { nanoid } from '@docutracker/lib/universal/id';
+import { seedOrganisationMembers } from '@docutracker/prisma/seed/organisations';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin } from '../../fixtures/authentication';
 

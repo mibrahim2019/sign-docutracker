@@ -4,10 +4,10 @@ import { DocumentDistributionMethod, DocumentSigningOrder, RecipientRole } from 
 import { nanoid } from 'nanoid';
 import { useForm } from 'react-hook-form';
 
-import { DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';
-import { DEFAULT_DOCUMENT_TIME_ZONE } from '@documenso/lib/constants/time-zones';
-import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';
-import { Button } from '@documenso/ui/primitives/button';
+import { DEFAULT_DOCUMENT_DATE_FORMAT } from '@docutracker/lib/constants/date-formats';
+import { DEFAULT_DOCUMENT_TIME_ZONE } from '@docutracker/lib/constants/time-zones';
+import { ZDocumentEmailSettingsSchema } from '@docutracker/lib/types/document-email';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Form,
   FormControl,
@@ -15,8 +15,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
 
 import { ConfigureDocumentAdvancedSettings } from './configure-document-advanced-settings';
 import { useConfigureDocument } from './configure-document-context';
@@ -88,11 +88,11 @@ export const ConfigureDocumentView = ({
   return (
     <div className="flex w-full flex-col space-y-8">
       <div>
-        <h2 className="text-foreground mb-1 text-xl font-semibold">
+        <h2 className="mb-1 text-xl font-semibold text-foreground">
           {isTemplate ? <Trans>Configure Template</Trans> : <Trans>Configure Document</Trans>}
         </h2>
 
-        <p className="text-muted-foreground text-sm">
+        <p className="text-sm text-muted-foreground">
           {isTemplate ? (
             <Trans>Set up your template properties and recipient information</Trans>
           ) : (

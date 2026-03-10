@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
-import { seedBlankTemplate } from '@documenso/prisma/seed/templates';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { seedBlankTemplate } from '@docutracker/prisma/seed/templates';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 

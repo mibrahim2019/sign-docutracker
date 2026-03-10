@@ -1,4 +1,4 @@
-import { resendDocument } from '@documenso/lib/server-only/document/resend-document';
+import { resendDocument } from '@docutracker/lib/server-only/document/resend-document';
 
 import { ZGenericSuccessResponse } from '../schema';
 import { authenticatedProcedure } from '../trpc';

@@ -7,20 +7,20 @@ import type { KonvaEventObject } from 'konva/lib/Node';
 import type { Transformer } from 'konva/lib/shapes/Transformer';
 import { CopyPlusIcon, SquareStackIcon, TrashIcon, UserCircleIcon } from 'lucide-react';
 
-import type { TLocalField } from '@documenso/lib/client-only/hooks/use-editor-fields';
-import { usePageRenderer } from '@documenso/lib/client-only/hooks/use-page-renderer';
-import { useCurrentEnvelopeEditor } from '@documenso/lib/client-only/providers/envelope-editor-provider';
-import { useCurrentEnvelopeRender } from '@documenso/lib/client-only/providers/envelope-render-provider';
-import { FIELD_META_DEFAULT_VALUES } from '@documenso/lib/types/field-meta';
+import type { TLocalField } from '@docutracker/lib/client-only/hooks/use-editor-fields';
+import { usePageRenderer } from '@docutracker/lib/client-only/hooks/use-page-renderer';
+import { useCurrentEnvelopeEditor } from '@docutracker/lib/client-only/providers/envelope-editor-provider';
+import { useCurrentEnvelopeRender } from '@docutracker/lib/client-only/providers/envelope-render-provider';
+import { FIELD_META_DEFAULT_VALUES } from '@docutracker/lib/types/field-meta';
 import {
   MIN_FIELD_HEIGHT_PX,
   MIN_FIELD_WIDTH_PX,
   convertPixelToPercentage,
-} from '@documenso/lib/universal/field-renderer/field-renderer';
-import { renderField } from '@documenso/lib/universal/field-renderer/render-field';
-import { getClientSideFieldTranslations } from '@documenso/lib/utils/fields';
-import { canRecipientFieldsBeModified } from '@documenso/lib/utils/recipients';
-import { CommandDialog } from '@documenso/ui/primitives/command';
+} from '@docutracker/lib/universal/field-renderer/field-renderer';
+import { renderField } from '@docutracker/lib/universal/field-renderer/render-field';
+import { getClientSideFieldTranslations } from '@docutracker/lib/utils/fields';
+import { canRecipientFieldsBeModified } from '@docutracker/lib/utils/recipients';
+import { CommandDialog } from '@docutracker/ui/primitives/command';
 
 import { fieldButtonList } from './envelope-editor-fields-drag-drop';
 import { EnvelopeRecipientSelectorCommand } from './envelope-recipient-selector';

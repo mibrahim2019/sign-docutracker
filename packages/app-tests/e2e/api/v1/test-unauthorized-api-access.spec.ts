@@ -1,21 +1,21 @@
 import { expect, test } from '@playwright/test';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { createApiToken } from '@docutracker/lib/server-only/public-api/create-api-token';
 import {
   mapSecondaryIdToDocumentId,
   mapSecondaryIdToTemplateId,
-} from '@documenso/lib/utils/envelope';
-import { prisma } from '@documenso/prisma';
-import { DocumentDataType, FieldType } from '@documenso/prisma/client';
+} from '@docutracker/lib/utils/envelope';
+import { prisma } from '@docutracker/prisma';
+import { DocumentDataType, FieldType } from '@docutracker/prisma/client';
 import {
   seedBlankDocument,
   seedCompletedDocument,
   seedDraftDocument,
   seedPendingDocumentWithFullFields,
-} from '@documenso/prisma/seed/documents';
-import { seedBlankTemplate, seedTemplate } from '@documenso/prisma/seed/templates';
-import { seedUser } from '@documenso/prisma/seed/users';
+} from '@docutracker/prisma/seed/documents';
+import { seedBlankTemplate, seedTemplate } from '@docutracker/prisma/seed/templates';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 const WEBAPP_BASE_URL = NEXT_PUBLIC_WEBAPP_URL();
 

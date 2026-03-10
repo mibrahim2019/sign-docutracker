@@ -6,12 +6,15 @@ import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { authClient } from '@documenso/auth/client';
-import type { SessionUser } from '@documenso/auth/server/lib/session/session';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { ZCurrentPasswordSchema, ZPasswordSchema } from '@documenso/trpc/server/auth-router/schema';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import { authClient } from '@docutracker/auth/client';
+import type { SessionUser } from '@docutracker/auth/server/lib/session/session';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import {
+  ZCurrentPasswordSchema,
+  ZPasswordSchema,
+} from '@docutracker/trpc/server/auth-router/schema';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Form,
   FormControl,
@@ -19,9 +22,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { PasswordInput } from '@documenso/ui/primitives/password-input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { PasswordInput } from '@docutracker/ui/primitives/password-input';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export const ZPasswordFormSchema = z
   .object({

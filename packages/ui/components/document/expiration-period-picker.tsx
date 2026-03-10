@@ -6,15 +6,15 @@ import { Trans } from '@lingui/react/macro';
 import type {
   TEnvelopeExpirationDurationPeriod,
   TEnvelopeExpirationPeriod,
-} from '@documenso/lib/constants/envelope-expiration';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@docutracker/lib/constants/envelope-expiration';
+import { Input } from '@docutracker/ui/primitives/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
+} from '@docutracker/ui/primitives/select';
 
 const EXPIRATION_UNITS: Array<{
   value: TEnvelopeExpirationDurationPeriod['unit'];

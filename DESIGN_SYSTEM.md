@@ -1,6 +1,6 @@
-# Documenso Design System
+# Docutracker Design System
 
-A complete, portable reference for replicating the Documenso UI in any project. Every token, component class string, layout pattern, and interaction convention is documented here with exact values.
+A complete, portable reference for replicating the Docutracker UI in any project. Every token, component class string, layout pattern, and interaction convention is documented here with exact values.
 
 ---
 

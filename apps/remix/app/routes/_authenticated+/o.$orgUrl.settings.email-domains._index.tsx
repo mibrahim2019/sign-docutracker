@@ -1,12 +1,15 @@
 import { Trans, useLingui } from '@lingui/react/macro';
 import { Link } from 'react-router';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import { canExecuteOrganisationAction, isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { IS_BILLING_ENABLED } from '@docutracker/lib/constants/app';
+import {
+  canExecuteOrganisationAction,
+  isPersonalLayout,
+} from '@docutracker/lib/utils/organisations';
+import { Alert, AlertDescription, AlertTitle } from '@docutracker/ui/primitives/alert';
+import { Button } from '@docutracker/ui/primitives/button';
 
 import { OrganisationEmailDomainCreateDialog } from '~/components/dialogs/organisation-email-domain-create-dialog';
 import { SettingsHeader } from '~/components/general/settings-header';

@@ -5,9 +5,9 @@ import {
   seedBlankDocument,
   seedDocuments,
   seedTeamDocuments,
-} from '@documenso/prisma/seed/documents';
-import { seedTeam, seedTeamEmail, seedTeamMember } from '@documenso/prisma/seed/teams';
-import { seedUser } from '@documenso/prisma/seed/users';
+} from '@docutracker/prisma/seed/documents';
+import { seedTeam, seedTeamEmail, seedTeamMember } from '@docutracker/prisma/seed/teams';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin, apiSignout } from '../fixtures/authentication';
 import { checkDocumentTabCount } from '../fixtures/documents';

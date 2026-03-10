@@ -1,9 +1,9 @@
-import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '@documenso/lib/constants/teams';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { getMemberRoles } from '@documenso/lib/server-only/team/get-member-roles';
-import { buildTeamWhereQuery, isTeamRoleWithinUserHierarchy } from '@documenso/lib/utils/teams';
-import { prisma } from '@documenso/prisma';
-import { OrganisationGroupType, OrganisationMemberRole } from '@documenso/prisma/generated/types';
+import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '@docutracker/lib/constants/teams';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { getMemberRoles } from '@docutracker/lib/server-only/team/get-member-roles';
+import { buildTeamWhereQuery, isTeamRoleWithinUserHierarchy } from '@docutracker/lib/utils/teams';
+import { prisma } from '@docutracker/prisma';
+import { OrganisationGroupType, OrganisationMemberRole } from '@docutracker/prisma/generated/types';
 
 import { authenticatedProcedure } from '../trpc';
 import {

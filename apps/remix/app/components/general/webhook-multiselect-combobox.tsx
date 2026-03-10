@@ -3,8 +3,8 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { WebhookTriggerEvents } from '@prisma/client';
 
-import { toFriendlyWebhookEventName } from '@documenso/lib/universal/webhook/to-friendly-webhook-event-name';
-import { MultiSelect, type Option } from '@documenso/ui/primitives/multiselect';
+import { toFriendlyWebhookEventName } from '@docutracker/lib/universal/webhook/to-friendly-webhook-event-name';
+import { MultiSelect, type Option } from '@docutracker/ui/primitives/multiselect';
 
 type WebhookMultiSelectComboboxProps = {
   listValues: string[];

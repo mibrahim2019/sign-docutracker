@@ -20,22 +20,22 @@ import { DateTime } from 'luxon';
 import { Link, useSearchParams } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { RECIPIENT_ROLES_DESCRIPTION } from '@documenso/lib/constants/recipient-roles';
-import type { TEnvelope } from '@documenso/lib/types/envelope';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { formatSigningLink, isRecipientExpired } from '@documenso/lib/utils/recipients';
-import { CopyTextButton } from '@documenso/ui/components/common/copy-text-button';
-import { SignatureIcon } from '@documenso/ui/icons/signature';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { PopoverHover } from '@documenso/ui/primitives/popover';
+import { RECIPIENT_ROLES_DESCRIPTION } from '@docutracker/lib/constants/recipient-roles';
+import type { TEnvelope } from '@docutracker/lib/types/envelope';
+import { isDocumentCompleted } from '@docutracker/lib/utils/document';
+import { formatSigningLink, isRecipientExpired } from '@docutracker/lib/utils/recipients';
+import { CopyTextButton } from '@docutracker/ui/components/common/copy-text-button';
+import { SignatureIcon } from '@docutracker/ui/icons/signature';
+import { AvatarWithText } from '@docutracker/ui/primitives/avatar';
+import { Badge } from '@docutracker/ui/primitives/badge';
+import { PopoverHover } from '@docutracker/ui/primitives/popover';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@documenso/ui/primitives/tooltip';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/tooltip';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export type DocumentPageViewRecipientsProps = {
   envelope: TEnvelope;

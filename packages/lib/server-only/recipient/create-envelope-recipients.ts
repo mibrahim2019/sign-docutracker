@@ -1,14 +1,14 @@
 import { EnvelopeType, RecipientRole } from '@prisma/client';
 import { SendStatus, SigningStatus } from '@prisma/client';
 
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import type { TRecipientAccessAuthTypes } from '@documenso/lib/types/document-auth';
-import { type TRecipientActionAuthTypes } from '@documenso/lib/types/document-auth';
-import type { ApiRequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { nanoid } from '@documenso/lib/universal/id';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { createRecipientAuthOptions } from '@documenso/lib/utils/document-auth';
-import { prisma } from '@documenso/prisma';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@docutracker/lib/types/document-audit-logs';
+import type { TRecipientAccessAuthTypes } from '@docutracker/lib/types/document-auth';
+import { type TRecipientActionAuthTypes } from '@docutracker/lib/types/document-auth';
+import type { ApiRequestMetadata } from '@docutracker/lib/universal/extract-request-metadata';
+import { nanoid } from '@docutracker/lib/universal/id';
+import { createDocumentAuditLogData } from '@docutracker/lib/utils/document-audit-logs';
+import { createRecipientAuthOptions } from '@docutracker/lib/utils/document-auth';
+import { prisma } from '@docutracker/prisma';
 
 import { AppError, AppErrorCode } from '../../errors/app-error';
 import type { EnvelopeIdOptions } from '../../utils/envelope';

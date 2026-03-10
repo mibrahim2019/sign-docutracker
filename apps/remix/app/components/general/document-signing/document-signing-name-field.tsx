@@ -5,21 +5,26 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { useRevalidator } from 'react-router';
 
-import { DO_NOT_INVALIDATE_QUERY_ON_MUTATION } from '@documenso/lib/constants/trpc';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import type { TRecipientActionAuth } from '@documenso/lib/types/document-auth';
-import { ZNameFieldMeta } from '@documenso/lib/types/field-meta';
-import type { FieldWithSignature } from '@documenso/prisma/types/field-with-signature';
-import { trpc } from '@documenso/trpc/react';
+import { DO_NOT_INVALIDATE_QUERY_ON_MUTATION } from '@docutracker/lib/constants/trpc';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import type { TRecipientActionAuth } from '@docutracker/lib/types/document-auth';
+import { ZNameFieldMeta } from '@docutracker/lib/types/field-meta';
+import type { FieldWithSignature } from '@docutracker/prisma/types/field-with-signature';
+import { trpc } from '@docutracker/trpc/react';
 import type {
   TRemovedSignedFieldWithTokenMutationSchema,
   TSignFieldWithTokenMutationSchema,
-} from '@documenso/trpc/server/field-router/schema';
-import { Button } from '@documenso/ui/primitives/button';
-import { Dialog, DialogContent, DialogFooter, DialogTitle } from '@documenso/ui/primitives/dialog';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/trpc/server/field-router/schema';
+import { Button } from '@docutracker/ui/primitives/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogTitle,
+} from '@docutracker/ui/primitives/dialog';
+import { Input } from '@docutracker/ui/primitives/input';
+import { Label } from '@docutracker/ui/primitives/label';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useRequiredDocumentSigningAuthContext } from './document-signing-auth-provider';
 import { DocumentSigningFieldContainer } from './document-signing-field-container';

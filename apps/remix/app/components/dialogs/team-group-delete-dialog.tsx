@@ -5,10 +5,10 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import type { TeamMemberRole } from '@prisma/client';
 
-import { isTeamRoleWithinUserHierarchy } from '@documenso/lib/utils/teams';
-import { trpc } from '@documenso/trpc/react';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { isTeamRoleWithinUserHierarchy } from '@docutracker/lib/utils/teams';
+import { trpc } from '@docutracker/trpc/react';
+import { Alert, AlertDescription } from '@docutracker/ui/primitives/alert';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -17,8 +17,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/dialog';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 

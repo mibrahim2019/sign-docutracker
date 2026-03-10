@@ -3,11 +3,11 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { Link } from 'react-router';
 
-import { getSession } from '@documenso/auth/server/lib/utils/get-session';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { prisma } from '@documenso/prisma';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { getSession } from '@docutracker/auth/server/lib/utils/get-session';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { prisma } from '@docutracker/prisma';
+import { Alert, AlertDescription, AlertTitle } from '@docutracker/ui/primitives/alert';
+import { Button } from '@docutracker/ui/primitives/button';
 
 import { DisableAuthenticatorAppDialog } from '~/components/forms/2fa/disable-authenticator-app-dialog';
 import { EnableAuthenticatorAppDialog } from '~/components/forms/2fa/enable-authenticator-app-dialog';
@@ -71,7 +71,7 @@ export default function SettingsSecurity({ loaderData }: Route.ComponentProps) {
         <>
           <PasswordForm user={user} />
 
-          <hr className="border-border/50 mt-6" />
+          <hr className="mt-6 border-border/50" />
         </>
       )}
 

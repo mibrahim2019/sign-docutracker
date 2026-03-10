@@ -8,11 +8,11 @@ import type { DropEvent, FileRejection } from 'react-dropzone';
 import { useDropzone } from 'react-dropzone';
 import { Link } from 'react-router';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT, IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import { megabytesToBytes } from '@documenso/lib/universal/unit-convertions';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT, IS_BILLING_ENABLED } from '@docutracker/lib/constants/app';
+import { megabytesToBytes } from '@docutracker/lib/universal/unit-convertions';
+import { isPersonalLayout } from '@docutracker/lib/utils/organisations';
 
 import { Button } from './button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './tooltip';
@@ -79,7 +79,7 @@ export const DocumentUploadButton = ({
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Button className="hover:bg-warning/80 bg-warning" asChild>
+            <Button className="bg-warning hover:bg-warning/80" asChild>
               <Link
                 to={
                   isPersonalLayoutMode

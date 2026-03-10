@@ -4,16 +4,16 @@ import { EnvelopeType } from '@prisma/client';
 import { DateTime } from 'luxon';
 import { redirect } from 'react-router';
 
-import { DOCUMENT_STATUS } from '@documenso/lib/constants/document';
-import { APP_I18N_OPTIONS, ZSupportedLanguageCodeSchema } from '@documenso/lib/constants/i18n';
-import { RECIPIENT_ROLES_DESCRIPTION } from '@documenso/lib/constants/recipient-roles';
-import { unsafeGetEntireEnvelope } from '@documenso/lib/server-only/admin/get-entire-document';
-import { decryptSecondaryData } from '@documenso/lib/server-only/crypto/decrypt';
-import { findDocumentAuditLogs } from '@documenso/lib/server-only/document/find-document-audit-logs';
-import { getOrganisationClaimByTeamId } from '@documenso/lib/server-only/organisation/get-organisation-claims';
-import { mapSecondaryIdToDocumentId } from '@documenso/lib/utils/envelope';
-import { getTranslations } from '@documenso/lib/utils/i18n';
-import { Card, CardContent } from '@documenso/ui/primitives/card';
+import { DOCUMENT_STATUS } from '@docutracker/lib/constants/document';
+import { APP_I18N_OPTIONS, ZSupportedLanguageCodeSchema } from '@docutracker/lib/constants/i18n';
+import { RECIPIENT_ROLES_DESCRIPTION } from '@docutracker/lib/constants/recipient-roles';
+import { unsafeGetEntireEnvelope } from '@docutracker/lib/server-only/admin/get-entire-document';
+import { decryptSecondaryData } from '@docutracker/lib/server-only/crypto/decrypt';
+import { findDocumentAuditLogs } from '@docutracker/lib/server-only/document/find-document-audit-logs';
+import { getOrganisationClaimByTeamId } from '@docutracker/lib/server-only/organisation/get-organisation-claims';
+import { mapSecondaryIdToDocumentId } from '@docutracker/lib/utils/envelope';
+import { getTranslations } from '@docutracker/lib/utils/i18n';
+import { Card, CardContent } from '@docutracker/ui/primitives/card';
 
 import appStylesheet from '~/app.css?url';
 import { BrandingLogo } from '~/components/general/branding-logo';

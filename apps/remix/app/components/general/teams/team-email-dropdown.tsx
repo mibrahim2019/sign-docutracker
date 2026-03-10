@@ -3,15 +3,15 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { Edit, Loader, Mail, MoreHorizontal, X } from 'lucide-react';
 
-import type { getTeamWithEmail } from '@documenso/lib/server-only/team/get-team-email-by-email';
-import { trpc } from '@documenso/trpc/react';
+import type { getTeamWithEmail } from '@docutracker/lib/server-only/team/get-team-email-by-email';
+import { trpc } from '@docutracker/trpc/react';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/dropdown-menu';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { TeamEmailDeleteDialog } from '~/components/dialogs/team-email-delete-dialog';
 import { TeamEmailUpdateDialog } from '~/components/dialogs/team-email-update-dialog';
@@ -46,7 +46,7 @@ export const TeamEmailDropdown = ({ team }: TeamEmailDropdownProps) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <MoreHorizontal className="text-muted-foreground h-5 w-5" />
+        <MoreHorizontal className="h-5 w-5 text-muted-foreground" />
       </DropdownMenuTrigger>
 
       <DropdownMenuContent className="w-52" align="start" forceMount>

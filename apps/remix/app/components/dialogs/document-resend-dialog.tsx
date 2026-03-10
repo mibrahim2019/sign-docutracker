@@ -9,14 +9,14 @@ import { History } from 'lucide-react';
 import { useForm, useWatch } from 'react-hook-form';
 import * as z from 'zod';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { getRecipientType } from '@documenso/lib/client-only/recipient-type';
-import { recipientAbbreviation } from '@documenso/lib/utils/recipient-formatter';
-import type { Document } from '@documenso/prisma/types/document-legacy-schema';
-import { trpc as trpcReact } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { getRecipientType } from '@docutracker/lib/client-only/recipient-type';
+import { recipientAbbreviation } from '@docutracker/lib/utils/recipient-formatter';
+import type { Document } from '@docutracker/prisma/types/document-legacy-schema';
+import { trpc as trpcReact } from '@docutracker/trpc/react';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
 import {
   Dialog,
   DialogClose,
@@ -25,16 +25,16 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { DropdownMenuItem } from '@documenso/ui/primitives/dropdown-menu';
+} from '@docutracker/ui/primitives/dialog';
+import { DropdownMenuItem } from '@docutracker/ui/primitives/dropdown-menu';
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-} from '@documenso/ui/primitives/form/form';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 
@@ -183,7 +183,7 @@ export const DocumentResendDialog = ({ document, recipients }: DocumentResendDia
             <DialogClose asChild>
               <Button
                 type="button"
-                className="dark:bg-muted dark:hover:bg-muted/80 flex-1 bg-black/5 hover:bg-black/10"
+                className="flex-1 bg-black/5 hover:bg-black/10 dark:bg-muted dark:hover:bg-muted/80"
                 variant="secondary"
                 disabled={isSubmitting}
               >

@@ -3,16 +3,16 @@ import type { Team, User } from '@prisma/client';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
-import { EnvelopeType, FieldType, RecipientRole } from '@documenso/prisma/client';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { createApiToken } from '@docutracker/lib/server-only/public-api/create-api-token';
+import { EnvelopeType, FieldType, RecipientRole } from '@docutracker/prisma/client';
+import { seedUser } from '@docutracker/prisma/seed/users';
 import type {
   TCreateEnvelopePayload,
   TCreateEnvelopeResponse,
-} from '@documenso/trpc/server/envelope-router/create-envelope.types';
-import type { TCreateEnvelopeRecipientsRequest } from '@documenso/trpc/server/envelope-router/envelope-recipients/create-envelope-recipients.types';
-import type { TGetEnvelopeResponse } from '@documenso/trpc/server/envelope-router/get-envelope.types';
+} from '@docutracker/trpc/server/envelope-router/create-envelope.types';
+import type { TCreateEnvelopeRecipientsRequest } from '@docutracker/trpc/server/envelope-router/envelope-recipients/create-envelope-recipients.types';
+import type { TGetEnvelopeResponse } from '@docutracker/trpc/server/envelope-router/get-envelope.types';
 
 const WEBAPP_BASE_URL = NEXT_PUBLIC_WEBAPP_URL();
 const baseUrl = `${WEBAPP_BASE_URL}/api/v2-beta`;

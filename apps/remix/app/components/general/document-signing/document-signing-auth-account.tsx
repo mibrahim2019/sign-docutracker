@@ -4,11 +4,11 @@ import { Trans, useLingui } from '@lingui/react/macro';
 import { RecipientRole } from '@prisma/client';
 import { match } from 'ts-pattern';
 
-import { authClient } from '@documenso/auth/client';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { DialogFooter } from '@documenso/ui/primitives/dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { authClient } from '@docutracker/auth/client';
+import { Alert, AlertDescription } from '@docutracker/ui/primitives/alert';
+import { Button } from '@docutracker/ui/primitives/button';
+import { DialogFooter } from '@docutracker/ui/primitives/dialog';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useRequiredDocumentSigningAuthContext } from './document-signing-auth-provider';
 

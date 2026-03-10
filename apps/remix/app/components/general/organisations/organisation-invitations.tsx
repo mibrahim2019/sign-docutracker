@@ -5,13 +5,13 @@ import { OrganisationMemberInviteStatus } from '@prisma/client';
 import { AnimatePresence } from 'framer-motion';
 import { BellIcon } from 'lucide-react';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { trpc } from '@documenso/trpc/react';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Button } from '@documenso/ui/primitives/button';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { formatAvatarUrl } from '@docutracker/lib/utils/avatars';
+import { trpc } from '@docutracker/trpc/react';
+import { AnimateGenericFadeInOut } from '@docutracker/ui/components/animate/animate-generic-fade-in-out';
+import { Alert, AlertDescription } from '@docutracker/ui/primitives/alert';
+import { AvatarWithText } from '@docutracker/ui/primitives/avatar';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -19,8 +19,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/dialog';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export const OrganisationInvitations = ({ className }: { className?: string }) => {
   const { data, isLoading } = trpc.organisation.member.invite.getMany.useQuery({
@@ -90,7 +90,7 @@ export const OrganisationInvitations = ({ className }: { className?: string }) =
                             className="w-full max-w-none py-4"
                             avatarFallback={invitation.organisation.name.slice(0, 1)}
                             primaryText={
-                              <span className="text-foreground/80 font-semibold">
+                              <span className="font-semibold text-foreground/80">
                                 {invitation.organisation.name}
                               </span>
                             }

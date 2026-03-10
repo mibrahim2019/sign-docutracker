@@ -1,9 +1,9 @@
 import { z } from 'zod';
 import { zfd } from 'zod-form-data';
 
-import { ZEnvelopeExpirationPeriod } from '@documenso/lib/constants/envelope-expiration';
-import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';
-import { ZDocumentFormValuesSchema } from '@documenso/lib/types/document-form-values';
+import { ZEnvelopeExpirationPeriod } from '@docutracker/lib/constants/envelope-expiration';
+import { ZDocumentEmailSettingsSchema } from '@docutracker/lib/types/document-email';
+import { ZDocumentFormValuesSchema } from '@docutracker/lib/types/document-form-values';
 import {
   ZDocumentMetaDateFormatSchema,
   ZDocumentMetaDistributionMethodSchema,
@@ -15,10 +15,10 @@ import {
   ZDocumentMetaTimezoneSchema,
   ZDocumentMetaTypedSignatureEnabledSchema,
   ZDocumentMetaUploadSignatureEnabledSchema,
-} from '@documenso/lib/types/document-meta';
-import { ZEnvelopeAttachmentTypeSchema } from '@documenso/lib/types/envelope-attachment';
-import { ZFieldMetaPrefillFieldsSchema } from '@documenso/lib/types/field-meta';
-import { ZRecipientEmailSchema } from '@documenso/lib/types/recipient';
+} from '@docutracker/lib/types/document-meta';
+import { ZEnvelopeAttachmentTypeSchema } from '@docutracker/lib/types/envelope-attachment';
+import { ZFieldMetaPrefillFieldsSchema } from '@docutracker/lib/types/field-meta';
+import { ZRecipientEmailSchema } from '@docutracker/lib/types/recipient';
 
 import { zodFormData } from '../../utils/zod-form-data';
 import type { TrpcRouteMeta } from '../trpc';

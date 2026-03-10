@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 
 import { Outlet, useNavigate } from 'react-router';
 
-import { OrganisationProvider } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { TrpcProvider } from '@documenso/trpc/react';
+import { OrganisationProvider } from '@docutracker/lib/client-only/providers/organisation';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { isPersonalLayout } from '@docutracker/lib/utils/organisations';
+import { TrpcProvider } from '@docutracker/trpc/react';
 
 import { TeamProvider } from '~/providers/team';
 

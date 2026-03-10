@@ -9,12 +9,12 @@ import {
 import { DateTime } from 'luxon';
 import path from 'node:path';
 
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@docutracker/prisma';
 import {
   seedBlankDocument,
   seedPendingDocumentWithFullFields,
-} from '@documenso/prisma/seed/documents';
-import { seedUser } from '@documenso/prisma/seed/users';
+} from '@docutracker/prisma/seed/documents';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 import { signSignaturePad } from '../fixtures/signature';

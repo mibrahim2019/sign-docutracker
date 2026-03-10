@@ -7,19 +7,19 @@ import { type Field, type Recipient, RecipientRole } from '@prisma/client';
 import { Controller, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 
-import type { DocumentAndSender } from '@documenso/lib/server-only/document/get-document-by-token';
-import type { TRecipientAccessAuth } from '@documenso/lib/types/document-auth';
-import { isFieldUnsignedAndRequired } from '@documenso/lib/utils/advanced-fields-helpers';
-import { sortFieldsByPosition } from '@documenso/lib/utils/fields';
-import { isSignatureFieldType } from '@documenso/prisma/guards/is-signature-field';
-import type { RecipientWithFields } from '@documenso/prisma/types/recipient-with-fields';
-import { FieldToolTip } from '@documenso/ui/components/field/field-tooltip';
-import { Button } from '@documenso/ui/primitives/button';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { RadioGroup, RadioGroupItem } from '@documenso/ui/primitives/radio-group';
-import { SignaturePadDialog } from '@documenso/ui/primitives/signature-pad/signature-pad-dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import type { DocumentAndSender } from '@docutracker/lib/server-only/document/get-document-by-token';
+import type { TRecipientAccessAuth } from '@docutracker/lib/types/document-auth';
+import { isFieldUnsignedAndRequired } from '@docutracker/lib/utils/advanced-fields-helpers';
+import { sortFieldsByPosition } from '@docutracker/lib/utils/fields';
+import { isSignatureFieldType } from '@docutracker/prisma/guards/is-signature-field';
+import type { RecipientWithFields } from '@docutracker/prisma/types/recipient-with-fields';
+import { FieldToolTip } from '@docutracker/ui/components/field/field-tooltip';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Input } from '@docutracker/ui/primitives/input';
+import { Label } from '@docutracker/ui/primitives/label';
+import { RadioGroup, RadioGroupItem } from '@docutracker/ui/primitives/radio-group';
+import { SignaturePadDialog } from '@docutracker/ui/primitives/signature-pad/signature-pad-dialog';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import {
   AssistantConfirmationDialog,

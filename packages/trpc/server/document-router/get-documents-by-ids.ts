@@ -1,8 +1,8 @@
 import { EnvelopeType } from '@prisma/client';
 
-import { getMultipleEnvelopeWhereInput } from '@documenso/lib/server-only/envelope/get-envelopes-by-ids';
-import { mapEnvelopesToDocumentMany } from '@documenso/lib/utils/document';
-import { prisma } from '@documenso/prisma';
+import { getMultipleEnvelopeWhereInput } from '@docutracker/lib/server-only/envelope/get-envelopes-by-ids';
+import { mapEnvelopesToDocumentMany } from '@docutracker/lib/utils/document';
+import { prisma } from '@docutracker/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import {

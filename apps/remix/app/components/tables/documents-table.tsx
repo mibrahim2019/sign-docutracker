@@ -7,17 +7,17 @@ import { DateTime } from 'luxon';
 import { Link } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { formatDocumentsPath } from '@documenso/lib/utils/teams';
-import type { TFindDocumentsResponse } from '@documenso/trpc/server/document-router/find-documents.types';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
-import type { DataTableColumnDef, RowSelectionState } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { isDocumentCompleted } from '@docutracker/lib/utils/document';
+import { formatDocumentsPath } from '@docutracker/lib/utils/teams';
+import type { TFindDocumentsResponse } from '@docutracker/trpc/server/document-router/find-documents.types';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
+import type { DataTableColumnDef, RowSelectionState } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { DataTablePagination } from '@docutracker/ui/primitives/data-table-pagination';
+import { Skeleton } from '@docutracker/ui/primitives/skeleton';
+import { TableCell } from '@docutracker/ui/primitives/table';
 
 import { DocumentStatus } from '~/components/general/document/document-status';
 import { useCurrentTeam } from '~/providers/team';

@@ -7,12 +7,12 @@ import { File } from 'lucide-react';
 import { DateTime } from 'luxon';
 import { Link } from 'react-router';
 
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+import { trpc } from '@docutracker/trpc/react';
+import { Button } from '@docutracker/ui/primitives/button';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { Skeleton } from '@docutracker/ui/primitives/skeleton';
+import { TableCell } from '@docutracker/ui/primitives/table';
 
 export type OrganisationBillingInvoicesTableProps = {
   organisationId: string;
@@ -59,7 +59,7 @@ export const OrganisationBillingInvoicesTable = ({
           <div className="flex max-w-xs items-center gap-2">
             <File className="h-6 w-6" />
 
-            <div className="text-foreground/80 text-sm font-semibold">
+            <div className="text-sm font-semibold text-foreground/80">
               {DateTime.fromSeconds(row.original.created).toFormat('MMMM yyyy')}
             </div>
           </div>

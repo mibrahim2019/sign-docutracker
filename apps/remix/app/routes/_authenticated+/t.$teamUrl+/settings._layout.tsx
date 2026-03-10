@@ -11,11 +11,11 @@ import {
 } from 'lucide-react';
 import { Link, NavLink, Outlet, redirect } from 'react-router';
 
-import { getSession } from '@documenso/auth/server/lib/utils/get-session';
-import { getTeamByUrl } from '@documenso/lib/server-only/team/get-team';
-import { canExecuteTeamAction } from '@documenso/lib/utils/teams';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import { getSession } from '@docutracker/auth/server/lib/utils/get-session';
+import { getTeamByUrl } from '@docutracker/lib/server-only/team/get-team';
+import { canExecuteTeamAction } from '@docutracker/lib/utils/teams';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
 
 import { GenericErrorLayout } from '~/components/general/generic-error-layout';
 import { useCurrentTeam } from '~/providers/team';

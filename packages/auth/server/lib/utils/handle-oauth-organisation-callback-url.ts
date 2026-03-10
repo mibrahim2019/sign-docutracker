@@ -1,10 +1,10 @@
 import type { Context } from 'hono';
 
-import { sendOrganisationAccountLinkConfirmationEmail } from '@documenso/ee/server-only/lib/send-organisation-account-link-confirmation-email';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { onCreateUserHook } from '@documenso/lib/server-only/user/create-user';
-import { formatOrganisationLoginUrl } from '@documenso/lib/utils/organisation-authentication-portal';
-import { prisma } from '@documenso/prisma';
+import { sendOrganisationAccountLinkConfirmationEmail } from '@docutracker/ee/server-only/lib/send-organisation-account-link-confirmation-email';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { onCreateUserHook } from '@docutracker/lib/server-only/user/create-user';
+import { formatOrganisationLoginUrl } from '@docutracker/lib/utils/organisation-authentication-portal';
+import { prisma } from '@docutracker/prisma';
 
 import { AuthenticationErrorCode } from '../errors/error-codes';
 import { onAuthorize } from './authorizer';

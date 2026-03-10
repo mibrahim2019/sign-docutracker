@@ -14,20 +14,20 @@ import { Link, useNavigate } from 'react-router';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { authClient } from '@documenso/auth/client';
-import { AuthenticationErrorCode } from '@documenso/auth/server/lib/errors/error-codes';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { trpc } from '@documenso/trpc/react';
-import { ZCurrentPasswordSchema } from '@documenso/trpc/server/auth-router/schema';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import { authClient } from '@docutracker/auth/client';
+import { AuthenticationErrorCode } from '@docutracker/auth/server/lib/errors/error-codes';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { trpc } from '@docutracker/trpc/react';
+import { ZCurrentPasswordSchema } from '@docutracker/trpc/server/auth-router/schema';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -35,11 +35,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { PasswordInput } from '@documenso/ui/primitives/password-input';
-import { PinInput, PinInputGroup, PinInputSlot } from '@documenso/ui/primitives/pin-input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { PasswordInput } from '@docutracker/ui/primitives/password-input';
+import { PinInput, PinInputGroup, PinInputSlot } from '@docutracker/ui/primitives/pin-input';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 const CommonErrorMessages: Record<string, MessageDescriptor> = {
   [AuthenticationErrorCode.AccountDisabled]: msg`This account has been disabled. Please contact support.`,

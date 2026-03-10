@@ -7,9 +7,9 @@ import { WebhookTriggerEvents } from '@prisma/client';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { toFriendlyWebhookEventName } from '@documenso/lib/universal/webhook/to-friendly-webhook-event-name';
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
+import { toFriendlyWebhookEventName } from '@docutracker/lib/universal/webhook/to-friendly-webhook-event-name';
+import { trpc } from '@docutracker/trpc/react';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -18,7 +18,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -26,15 +26,15 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
+} from '@docutracker/ui/primitives/form/form';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/select';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export type WebhookTestDialogProps = {
   webhook: Pick<Webhook, 'id' | 'webhookUrl' | 'eventTriggers'>;
@@ -140,7 +140,7 @@ export const WebhookTestDialog = ({ webhook, children }: WebhookTestDialogProps)
                 <h4 className="mb-2 text-sm font-medium">
                   <Trans>Webhook URL</Trans>
                 </h4>
-                <p className="text-muted-foreground break-all text-sm">{webhook.webhookUrl}</p>
+                <p className="break-all text-sm text-muted-foreground">{webhook.webhookUrl}</p>
               </div>
 
               <DialogFooter>

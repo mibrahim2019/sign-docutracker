@@ -2,11 +2,11 @@ import { msg } from '@lingui/core/macro';
 import { DocumentDistributionMethod, DocumentSigningOrder } from '@prisma/client';
 import { z } from 'zod';
 
-import { VALID_DATE_FORMAT_VALUES } from '@documenso/lib/constants/date-formats';
-import { ZEnvelopeExpirationPeriod } from '@documenso/lib/constants/envelope-expiration';
-import { SUPPORTED_LANGUAGE_CODES } from '@documenso/lib/constants/i18n';
-import { isValidRedirectUrl } from '@documenso/lib/utils/is-valid-redirect-url';
-import { DocumentMetaSchema } from '@documenso/prisma/generated/zod/modelSchema/DocumentMetaSchema';
+import { VALID_DATE_FORMAT_VALUES } from '@docutracker/lib/constants/date-formats';
+import { ZEnvelopeExpirationPeriod } from '@docutracker/lib/constants/envelope-expiration';
+import { SUPPORTED_LANGUAGE_CODES } from '@docutracker/lib/constants/i18n';
+import { isValidRedirectUrl } from '@docutracker/lib/utils/is-valid-redirect-url';
+import { DocumentMetaSchema } from '@docutracker/prisma/generated/zod/modelSchema/DocumentMetaSchema';
 
 import { ZDocumentEmailSettingsSchema } from './document-email';
 

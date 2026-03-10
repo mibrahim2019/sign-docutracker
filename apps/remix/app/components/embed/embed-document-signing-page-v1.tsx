@@ -7,26 +7,26 @@ import type { DocumentMeta, EnvelopeItem } from '@prisma/client';
 import { type Field, RecipientRole, SigningStatus } from '@prisma/client';
 import { LucideChevronDown, LucideChevronUp } from 'lucide-react';
 
-import { useThrottleFn } from '@documenso/lib/client-only/hooks/use-throttle-fn';
-import { PDF_VIEWER_PAGE_SELECTOR } from '@documenso/lib/constants/pdf-viewer';
-import { isFieldUnsignedAndRequired } from '@documenso/lib/utils/advanced-fields-helpers';
-import { validateFieldsInserted } from '@documenso/lib/utils/fields';
-import { isSignatureFieldType } from '@documenso/prisma/guards/is-signature-field';
-import type { RecipientWithFields } from '@documenso/prisma/types/recipient-with-fields';
-import { trpc } from '@documenso/trpc/react';
+import { useThrottleFn } from '@docutracker/lib/client-only/hooks/use-throttle-fn';
+import { PDF_VIEWER_PAGE_SELECTOR } from '@docutracker/lib/constants/pdf-viewer';
+import { isFieldUnsignedAndRequired } from '@docutracker/lib/utils/advanced-fields-helpers';
+import { validateFieldsInserted } from '@docutracker/lib/utils/fields';
+import { isSignatureFieldType } from '@docutracker/prisma/guards/is-signature-field';
+import type { RecipientWithFields } from '@docutracker/prisma/types/recipient-with-fields';
+import { trpc } from '@docutracker/trpc/react';
 import {
   type DocumentField,
   DocumentReadOnlyFields,
-} from '@documenso/ui/components/document/document-read-only-fields';
-import { FieldToolTip } from '@documenso/ui/components/field/field-tooltip';
-import { Button } from '@documenso/ui/primitives/button';
-import { ElementVisible } from '@documenso/ui/primitives/element-visible';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { PDFViewerLazy } from '@documenso/ui/primitives/pdf-viewer/lazy';
-import { RadioGroup, RadioGroupItem } from '@documenso/ui/primitives/radio-group';
-import { SignaturePadDialog } from '@documenso/ui/primitives/signature-pad/signature-pad-dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/components/document/document-read-only-fields';
+import { FieldToolTip } from '@docutracker/ui/components/field/field-tooltip';
+import { Button } from '@docutracker/ui/primitives/button';
+import { ElementVisible } from '@docutracker/ui/primitives/element-visible';
+import { Input } from '@docutracker/ui/primitives/input';
+import { Label } from '@docutracker/ui/primitives/label';
+import { PDFViewerLazy } from '@docutracker/ui/primitives/pdf-viewer/lazy';
+import { RadioGroup, RadioGroupItem } from '@docutracker/ui/primitives/radio-group';
+import { SignaturePadDialog } from '@docutracker/ui/primitives/signature-pad/signature-pad-dialog';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { BrandingLogo } from '~/components/general/branding-logo';
 import { injectCss } from '~/utils/css-vars';

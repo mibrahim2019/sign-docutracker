@@ -8,20 +8,20 @@ import { Paperclip, Plus, X } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { AppError } from '@documenso/lib/errors/app-error';
-import { trpc } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { trpc } from '@docutracker/trpc/react';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { Popover, PopoverContent, PopoverTrigger } from '@documenso/ui/primitives/popover';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { Popover, PopoverContent, PopoverTrigger } from '@docutracker/ui/primitives/popover';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export type DocumentAttachmentsPopoverProps = {
   envelopeId: string;
@@ -143,7 +143,7 @@ export const DocumentAttachmentsPopover = ({
             <h4 className="font-medium">
               <Trans>Attachments</Trans>
             </h4>
-            <p className="text-muted-foreground mt-1 text-sm">
+            <p className="mt-1 text-sm text-muted-foreground">
               <Trans>Add links to relevant documents or resources.</Trans>
             </p>
           </div>
@@ -153,7 +153,7 @@ export const DocumentAttachmentsPopover = ({
               {attachments?.data.map((attachment) => (
                 <div
                   key={attachment.id}
-                  className="border-border flex items-center justify-between rounded-md border p-2"
+                  className="flex items-center justify-between rounded-md border border-border p-2"
                 >
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-sm font-medium">{attachment.label}</p>
@@ -161,7 +161,7 @@ export const DocumentAttachmentsPopover = ({
                       href={attachment.data}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground truncate text-xs underline"
+                      className="truncate text-xs text-muted-foreground underline hover:text-foreground"
                     >
                       {attachment.data}
                     </a>

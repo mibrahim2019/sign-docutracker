@@ -1,5 +1,5 @@
-import { getCertificateStatus } from '@documenso/lib/server-only/cert/cert-status';
-import { prisma } from '@documenso/prisma';
+import { getCertificateStatus } from '@docutracker/lib/server-only/cert/cert-status';
+import { prisma } from '@docutracker/prisma';
 
 type CheckStatus = 'ok' | 'warning' | 'error';
 

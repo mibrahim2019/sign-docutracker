@@ -1,8 +1,8 @@
 import { DocumentSource, DocumentStatus, EnvelopeType } from '@prisma/client';
 import { z } from 'zod';
 
-import { ZEnvelopeManySchema } from '@documenso/lib/types/envelope';
-import { ZFindResultResponse, ZFindSearchParamsSchema } from '@documenso/lib/types/search-params';
+import { ZEnvelopeManySchema } from '@docutracker/lib/types/envelope';
+import { ZFindResultResponse, ZFindSearchParamsSchema } from '@docutracker/lib/types/search-params';
 
 import type { TrpcRouteMeta } from '../trpc';
 

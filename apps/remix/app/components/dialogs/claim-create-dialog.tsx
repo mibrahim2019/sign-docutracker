@@ -3,11 +3,11 @@ import { useState } from 'react';
 import { Trans, useLingui } from '@lingui/react/macro';
 import type { z } from 'zod';
 
-import type { TLicenseClaim } from '@documenso/lib/types/license';
-import { generateDefaultSubscriptionClaim } from '@documenso/lib/utils/organisations-claims';
-import { trpc } from '@documenso/trpc/react';
-import type { ZCreateSubscriptionClaimRequestSchema } from '@documenso/trpc/server/admin-router/create-subscription-claim.types';
-import { Button } from '@documenso/ui/primitives/button';
+import type { TLicenseClaim } from '@docutracker/lib/types/license';
+import { generateDefaultSubscriptionClaim } from '@docutracker/lib/utils/organisations-claims';
+import { trpc } from '@docutracker/trpc/react';
+import type { ZCreateSubscriptionClaimRequestSchema } from '@docutracker/trpc/server/admin-router/create-subscription-claim.types';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -16,8 +16,8 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/dialog';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { SubscriptionClaimForm } from '../forms/subscription-claim-form';
 

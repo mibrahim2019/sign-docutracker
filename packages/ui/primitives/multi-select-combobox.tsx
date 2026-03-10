@@ -7,7 +7,7 @@ import { Trans } from '@lingui/react/macro';
 import { AnimatePresence } from 'framer-motion';
 import { Check, ChevronsUpDown, Loader, XIcon } from 'lucide-react';
 
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
+import { AnimateGenericFadeInOut } from '@docutracker/ui/components/animate/animate-generic-fade-in-out';
 
 import { cn } from '../lib/utils';
 import { Button } from './button';
@@ -146,7 +146,7 @@ export function MultiSelectCombobox<T = OptionValue>({
               className="flex h-4 w-4 items-center justify-center rounded-full bg-gray-300 dark:bg-neutral-700"
               onClick={() => onChange([])}
             >
-              <XIcon className="text-muted-foreground h-3.5 w-3.5" />
+              <XIcon className="h-3.5 w-3.5 text-muted-foreground" />
             </button>
           </div>
         )}

@@ -2,8 +2,8 @@ import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Copy } from 'lucide-react';
 
-import { useCopyToClipboard } from '@documenso/lib/client-only/hooks/use-copy-to-clipboard';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { useCopyToClipboard } from '@docutracker/lib/client-only/hooks/use-copy-to-clipboard';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export type RecoveryCodeListProps = {
   recoveryCodes: string[];
@@ -42,7 +42,7 @@ export const RecoveryCodeList = ({ recoveryCodes }: RecoveryCodeListProps) => {
       {recoveryCodes.map((code) => (
         <div
           key={code}
-          className="bg-muted text-muted-foreground relative rounded-lg p-4 font-mono md:text-center"
+          className="relative rounded-lg bg-muted p-4 font-mono text-muted-foreground md:text-center"
         >
           <span>{code}</span>
 

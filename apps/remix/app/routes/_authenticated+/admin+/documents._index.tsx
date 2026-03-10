@@ -6,16 +6,16 @@ import { Trans } from '@lingui/react/macro';
 import { Loader } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router';
 
-import { useDebouncedValue } from '@documenso/lib/client-only/hooks/use-debounced-value';
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { trpc } from '@documenso/trpc/react';
-import { Avatar, AvatarFallback } from '@documenso/ui/primitives/avatar';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
-import { Input } from '@documenso/ui/primitives/input';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
+import { useDebouncedValue } from '@docutracker/lib/client-only/hooks/use-debounced-value';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import { extractInitials } from '@docutracker/lib/utils/recipient-formatter';
+import { trpc } from '@docutracker/trpc/react';
+import { Avatar, AvatarFallback } from '@docutracker/ui/primitives/avatar';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { DataTablePagination } from '@docutracker/ui/primitives/data-table-pagination';
+import { Input } from '@docutracker/ui/primitives/input';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@docutracker/ui/primitives/tooltip';
 
 import { DocumentStatus } from '~/components/general/document/document-status';
 
@@ -89,8 +89,8 @@ export default function AdminDocumentsPage() {
             <Tooltip delayDuration={200}>
               <TooltipTrigger>
                 <Link to={`/admin/users/${row.original.user.id}`}>
-                  <Avatar className="dark:border-border h-12 w-12 border-2 border-solid border-white">
-                    <AvatarFallback className="text-muted-foreground text-xs">
+                  <Avatar className="h-12 w-12 border-2 border-solid border-white dark:border-border">
+                    <AvatarFallback className="text-xs text-muted-foreground">
                       {avatarFallbackText}
                     </AvatarFallback>
                   </Avatar>
@@ -98,13 +98,13 @@ export default function AdminDocumentsPage() {
               </TooltipTrigger>
 
               <TooltipContent className="flex max-w-xs items-center gap-2">
-                <Avatar className="dark:border-border h-12 w-12 border-2 border-solid border-white">
-                  <AvatarFallback className="text-muted-foreground text-xs">
+                <Avatar className="h-12 w-12 border-2 border-solid border-white dark:border-border">
+                  <AvatarFallback className="text-xs text-muted-foreground">
                     {avatarFallbackText}
                   </AvatarFallback>
                 </Avatar>
 
-                <div className="text-muted-foreground flex flex-col text-sm">
+                <div className="flex flex-col text-sm text-muted-foreground">
                   <span>{row.original.user.name}</span>
                   <span>{row.original.user.email}</span>
                 </div>

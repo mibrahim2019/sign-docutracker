@@ -2,14 +2,14 @@ import { expect, test } from '@playwright/test';
 import { DocumentSigningOrder, RecipientRole } from '@prisma/client';
 import { customAlphabet } from 'nanoid';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createDocumentAuthOptions } from '@documenso/lib/utils/document-auth';
-import { mapSecondaryIdToTemplateId } from '@documenso/lib/utils/envelope';
-import { formatDirectTemplatePath } from '@documenso/lib/utils/templates';
-import { prisma } from '@documenso/prisma';
-import { seedTeam } from '@documenso/prisma/seed/teams';
-import { seedDirectTemplate, seedTemplate } from '@documenso/prisma/seed/templates';
-import { seedTestEmail, seedUser } from '@documenso/prisma/seed/users';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { createDocumentAuthOptions } from '@docutracker/lib/utils/document-auth';
+import { mapSecondaryIdToTemplateId } from '@docutracker/lib/utils/envelope';
+import { formatDirectTemplatePath } from '@docutracker/lib/utils/templates';
+import { prisma } from '@docutracker/prisma';
+import { seedTeam } from '@docutracker/prisma/seed/teams';
+import { seedDirectTemplate, seedTemplate } from '@docutracker/prisma/seed/templates';
+import { seedTestEmail, seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 

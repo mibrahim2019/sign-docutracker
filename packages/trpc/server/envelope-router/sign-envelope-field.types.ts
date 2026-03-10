@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { ZRecipientActionAuthSchema } from '@documenso/lib/types/document-auth';
-import { ZFieldSchema } from '@documenso/lib/types/field';
-import { FieldType } from '@documenso/prisma/client';
-import SignatureSchema from '@documenso/prisma/generated/zod/modelSchema/SignatureSchema';
+import { ZRecipientActionAuthSchema } from '@docutracker/lib/types/document-auth';
+import { ZFieldSchema } from '@docutracker/lib/types/field';
+import { FieldType } from '@docutracker/prisma/client';
+import SignatureSchema from '@docutracker/prisma/generated/zod/modelSchema/SignatureSchema';
 
 export const ZSignEnvelopeFieldValue = z.discriminatedUnion('type', [
   z.object({

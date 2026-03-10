@@ -10,8 +10,8 @@ import { z } from 'zod';
 import {
   ZRecipientActionAuthTypesSchema,
   ZRecipientAuthOptionsSchema,
-} from '@documenso/lib/types/document-auth';
-import { ZRecipientEmailSchema } from '@documenso/lib/types/recipient';
+} from '@docutracker/lib/types/document-auth';
+import { ZRecipientEmailSchema } from '@docutracker/lib/types/recipient';
 
 import type { TEnvelope } from '../../types/envelope';
 

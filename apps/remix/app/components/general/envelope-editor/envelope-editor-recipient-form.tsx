@@ -16,35 +16,35 @@ import { useFieldArray, useWatch } from 'react-hook-form';
 import { useRevalidator, useSearchParams } from 'react-router';
 import { isDeepEqual } from 'remeda';
 
-import { useLimits } from '@documenso/ee/server-only/limits/provider/client';
-import { useDebouncedValue } from '@documenso/lib/client-only/hooks/use-debounced-value';
-import { ZEditorRecipientsFormSchema } from '@documenso/lib/client-only/hooks/use-editor-recipients';
-import { useCurrentEnvelopeEditor } from '@documenso/lib/client-only/providers/envelope-editor-provider';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import type { TDetectedRecipientSchema } from '@documenso/lib/server-only/ai/envelope/detect-recipients/schema';
-import { ZRecipientAuthOptionsSchema } from '@documenso/lib/types/document-auth';
-import { nanoid } from '@documenso/lib/universal/id';
-import { canRecipientBeModified as utilCanRecipientBeModified } from '@documenso/lib/utils/recipients';
-import { trpc } from '@documenso/trpc/react';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import { RecipientActionAuthSelect } from '@documenso/ui/components/recipient/recipient-action-auth-select';
+import { useLimits } from '@docutracker/ee/server-only/limits/provider/client';
+import { useDebouncedValue } from '@docutracker/lib/client-only/hooks/use-debounced-value';
+import { ZEditorRecipientsFormSchema } from '@docutracker/lib/client-only/hooks/use-editor-recipients';
+import { useCurrentEnvelopeEditor } from '@docutracker/lib/client-only/providers/envelope-editor-provider';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import type { TDetectedRecipientSchema } from '@docutracker/lib/server-only/ai/envelope/detect-recipients/schema';
+import { ZRecipientAuthOptionsSchema } from '@docutracker/lib/types/document-auth';
+import { nanoid } from '@docutracker/lib/universal/id';
+import { canRecipientBeModified as utilCanRecipientBeModified } from '@docutracker/lib/utils/recipients';
+import { trpc } from '@docutracker/trpc/react';
+import { AnimateGenericFadeInOut } from '@docutracker/ui/components/animate/animate-generic-fade-in-out';
+import { RecipientActionAuthSelect } from '@docutracker/ui/components/recipient/recipient-action-auth-select';
 import {
   RecipientAutoCompleteInput,
   type RecipientAutoCompleteOption,
-} from '@documenso/ui/components/recipient/recipient-autocomplete-input';
-import { RecipientRoleSelect } from '@documenso/ui/components/recipient/recipient-role-select';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+} from '@docutracker/ui/components/recipient/recipient-autocomplete-input';
+import { RecipientRoleSelect } from '@docutracker/ui/components/recipient/recipient-role-select';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@documenso/ui/primitives/card';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
-import { SigningOrderConfirmation } from '@documenso/ui/primitives/document-flow/signing-order-confirmation';
+} from '@docutracker/ui/primitives/card';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
+import { SigningOrderConfirmation } from '@docutracker/ui/primitives/document-flow/signing-order-confirmation';
 import {
   Form,
   FormControl,
@@ -52,11 +52,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { FormErrorMessage } from '@documenso/ui/primitives/form/form-error-message';
-import { Input } from '@documenso/ui/primitives/input';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { FormErrorMessage } from '@docutracker/ui/primitives/form/form-error-message';
+import { Input } from '@docutracker/ui/primitives/input';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@docutracker/ui/primitives/tooltip';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { AiFeaturesEnableDialog } from '~/components/dialogs/ai-features-enable-dialog';
 import { AiRecipientDetectionDialog } from '~/components/dialogs/ai-recipient-detection-dialog';

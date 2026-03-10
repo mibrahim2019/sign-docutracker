@@ -1,11 +1,11 @@
 import { expect, test } from '@playwright/test';
 import { WebhookCallStatus, WebhookTriggerEvents } from '@prisma/client';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { alphaid } from '@documenso/lib/universal/id';
-import { prisma } from '@documenso/prisma';
-import { seedBlankDocument } from '@documenso/prisma/seed/documents';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { alphaid } from '@docutracker/lib/universal/id';
+import { prisma } from '@docutracker/prisma';
+import { seedBlankDocument } from '@docutracker/prisma/seed/documents';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin, apiSignout } from '../fixtures/authentication';
 import { expectTextToBeVisible, openDropdownMenu } from '../fixtures/generic';

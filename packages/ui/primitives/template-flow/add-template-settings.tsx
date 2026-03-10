@@ -8,40 +8,43 @@ import { InfoIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
 
-import { useAutoSave } from '@documenso/lib/client-only/hooks/use-autosave';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { DATE_FORMATS, DEFAULT_DOCUMENT_DATE_FORMAT } from '@documenso/lib/constants/date-formats';
+import { useAutoSave } from '@docutracker/lib/client-only/hooks/use-autosave';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import {
+  DATE_FORMATS,
+  DEFAULT_DOCUMENT_DATE_FORMAT,
+} from '@docutracker/lib/constants/date-formats';
 import {
   DOCUMENT_DISTRIBUTION_METHODS,
   DOCUMENT_SIGNATURE_TYPES,
-} from '@documenso/lib/constants/document';
-import { SUPPORTED_LANGUAGES } from '@documenso/lib/constants/i18n';
-import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@documenso/lib/constants/time-zones';
-import { ZDocumentEmailSettingsSchema } from '@documenso/lib/types/document-email';
-import type { TDocumentMetaDateFormat } from '@documenso/lib/types/document-meta';
-import type { TTemplate } from '@documenso/lib/types/template';
-import { extractDocumentAuthMethods } from '@documenso/lib/utils/document-auth';
-import { extractTeamSignatureSettings } from '@documenso/lib/utils/teams';
-import { trpc } from '@documenso/trpc/react';
+} from '@docutracker/lib/constants/document';
+import { SUPPORTED_LANGUAGES } from '@docutracker/lib/constants/i18n';
+import { DEFAULT_DOCUMENT_TIME_ZONE, TIME_ZONES } from '@docutracker/lib/constants/time-zones';
+import { ZDocumentEmailSettingsSchema } from '@docutracker/lib/types/document-email';
+import type { TDocumentMetaDateFormat } from '@docutracker/lib/types/document-meta';
+import type { TTemplate } from '@docutracker/lib/types/template';
+import { extractDocumentAuthMethods } from '@docutracker/lib/utils/document-auth';
+import { extractTeamSignatureSettings } from '@docutracker/lib/utils/teams';
+import { trpc } from '@docutracker/trpc/react';
 import {
   DocumentGlobalAuthAccessSelect,
   DocumentGlobalAuthAccessTooltip,
-} from '@documenso/ui/components/document/document-global-auth-access-select';
+} from '@docutracker/ui/components/document/document-global-auth-access-select';
 import {
   DocumentGlobalAuthActionSelect,
   DocumentGlobalAuthActionTooltip,
-} from '@documenso/ui/components/document/document-global-auth-action-select';
-import { DocumentSendEmailMessageHelper } from '@documenso/ui/components/document/document-send-email-message-helper';
+} from '@docutracker/ui/components/document/document-global-auth-action-select';
+import { DocumentSendEmailMessageHelper } from '@docutracker/ui/components/document/document-send-email-message-helper';
 import {
   DocumentVisibilitySelect,
   DocumentVisibilityTooltip,
-} from '@documenso/ui/components/document/document-visibility-select';
+} from '@docutracker/ui/components/document/document-visibility-select';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@documenso/ui/primitives/accordion';
+} from '@docutracker/ui/primitives/accordion';
 import {
   Form,
   FormControl,
@@ -49,7 +52,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
+} from '@docutracker/ui/primitives/form/form';
 
 import { DocumentEmailCheckboxes } from '../../components/document/document-email-checkboxes';
 import {
@@ -501,7 +504,7 @@ export const AddTemplateSettingsFormPartial = ({
                                       </SelectItem>
                                     ))}
 
-                                    <SelectItem value={'-1'}>Documenso</SelectItem>
+                                    <SelectItem value={'-1'}>Docutracker</SelectItem>
                                   </SelectContent>
                                 </Select>
                               </FormControl>

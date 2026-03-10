@@ -1,10 +1,10 @@
 import { TeamMemberRole } from '@prisma/client';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { orphanEnvelopes } from '@documenso/lib/server-only/envelope/orphan-envelopes';
-import { transferTeamEnvelopes } from '@documenso/lib/server-only/envelope/transfer-team-envelopes';
-import { deleteTeam } from '@documenso/lib/server-only/team/delete-team';
-import { getTeamById } from '@documenso/lib/server-only/team/get-team';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { orphanEnvelopes } from '@docutracker/lib/server-only/envelope/orphan-envelopes';
+import { transferTeamEnvelopes } from '@docutracker/lib/server-only/envelope/transfer-team-envelopes';
+import { deleteTeam } from '@docutracker/lib/server-only/team/delete-team';
+import { getTeamById } from '@docutracker/lib/server-only/team/get-team';
 
 import { authenticatedProcedure } from '../trpc';
 import { ZDeleteTeamRequestSchema, ZDeleteTeamResponseSchema } from './delete-team.types';

@@ -9,14 +9,14 @@ import { DateTime } from 'luxon';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import type { TRecipientAccessAuth } from '@documenso/lib/types/document-auth';
-import { trpc } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Alert } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
-import { Form, FormField, FormItem } from '@documenso/ui/primitives/form/form';
-import { PinInput, PinInputGroup, PinInputSlot } from '@documenso/ui/primitives/pin-input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import type { TRecipientAccessAuth } from '@docutracker/lib/types/document-auth';
+import { trpc } from '@docutracker/trpc/react';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Alert } from '@docutracker/ui/primitives/alert';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Form, FormField, FormItem } from '@docutracker/ui/primitives/form/form';
+import { PinInput, PinInputGroup, PinInputSlot } from '@docutracker/ui/primitives/pin-input';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useRequiredDocumentSigningAuthContext } from './document-signing-auth-provider';
 
@@ -151,7 +151,7 @@ export const AccessAuth2FAForm = ({ onSubmit, token, error }: AccessAuth2FAFormP
             <h3 className="text-lg font-semibold">
               <Trans>Choose verification method</Trans>
             </h3>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-sm text-muted-foreground">
               <Trans>Please select how you'd like to receive your verification code.</Trans>
             </p>
           </div>
@@ -175,7 +175,7 @@ export const AccessAuth2FAForm = ({ onSubmit, token, error }: AccessAuth2FAFormP
                 <div className="font-medium">
                   <Trans>Email verification</Trans>
                 </div>
-                <div className="text-muted-foreground text-sm">
+                <div className="text-sm text-muted-foreground">
                   <Trans>We'll send a 6-digit code to your email</Trans>
                 </div>
               </div>
@@ -194,7 +194,7 @@ export const AccessAuth2FAForm = ({ onSubmit, token, error }: AccessAuth2FAFormP
                   <div className="font-medium">
                     <Trans>Authenticator app</Trans>
                   </div>
-                  <div className="text-muted-foreground text-sm">
+                  <div className="text-sm text-muted-foreground">
                     <Trans>Use your authenticator app to generate a code</Trans>
                   </div>
                 </div>
@@ -216,7 +216,7 @@ export const AccessAuth2FAForm = ({ onSubmit, token, error }: AccessAuth2FAFormP
             </h3>
           </div>
 
-          <div className="text-muted-foreground text-sm">
+          <div className="text-sm text-muted-foreground">
             {selectedMethod === 'email' ? (
               <Trans>
                 We've sent a 6-digit verification code to your email. Please enter it below to
@@ -262,7 +262,7 @@ export const AccessAuth2FAForm = ({ onSubmit, token, error }: AccessAuth2FAFormP
 
                       {expiresAt && millisecondsRemaining !== null && (
                         <div
-                          className={cn('text-muted-foreground mt-2 text-center text-sm', {
+                          className={cn('mt-2 text-center text-sm text-muted-foreground', {
                             'text-destructive': millisecondsRemaining <= 0,
                           })}
                         >

@@ -5,18 +5,18 @@ import { zfd } from 'zod-form-data';
 import {
   ZDocumentAccessAuthTypesSchema,
   ZDocumentActionAuthTypesSchema,
-} from '@documenso/lib/types/document-auth';
-import { ZDocumentFormValuesSchema } from '@documenso/lib/types/document-form-values';
-import { ZDocumentMetaCreateSchema } from '@documenso/lib/types/document-meta';
-import { ZEnvelopeAttachmentTypeSchema } from '@documenso/lib/types/envelope-attachment';
+} from '@docutracker/lib/types/document-auth';
+import { ZDocumentFormValuesSchema } from '@docutracker/lib/types/document-form-values';
+import { ZDocumentMetaCreateSchema } from '@docutracker/lib/types/document-meta';
+import { ZEnvelopeAttachmentTypeSchema } from '@docutracker/lib/types/envelope-attachment';
 import {
   ZClampedFieldHeightSchema,
   ZClampedFieldPositionXSchema,
   ZClampedFieldPositionYSchema,
   ZClampedFieldWidthSchema,
   ZFieldPageNumberSchema,
-} from '@documenso/lib/types/field';
-import { ZEnvelopeFieldAndMetaSchema } from '@documenso/lib/types/field-meta';
+} from '@docutracker/lib/types/field';
+import { ZEnvelopeFieldAndMetaSchema } from '@docutracker/lib/types/field-meta';
 
 import { zodFormData } from '../../utils/zod-form-data';
 import {

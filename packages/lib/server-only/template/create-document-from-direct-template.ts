@@ -18,11 +18,11 @@ import { DateTime } from 'luxon';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { mailer } from '@documenso/email/mailer';
-import { DocumentCreatedFromDirectTemplateEmailTemplate } from '@documenso/email/templates/document-created-from-direct-template';
-import { nanoid, prefixedId } from '@documenso/lib/universal/id';
-import { prisma } from '@documenso/prisma';
-import type { TSignFieldWithTokenMutationSchema } from '@documenso/trpc/server/field-router/schema';
+import { mailer } from '@docutracker/email/mailer';
+import { DocumentCreatedFromDirectTemplateEmailTemplate } from '@docutracker/email/templates/document-created-from-direct-template';
+import { nanoid, prefixedId } from '@docutracker/lib/universal/id';
+import { prisma } from '@docutracker/prisma';
+import type { TSignFieldWithTokenMutationSchema } from '@docutracker/trpc/server/field-router/schema';
 
 import { getI18nInstance } from '../../client-only/providers/i18n-server';
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../constants/app';

@@ -3,13 +3,13 @@ import { useLingui } from '@lingui/react';
 import type { Recipient } from '@prisma/client';
 import { DocumentStatus } from '@prisma/client';
 
-import { useCopyToClipboard } from '@documenso/lib/client-only/hooks/use-copy-to-clipboard';
-import { getRecipientType } from '@documenso/lib/client-only/recipient-type';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { RECIPIENT_ROLES_DESCRIPTION } from '@documenso/lib/constants/recipient-roles';
-import { recipientAbbreviation } from '@documenso/lib/utils/recipient-formatter';
-import { cn } from '@documenso/ui/lib/utils';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { useCopyToClipboard } from '@docutracker/lib/client-only/hooks/use-copy-to-clipboard';
+import { getRecipientType } from '@docutracker/lib/client-only/recipient-type';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { RECIPIENT_ROLES_DESCRIPTION } from '@docutracker/lib/constants/recipient-roles';
+import { recipientAbbreviation } from '@docutracker/lib/utils/recipient-formatter';
+import { cn } from '@docutracker/ui/lib/utils';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { StackAvatar } from './stack-avatar';
 

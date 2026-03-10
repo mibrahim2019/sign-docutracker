@@ -3,14 +3,14 @@ import { useMemo } from 'react';
 import { Trans } from '@lingui/react/macro';
 import { useLocation, useNavigate, useSearchParams } from 'react-router';
 
-import type { PeriodSelectorValue } from '@documenso/lib/server-only/document/find-documents';
+import type { PeriodSelectorValue } from '@docutracker/lib/server-only/document/find-documents';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
+} from '@docutracker/ui/primitives/select';
 
 const isPeriodSelectorValue = (value: unknown): value is PeriodSelectorValue => {
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
@@ -47,7 +47,7 @@ export const PeriodSelector = () => {
 
   return (
     <Select defaultValue={period} onValueChange={onPeriodChange}>
-      <SelectTrigger className="text-muted-foreground max-w-[200px]">
+      <SelectTrigger className="max-w-[200px] text-muted-foreground">
         <SelectValue />
       </SelectTrigger>
 

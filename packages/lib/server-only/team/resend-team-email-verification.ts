@@ -1,7 +1,7 @@
-import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '@documenso/lib/constants/teams';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { createTokenVerification } from '@documenso/lib/utils/token-verification';
-import { prisma } from '@documenso/prisma';
+import { TEAM_MEMBER_ROLE_PERMISSIONS_MAP } from '@docutracker/lib/constants/teams';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { createTokenVerification } from '@docutracker/lib/utils/token-verification';
+import { prisma } from '@docutracker/prisma';
 
 import { buildTeamWhereQuery } from '../../utils/teams';
 import { sendTeamEmailVerificationEmail } from './create-team-email-verification';

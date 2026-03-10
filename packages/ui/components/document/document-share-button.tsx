@@ -7,10 +7,10 @@ import { Trans } from '@lingui/react/macro';
 import { Copy, Sparkles } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
 
-import { useCopyShareLink } from '@documenso/lib/client-only/hooks/use-copy-share-link';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { generateTwitterIntent } from '@documenso/lib/universal/generate-twitter-intent';
-import { trpc } from '@documenso/trpc/react';
+import { useCopyShareLink } from '@docutracker/lib/client-only/hooks/use-copy-share-link';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { generateTwitterIntent } from '@docutracker/lib/universal/generate-twitter-intent';
+import { trpc } from '@docutracker/trpc/react';
 
 import { cn } from '../../lib/utils';
 import { Button } from '../../primitives/button';
@@ -166,7 +166,7 @@ export const DocumentShareButton = ({
             </span>
             <div
               className={cn(
-                'bg-muted/40 mt-4 aspect-[1200/630] overflow-hidden rounded-lg border',
+                'mt-4 aspect-[1200/630] overflow-hidden rounded-lg border bg-muted/40',
                 {
                   'animate-pulse': !shareLink?.slug,
                 },

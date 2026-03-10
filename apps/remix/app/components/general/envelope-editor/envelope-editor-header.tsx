@@ -11,11 +11,11 @@ import {
 import { Link } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { useCurrentEnvelopeEditor } from '@documenso/lib/client-only/providers/envelope-editor-provider';
-import { mapSecondaryIdToTemplateId } from '@documenso/lib/utils/envelope';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
-import { Separator } from '@documenso/ui/primitives/separator';
+import { useCurrentEnvelopeEditor } from '@docutracker/lib/client-only/providers/envelope-editor-provider';
+import { mapSecondaryIdToTemplateId } from '@docutracker/lib/utils/envelope';
+import { Badge } from '@docutracker/ui/primitives/badge';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Separator } from '@docutracker/ui/primitives/separator';
 
 import { EnvelopeDistributeDialog } from '~/components/dialogs/envelope-distribute-dialog';
 import { EnvelopeRedistributeDialog } from '~/components/dialogs/envelope-redistribute-dialog';

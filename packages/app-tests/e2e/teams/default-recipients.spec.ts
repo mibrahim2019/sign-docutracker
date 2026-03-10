@@ -2,16 +2,16 @@ import { expect, test } from '@playwright/test';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
-import { prisma } from '@documenso/prisma';
-import { EnvelopeType, RecipientRole } from '@documenso/prisma/client';
-import { seedTeam } from '@documenso/prisma/seed/teams';
-import { seedBlankTemplate } from '@documenso/prisma/seed/templates';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { createApiToken } from '@docutracker/lib/server-only/public-api/create-api-token';
+import { prisma } from '@docutracker/prisma';
+import { EnvelopeType, RecipientRole } from '@docutracker/prisma/client';
+import { seedTeam } from '@docutracker/prisma/seed/teams';
+import { seedBlankTemplate } from '@docutracker/prisma/seed/templates';
 import type {
   TCreateEnvelopePayload,
   TCreateEnvelopeResponse,
-} from '@documenso/trpc/server/envelope-router/create-envelope.types';
+} from '@docutracker/trpc/server/envelope-router/create-envelope.types';
 
 import { apiSignin } from '../fixtures/authentication';
 

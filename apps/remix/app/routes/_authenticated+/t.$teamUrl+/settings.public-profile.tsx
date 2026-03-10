@@ -4,17 +4,17 @@ import { useLingui } from '@lingui/react/macro';
 import { Trans } from '@lingui/react/macro';
 import { type TemplateDirectLink, TemplateType } from '@prisma/client';
 
-import { getSession } from '@documenso/auth/server/lib/utils/get-session';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { getTeamByUrl } from '@documenso/lib/server-only/team/get-team';
-import { getTeamPublicProfile } from '@documenso/lib/server-only/team/get-team-public-profile';
-import { trpc } from '@documenso/trpc/react';
-import type { FindTemplateRow } from '@documenso/trpc/server/template-router/schema';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { Switch } from '@documenso/ui/primitives/switch';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { getSession } from '@docutracker/auth/server/lib/utils/get-session';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { getTeamByUrl } from '@docutracker/lib/server-only/team/get-team';
+import { getTeamPublicProfile } from '@docutracker/lib/server-only/team/get-team-public-profile';
+import { trpc } from '@docutracker/trpc/react';
+import type { FindTemplateRow } from '@docutracker/trpc/server/template-router/schema';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Switch } from '@docutracker/ui/primitives/switch';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@docutracker/ui/primitives/tooltip';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { ManagePublicTemplateDialog } from '~/components/dialogs/public-profile-template-manage-dialog';
 import type { TPublicProfileFormSchema } from '~/components/forms/public-profile-form';
@@ -143,7 +143,7 @@ export default function PublicProfilePage({ loaderData }: Route.ComponentProps) 
           <TooltipTrigger asChild>
             <div
               className={cn(
-                'text-muted-foreground/50 flex flex-row items-center justify-center space-x-2 text-xs',
+                'flex flex-row items-center justify-center space-x-2 text-xs text-muted-foreground/50',
                 {
                   '[&>*:first-child]:text-muted-foreground': !isPublicProfileVisible,
                   '[&>*:last-child]:text-muted-foreground': isPublicProfileVisible,
@@ -164,7 +164,7 @@ export default function PublicProfilePage({ loaderData }: Route.ComponentProps) 
             </div>
           </TooltipTrigger>
 
-          <TooltipContent className="text-muted-foreground max-w-[40ch] space-y-2 py-2">
+          <TooltipContent className="max-w-[40ch] space-y-2 py-2 text-muted-foreground">
             {isPublicProfileVisible ? (
               <>
                 <p>

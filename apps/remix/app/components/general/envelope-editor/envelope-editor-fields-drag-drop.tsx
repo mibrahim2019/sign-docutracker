@@ -15,17 +15,17 @@ import {
   UserIcon,
 } from 'lucide-react';
 
-import { getBoundingClientRect } from '@documenso/lib/client-only/get-bounding-client-rect';
-import { useDocumentElement } from '@documenso/lib/client-only/hooks/use-document-element';
-import { useCurrentEnvelopeEditor } from '@documenso/lib/client-only/providers/envelope-editor-provider';
-import { PDF_VIEWER_PAGE_SELECTOR } from '@documenso/lib/constants/pdf-viewer';
-import { FIELD_META_DEFAULT_VALUES } from '@documenso/lib/types/field-meta';
-import { nanoid } from '@documenso/lib/universal/id';
-import { canRecipientFieldsBeModified } from '@documenso/lib/utils/recipients';
-import { SignatureIcon } from '@documenso/ui/icons/signature';
-import { RECIPIENT_COLOR_STYLES } from '@documenso/ui/lib/recipient-colors';
-import { cn } from '@documenso/ui/lib/utils';
-import { FRIENDLY_FIELD_TYPE } from '@documenso/ui/primitives/document-flow/types';
+import { getBoundingClientRect } from '@docutracker/lib/client-only/get-bounding-client-rect';
+import { useDocumentElement } from '@docutracker/lib/client-only/hooks/use-document-element';
+import { useCurrentEnvelopeEditor } from '@docutracker/lib/client-only/providers/envelope-editor-provider';
+import { PDF_VIEWER_PAGE_SELECTOR } from '@docutracker/lib/constants/pdf-viewer';
+import { FIELD_META_DEFAULT_VALUES } from '@docutracker/lib/types/field-meta';
+import { nanoid } from '@docutracker/lib/universal/id';
+import { canRecipientFieldsBeModified } from '@docutracker/lib/utils/recipients';
+import { SignatureIcon } from '@docutracker/ui/icons/signature';
+import { RECIPIENT_COLOR_STYLES } from '@docutracker/ui/lib/recipient-colors';
+import { cn } from '@docutracker/ui/lib/utils';
+import { FRIENDLY_FIELD_TYPE } from '@docutracker/ui/primitives/document-flow/types';
 
 const MIN_HEIGHT_PX = 12;
 const MIN_WIDTH_PX = 36;
@@ -278,13 +278,13 @@ export const EnvelopeEditorFieldDragDrop = ({
             onMouseDown={() => setSelectedField(field.type)}
             data-selected={selectedField === field.type ? true : undefined}
             className={cn(
-              'border-border group flex h-12 cursor-pointer items-center justify-center rounded-lg border px-4 transition-colors',
+              'group flex h-12 cursor-pointer items-center justify-center rounded-lg border border-border px-4 transition-colors',
               RECIPIENT_COLOR_STYLES[selectedRecipientColor].fieldButton,
             )}
           >
             <p
               className={cn(
-                'text-muted-foreground font-noto group-data-[selected]:text-foreground flex items-center justify-center gap-x-1.5 text-sm font-normal',
+                'flex items-center justify-center gap-x-1.5 font-noto text-sm font-normal text-muted-foreground group-data-[selected]:text-foreground',
                 field.className,
                 {
                   'group-hover:text-recipient-green': selectedRecipientColor === 'green',
@@ -306,7 +306,7 @@ export const EnvelopeEditorFieldDragDrop = ({
       {selectedField && (
         <div
           className={cn(
-            'text-muted-foreground dark:text-muted-background font-noto pointer-events-none fixed z-50 flex cursor-pointer flex-col items-center justify-center rounded-[2px] bg-white ring-2 transition duration-200 [container-type:size]',
+            'dark:text-muted-background pointer-events-none fixed z-50 flex cursor-pointer flex-col items-center justify-center rounded-[2px] bg-white font-noto text-muted-foreground ring-2 transition duration-200 [container-type:size]',
             RECIPIENT_COLOR_STYLES[selectedRecipientColor].base,
             selectedField === FieldType.SIGNATURE && 'font-signature',
             {

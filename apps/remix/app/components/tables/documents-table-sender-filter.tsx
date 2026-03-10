@@ -2,9 +2,9 @@ import { msg } from '@lingui/core/macro';
 import { Trans } from '@lingui/react/macro';
 import { useLocation, useNavigate, useSearchParams } from 'react-router';
 
-import { useIsMounted } from '@documenso/lib/client-only/hooks/use-is-mounted';
-import { trpc } from '@documenso/trpc/react';
-import { MultiSelectCombobox } from '@documenso/ui/primitives/multi-select-combobox';
+import { useIsMounted } from '@docutracker/lib/client-only/hooks/use-is-mounted';
+import { trpc } from '@docutracker/trpc/react';
+import { MultiSelectCombobox } from '@docutracker/ui/primitives/multi-select-combobox';
 
 type DocumentsTableSenderFilterProps = {
   teamId: number;
@@ -49,7 +49,7 @@ export const DocumentsTableSenderFilter = ({ teamId }: DocumentsTableSenderFilte
   return (
     <MultiSelectCombobox
       emptySelectionPlaceholder={
-        <p className="text-muted-foreground font-normal">
+        <p className="font-normal text-muted-foreground">
           <Trans>
             <span className="text-muted-foreground/70">Sender:</span> All
           </Trans>

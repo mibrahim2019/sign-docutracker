@@ -3,15 +3,15 @@ import { UsersIcon } from 'lucide-react';
 import { redirect } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
-import { EnvelopeRenderProvider } from '@documenso/lib/client-only/providers/envelope-render-provider';
-import { useOptionalSession } from '@documenso/lib/client-only/providers/session';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { getEnvelopeForDirectTemplateSigning } from '@documenso/lib/server-only/envelope/get-envelope-for-direct-template-signing';
-import { getTemplateByDirectLinkToken } from '@documenso/lib/server-only/template/get-template-by-direct-link-token';
-import { DocumentAccessAuth } from '@documenso/lib/types/document-auth';
-import { extractDocumentAuthMethods } from '@documenso/lib/utils/document-auth';
-import { prisma } from '@documenso/prisma';
+import { getOptionalSession } from '@docutracker/auth/server/lib/utils/get-session';
+import { EnvelopeRenderProvider } from '@docutracker/lib/client-only/providers/envelope-render-provider';
+import { useOptionalSession } from '@docutracker/lib/client-only/providers/session';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { getEnvelopeForDirectTemplateSigning } from '@docutracker/lib/server-only/envelope/get-envelope-for-direct-template-signing';
+import { getTemplateByDirectLinkToken } from '@docutracker/lib/server-only/template/get-template-by-direct-link-token';
+import { DocumentAccessAuth } from '@docutracker/lib/types/document-auth';
+import { extractDocumentAuthMethods } from '@docutracker/lib/utils/document-auth';
+import { prisma } from '@docutracker/prisma';
 
 import { Header as AuthenticatedHeader } from '~/components/general/app-header';
 import { DirectTemplatePageView } from '~/components/general/direct-template/direct-template-page';
@@ -198,7 +198,7 @@ const DirectSigningPageV1 = ({ data }: { data: Awaited<ReturnType<typeof handleV
               {template.title}
             </h1>
 
-            <div className="text-muted-foreground mb-8 mt-2.5 flex items-center gap-x-2">
+            <div className="mb-8 mt-2.5 flex items-center gap-x-2 text-muted-foreground">
               <UsersIcon className="h-4 w-4" />
               <p className="text-muted-foreground/80">
                 <Plural value={template.recipients.length} one="# recipient" other="# recipients" />

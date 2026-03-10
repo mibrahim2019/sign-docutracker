@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@docutracker/prisma';
 
 import { IS_BILLING_ENABLED } from '../../constants/app';
 import type { TLicenseClaim } from '../../types/license';
@@ -15,7 +15,7 @@ import {
 import { SUBSCRIPTION_CLAIM_FEATURE_FLAGS } from '../../types/subscription';
 import { env } from '../../utils/env';
 
-const LICENSE_KEY = env('NEXT_PRIVATE_DOCUMENSO_LICENSE_KEY');
+const LICENSE_KEY = env('NEXT_PRIVATE_DOCUTRACKER_LICENSE_KEY');
 const LICENSE_SERVER_URL =
   env('INTERNAL_OVERRIDE_LICENSE_SERVER_URL') || 'https://license.documenso.com';
 

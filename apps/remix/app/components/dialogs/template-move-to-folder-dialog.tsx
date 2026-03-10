@@ -10,11 +10,11 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import { z } from 'zod';
 
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { FolderType } from '@documenso/lib/types/folder-type';
-import { formatTemplatesPath } from '@documenso/lib/utils/teams';
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { FolderType } from '@docutracker/lib/types/folder-type';
+import { formatTemplatesPath } from '@docutracker/lib/utils/teams';
+import { trpc } from '@docutracker/trpc/react';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -22,7 +22,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -30,9 +30,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 
@@ -157,7 +157,7 @@ export function TemplateMoveToFolderDialog({
         </DialogHeader>
 
         <div className="relative">
-          <Search className="text-muted-foreground absolute left-2 top-3 h-4 w-4" />
+          <Search className="absolute left-2 top-3 h-4 w-4 text-muted-foreground" />
           <Input
             placeholder={_(msg`Search folders...`)}
             value={searchTerm}
@@ -211,7 +211,7 @@ export function TemplateMoveToFolderDialog({
                           ))}
 
                           {searchTerm && filteredFolders?.length === 0 && (
-                            <div className="text-muted-foreground px-2 py-2 text-center text-sm">
+                            <div className="px-2 py-2 text-center text-sm text-muted-foreground">
                               <Trans>No folders found</Trans>
                             </div>
                           )}

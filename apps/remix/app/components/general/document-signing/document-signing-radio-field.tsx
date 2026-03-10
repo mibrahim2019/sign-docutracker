@@ -4,19 +4,19 @@ import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { useRevalidator } from 'react-router';
 
-import { DO_NOT_INVALIDATE_QUERY_ON_MUTATION } from '@documenso/lib/constants/trpc';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import type { TRecipientActionAuth } from '@documenso/lib/types/document-auth';
-import { ZRadioFieldMeta } from '@documenso/lib/types/field-meta';
-import type { FieldWithSignatureAndFieldMeta } from '@documenso/prisma/types/field-with-signature-and-fieldmeta';
-import { trpc } from '@documenso/trpc/react';
+import { DO_NOT_INVALIDATE_QUERY_ON_MUTATION } from '@docutracker/lib/constants/trpc';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import type { TRecipientActionAuth } from '@docutracker/lib/types/document-auth';
+import { ZRadioFieldMeta } from '@docutracker/lib/types/field-meta';
+import type { FieldWithSignatureAndFieldMeta } from '@docutracker/prisma/types/field-with-signature-and-fieldmeta';
+import { trpc } from '@docutracker/trpc/react';
 import type {
   TRemovedSignedFieldWithTokenMutationSchema,
   TSignFieldWithTokenMutationSchema,
-} from '@documenso/trpc/server/field-router/schema';
-import { Label } from '@documenso/ui/primitives/label';
-import { RadioGroup, RadioGroupItem } from '@documenso/ui/primitives/radio-group';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/trpc/server/field-router/schema';
+import { Label } from '@docutracker/ui/primitives/label';
+import { RadioGroup, RadioGroupItem } from '@docutracker/ui/primitives/radio-group';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useRequiredDocumentSigningAuthContext } from './document-signing-auth-provider';
 import { DocumentSigningFieldContainer } from './document-signing-field-container';
@@ -170,7 +170,7 @@ export const DocumentSigningRadioField = ({
               {!item.value.includes('empty-value-') && item.value && (
                 <Label
                   htmlFor={`option-${field.id}-${item.id}`}
-                  className="text-foreground ml-1.5 text-xs font-normal"
+                  className="ml-1.5 text-xs font-normal text-foreground"
                 >
                   {item.value}
                 </Label>
@@ -194,7 +194,7 @@ export const DocumentSigningRadioField = ({
               {!item.value.includes('empty-value-') && item.value && (
                 <Label
                   htmlFor={`option-${field.id}-${item.id}`}
-                  className="text-foreground ml-1.5 text-xs font-normal"
+                  className="ml-1.5 text-xs font-normal text-foreground"
                 >
                   {item.value}
                 </Label>

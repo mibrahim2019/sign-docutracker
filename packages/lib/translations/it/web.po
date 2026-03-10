@@ -586,8 +586,8 @@ msgid "<0>{organisationName}</0> has requested to create an account on your beha
 msgstr "<0>{organisationName}</0> ha richiesto di creare un account per tuo conto."
 
 #: packages/email/templates/organisation-account-link-confirmation.tsx
-msgid "<0>{organisationName}</0> has requested to link your current Documenso account to their organisation."
-msgstr "<0>{organisationName}</0> ha richiesto di collegare il tuo account Documenso attuale alla loro organizzazione."
+msgid "<0>{organisationName}</0> has requested to link your current Docutracker account to their organisation."
+msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-page-view-v1.tsx
 msgid "<0>{senderName} {senderEmail}</0> has invited you to approve this document"
@@ -626,8 +626,8 @@ msgid "<0>{senderName} {senderEmail}</0> on behalf of \"{0}\" has invited you to
 msgstr "<0>{senderName} {senderEmail}</0>, per conto di \"{0}\", ti ha invitato a visualizzare questo documento"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "<0>{teamName}</0> has requested to use your email address for their team on Documenso."
-msgstr "<0>{teamName}</0> ha richiesto di utilizzare il tuo indirizzo email per il loro team su Documenso."
+msgid "<0>{teamName}</0> has requested to use your email address for their team on Docutracker."
+msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/organisation.sso.confirmation.$token.tsx
 msgid "<0>Account management:</0> Modify your account settings, permissions, and preferences"
@@ -835,10 +835,6 @@ msgstr "{VAR_PLURAL, select, one {1 mese} other {6 mesi}}"
 msgid "7 days"
 msgstr "{VAR_PLURAL, select, one {1 giorno} other {7 giorni}}"
 
-#: apps/remix/app/components/forms/send-confirmation-email.tsx
-msgid "A confirmation email has been sent, and it should arrive in your inbox shortly."
-msgstr "È stata inviata un'e-mail di conferma e dovrebbe arrivare nella tua casella di posta a breve."
-
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "A device capable of accessing, opening, and reading documents"
 msgstr "Un dispositivo in grado di accedere, aprire e leggere documenti"
@@ -871,8 +867,8 @@ msgid "A means to print or download documents for your records"
 msgstr "Un mezzo per stampare o scaricare documenti per i tuoi archivi"
 
 #: packages/email/templates/organisation-join.tsx
-msgid "A member has joined your organisation on Documenso"
-msgstr "Un membro si è unito alla tua organizzazione su Documenso"
+msgid "A member has joined your organisation on Docutracker"
+msgstr ""
 
 #: packages/lib/jobs/definitions/emails/send-organisation-member-left-email.handler.ts
 msgid "A member has left your organisation"
@@ -883,8 +879,8 @@ msgid "A member has left your organisation {organisationName}"
 msgstr "Un membro ha lasciato la tua organizzazione {organisationName}"
 
 #: packages/email/templates/organisation-leave.tsx
-msgid "A member has left your organisation on Documenso"
-msgstr "Un membro ha lasciato la tua organizzazione su Documenso"
+msgid "A member has left your organisation on Docutracker"
+msgstr ""
 
 #: packages/lib/jobs/definitions/emails/send-organisation-member-joined-email.handler.ts
 msgid "A new member has joined your organisation"
@@ -923,8 +919,8 @@ msgid "A request has been made to create an account for you"
 msgstr "È stata effettuata una richiesta per creare un account per te"
 
 #: packages/email/templates/organisation-account-link-confirmation.tsx
-msgid "A request has been made to link your Documenso account"
-msgstr "È stata effettuata una richiesta per collegare il tuo account Documenso"
+msgid "A request has been made to link your Docutracker account"
+msgstr ""
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-email-verification.ts
@@ -933,8 +929,8 @@ msgstr "Una richiesta per utilizzare la tua email è stata avviata da {0} su Doc
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
 #: apps/remix/app/components/dialogs/webhook-edit-dialog.tsx
-msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Documenso."
-msgstr "Un codice segreto che verrà inviato al tuo URL in modo che tu possa verificare che la richiesta sia stata inviata da Documenso."
+msgid "A secret that will be sent to your URL so you can verify that the request has been sent by Docutracker."
+msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "A stable internet connection"
@@ -981,8 +977,8 @@ msgid "Accept invitation to join an organisation on Documenso"
 msgstr "Accetta l'invito a unirti a un'organizzazione su Documenso"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "Accept team email request for {teamName} on Documenso"
-msgstr "Accetta la richiesta di email per il team {teamName} su Documenso"
+msgid "Accept team email request for {teamName} on Docutracker"
+msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
 msgid "Acceptance and Consent"
@@ -1672,10 +1668,6 @@ msgstr "Si è verificato un errore durante il reset dell'autenticazione a due fa
 msgid "An error occurred while sending the document."
 msgstr "Si è verificato un errore durante l'invio del documento."
 
-#: apps/remix/app/components/forms/send-confirmation-email.tsx
-msgid "An error occurred while sending your confirmation email"
-msgstr "Si è verificato un errore durante l'invio della tua email di conferma"
-
 #: apps/remix/app/components/general/document-signing/document-signing-checkbox-field.tsx
 #: apps/remix/app/components/general/document-signing/document-signing-date-field.tsx
 #: apps/remix/app/components/general/document-signing/document-signing-dropdown-field.tsx
@@ -2211,8 +2203,8 @@ msgid "By enabling 2FA, you will be required to enter a code from your authentic
 msgstr "Abilitando la 2FA, ti sarà richiesto di inserire un codice dalla tua app di autenticazione ogni volta che accedi utilizzando email e password."
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "By proceeding to use the electronic signature service provided by Documenso, you affirm that you have read and understood this disclosure. You agree to all terms and conditions related to the use of electronic signatures and electronic transactions as outlined herein."
-msgstr "Procedendo con l'utilizzo del servizio di firma elettronica fornito da Documenso, affermi di aver letto e compreso questa divulgazione. Accetti tutti i termini e le condizioni relativi all'uso delle firme elettroniche e delle transazioni elettroniche come descritto in questo documento."
+msgid "By proceeding to use the electronic signature service provided by Docutracker, you affirm that you have read and understood this disclosure. You agree to all terms and conditions related to the use of electronic signatures and electronic transactions as outlined herein."
+msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-disclosure.tsx
 msgid "By proceeding with your electronic signature, you acknowledge and consent that it will be used to sign the given document and holds the same legal validity as a handwritten signature. By completing the electronic signing process, you affirm your understanding and acceptance of these conditions."
@@ -2378,9 +2370,17 @@ msgstr "Copiatori"
 msgid "Center"
 msgstr "Centro"
 
+#: apps/remix/app/components/general/app-command-menu.tsx
+msgid "Change language"
+msgstr ""
+
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-fields-page-renderer.tsx
 msgid "Change Recipient"
 msgstr "Cambia destinatario"
+
+#: apps/remix/app/components/general/app-command-menu.tsx
+msgid "Change theme"
+msgstr ""
 
 #: apps/remix/app/components/forms/editor/editor-field-text-form.tsx
 msgid "Character limit"
@@ -2422,6 +2422,10 @@ msgstr "Valori della casella di controllo"
 #: apps/remix/app/components/general/billing-plans.tsx
 msgid "Checkout"
 msgstr "Pagamento"
+
+#: packages/lib/constants/i18n.ts
+msgid "Chinese"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/template-direct-link-dialog.tsx
 msgid "Choose an existing recipient from below to continue"
@@ -2630,8 +2634,8 @@ msgid "Configure document settings and options before sending."
 msgstr "Configura le impostazioni e le opzioni del documento prima di inviare."
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
-msgid "Configure email settings for the document"
-msgstr "Configura le impostazioni email per il documento"
+msgid "Configure email settings for the document."
+msgstr ""
 
 #: apps/remix/app/components/embed/authoring/configure-fields-view.tsx
 #: apps/remix/app/components/embed/authoring/configure-fields-view.tsx
@@ -2648,8 +2652,8 @@ msgid "Configure general settings for the template."
 msgstr "Configura le impostazioni generali per il modello."
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-settings-dialog.tsx
-msgid "Configure security settings for the document"
-msgstr "Configura le impostazioni di sicurezza per il documento"
+msgid "Configure security settings for the document."
+msgstr ""
 
 #: apps/remix/app/components/dialogs/public-profile-template-manage-dialog.tsx
 msgid "Configure template"
@@ -2701,12 +2705,10 @@ msgstr "Conferma digitando: <0>{deleteMessage}</0>"
 msgid "Confirm Deletion"
 msgstr "Conferma eliminazione"
 
-#: apps/remix/app/routes/_unauthenticated+/unverified-account.tsx
 #: packages/email/template-components/template-confirmation-email.tsx
 msgid "Confirm email"
 msgstr "Conferma email"
 
-#: apps/remix/app/components/forms/send-confirmation-email.tsx
 #: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
 msgid "Confirmation email sent"
 msgstr "Email di conferma inviato"
@@ -2745,7 +2747,6 @@ msgstr "Contesto"
 #: apps/remix/app/routes/_unauthenticated+/organisation.invite.$token.tsx
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 #: packages/ui/primitives/document-flow/document-flow-root.tsx
 msgid "Continue"
 msgstr "Continua"
@@ -3630,14 +3631,6 @@ msgstr "Vuoi eliminare questo modello?"
 msgid "Do you want to duplicate this template?"
 msgstr "Vuoi duplicare questo modello?"
 
-#: apps/remix/app/components/general/admin-license-card.tsx
-msgid "Documenso License"
-msgstr "Licenza Documenso"
-
-#: apps/remix/app/components/dialogs/account-delete-dialog.tsx
-msgid "Documenso will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
-msgstr "Documenso eliminerà <0>tutti i tuoi documenti</0>, insieme a tutti i tuoi documenti completati, firme e tutte le altre risorse appartenenti al tuo account."
-
 #: apps/remix/app/components/general/settings-nav-desktop.tsx
 #: apps/remix/app/components/general/template/template-page-view-documents-table.tsx
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings._layout.tsx
@@ -4029,6 +4022,14 @@ msgstr "I documenti che richiedono la tua attenzione verranno visualizzati qui"
 msgid "Documents Viewed"
 msgstr "Documenti visualizzati"
 
+#: apps/remix/app/components/general/admin-license-card.tsx
+msgid "Docutracker License"
+msgstr ""
+
+#: apps/remix/app/components/dialogs/account-delete-dialog.tsx
+msgid "Docutracker will delete <0>all of your documents</0>, along with all of your completed documents, signatures, and all other resources belonging to your Account."
+msgstr ""
+
 #: apps/remix/app/components/tables/organisation-email-domains-table.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/email-domains._index.tsx
 msgid "Domain"
@@ -4187,6 +4188,10 @@ msgstr "Duplica Modello"
 msgid "Duplicate values are not allowed"
 msgstr "I valori duplicati non sono ammessi"
 
+#: packages/lib/constants/i18n.ts
+msgid "Dutch"
+msgstr ""
+
 #: packages/ui/primitives/document-flow/field-items-advanced-settings/number-field.tsx
 msgid "E.g. 0"
 msgstr "Es. 0"
@@ -4283,7 +4288,6 @@ msgid "Email"
 msgstr "Email"
 
 #: apps/remix/app/components/dialogs/organisation-member-invite-dialog.tsx
-#: apps/remix/app/components/forms/send-confirmation-email.tsx
 #: apps/remix/app/components/general/claim-account.tsx
 msgid "Email address"
 msgstr "Indirizzo email"
@@ -4293,17 +4297,9 @@ msgstr "Indirizzo email"
 msgid "Email Address"
 msgstr "Indirizzo Email"
 
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Email already confirmed"
-msgstr "Email già confermata"
-
 #: apps/remix/app/components/dialogs/organisation-email-create-dialog.tsx
 msgid "Email already exists"
 msgstr "Email già esistente"
-
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Email Confirmed!"
-msgstr "Email confermato!"
 
 #: apps/remix/app/components/dialogs/organisation-email-create-dialog.tsx
 msgid "Email Created"
@@ -4528,6 +4524,10 @@ msgstr "Documento Allegato"
 msgid "Enclosed Documents"
 msgstr "Documenti allegati"
 
+#: packages/lib/constants/i18n.ts
+msgid "English"
+msgstr ""
+
 #: apps/remix/app/components/dialogs/sign-field-email-dialog.tsx
 #: apps/remix/app/components/dialogs/sign-field-initials-dialog.tsx
 #: apps/remix/app/components/dialogs/sign-field-name-dialog.tsx
@@ -4724,7 +4724,6 @@ msgstr "Busta aggiornata"
 #: apps/remix/app/components/general/template/template-edit-form.tsx
 #: apps/remix/app/components/general/template/template-edit-form.tsx
 #: apps/remix/app/components/general/template/template-edit-form.tsx
-#: apps/remix/app/components/general/verify-email-banner.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/documents.$id.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/email-domains.$id.tsx
 #: apps/remix/app/routes/_authenticated+/admin+/organisations.$id.tsx
@@ -5099,6 +5098,10 @@ msgstr "Firma gratuita"
 msgid "Free Signature Settings"
 msgstr "Impostazioni Firma Gratuita"
 
+#: packages/lib/constants/i18n.ts
+msgid "French"
+msgstr ""
+
 #: apps/remix/app/components/embed/embed-direct-template-client-page.tsx
 #: apps/remix/app/components/embed/embed-document-signing-page-v1.tsx
 #: apps/remix/app/components/embed/multisign/multi-sign-document-signing-view.tsx
@@ -5131,6 +5134,10 @@ msgstr "Genera Record DKIM"
 msgid "Generate Links"
 msgstr "Genera link"
 
+#: packages/lib/constants/i18n.ts
+msgid "German"
+msgstr ""
+
 #: packages/ui/components/document/document-global-auth-action-select.tsx
 msgid "Global recipient action authentication"
 msgstr "Autenticazione globale del destinatario"
@@ -5158,9 +5165,6 @@ msgid "Go Back"
 msgstr "Torna indietro"
 
 #: apps/remix/app/routes/_unauthenticated+/verify-email._index.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 msgid "Go back home"
 msgstr "Torna alla home"
 
@@ -5425,10 +5429,6 @@ msgstr "Se non hai richiesto questo codice di verifica, puoi tranquillamente ign
 msgid "If you do not want to use the authenticator prompted, you can close it, which will then display the next available authenticator."
 msgstr "Se non vuoi utilizzare l'autenticatore richiesto, puoi chiuderlo, dopodiché verrà mostrato il successivo disponibile."
 
-#: apps/remix/app/routes/_unauthenticated+/unverified-account.tsx
-msgid "If you don't find the confirmation link in your inbox, you can request a new one below."
-msgstr "Se non trovi il link di conferma nella tua casella di posta, puoi richiederne uno nuovo qui sotto."
-
 #: apps/remix/app/components/forms/2fa/enable-authenticator-app-dialog.tsx
 msgid "If your authenticator app does not support QR codes, you can use the following code instead:"
 msgstr "Se la tua app autenticatrice non supporta i codici QR, puoi usare il seguente codice:"
@@ -5550,8 +5550,8 @@ msgid "Invalid License Key"
 msgstr "Chiave di licenza non valida"
 
 #: apps/remix/app/components/general/admin-license-status-banner.tsx
-msgid "Invalid License Type - Your Documenso instance is using features that are not part of your license."
-msgstr "Tipo di licenza non valido - La tua istanza Documenso sta utilizzando funzionalità che non fanno parte della tua licenza."
+msgid "Invalid License Type - Your Docutracker instance is using features that are not part of your license."
+msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "Invalid link"
@@ -5652,10 +5652,6 @@ msgstr "Sembra che {0} non abbia ancora aggiunto documenti al proprio profilo."
 msgid "It looks like we ran into an issue!"
 msgstr "Sembra che ci siamo imbattuti in un problema!"
 
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "It seems that the provided token has expired. We've just sent you another token, please check your email and try again."
-msgstr "Sembra che il token fornito sia scaduto. Ti abbiamo appena inviato un altro token, controlla la tua email e riprova."
-
 #: apps/remix/app/routes/_unauthenticated+/verify-email._index.tsx
 msgid "It seems that there is no token provided, if you are trying to verify your email please follow the link in your email."
 msgstr "Sembra che non sia stato fornito alcun token, se stai cercando di verificare la tua email, segui il link nella tua email."
@@ -5668,9 +5664,17 @@ msgstr "Attualmente non è il tuo turno di firmare. Torna presto a controllare p
 msgid "It's currently not your turn to sign. You will receive an email with instructions once it's your turn to sign the document."
 msgstr "Al momento, non è il tuo turno di firmare. Riceverai un'email con le istruzioni quando sarà il tuo turno di firmare il documento."
 
+#: packages/lib/constants/i18n.ts
+msgid "Italian"
+msgstr ""
+
+#: packages/lib/constants/i18n.ts
+msgid "Japanese"
+msgstr ""
+
 #: packages/email/templates/organisation-invite.tsx
-msgid "Join {organisationName} on Documenso"
-msgstr "Unisciti a {organisationName} su Documenso"
+msgid "Join {organisationName} on Docutracker"
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.support.tsx
 msgid "Join our community on <0>Discord</0> for community support and discussion."
@@ -5684,6 +5688,10 @@ msgstr "Iscritto"
 #: apps/remix/app/routes/_authenticated+/dashboard.tsx
 msgid "Joined {0}"
 msgstr "Iscritto a {0}"
+
+#: packages/lib/constants/i18n.ts
+msgid "Korean"
+msgstr ""
 
 #: apps/remix/app/components/forms/editor/editor-field-generic-field-forms.tsx
 #: apps/remix/app/components/forms/editor/editor-field-text-form.tsx
@@ -5854,8 +5862,8 @@ msgid "Link template"
 msgstr "Collega modello"
 
 #: packages/email/templates/organisation-account-link-confirmation.tsx
-msgid "Link your Documenso account"
-msgstr "Collega il tuo account Documenso"
+msgid "Link your Docutracker account"
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/settings+/security._index.tsx
 #: apps/remix/app/routes/_authenticated+/settings+/security.linked-accounts.tsx
@@ -6183,8 +6191,8 @@ msgid "Min"
 msgstr ""
 
 #: apps/remix/app/components/general/admin-license-status-banner.tsx
-msgid "Missing License - Your Documenso instance is using features that require a license."
-msgstr "Licenza mancante - La tua istanza Documenso sta utilizzando funzionalità che richiedono una licenza."
+msgid "Missing License - Your Docutracker instance is using features that require a license."
+msgstr ""
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-fields-page.tsx
 msgid "Missing Recipients"
@@ -7240,10 +7248,6 @@ msgstr "Seleziona come desideri ricevere il tuo codice di verifica."
 msgid "Please try a different domain."
 msgstr "Si prega di provare un altro dominio."
 
-#: apps/remix/app/components/forms/send-confirmation-email.tsx
-msgid "Please try again and make sure you enter the correct email address."
-msgstr "Si prega di riprovare assicurandosi di inserire l'indirizzo email corretto."
-
 #: packages/ui/components/pdf-viewer/pdf-viewer-konva.tsx
 #: packages/ui/components/pdf-viewer/pdf-viewer-konva.tsx
 #: packages/ui/primitives/pdf-viewer/base.tsx
@@ -7269,6 +7273,14 @@ msgstr "Per favore carica un documento per continuare"
 #: apps/remix/app/components/forms/branding-preferences-form.tsx
 msgid "Please upload a logo"
 msgstr "Si prega di caricare un logo"
+
+#: packages/lib/constants/i18n.ts
+msgid "Polish"
+msgstr ""
+
+#: packages/lib/constants/i18n.ts
+msgid "Portuguese (Brazil)"
+msgstr ""
 
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-fields-page.tsx
 #: packages/ui/primitives/document-flow/field-item.tsx
@@ -7445,8 +7457,8 @@ msgid "Read Only"
 msgstr "Solo lettura"
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.support.tsx
-msgid "Read our documentation to get started with Documenso."
-msgstr "Leggi la nostra documentazione per iniziare con Documenso."
+msgid "Read our documentation to get started with Docutracker."
+msgstr ""
 
 #: apps/remix/app/components/general/document-signing/document-signing-disclosure.tsx
 msgid "Read the full <0>signature disclosure</0>."
@@ -7659,6 +7671,10 @@ msgstr "Reindirizzamento"
 msgid "Registration Successful"
 msgstr "Registrazione avvenuta con successo"
 
+#: apps/remix/app/components/forms/signup.tsx
+msgid "Registration successful. Please sign in."
+msgstr ""
+
 #: apps/remix/app/components/general/envelope-signing/envelope-signer-header.tsx
 msgid "Reject"
 msgstr "Rifiuta"
@@ -7835,10 +7851,6 @@ msgstr "Reinvia"
 msgid "Resend code"
 msgstr "Reinvia codice"
 
-#: apps/remix/app/components/general/verify-email-banner.tsx
-msgid "Resend Confirmation Email"
-msgstr "Reinvia email di conferma"
-
 #: apps/remix/app/components/dialogs/envelope-redistribute-dialog.tsx
 #: apps/remix/app/components/general/envelope-editor/envelope-editor-header.tsx
 #: apps/remix/app/components/general/envelope-editor/envelope-editor.tsx
@@ -7937,13 +7949,13 @@ msgstr "Ritorna"
 msgid "Return Home"
 msgstr "Torna alla home"
 
-#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-msgid "Return to Documenso sign in page here"
-msgstr "Torna alla pagina di accesso a Documenso qui"
-
 #: apps/remix/app/components/general/envelope-editor/envelope-editor.tsx
 msgid "Return to documents"
 msgstr "Torna ai documenti"
+
+#: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
+msgid "Return to Docutracker sign in page here"
+msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/organisation.decline.$token.tsx
 msgid "Return to Home"
@@ -8333,10 +8345,6 @@ msgstr "Invia"
 msgid "Send a test webhook with sample data to verify your integration is working correctly."
 msgstr "Invia un webhook di prova con dati di esempio per verificare che la tua integrazione funzioni correttamente."
 
-#: apps/remix/app/components/forms/send-confirmation-email.tsx
-msgid "Send confirmation email"
-msgstr "Invia email di conferma"
-
 #: apps/remix/app/components/dialogs/template-use-dialog.tsx
 msgid "Send document"
 msgstr "Invia documento"
@@ -8381,10 +8389,6 @@ msgstr "Mittente"
 #: apps/remix/app/components/forms/forgot-password.tsx
 msgid "Sending Reset Email..."
 msgstr "Invio dell'email di ripristino..."
-
-#: apps/remix/app/components/general/verify-email-banner.tsx
-msgid "Sending..."
-msgstr "Invio..."
 
 #: apps/remix/app/components/general/document/document-page-view-recipients.tsx
 #: apps/remix/app/components/general/webhook-logs-sheet.tsx
@@ -8789,8 +8793,6 @@ msgstr "Alcuni firmatari non hanno un campo firma assegnato. Assegna almeno 1 ca
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.branding.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.branding.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.public-profile.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
 #: packages/ui/components/document/document-share-button.tsx
 msgid "Something went wrong"
 msgstr "Qualcosa è andato storto"
@@ -8823,10 +8825,6 @@ msgstr "Qualcosa è andato storto durante il caricamento delle tue chiavi di acc
 #: packages/ui/components/pdf-viewer/pdf-viewer-konva.tsx
 msgid "Something went wrong while rendering the document, some fields may be missing or corrupted."
 msgstr "Qualcosa è andato storto durante il rendering del documento, alcuni campi potrebbero mancare o essere corrotti."
-
-#: apps/remix/app/components/general/verify-email-banner.tsx
-msgid "Something went wrong while sending the confirmation email."
-msgstr "Qualcosa è andato storto durante l'invio dell'e-mail di conferma."
 
 #: apps/remix/app/components/dialogs/team-delete-dialog.tsx
 msgid "Something went wrong while updating the team billing subscription, please contact support."
@@ -8872,6 +8870,10 @@ msgstr "Fonte"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
 msgid "Space-separated list of domains. Leave empty to allow all domains."
 msgstr "Elenco di domini separato da spazi. Lascia vuoto per consentire tutti i domini."
+
+#: packages/lib/constants/i18n.ts
+msgid "Spanish"
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings._layout.tsx
 msgid "SSO"
@@ -9018,7 +9020,6 @@ msgstr "Stato dell’abbonamento"
 #: apps/remix/app/components/general/organisations/organisation-invitations.tsx
 #: apps/remix/app/components/general/teams/team-email-dropdown.tsx
 #: apps/remix/app/components/general/teams/team-email-usage.tsx
-#: apps/remix/app/components/general/verify-email-banner.tsx
 #: apps/remix/app/components/general/webhook-logs-sheet.tsx
 #: apps/remix/app/components/tables/organisation-member-invites-table.tsx
 #: apps/remix/app/components/tables/organisation-member-invites-table.tsx
@@ -9146,8 +9147,8 @@ msgid "Team email removed"
 msgstr "Email del team rimosso"
 
 #: packages/email/templates/team-email-removed.tsx
-msgid "Team email removed for {teamName} on Documenso"
-msgstr "Email del team rimosso per {teamName} su Documenso"
+msgid "Team email removed for {teamName} on Docutracker"
+msgstr ""
 
 #: apps/remix/app/routes/_unauthenticated+/team.verify.email.$token.tsx
 msgid "Team email verification"
@@ -9397,8 +9398,8 @@ msgid "Thank you for completing the signing process."
 msgstr "Grazie per aver completato il processo di firma."
 
 #: apps/remix/app/routes/_unauthenticated+/articles.signature-disclosure.tsx
-msgid "Thank you for using Documenso to perform your electronic document signing. The purpose of this disclosure is to inform you about the process, legality, and your rights regarding the use of electronic signatures on our platform. By opting to use an electronic signature, you are agreeing to the terms and conditions outlined below."
-msgstr "Grazie per aver utilizzato Documenso per eseguire la firma elettronica dei tuoi documenti. Lo scopo di questa divulgazione è informarti sul processo, la legalità e i tuoi diritti riguardanti l'uso delle firme elettroniche sulla nostra piattaforma. Optando per l'utilizzo di una firma elettronica, accetti i termini e le condizioni delineati di seguito."
+msgid "Thank you for using Docutracker to perform your electronic document signing. The purpose of this disclosure is to inform you about the process, legality, and your rights regarding the use of electronic signatures on our platform. By opting to use an electronic signature, you are agreeing to the terms and conditions outlined below."
+msgstr ""
 
 #: packages/email/template-components/template-forgot-password.tsx
 msgid "That's okay, it happens! Click the button below to reset your password."
@@ -9755,8 +9756,8 @@ msgstr "I tipi di firma che i destinatari possono utilizzare quando firmano il d
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
 #: apps/remix/app/components/dialogs/webhook-edit-dialog.tsx
-msgid "The URL for Documenso to send webhook events to."
-msgstr "L'URL per Documenso per inviare eventi webhook."
+msgid "The URL for Docutracker to send webhook events to."
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/admin+/users.$id.tsx
 msgid "The user you are looking for may have been removed, renamed or may have never existed."
@@ -9817,10 +9818,6 @@ msgstr "Hanno il permesso per tuo conto di:"
 #: apps/remix/app/components/forms/signin.tsx
 msgid "This account has been disabled. Please contact support."
 msgstr "Questo account è stato disabilitato. Contatta il supporto."
-
-#: apps/remix/app/components/forms/signin.tsx
-msgid "This account has not been verified. Please verify your account before signing in."
-msgstr "Questo account non è stato verificato. Verifica il tuo account prima di accedere."
 
 #: apps/remix/app/components/dialogs/admin-user-reset-two-factor-dialog.tsx
 msgid "This action is irreversible. Please ensure you have informed the user before proceeding."
@@ -9893,8 +9890,8 @@ msgid "This document has been signed by all recipients"
 msgstr "Questo documento è stato firmato da tutti i destinatari"
 
 #: apps/remix/app/components/general/document/document-certificate-qr-view.tsx
-msgid "This document is available in your Documenso account. You can view more details, recipients, and audit logs there."
-msgstr "Questo documento è disponibile nel tuo account Documenso. Puoi visualizzare più dettagli, destinatari e log di controllo lì."
+msgid "This document is available in your Docutracker account. You can view more details, recipients, and audit logs there."
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/documents.$id._index.tsx
 msgid "This document is currently a draft and has not been sent"
@@ -9913,8 +9910,8 @@ msgid "This document was created using a direct link."
 msgstr "Questo documento è stato creato utilizzando un link diretto."
 
 #: packages/email/template-components/template-footer.tsx
-msgid "This document was sent using <0>Documenso</0>."
-msgstr "Questo documento è stato inviato tramite <0>Documenso</0>."
+msgid "This document was sent using <0>Docutracker</0>."
+msgstr ""
 
 #: apps/remix/app/components/dialogs/envelope-duplicate-dialog.tsx
 msgid "This document will be duplicated."
@@ -10186,7 +10183,6 @@ msgid "To enable two-factor authentication, scan the following QR code using you
 msgstr "Per abilitare l'autenticazione a due fattori, scansiona il seguente codice QR utilizzando la tua app di autenticazione."
 
 #: apps/remix/app/routes/_unauthenticated+/o.$orgUrl.signin.tsx
-#: apps/remix/app/routes/_unauthenticated+/unverified-account.tsx
 msgid "To gain access to your account, please confirm your email address by clicking on the confirmation link from your inbox."
 msgstr "Per accedere al tuo account, conferma il tuo indirizzo email facendo clic sul link di conferma dalla tua casella di posta."
 
@@ -10476,7 +10472,6 @@ msgstr "Impossibile reimpostare la password"
 msgid "Unable to setup two-factor authentication"
 msgstr "Impossibile configurare l'autenticazione a due fattori"
 
-#: apps/remix/app/components/forms/signin.tsx
 #: apps/remix/app/components/forms/signin.tsx
 msgid "Unable to sign in"
 msgstr "Impossibile accedere"
@@ -10883,14 +10878,6 @@ msgstr "Valore"
 msgid "Verification Code Required"
 msgstr "Codice di verifica richiesto"
 
-#: apps/remix/app/components/general/verify-email-banner.tsx
-msgid "Verification Email Sent"
-msgstr "Email di Verifica Inviata"
-
-#: apps/remix/app/components/general/verify-email-banner.tsx
-msgid "Verification email sent successfully."
-msgstr "Email di verifica inviata con successo."
-
 #: apps/remix/app/components/general/document-signing/access-auth-2fa-form.tsx
 msgid "Verify & Complete"
 msgstr "Verifica e completa"
@@ -10898,23 +10885,6 @@ msgstr "Verifica e completa"
 #: apps/remix/app/components/dialogs/organisation-email-domain-records-dialog.tsx
 msgid "Verify Domain"
 msgstr "Verifica Dominio"
-
-#: apps/remix/app/components/general/verify-email-banner.tsx
-msgid "Verify Now"
-msgstr "Verifica Ora"
-
-#: apps/remix/app/components/general/verify-email-banner.tsx
-msgid "Verify your email address"
-msgstr "Verifica il tuo indirizzo email"
-
-#: apps/remix/app/components/general/verify-email-banner.tsx
-msgid "Verify your email address to unlock all features."
-msgstr "Verifica il tuo indirizzo email per sbloccare tutte le funzionalità."
-
-#: apps/remix/app/components/general/document/document-upload-button-legacy.tsx
-#: apps/remix/app/components/general/envelope/envelope-upload-button.tsx
-msgid "Verify your email to upload documents."
-msgstr "Verifica il tuo email per caricare documenti."
 
 #: packages/email/templates/confirm-team-email.tsx
 msgid "Verify your team email address"
@@ -11121,8 +11091,8 @@ msgstr "In attesa del tuo turno"
 
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
 #: apps/remix/app/routes/_recipient+/sign.$token+/_index.tsx
-msgid "Want to send slick signing links like this one? <0>Check out Documenso</0>."
-msgstr "Vuoi inviare link per la firma eleganti come questo? <0>Dai un'occhiata a Documenso</0>."
+msgid "Want to send slick signing links like this one? <0>Check out Docutracker</0>."
+msgstr ""
 
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Want your own public profile?"
@@ -11429,14 +11399,6 @@ msgstr "Al momento non siamo in grado di aggiornare le tue preferenze email, rip
 msgid "We were unable to verify your details. Please try again or contact support"
 msgstr "Non siamo riusciti a verificare i tuoi dati. Per favore riprova o contatta il supporto"
 
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "We were unable to verify your email at this time."
-msgstr "Non siamo stati in grado di verificare la tua email in questo momento."
-
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "We were unable to verify your email. If your email is not verified already, please try again."
-msgstr "Non siamo riusciti a verificare la tua email. Se la tua email non è già verificata, riprova."
-
 #: apps/remix/app/components/dialogs/envelope-distribute-dialog.tsx
 #: apps/remix/app/components/dialogs/template-use-dialog.tsx
 #: packages/ui/primitives/document-flow/add-subject.tsx
@@ -11481,10 +11443,6 @@ msgstr "Abbiamo cambiato la tua password come richiesto. Ora puoi accedere con l
 #: apps/remix/app/components/general/document-signing/access-auth-2fa-form.tsx
 msgid "We've sent a 6-digit verification code to your email. Please enter it below to complete the document."
 msgstr "Abbiamo inviato un codice di verifica a 6 cifre alla tua email. Inseriscilo di seguito per completare il documento."
-
-#: apps/remix/app/components/general/verify-email-banner.tsx
-msgid "We've sent a confirmation email to <0>{email}</0>. Please check your inbox and click the link in the email to verify your account."
-msgstr "Abbiamo inviato un'email di conferma a <0>{email}</0>. Controlla la tua casella di posta e clicca sul link nell'email per verificare il tuo account."
 
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks._index.tsx
 #: apps/remix/app/routes/_authenticated+/t.$teamUrl+/settings.webhooks.$id._index.tsx
@@ -11548,8 +11506,8 @@ msgid "Welcome to {organisationName}"
 msgstr "Benvenuto a {organisationName}"
 
 #: packages/email/template-components/template-confirmation-email.tsx
-msgid "Welcome to Documenso!"
-msgstr "Benvenuto su Documenso!"
+msgid "Welcome to Docutracker!"
+msgstr ""
 
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
 msgid "Well-known URL is required"
@@ -11587,8 +11545,8 @@ msgid "Whether to enable the SSO portal for your organisation"
 msgstr "Se abilitare il portale SSO per la tua organizzazione"
 
 #: apps/remix/app/routes/_profile+/p.$url.tsx
-msgid "While waiting for them to do so you can create your own Documenso account and get started with document signing right away."
-msgstr "Mentre aspetti che lo facciano, puoi creare il tuo account Documenso e iniziare a firmare documenti subito."
+msgid "While waiting for them to do so you can create your own Docutracker account and get started with document signing right away."
+msgstr ""
 
 #: apps/remix/app/components/dialogs/organisation-create-dialog.tsx
 msgid "Whitelabeling, unlimited members and more"
@@ -11833,8 +11791,8 @@ msgid "You can only detect fields in draft envelopes"
 msgstr "Puoi rilevare i campi solo nelle buste in bozza"
 
 #: packages/email/templates/confirm-team-email.tsx
-msgid "You can revoke access at any time in your team settings on Documenso <0>here</0>."
-msgstr "Puoi revocare l'accesso in qualsiasi momento dalle impostazioni del team su Documenso <0>qui</0>."
+msgid "You can revoke access at any time in your team settings on Docutracker <0>here</0>."
+msgstr ""
 
 #: apps/remix/app/components/forms/public-profile-form.tsx
 msgid "You can update the profile URL by updating the team URL in the general settings page."
@@ -12051,7 +12009,6 @@ msgstr "Hai firmato “{documentName}”"
 msgid "You have successfully left this organisation."
 msgstr "Hai abbandonato con successo questa organizzazione."
 
-#: apps/remix/app/components/forms/signup.tsx
 #: apps/remix/app/components/general/claim-account.tsx
 msgid "You have successfully registered. Please verify your account by clicking on the link you received in the email."
 msgstr "Ti sei registrato con successo. Verifica il tuo account cliccando sul link ricevuto via email."
@@ -12492,14 +12449,6 @@ msgstr "I tuoi documenti"
 msgid "Your Email"
 msgstr "La tua email"
 
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has already been confirmed. You can now use all features of Documenso."
-msgstr "La tua email è già stata confermata. Ora puoi utilizzare tutte le funzionalità di Documenso."
-
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your email has been successfully confirmed! You can now use all features of Documenso."
-msgstr "La tua email è stata confermata con successo! Ora puoi utilizzare tutte le funzionalità di Documenso."
-
 #. placeholder {0}: teamEmail.team.name
 #. placeholder {1}: teamEmail.team.url
 #: apps/remix/app/components/general/teams/team-email-usage.tsx
@@ -12570,8 +12519,8 @@ msgid "Your plan does not support inviting members. Please upgrade or your plan 
 msgstr "Il tuo piano non supporta l'invito ai membri. Per favore, aggiorna il tuo piano o contatta le vendite <0>{SUPPORT_EMAIL}</0> se desideri discutere le tue opzioni."
 
 #: apps/remix/app/components/general/organisations/organisation-billing-banner.tsx
-msgid "Your plan is no longer valid. Please subscribe to a new plan to continue using Documenso."
-msgstr "Il tuo piano non è più valido. Per favore, abbonati a un nuovo piano per continuare a utilizzare Documenso."
+msgid "Your plan is no longer valid. Please subscribe to a new plan to continue using Docutracker."
+msgstr ""
 
 #: apps/remix/app/components/forms/profile.tsx
 msgid "Your profile has been updated successfully."
@@ -12639,10 +12588,6 @@ msgstr "Il tuo modello sarà duplicato."
 msgid "Your templates has been saved successfully."
 msgstr "I tuoi modelli sono stati salvati con successo."
 
-#: apps/remix/app/routes/_unauthenticated+/verify-email.$token.tsx
-msgid "Your token has expired!"
-msgstr "Il tuo token è scaduto!"
-
 #: apps/remix/app/components/forms/token.tsx
 msgid "Your token was created successfully! Make sure to copy it because you won't be able to see it again!"
 msgstr "Il tuo token è stato creato con successo! Assicurati di copiarlo perché non potrai più vederlo!"
@@ -12666,4 +12611,3 @@ msgstr "Il tuo codice di verifica:"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.sso.tsx
 msgid "your-domain.com another-domain.com"
 msgstr "tuo-dominio.com altro-dominio.com"
-

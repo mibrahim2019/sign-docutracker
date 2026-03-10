@@ -1,5 +1,5 @@
-import { AppError } from '@documenso/lib/errors/app-error';
-import { prisma } from '@documenso/prisma';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { prisma } from '@docutracker/prisma';
 
 export type EnableUserOptions = {
   id: number;

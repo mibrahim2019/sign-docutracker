@@ -3,11 +3,11 @@ import { EnvelopeType, FolderType } from '@prisma/client';
 import { DocumentStatus } from '@prisma/client';
 import { isDeepEqual } from 'remeda';
 
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import type { ApiRequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import type { CreateDocumentAuditLogDataResponse } from '@documenso/lib/utils/document-audit-logs';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { prisma } from '@documenso/prisma';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@docutracker/lib/types/document-audit-logs';
+import type { ApiRequestMetadata } from '@docutracker/lib/universal/extract-request-metadata';
+import type { CreateDocumentAuditLogDataResponse } from '@docutracker/lib/utils/document-audit-logs';
+import { createDocumentAuditLogData } from '@docutracker/lib/utils/document-audit-logs';
+import { prisma } from '@docutracker/prisma';
 
 import { TEAM_DOCUMENT_VISIBILITY_MAP } from '../../constants/teams';
 import { AppError, AppErrorCode } from '../../errors/app-error';

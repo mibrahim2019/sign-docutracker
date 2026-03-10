@@ -6,13 +6,13 @@ import { InfoIcon } from 'lucide-react';
 import type { Control } from 'react-hook-form';
 import { useFormContext } from 'react-hook-form';
 
-import { DATE_FORMATS } from '@documenso/lib/constants/date-formats';
-import { DOCUMENT_SIGNATURE_TYPES } from '@documenso/lib/constants/document';
-import { SUPPORTED_LANGUAGES } from '@documenso/lib/constants/i18n';
-import { TIME_ZONES } from '@documenso/lib/constants/time-zones';
-import { DocumentEmailCheckboxes } from '@documenso/ui/components/document/document-email-checkboxes';
-import { DocumentSendEmailMessageHelper } from '@documenso/ui/components/document/document-send-email-message-helper';
-import { Combobox } from '@documenso/ui/primitives/combobox';
+import { DATE_FORMATS } from '@docutracker/lib/constants/date-formats';
+import { DOCUMENT_SIGNATURE_TYPES } from '@docutracker/lib/constants/document';
+import { SUPPORTED_LANGUAGES } from '@docutracker/lib/constants/i18n';
+import { TIME_ZONES } from '@docutracker/lib/constants/time-zones';
+import { DocumentEmailCheckboxes } from '@docutracker/ui/components/document/document-email-checkboxes';
+import { DocumentSendEmailMessageHelper } from '@docutracker/ui/components/document/document-send-email-message-helper';
+import { Combobox } from '@docutracker/ui/primitives/combobox';
 import {
   FormControl,
   FormDescription,
@@ -20,19 +20,19 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { MultiSelectCombobox } from '@documenso/ui/primitives/multi-select-combobox';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { MultiSelectCombobox } from '@docutracker/ui/primitives/multi-select-combobox';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@documenso/ui/primitives/tabs';
-import { Textarea } from '@documenso/ui/primitives/textarea';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
+} from '@docutracker/ui/primitives/select';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@docutracker/ui/primitives/tabs';
+import { Textarea } from '@docutracker/ui/primitives/textarea';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@docutracker/ui/primitives/tooltip';
 
 import { useConfigureDocument } from './configure-document-context';
 import type { TConfigureEmbedFormSchema } from './configure-document-view.types';
@@ -60,11 +60,11 @@ export const ConfigureDocumentAdvancedSettings = ({
 
   return (
     <div>
-      <h3 className="text-foreground mb-1 text-lg font-medium">
+      <h3 className="mb-1 text-lg font-medium text-foreground">
         <Trans>Advanced Settings</Trans>
       </h3>
 
-      <p className="text-muted-foreground mb-6 text-sm">
+      <p className="mb-6 text-sm text-muted-foreground">
         <Trans>Configure additional options and preferences</Trans>
       </p>
 
@@ -100,7 +100,7 @@ export const ConfigureDocumentAdvancedSettings = ({
                         }))}
                         selectedValues={field.value}
                         onChange={field.onChange}
-                        className="bg-background w-full"
+                        className="w-full bg-background"
                         emptySelectionPlaceholder={t`Select signature types`}
                       />
                     </FormControl>
@@ -204,7 +204,7 @@ export const ConfigureDocumentAdvancedSettings = ({
                         <TooltipTrigger>
                           <InfoIcon className="mx-2 h-4 w-4" />
                         </TooltipTrigger>
-                        <TooltipContent className="text-muted-foreground max-w-xs">
+                        <TooltipContent className="max-w-xs text-muted-foreground">
                           <Trans>
                             Add a URL to redirect the user to once the document is signed
                           </Trans>
@@ -279,7 +279,7 @@ export const ConfigureDocumentAdvancedSettings = ({
                       <FormControl>
                         <Input
                           id="subject"
-                          className="bg-background mt-2"
+                          className="mt-2 bg-background"
                           disabled={isSubmitting || !isEmailDistribution}
                           {...field}
                         />
@@ -302,7 +302,7 @@ export const ConfigureDocumentAdvancedSettings = ({
                       <FormControl>
                         <Textarea
                           id="message"
-                          className="bg-background mt-2 h-32 resize-none"
+                          className="mt-2 h-32 resize-none bg-background"
                           disabled={isSubmitting || !isEmailDistribution}
                           {...field}
                         />

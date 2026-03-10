@@ -1,10 +1,10 @@
 import { EnvelopeType } from '@prisma/client';
 
-import { getMultipleEnvelopeWhereInput } from '@documenso/lib/server-only/envelope/get-envelopes-by-ids';
-import { mapSecondaryIdToTemplateId } from '@documenso/lib/utils/envelope';
-import { mapFieldToLegacyField } from '@documenso/lib/utils/fields';
-import { mapRecipientToLegacyRecipient } from '@documenso/lib/utils/recipients';
-import { prisma } from '@documenso/prisma';
+import { getMultipleEnvelopeWhereInput } from '@docutracker/lib/server-only/envelope/get-envelopes-by-ids';
+import { mapSecondaryIdToTemplateId } from '@docutracker/lib/utils/envelope';
+import { mapFieldToLegacyField } from '@docutracker/lib/utils/fields';
+import { mapRecipientToLegacyRecipient } from '@docutracker/lib/utils/recipients';
+import { prisma } from '@docutracker/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import {

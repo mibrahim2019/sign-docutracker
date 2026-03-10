@@ -1,10 +1,10 @@
 import { Trans } from '@lingui/react/macro';
 import { Link } from 'react-router';
 
-import { getOrganisationDetailedInsights } from '@documenso/lib/server-only/admin/get-organisation-detailed-insights';
-import type { DateRange } from '@documenso/lib/types/search-params';
-import { getAdminOrganisation } from '@documenso/trpc/server/admin-router/get-admin-organisation';
-import { Button } from '@documenso/ui/primitives/button';
+import { getOrganisationDetailedInsights } from '@docutracker/lib/server-only/admin/get-organisation-detailed-insights';
+import type { DateRange } from '@docutracker/lib/types/search-params';
+import { getAdminOrganisation } from '@docutracker/trpc/server/admin-router/get-admin-organisation';
+import { Button } from '@docutracker/ui/primitives/button';
 
 import { OrganisationInsightsTable } from '~/components/tables/organisation-insights-table';
 

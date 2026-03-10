@@ -9,15 +9,15 @@ import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { base64 } from '@documenso/lib/universal/base64';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { trpc } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Avatar, AvatarFallback, AvatarImage } from '@documenso/ui/primitives/avatar';
-import { Button } from '@documenso/ui/primitives/button';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { base64 } from '@docutracker/lib/universal/base64';
+import { formatAvatarUrl } from '@docutracker/lib/utils/avatars';
+import { extractInitials } from '@docutracker/lib/utils/recipient-formatter';
+import { trpc } from '@docutracker/trpc/react';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Avatar, AvatarFallback, AvatarImage } from '@docutracker/ui/primitives/avatar';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Form,
   FormControl,
@@ -25,8 +25,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export const ZAvatarImageFormSchema = z.object({
   bytes: z.string().nullish(),
@@ -168,7 +168,7 @@ export const AvatarImageForm = ({ className, team, organisation }: AvatarImageFo
                       {hasAvatarImage && (
                         <button
                           type="button"
-                          className="bg-background/70 text-destructive absolute inset-0 flex cursor-pointer items-center justify-center text-xs opacity-0 transition-opacity hover:opacity-100"
+                          className="absolute inset-0 flex cursor-pointer items-center justify-center bg-background/70 text-xs text-destructive opacity-0 transition-opacity hover:opacity-100"
                           disabled={form.formState.isSubmitting}
                           onClick={() => void onFormSubmit({ bytes: null })}
                         >

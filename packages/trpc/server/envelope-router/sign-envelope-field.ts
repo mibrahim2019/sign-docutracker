@@ -1,13 +1,13 @@
 import { DocumentStatus, FieldType, RecipientRole, SigningStatus } from '@prisma/client';
 import { match } from 'ts-pattern';
 
-import { isBase64Image } from '@documenso/lib/constants/signatures';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { validateFieldAuth } from '@documenso/lib/server-only/document/validate-field-auth';
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { extractFieldInsertionValues } from '@documenso/lib/utils/envelope-signing';
-import { prisma } from '@documenso/prisma';
+import { isBase64Image } from '@docutracker/lib/constants/signatures';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { validateFieldAuth } from '@docutracker/lib/server-only/document/validate-field-auth';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@docutracker/lib/types/document-audit-logs';
+import { createDocumentAuditLogData } from '@docutracker/lib/utils/document-audit-logs';
+import { extractFieldInsertionValues } from '@docutracker/lib/utils/envelope-signing';
+import { prisma } from '@docutracker/prisma';
 
 import { procedure } from '../trpc';
 import {

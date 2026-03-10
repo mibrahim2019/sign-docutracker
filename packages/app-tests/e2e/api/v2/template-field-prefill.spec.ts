@@ -1,17 +1,17 @@
 import { expect, test } from '@playwright/test';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
-import type { TCheckboxFieldMeta, TRadioFieldMeta } from '@documenso/lib/types/field-meta';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { createApiToken } from '@docutracker/lib/server-only/public-api/create-api-token';
+import type { TCheckboxFieldMeta, TRadioFieldMeta } from '@docutracker/lib/types/field-meta';
 import {
   mapDocumentIdToSecondaryId,
   mapSecondaryIdToDocumentId,
   mapSecondaryIdToTemplateId,
-} from '@documenso/lib/utils/envelope';
-import { prisma } from '@documenso/prisma';
-import { FieldType, RecipientRole } from '@documenso/prisma/client';
-import { seedBlankTemplate } from '@documenso/prisma/seed/templates';
-import { seedUser } from '@documenso/prisma/seed/users';
+} from '@docutracker/lib/utils/envelope';
+import { prisma } from '@docutracker/prisma';
+import { FieldType, RecipientRole } from '@docutracker/prisma/client';
+import { seedBlankTemplate } from '@docutracker/prisma/seed/templates';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin } from '../../fixtures/authentication';
 

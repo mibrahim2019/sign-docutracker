@@ -1,9 +1,9 @@
 import { expect, test } from '@playwright/test';
 
-import { prisma } from '@documenso/prisma';
-import { FieldType } from '@documenso/prisma/client';
-import { seedPendingDocumentWithFullFields } from '@documenso/prisma/seed/documents';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { prisma } from '@docutracker/prisma';
+import { FieldType } from '@docutracker/prisma/client';
+import { seedPendingDocumentWithFullFields } from '@docutracker/prisma/seed/documents';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 import { signSignaturePad } from '../fixtures/signature';

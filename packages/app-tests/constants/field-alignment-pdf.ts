@@ -2,8 +2,8 @@ import { FieldType } from '@prisma/client';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import type { TFieldAndMeta } from '@documenso/lib/types/field-meta';
-import { toCheckboxCustomText } from '@documenso/lib/utils/fields';
+import type { TFieldAndMeta } from '@docutracker/lib/types/field-meta';
+import { toCheckboxCustomText } from '@docutracker/lib/utils/fields';
 
 export type FieldTestData = TFieldAndMeta & {
   page: number;

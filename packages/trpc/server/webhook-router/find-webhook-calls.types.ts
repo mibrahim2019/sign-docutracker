@@ -1,8 +1,8 @@
 import { WebhookCallStatus, WebhookTriggerEvents } from '@prisma/client';
 import { z } from 'zod';
 
-import { ZFindResultResponse, ZFindSearchParamsSchema } from '@documenso/lib/types/search-params';
-import WebhookCallSchema from '@documenso/prisma/generated/zod/modelSchema/WebhookCallSchema';
+import { ZFindResultResponse, ZFindSearchParamsSchema } from '@docutracker/lib/types/search-params';
+import WebhookCallSchema from '@docutracker/prisma/generated/zod/modelSchema/WebhookCallSchema';
 
 export const ZFindWebhookCallsRequestSchema = ZFindSearchParamsSchema.extend({
   webhookId: z.string(),

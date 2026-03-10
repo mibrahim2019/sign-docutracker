@@ -11,7 +11,7 @@ import { z } from 'zod';
 import {
   DEFAULT_FIELD_FONT_SIZE,
   type TDropdownFieldMeta as DropdownFieldMeta,
-} from '@documenso/lib/types/field-meta';
+} from '@docutracker/lib/types/field-meta';
 import {
   Form,
   FormControl,
@@ -19,16 +19,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { Separator } from '@documenso/ui/primitives/separator';
+} from '@docutracker/ui/primitives/select';
+import { Separator } from '@docutracker/ui/primitives/separator';
 
 import {
   EditorGenericFontSizeField,
@@ -176,7 +176,7 @@ export const EditorFieldDropdownForm = ({
                     value={field.value ?? '-1'}
                     onValueChange={(value) => field.onChange(value === '-1' ? undefined : value)}
                   >
-                    <SelectTrigger className="text-muted-foreground bg-background w-full">
+                    <SelectTrigger className="w-full bg-background text-muted-foreground">
                       <SelectValue placeholder={t`Default Value`} />
                     </SelectTrigger>
                     <SelectContent position="popper">

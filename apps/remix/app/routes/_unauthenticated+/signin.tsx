@@ -3,15 +3,15 @@ import { useEffect, useState } from 'react';
 import { Trans } from '@lingui/react/macro';
 import { Link, redirect } from 'react-router';
 
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
+import { getOptionalSession } from '@docutracker/auth/server/lib/utils/get-session';
 import {
   IS_GOOGLE_SSO_ENABLED,
   IS_MICROSOFT_SSO_ENABLED,
   IS_OIDC_SSO_ENABLED,
   OIDC_PROVIDER_LABEL,
-} from '@documenso/lib/constants/auth';
-import { env } from '@documenso/lib/utils/env';
-import { isValidReturnTo, normalizeReturnTo } from '@documenso/lib/utils/is-valid-return-to';
+} from '@docutracker/lib/constants/auth';
+import { env } from '@docutracker/lib/utils/env';
+import { isValidReturnTo, normalizeReturnTo } from '@docutracker/lib/utils/is-valid-return-to';
 
 import { SignInForm } from '~/components/forms/signin';
 import { appMetaTags } from '~/utils/meta';
@@ -69,12 +69,12 @@ export default function SignIn({ loaderData }: Route.ComponentProps) {
 
   return (
     <div className="w-screen max-w-lg px-4">
-      <div className="border-border dark:bg-background z-10 rounded-xl border bg-neutral-100 p-6">
+      <div className="z-10 rounded-xl border border-border bg-neutral-100 p-6 dark:bg-background">
         <h1 className="text-2xl font-semibold">
           <Trans>Sign in to your account</Trans>
         </h1>
 
-        <p className="text-muted-foreground mt-2 text-sm">
+        <p className="mt-2 text-sm text-muted-foreground">
           <Trans>Welcome back, we are lucky to have you.</Trans>
         </p>
         <hr className="-mx-6 my-4" />
@@ -88,7 +88,7 @@ export default function SignIn({ loaderData }: Route.ComponentProps) {
         />
 
         {!isEmbeddedRedirect && env('NEXT_PUBLIC_DISABLE_SIGNUP') !== 'true' && (
-          <p className="text-muted-foreground mt-6 text-center text-sm">
+          <p className="mt-6 text-center text-sm text-muted-foreground">
             <Trans>
               Don't have an account?{' '}
               <Link

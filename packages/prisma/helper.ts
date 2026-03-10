@@ -1,4 +1,4 @@
-/// <reference types="@documenso/tsconfig/process-env.d.ts" />
+/// <reference types="@docutracker/tsconfig/process-env.d.ts" />
 
 export const getDatabaseUrl = () => {
   if (process.env.NEXT_PRIVATE_DATABASE_URL) {
@@ -32,7 +32,8 @@ export const getDatabaseUrl = () => {
     return undefined;
   }
 
-  const normalizeForUrl = (u: string) => u.replace('postgres://', 'https://').replace('postgresql://', 'https://');
+  const normalizeForUrl = (u: string) =>
+    u.replace('postgres://', 'https://').replace('postgresql://', 'https://');
   const toPostgres = (u: URL) => u.toString().replace('https://', 'postgres://');
 
   // Supabase (and other cloud Postgres) require SSL from external platforms (e.g. Railway).

@@ -1,12 +1,12 @@
 import { TRPCError, initTRPC } from '@trpc/server';
 import type { AnyZodObject } from 'zod';
 
-import { AppError, genericErrorCodeToTrpcErrorCodeMap } from '@documenso/lib/errors/app-error';
-import { getApiTokenByToken } from '@documenso/lib/server-only/public-api/get-api-token-by-token';
-import type { TrpcApiLog } from '@documenso/lib/types/api-logs';
-import type { ApiRequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { alphaid } from '@documenso/lib/universal/id';
-import { isAdmin } from '@documenso/lib/utils/is-admin';
+import { AppError, genericErrorCodeToTrpcErrorCodeMap } from '@docutracker/lib/errors/app-error';
+import { getApiTokenByToken } from '@docutracker/lib/server-only/public-api/get-api-token-by-token';
+import type { TrpcApiLog } from '@docutracker/lib/types/api-logs';
+import type { ApiRequestMetadata } from '@docutracker/lib/universal/extract-request-metadata';
+import { alphaid } from '@docutracker/lib/universal/id';
+import { isAdmin } from '@docutracker/lib/utils/is-admin';
 
 import { dataTransformer } from '../utils/data-transformer';
 import type { TrpcContext } from './context';
@@ -84,7 +84,7 @@ export const authenticatedMiddleware = t.middleware(async ({ ctx, next, path }) 
 
   const authorizationHeader = ctx.req.headers.get('authorization');
 
-  // Taken from `authenticatedMiddleware` in `@documenso/api/v1/middleware/authenticated.ts`.
+  // Taken from `authenticatedMiddleware` in `@docutracker/api/v1/middleware/authenticated.ts`.
   if (authorizationHeader) {
     // Support for both "Authorization: Bearer api_xxx" and "Authorization: api_xxx"
     const [token] = (authorizationHeader || '').split('Bearer ').filter((s) => s.length > 0);
@@ -180,7 +180,7 @@ export const maybeAuthenticatedMiddleware = t.middleware(async ({ ctx, next, pat
 
   const authorizationHeader = ctx.req.headers.get('authorization');
 
-  // Taken from `authenticatedMiddleware` in `@documenso/api/v1/middleware/authenticated.ts`.
+  // Taken from `authenticatedMiddleware` in `@docutracker/api/v1/middleware/authenticated.ts`.
   if (authorizationHeader) {
     // Support for both "Authorization: Bearer api_xxx" and "Authorization: api_xxx"
     const [token] = (authorizationHeader || '').split('Bearer ').filter((s) => s.length > 0);

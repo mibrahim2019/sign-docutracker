@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
-import { DocumentDataSchema } from '@documenso/prisma/generated/zod/modelSchema/DocumentDataSchema';
-import { DocumentMetaSchema } from '@documenso/prisma/generated/zod/modelSchema/DocumentMetaSchema';
-import EnvelopeItemSchema from '@documenso/prisma/generated/zod/modelSchema/EnvelopeItemSchema';
-import { FolderSchema } from '@documenso/prisma/generated/zod/modelSchema/FolderSchema';
-import { TeamSchema } from '@documenso/prisma/generated/zod/modelSchema/TeamSchema';
-import { UserSchema } from '@documenso/prisma/generated/zod/modelSchema/UserSchema';
-import { LegacyDocumentSchema } from '@documenso/prisma/types/document-legacy-schema';
+import { DocumentDataSchema } from '@docutracker/prisma/generated/zod/modelSchema/DocumentDataSchema';
+import { DocumentMetaSchema } from '@docutracker/prisma/generated/zod/modelSchema/DocumentMetaSchema';
+import EnvelopeItemSchema from '@docutracker/prisma/generated/zod/modelSchema/EnvelopeItemSchema';
+import { FolderSchema } from '@docutracker/prisma/generated/zod/modelSchema/FolderSchema';
+import { TeamSchema } from '@docutracker/prisma/generated/zod/modelSchema/TeamSchema';
+import { UserSchema } from '@docutracker/prisma/generated/zod/modelSchema/UserSchema';
+import { LegacyDocumentSchema } from '@docutracker/prisma/types/document-legacy-schema';
 
 import { ZFieldSchema } from './field';
 import { ZRecipientLiteSchema } from './recipient';

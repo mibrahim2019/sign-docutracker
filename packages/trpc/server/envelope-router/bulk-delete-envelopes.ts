@@ -1,10 +1,10 @@
 import { EnvelopeType } from '@prisma/client';
 import pMap from 'p-map';
 
-import { deleteDocument } from '@documenso/lib/server-only/document/delete-document';
-import { getMultipleEnvelopeWhereInput } from '@documenso/lib/server-only/envelope/get-envelopes-by-ids';
-import { deleteTemplate } from '@documenso/lib/server-only/template/delete-template';
-import { prisma } from '@documenso/prisma';
+import { deleteDocument } from '@docutracker/lib/server-only/document/delete-document';
+import { getMultipleEnvelopeWhereInput } from '@docutracker/lib/server-only/envelope/get-envelopes-by-ids';
+import { deleteTemplate } from '@docutracker/lib/server-only/template/delete-template';
+import { prisma } from '@docutracker/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import {

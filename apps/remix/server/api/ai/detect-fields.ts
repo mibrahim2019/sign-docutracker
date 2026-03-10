@@ -2,11 +2,11 @@ import { sValidator } from '@hono/standard-validator';
 import { Hono } from 'hono';
 import { streamText } from 'hono/streaming';
 
-import { getSession } from '@documenso/auth/server/lib/utils/get-session';
-import { IS_AI_FEATURES_CONFIGURED } from '@documenso/lib/constants/app';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { detectFieldsFromEnvelope } from '@documenso/lib/server-only/ai/envelope/detect-fields';
-import { getTeamById } from '@documenso/lib/server-only/team/get-team';
+import { getSession } from '@docutracker/auth/server/lib/utils/get-session';
+import { IS_AI_FEATURES_CONFIGURED } from '@docutracker/lib/constants/app';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { detectFieldsFromEnvelope } from '@docutracker/lib/server-only/ai/envelope/detect-fields';
+import { getTeamById } from '@docutracker/lib/server-only/team/get-team';
 
 import type { HonoEnv } from '../../router';
 import { ZDetectFieldsRequestSchema } from './detect-fields.types';

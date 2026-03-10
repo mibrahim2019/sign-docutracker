@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 import { ChevronLeft } from 'lucide-react';
 import { Link, useNavigate } from 'react-router';
 
-import backgroundPattern from '@documenso/assets/images/background-pattern.png';
-import { Button } from '@documenso/ui/primitives/button';
+import backgroundPattern from '@docutracker/assets/images/background-pattern.png';
+import { Button } from '@docutracker/ui/primitives/button';
 
 type ErrorCodeMap = Record<
   number,
@@ -81,11 +81,11 @@ export const GenericErrorLayout = ({
 
       <div className="inset-0 mx-auto flex h-full flex-grow items-center justify-center px-6 py-32">
         <div>
-          <p className="text-muted-foreground font-semibold">{_(subHeading)}</p>
+          <p className="font-semibold text-muted-foreground">{_(subHeading)}</p>
 
           <h1 className="mt-3 text-2xl font-bold md:text-3xl">{_(heading)}</h1>
 
-          <p className="text-muted-foreground mt-4 text-sm">{_(message)}</p>
+          <p className="mt-4 text-sm text-muted-foreground">{_(message)}</p>
 
           <div className="mt-6 flex gap-x-2.5 gap-y-4 md:items-center">
             {secondaryButton ||

@@ -1,11 +1,11 @@
 import { expect, test } from '@playwright/test';
 import type { APIRequestContext } from 'playwright-core';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import type { CreateEmbeddingPresignTokenOptions } from '@documenso/lib/server-only/embedding-presign/create-embedding-presign-token';
-import type { VerifyEmbeddingPresignTokenOptions } from '@documenso/lib/server-only/embedding-presign/verify-embedding-presign-token';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import type { CreateEmbeddingPresignTokenOptions } from '@docutracker/lib/server-only/embedding-presign/create-embedding-presign-token';
+import type { VerifyEmbeddingPresignTokenOptions } from '@docutracker/lib/server-only/embedding-presign/verify-embedding-presign-token';
+import { createApiToken } from '@docutracker/lib/server-only/public-api/create-api-token';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 test.describe('Embedding Presign API', () => {
   test('createEmbeddingPresignToken: should create a token with default expiration', async ({

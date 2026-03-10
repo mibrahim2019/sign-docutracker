@@ -12,19 +12,19 @@ import { Link, useSearchParams } from 'react-router';
 import { match } from 'ts-pattern';
 import type { z } from 'zod';
 
-import type { InternalClaimPlans } from '@documenso/ee/server-only/stripe/get-internal-claim-plans';
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { IS_BILLING_ENABLED } from '@documenso/lib/constants/app';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { INTERNAL_CLAIM_ID } from '@documenso/lib/types/subscription';
-import { parseMessageDescriptorMacro } from '@documenso/lib/utils/i18n';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { trpc } from '@documenso/trpc/react';
-import { ZCreateOrganisationRequestSchema } from '@documenso/trpc/server/organisation-router/create-organisation.types';
-import { cn } from '@documenso/ui/lib/utils';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
+import type { InternalClaimPlans } from '@docutracker/ee/server-only/stripe/get-internal-claim-plans';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { IS_BILLING_ENABLED } from '@docutracker/lib/constants/app';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { INTERNAL_CLAIM_ID } from '@docutracker/lib/types/subscription';
+import { parseMessageDescriptorMacro } from '@docutracker/lib/utils/i18n';
+import { isPersonalLayout } from '@docutracker/lib/utils/organisations';
+import { trpc } from '@docutracker/trpc/react';
+import { ZCreateOrganisationRequestSchema } from '@docutracker/trpc/server/organisation-router/create-organisation.types';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Badge } from '@docutracker/ui/primitives/badge';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -33,7 +33,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -41,11 +41,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
-import { Tabs, TabsList, TabsTrigger } from '@documenso/ui/primitives/tabs';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { SpinnerBox } from '@docutracker/ui/primitives/spinner';
+import { Tabs, TabsList, TabsTrigger } from '@docutracker/ui/primitives/tabs';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { IndividualPersonalLayoutCheckoutButton } from '../general/billing-plans';
 
@@ -357,9 +357,9 @@ const BillingPlanForm = ({
         <button
           onClick={() => onChange('')}
           className={cn(
-            'hover:border-primary flex cursor-pointer items-center space-x-2 rounded-md border p-4 transition-all hover:shadow-sm',
+            'flex cursor-pointer items-center space-x-2 rounded-md border p-4 transition-all hover:border-primary hover:shadow-sm',
             {
-              'ring-primary/10 border-primary ring-2 ring-offset-1': '' === value,
+              'border-primary ring-2 ring-primary/10 ring-offset-1': '' === value,
             },
           )}
           disabled={!canCreateFreeOrganisation}
@@ -390,9 +390,9 @@ const BillingPlanForm = ({
             key={plan[billingPeriod]?.id}
             onClick={() => onChange(plan[billingPeriod]?.id ?? '')}
             className={cn(
-              'hover:border-primary flex cursor-pointer items-center space-x-2 rounded-md border p-4 transition-all hover:shadow-sm',
+              'flex cursor-pointer items-center space-x-2 rounded-md border p-4 transition-all hover:border-primary hover:shadow-sm',
               {
-                'ring-primary/10 border-primary ring-2 ring-offset-1':
+                'border-primary ring-2 ring-primary/10 ring-offset-1':
                   plan[billingPeriod]?.id === value,
               },
             )}
@@ -403,7 +403,7 @@ const BillingPlanForm = ({
             </div>
             <div className="whitespace-nowrap text-right text-sm font-medium">
               <p>{plan[billingPeriod]?.friendlyPrice}</p>
-              <span className="text-muted-foreground text-xs">
+              <span className="text-xs text-muted-foreground">
                 {billingPeriod === 'monthlyPrice' ? (
                   <Trans>per month</Trans>
                 ) : (
@@ -417,13 +417,13 @@ const BillingPlanForm = ({
         <Link
           to="https://documen.so/enterprise-cta"
           target="_blank"
-          className="bg-muted/30 flex items-center space-x-2 rounded-md border p-4"
+          className="flex items-center space-x-2 rounded-md border bg-muted/30 p-4"
         >
           <div className="flex-1 font-normal">
-            <p className="text-muted-foreground font-medium">
+            <p className="font-medium text-muted-foreground">
               <Trans>Enterprise</Trans>
             </p>
-            <p className="text-muted-foreground flex flex-row items-center gap-1">
+            <p className="flex flex-row items-center gap-1 text-muted-foreground">
               <Trans>Contact sales here</Trans>
               <ExternalLinkIcon className="h-4 w-4" />
             </p>
@@ -433,8 +433,8 @@ const BillingPlanForm = ({
 
       <div className="mt-6 text-center">
         <Link
-          to="https://documenso.com/pricing"
-          className="text-primary hover:text-primary/80 flex items-center justify-center gap-1 text-sm hover:underline"
+          to="https://docutracker.io/pricing"
+          className="flex items-center justify-center gap-1 text-sm text-primary hover:text-primary/80 hover:underline"
           target="_blank"
         >
           <Trans>Compare all plans and features in detail</Trans>

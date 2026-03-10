@@ -4,11 +4,11 @@ import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 
-import { authClient } from '@documenso/auth/client';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { trpc } from '@documenso/trpc/react';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { authClient } from '@docutracker/auth/client';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { trpc } from '@docutracker/trpc/react';
+import { Alert, AlertDescription, AlertTitle } from '@docutracker/ui/primitives/alert';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -17,10 +17,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
-import { Input } from '@documenso/ui/primitives/input';
-import { Label } from '@documenso/ui/primitives/label';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/dialog';
+import { Input } from '@docutracker/ui/primitives/input';
+import { Label } from '@docutracker/ui/primitives/label';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export type AccountDeleteDialogProps = {
   className?: string;
@@ -109,7 +109,7 @@ export const AccountDeleteDialog = ({ className }: AccountDeleteDialogProps) => 
 
                 <DialogDescription>
                   <Trans>
-                    Documenso will delete{' '}
+                    Docutracker will delete{' '}
                     <span className="font-semibold">all of your documents</span>, along with all of
                     your completed documents, signatures, and all other resources belonging to your
                     Account.
@@ -122,7 +122,7 @@ export const AccountDeleteDialog = ({ className }: AccountDeleteDialogProps) => 
                   <Label>
                     <Trans>
                       Please type{' '}
-                      <span className="text-muted-foreground font-semibold">{user.email}</span> to
+                      <span className="font-semibold text-muted-foreground">{user.email}</span> to
                       confirm.
                     </Trans>
                   </Label>

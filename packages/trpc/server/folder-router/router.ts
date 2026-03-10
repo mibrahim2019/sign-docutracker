@@ -1,11 +1,11 @@
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { createFolder } from '@documenso/lib/server-only/folder/create-folder';
-import { deleteFolder } from '@documenso/lib/server-only/folder/delete-folder';
-import { findFolders } from '@documenso/lib/server-only/folder/find-folders';
-import { findFoldersInternal } from '@documenso/lib/server-only/folder/find-folders-internal';
-import { getFolderBreadcrumbs } from '@documenso/lib/server-only/folder/get-folder-breadcrumbs';
-import { getFolderById } from '@documenso/lib/server-only/folder/get-folder-by-id';
-import { updateFolder } from '@documenso/lib/server-only/folder/update-folder';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { createFolder } from '@docutracker/lib/server-only/folder/create-folder';
+import { deleteFolder } from '@docutracker/lib/server-only/folder/delete-folder';
+import { findFolders } from '@docutracker/lib/server-only/folder/find-folders';
+import { findFoldersInternal } from '@docutracker/lib/server-only/folder/find-folders-internal';
+import { getFolderBreadcrumbs } from '@docutracker/lib/server-only/folder/get-folder-breadcrumbs';
+import { getFolderById } from '@docutracker/lib/server-only/folder/get-folder-by-id';
+import { updateFolder } from '@docutracker/lib/server-only/folder/update-folder';
 
 import { ZGenericSuccessResponse, ZSuccessResponseSchema } from '../schema';
 import { authenticatedProcedure, router } from '../trpc';

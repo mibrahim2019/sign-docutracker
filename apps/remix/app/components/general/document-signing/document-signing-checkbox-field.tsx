@@ -5,23 +5,23 @@ import { useLingui } from '@lingui/react';
 import { Loader } from 'lucide-react';
 import { useRevalidator } from 'react-router';
 
-import { DO_NOT_INVALIDATE_QUERY_ON_MUTATION } from '@documenso/lib/constants/trpc';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import type { TRecipientActionAuth } from '@documenso/lib/types/document-auth';
-import { ZCheckboxFieldMeta } from '@documenso/lib/types/field-meta';
-import { fromCheckboxValue, toCheckboxValue } from '@documenso/lib/universal/field-checkbox';
-import type { FieldWithSignatureAndFieldMeta } from '@documenso/prisma/types/field-with-signature-and-fieldmeta';
-import { trpc } from '@documenso/trpc/react';
+import { DO_NOT_INVALIDATE_QUERY_ON_MUTATION } from '@docutracker/lib/constants/trpc';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import type { TRecipientActionAuth } from '@docutracker/lib/types/document-auth';
+import { ZCheckboxFieldMeta } from '@docutracker/lib/types/field-meta';
+import { fromCheckboxValue, toCheckboxValue } from '@docutracker/lib/universal/field-checkbox';
+import type { FieldWithSignatureAndFieldMeta } from '@docutracker/prisma/types/field-with-signature-and-fieldmeta';
+import { trpc } from '@docutracker/trpc/react';
 import type {
   TRemovedSignedFieldWithTokenMutationSchema,
   TSignFieldWithTokenMutationSchema,
-} from '@documenso/trpc/server/field-router/schema';
-import { FieldToolTip } from '@documenso/ui/components/field/field-tooltip';
-import { cn } from '@documenso/ui/lib/utils';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
-import { checkboxValidationSigns } from '@documenso/ui/primitives/document-flow/field-items-advanced-settings/constants';
-import { Label } from '@documenso/ui/primitives/label';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/trpc/server/field-router/schema';
+import { FieldToolTip } from '@docutracker/ui/components/field/field-tooltip';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
+import { checkboxValidationSigns } from '@docutracker/ui/primitives/document-flow/field-items-advanced-settings/constants';
+import { Label } from '@docutracker/ui/primitives/label';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useRequiredDocumentSigningAuthContext } from './document-signing-auth-provider';
 import { DocumentSigningFieldContainer } from './document-signing-field-container';
@@ -265,8 +265,8 @@ export const DocumentSigningCheckboxField = ({
       type="Checkbox"
     >
       {isLoading && (
-        <div className="bg-background absolute inset-0 z-20 flex items-center justify-center rounded-md">
-          <Loader className="text-primary h-5 w-5 animate-spin md:h-8 md:w-8" />
+        <div className="absolute inset-0 z-20 flex items-center justify-center rounded-md bg-background">
+          <Loader className="h-5 w-5 animate-spin text-primary md:h-8 md:w-8" />
         </div>
       )}
 
@@ -300,7 +300,7 @@ export const DocumentSigningCheckboxField = ({
                   {!item.value.includes('empty-value-') && item.value && (
                     <Label
                       htmlFor={`checkbox-${field.id}-${item.id}`}
-                      className="text-foreground ml-1.5 text-xs font-normal"
+                      className="ml-1.5 text-xs font-normal text-foreground"
                     >
                       {item.value}
                     </Label>
@@ -334,7 +334,7 @@ export const DocumentSigningCheckboxField = ({
                 {!item.value.includes('empty-value-') && item.value && (
                   <Label
                     htmlFor={`checkbox-${field.id}-${item.id}`}
-                    className="text-foreground ml-1.5 text-xs font-normal"
+                    className="ml-1.5 text-xs font-normal text-foreground"
                   >
                     {item.value}
                   </Label>

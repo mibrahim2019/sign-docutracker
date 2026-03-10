@@ -1,10 +1,10 @@
-import { createCheckoutSession } from '@documenso/ee/server-only/stripe/create-checkout-session';
-import { createCustomer } from '@documenso/ee/server-only/stripe/create-customer';
-import { IS_BILLING_ENABLED, NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP } from '@documenso/lib/constants/organisations';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { buildOrganisationWhereQuery } from '@documenso/lib/utils/organisations';
-import { prisma } from '@documenso/prisma';
+import { createCheckoutSession } from '@docutracker/ee/server-only/stripe/create-checkout-session';
+import { createCustomer } from '@docutracker/ee/server-only/stripe/create-customer';
+import { IS_BILLING_ENABLED, NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { ORGANISATION_MEMBER_ROLE_PERMISSIONS_MAP } from '@docutracker/lib/constants/organisations';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { buildOrganisationWhereQuery } from '@docutracker/lib/utils/organisations';
+import { prisma } from '@docutracker/prisma';
 
 import { authenticatedProcedure } from '../trpc';
 import { ZCreateSubscriptionRequestSchema } from './create-subscription.types';

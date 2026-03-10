@@ -6,11 +6,11 @@ import { useForm } from 'react-hook-form';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { authClient } from '@documenso/auth/client';
-import { downloadFile } from '@documenso/lib/client-only/download-file';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { Button } from '@documenso/ui/primitives/button';
+import { authClient } from '@docutracker/auth/client';
+import { downloadFile } from '@docutracker/lib/client-only/download-file';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { Alert, AlertDescription } from '@docutracker/ui/primitives/alert';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogClose,
@@ -20,15 +20,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { PinInput, PinInputGroup, PinInputSlot } from '@documenso/ui/primitives/pin-input';
+} from '@docutracker/ui/primitives/form/form';
+import { PinInput, PinInputGroup, PinInputSlot } from '@docutracker/ui/primitives/pin-input';
 
 import { RecoveryCodeList } from './recovery-code-list';
 

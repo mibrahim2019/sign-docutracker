@@ -3,10 +3,10 @@ import { createElement } from 'react';
 import { msg } from '@lingui/core/macro';
 import { EnvelopeType, ReadStatus, SendStatus, SigningStatus } from '@prisma/client';
 
-import { mailer } from '@documenso/email/mailer';
-import DocumentCancelTemplate from '@documenso/email/templates/document-cancel';
-import { isRecipientEmailValidForSending } from '@documenso/lib/utils/recipients';
-import { prisma } from '@documenso/prisma';
+import { mailer } from '@docutracker/email/mailer';
+import DocumentCancelTemplate from '@docutracker/email/templates/document-cancel';
+import { isRecipientEmailValidForSending } from '@docutracker/lib/utils/recipients';
+import { prisma } from '@docutracker/prisma';
 
 import { getI18nInstance } from '../../../client-only/providers/i18n-server';
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../../constants/app';

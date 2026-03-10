@@ -8,10 +8,10 @@ import { useForm } from 'react-hook-form';
 import { renderSVG } from 'uqr';
 import { z } from 'zod';
 
-import { authClient } from '@documenso/auth/client';
-import { downloadFile } from '@documenso/lib/client-only/download-file';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { Button } from '@documenso/ui/primitives/button';
+import { authClient } from '@docutracker/auth/client';
+import { downloadFile } from '@docutracker/lib/client-only/download-file';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogClose,
@@ -21,7 +21,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -29,9 +29,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { PinInput, PinInputGroup, PinInputSlot } from '@documenso/ui/primitives/pin-input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { PinInput, PinInputGroup, PinInputSlot } from '@docutracker/ui/primitives/pin-input';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { RecoveryCodeList } from './recovery-code-list';
 
@@ -216,18 +216,18 @@ export const EnableAuthenticatorAppDialog = ({ onSuccess }: EnableAuthenticatorA
                       }}
                     />
 
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-sm text-muted-foreground">
                       <Trans>
                         If your authenticator app does not support QR codes, you can use the
                         following code instead:
                       </Trans>
                     </p>
 
-                    <p className="bg-muted/60 text-muted-foreground rounded-lg p-2 text-center font-mono tracking-widest">
+                    <p className="rounded-lg bg-muted/60 p-2 text-center font-mono tracking-widest text-muted-foreground">
                       {setup2FAData?.secret}
                     </p>
 
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-sm text-muted-foreground">
                       <Trans>
                         Once you have scanned the QR code or entered the code manually, enter the
                         code provided by your authenticator app below.

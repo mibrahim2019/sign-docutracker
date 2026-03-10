@@ -11,22 +11,22 @@ import { useFieldArray, useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
 import * as z from 'zod';
 
-import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT } from '@documenso/lib/constants/app';
+import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT } from '@docutracker/lib/constants/app';
 import {
   TEMPLATE_RECIPIENT_EMAIL_PLACEHOLDER_REGEX,
   TEMPLATE_RECIPIENT_NAME_PLACEHOLDER_REGEX,
-} from '@documenso/lib/constants/template';
+} from '@docutracker/lib/constants/template';
 import {
   DO_NOT_INVALIDATE_QUERY_ON_MUTATION,
   SKIP_QUERY_BATCH_META,
-} from '@documenso/lib/constants/trpc';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { ZRecipientEmailSchema } from '@documenso/lib/types/recipient';
-import { putPdfFile } from '@documenso/lib/universal/upload/put-file';
-import { trpc } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
+} from '@docutracker/lib/constants/trpc';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { ZRecipientEmailSchema } from '@docutracker/lib/types/recipient';
+import { putPdfFile } from '@docutracker/lib/universal/upload/put-file';
+import { trpc } from '@docutracker/trpc/react';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
 import {
   Dialog,
   DialogClose,
@@ -36,7 +36,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -44,12 +44,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
-import type { Toast } from '@documenso/ui/primitives/use-toast';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { SpinnerBox } from '@docutracker/ui/primitives/spinner';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@docutracker/ui/primitives/tooltip';
+import type { Toast } from '@docutracker/ui/primitives/use-toast';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 const ZAddRecipientsForNewDocumentSchema = z.object({
   distributeDocument: z.boolean(),

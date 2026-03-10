@@ -12,21 +12,21 @@ import { motion } from 'framer-motion';
 import { GripVerticalIcon, HelpCircle, Link2Icon, Plus, Trash } from 'lucide-react';
 import { useFieldArray, useForm } from 'react-hook-form';
 
-import { useAutoSave } from '@documenso/lib/client-only/hooks/use-autosave';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { isTemplateRecipientEmailPlaceholder } from '@documenso/lib/constants/template';
-import { ZRecipientAuthOptionsSchema } from '@documenso/lib/types/document-auth';
-import { nanoid } from '@documenso/lib/universal/id';
-import { generateRecipientPlaceholder } from '@documenso/lib/utils/templates';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import { RecipientActionAuthSelect } from '@documenso/ui/components/recipient/recipient-action-auth-select';
-import { RecipientRoleSelect } from '@documenso/ui/components/recipient/recipient-role-select';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { FormErrorMessage } from '@documenso/ui/primitives/form/form-error-message';
-import { Input } from '@documenso/ui/primitives/input';
-import { toast } from '@documenso/ui/primitives/use-toast';
+import { useAutoSave } from '@docutracker/lib/client-only/hooks/use-autosave';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { isTemplateRecipientEmailPlaceholder } from '@docutracker/lib/constants/template';
+import { ZRecipientAuthOptionsSchema } from '@docutracker/lib/types/document-auth';
+import { nanoid } from '@docutracker/lib/universal/id';
+import { generateRecipientPlaceholder } from '@docutracker/lib/utils/templates';
+import { AnimateGenericFadeInOut } from '@docutracker/ui/components/animate/animate-generic-fade-in-out';
+import { RecipientActionAuthSelect } from '@docutracker/ui/components/recipient/recipient-action-auth-select';
+import { RecipientRoleSelect } from '@docutracker/ui/components/recipient/recipient-role-select';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
+import { FormErrorMessage } from '@docutracker/ui/primitives/form/form-error-message';
+import { Input } from '@docutracker/ui/primitives/input';
+import { toast } from '@docutracker/ui/primitives/use-toast';
 
 import {
   DocumentReadOnlyFields,
@@ -533,7 +533,7 @@ export const AddTemplatePlaceholderRecipientsFormPartial = ({
 
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <span className="text-muted-foreground ml-1 cursor-help">
+                        <span className="ml-1 cursor-help text-muted-foreground">
                           <HelpCircle className="h-3.5 w-3.5" />
                         </span>
                       </TooltipTrigger>
@@ -586,7 +586,7 @@ export const AddTemplatePlaceholderRecipientsFormPartial = ({
                             {...provided.draggableProps}
                             {...provided.dragHandleProps}
                             className={cn('py-1', {
-                              'bg-widget-foreground pointer-events-none rounded-md pt-2':
+                              'pointer-events-none rounded-md bg-widget-foreground pt-2':
                                 snapshot.isDragging,
                             })}
                           >
@@ -768,11 +768,11 @@ export const AddTemplatePlaceholderRecipientsFormPartial = ({
                                     <TooltipTrigger className="col-span-1 mt-auto inline-flex h-10 w-10 items-center justify-center text-slate-500 hover:opacity-80">
                                       <Link2Icon className="h-4 w-4" />
                                     </TooltipTrigger>
-                                    <TooltipContent className="text-foreground z-9999 max-w-md p-4">
-                                      <h3 className="text-foreground text-lg font-semibold">
+                                    <TooltipContent className="z-9999 max-w-md p-4 text-foreground">
+                                      <h3 className="text-lg font-semibold text-foreground">
                                         <Trans>Direct link receiver</Trans>
                                       </h3>
-                                      <p className="text-muted-foreground mt-1">
+                                      <p className="mt-1 text-muted-foreground">
                                         <Trans>
                                           This field cannot be modified or deleted. When you share
                                           this template's direct link or add it to your public
@@ -829,7 +829,7 @@ export const AddTemplatePlaceholderRecipientsFormPartial = ({
 
               <Button
                 type="button"
-                className="dark:bg-muted dark:hover:bg-muted/80 bg-black/5 hover:bg-black/10"
+                className="bg-black/5 hover:bg-black/10 dark:bg-muted dark:hover:bg-muted/80"
                 variant="secondary"
                 disabled={
                   isSubmitting ||
@@ -852,7 +852,7 @@ export const AddTemplatePlaceholderRecipientsFormPartial = ({
                 />
 
                 <label
-                  className="text-muted-foreground ml-2 text-sm"
+                  className="ml-2 text-sm text-muted-foreground"
                   htmlFor="showAdvancedRecipientSettings"
                 >
                   <Trans>Show advanced settings</Trans>

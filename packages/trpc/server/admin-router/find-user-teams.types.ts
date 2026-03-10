@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
-import { ZFindResultResponse, ZFindSearchParamsSchema } from '@documenso/lib/types/search-params';
-import { TeamMemberRoleSchema } from '@documenso/prisma/generated/zod/inputTypeSchemas/TeamMemberRoleSchema';
-import OrganisationSchema from '@documenso/prisma/generated/zod/modelSchema/OrganisationSchema';
-import TeamSchema from '@documenso/prisma/generated/zod/modelSchema/TeamSchema';
+import { ZFindResultResponse, ZFindSearchParamsSchema } from '@docutracker/lib/types/search-params';
+import { TeamMemberRoleSchema } from '@docutracker/prisma/generated/zod/inputTypeSchemas/TeamMemberRoleSchema';
+import OrganisationSchema from '@docutracker/prisma/generated/zod/modelSchema/OrganisationSchema';
+import TeamSchema from '@docutracker/prisma/generated/zod/modelSchema/TeamSchema';
 
 export const ZFindUserTeamsRequestSchema = ZFindSearchParamsSchema.extend({
   userId: z.number(),

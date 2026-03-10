@@ -1,9 +1,9 @@
 import { Link } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import type { TDocumentMany as TDocumentRow } from '@documenso/lib/types/document';
-import { formatDocumentsPath } from '@documenso/lib/utils/teams';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import type { TDocumentMany as TDocumentRow } from '@docutracker/lib/types/document';
+import { formatDocumentsPath } from '@docutracker/lib/utils/teams';
 
 export type DataTableTitleProps = {
   row: TDocumentRow;

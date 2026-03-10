@@ -7,27 +7,27 @@ import { OrganisationGroupType, OrganisationMemberRole } from '@prisma/client';
 import { EditIcon, MoreHorizontal, Trash2Icon } from 'lucide-react';
 import { useSearchParams } from 'react-router';
 
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { EXTENDED_TEAM_MEMBER_ROLE_MAP } from '@documenso/lib/constants/teams-translations';
-import { ZUrlSearchParamsSchema } from '@documenso/lib/types/search-params';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { isTeamRoleWithinUserHierarchy } from '@documenso/lib/utils/teams';
-import { trpc } from '@documenso/trpc/react';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { EXTENDED_TEAM_MEMBER_ROLE_MAP } from '@docutracker/lib/constants/teams-translations';
+import { ZUrlSearchParamsSchema } from '@docutracker/lib/types/search-params';
+import { extractInitials } from '@docutracker/lib/utils/recipient-formatter';
+import { isTeamRoleWithinUserHierarchy } from '@docutracker/lib/utils/teams';
+import { trpc } from '@docutracker/trpc/react';
+import { AnimateGenericFadeInOut } from '@docutracker/ui/components/animate/animate-generic-fade-in-out';
+import { AvatarWithText } from '@docutracker/ui/primitives/avatar';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { DataTablePagination } from '@docutracker/ui/primitives/data-table-pagination';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { TableCell } from '@documenso/ui/primitives/table';
+} from '@docutracker/ui/primitives/dropdown-menu';
+import { Skeleton } from '@docutracker/ui/primitives/skeleton';
+import { TableCell } from '@docutracker/ui/primitives/table';
 
 import { useCurrentTeam } from '~/providers/team';
 
@@ -101,7 +101,7 @@ export const TeamMembersTable = () => {
               avatarClass="h-12 w-12"
               avatarFallback={avatarFallbackText}
               primaryText={
-                <span className="text-foreground/80 font-semibold">{row.original.name}</span>
+                <span className="font-semibold text-foreground/80">{row.original.name}</span>
               }
               secondaryText={row.original.email}
             />
@@ -130,7 +130,7 @@ export const TeamMembersTable = () => {
         cell: ({ row }) => (
           <DropdownMenu>
             <DropdownMenuTrigger>
-              <MoreHorizontal className="text-muted-foreground h-5 w-5" />
+              <MoreHorizontal className="h-5 w-5 text-muted-foreground" />
             </DropdownMenuTrigger>
 
             <DropdownMenuContent className="w-52" align="start" forceMount>

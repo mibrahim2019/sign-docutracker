@@ -1,21 +1,21 @@
 import { P, match } from 'ts-pattern';
 
-import type { BrandingSettings } from '@documenso/email/providers/branding';
-import { prisma } from '@documenso/prisma';
+import type { BrandingSettings } from '@docutracker/email/providers/branding';
+import { prisma } from '@docutracker/prisma';
 import type {
   DocumentMeta,
   EmailDomain,
   Organisation,
   OrganisationEmail,
   OrganisationType,
-} from '@documenso/prisma/client';
+} from '@docutracker/prisma/client';
 import {
   EmailDomainStatus,
   type OrganisationClaim,
   type OrganisationGlobalSettings,
-} from '@documenso/prisma/client';
+} from '@docutracker/prisma/client';
 
-import { DOCUMENSO_INTERNAL_EMAIL } from '../../constants/email';
+import { DOCUTRACKER_INTERNAL_EMAIL } from '../../constants/email';
 import { AppError, AppErrorCode } from '../../errors/app-error';
 import {
   organisationGlobalSettingsToBranding,
@@ -99,7 +99,7 @@ export const getEmailContext = async (
   if (options.emailType === 'INTERNAL') {
     return {
       ...emailContext,
-      senderEmail: DOCUMENSO_INTERNAL_EMAIL,
+      senderEmail: DOCUTRACKER_INTERNAL_EMAIL,
       replyToEmail: undefined,
       emailLanguage, // Not sure if we want to use this for internal emails.
     };
@@ -125,7 +125,7 @@ export const getEmailContext = async (
         name: foundSenderEmail.emailName,
         address: foundSenderEmail.email,
       }
-    : DOCUMENSO_INTERNAL_EMAIL;
+    : DOCUTRACKER_INTERNAL_EMAIL;
 
   return {
     ...emailContext,

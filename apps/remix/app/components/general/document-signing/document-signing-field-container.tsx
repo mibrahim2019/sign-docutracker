@@ -5,13 +5,13 @@ import { FieldType } from '@prisma/client';
 import { TooltipArrow } from '@radix-ui/react-tooltip';
 import { X } from 'lucide-react';
 
-import { type TRecipientActionAuth } from '@documenso/lib/types/document-auth';
-import { ZFieldMetaSchema } from '@documenso/lib/types/field-meta';
-import type { FieldWithSignature } from '@documenso/prisma/types/field-with-signature';
-import { FieldRootContainer } from '@documenso/ui/components/field/field';
-import { RECIPIENT_COLOR_STYLES } from '@documenso/ui/lib/recipient-colors';
-import { cn } from '@documenso/ui/lib/utils';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
+import { type TRecipientActionAuth } from '@docutracker/lib/types/document-auth';
+import { ZFieldMetaSchema } from '@docutracker/lib/types/field-meta';
+import type { FieldWithSignature } from '@docutracker/prisma/types/field-with-signature';
+import { FieldRootContainer } from '@docutracker/ui/components/field/field';
+import { RECIPIENT_COLOR_STYLES } from '@docutracker/ui/lib/recipient-colors';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@docutracker/ui/primitives/tooltip';
 
 import { useRequiredDocumentSigningAuthContext } from './document-signing-auth-provider';
 
@@ -180,10 +180,10 @@ export const DocumentSigningFieldContainer = ({
               className={cn(
                 'absolute -top-16 left-0 right-0 rounded-md p-2 text-center text-xs text-gray-700',
                 {
-                  'bg-foreground/5 border-border border': !field.inserted,
+                  'border border-border bg-foreground/5': !field.inserted,
                 },
                 {
-                  'bg-documenso-200 border-primary border': field.inserted,
+                  'border border-primary bg-documenso-200': field.inserted,
                 },
               )}
             >

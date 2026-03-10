@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const baseConfig = require('@documenso/tailwind-config');
+const baseConfig = require('@docutracker/tailwind-config');
 const path = require('path');
 
 module.exports = {
@@ -7,12 +7,12 @@ module.exports = {
   content: [
     ...baseConfig.content,
     './app/**/*.{ts,tsx}',
-    `${path.join(require.resolve('@documenso/ui'), '..')}/components/**/*.{ts,tsx}`,
-    `${path.join(require.resolve('@documenso/ui'), '..')}/icons/**/*.{ts,tsx}`,
-    `${path.join(require.resolve('@documenso/ui'), '..')}/lib/**/*.{ts,tsx}`,
-    `${path.join(require.resolve('@documenso/ui'), '..')}/primitives/**/*.{ts,tsx}`,
-    `${path.join(require.resolve('@documenso/email'), '..')}/templates/**/*.{ts,tsx}`,
-    `${path.join(require.resolve('@documenso/email'), '..')}/template-components/**/*.{ts,tsx}`,
-    `${path.join(require.resolve('@documenso/email'), '..')}/providers/**/*.{ts,tsx}`,
+    `${path.join(require.resolve('@docutracker/ui'), '..')}/components/**/*.{ts,tsx}`,
+    `${path.join(require.resolve('@docutracker/ui'), '..')}/icons/**/*.{ts,tsx}`,
+    `${path.join(require.resolve('@docutracker/ui'), '..')}/lib/**/*.{ts,tsx}`,
+    `${path.join(require.resolve('@docutracker/ui'), '..')}/primitives/**/*.{ts,tsx}`,
+    `${path.join(require.resolve('@docutracker/email'), '..')}/templates/**/*.{ts,tsx}`,
+    `${path.join(require.resolve('@docutracker/email'), '..')}/template-components/**/*.{ts,tsx}`,
+    `${path.join(require.resolve('@docutracker/email'), '..')}/providers/**/*.{ts,tsx}`,
   ],
 };

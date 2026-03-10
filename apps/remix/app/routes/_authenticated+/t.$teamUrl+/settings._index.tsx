@@ -2,13 +2,13 @@ import { Trans } from '@lingui/react/macro';
 import { CheckCircle2, Clock } from 'lucide-react';
 import { P, match } from 'ts-pattern';
 
-import { getSession } from '@documenso/auth/server/lib/utils/get-session';
-import { getTeamWithEmail } from '@documenso/lib/server-only/team/get-team-email-by-email';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { canExecuteTeamAction } from '@documenso/lib/utils/teams';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
+import { getSession } from '@docutracker/auth/server/lib/utils/get-session';
+import { getTeamWithEmail } from '@docutracker/lib/server-only/team/get-team-email-by-email';
+import { formatAvatarUrl } from '@docutracker/lib/utils/avatars';
+import { extractInitials } from '@docutracker/lib/utils/recipient-formatter';
+import { canExecuteTeamAction } from '@docutracker/lib/utils/teams';
+import { Alert, AlertDescription, AlertTitle } from '@docutracker/ui/primitives/alert';
+import { AvatarWithText } from '@docutracker/ui/primitives/avatar';
 
 import { TeamDeleteDialog } from '~/components/dialogs/team-delete-dialog';
 import { TeamEmailAddDialog } from '~/components/dialogs/team-email-add-dialog';
@@ -60,7 +60,7 @@ export default function TeamsSettingsPage({ loaderData }: Route.ComponentProps) 
               </Trans>
             </AlertDescription>
 
-            <hr className="border-border/50 mt-2" />
+            <hr className="mt-2 border-border/50" />
 
             <div className="flex flex-row items-center justify-between pt-4">
               <AvatarWithText
@@ -70,7 +70,7 @@ export default function TeamsSettingsPage({ loaderData }: Route.ComponentProps) 
                   (team.teamEmail?.name || team.emailVerification?.name) ?? '',
                 )}
                 primaryText={
-                  <span className="text-foreground/80 text-sm font-semibold">
+                  <span className="text-sm font-semibold text-foreground/80">
                     {team.teamEmail?.name || team.emailVerification?.name}
                   </span>
                 }
@@ -82,7 +82,7 @@ export default function TeamsSettingsPage({ loaderData }: Route.ComponentProps) 
               />
 
               <div className="flex flex-row items-center pr-2">
-                <div className="text-muted-foreground mr-4 flex flex-row items-center text-sm xl:mr-8">
+                <div className="mr-4 flex flex-row items-center text-sm text-muted-foreground xl:mr-8">
                   {match({
                     teamEmail: team.teamEmail,
                     emailVerification: team.emailVerification,
@@ -133,7 +133,7 @@ export default function TeamsSettingsPage({ loaderData }: Route.ComponentProps) 
               </AlertTitle>
 
               <AlertDescription className="mr-2">
-                <ul className="text-muted-foreground mt-0.5 list-inside list-disc text-sm">
+                <ul className="mt-0.5 list-inside list-disc text-sm text-muted-foreground">
                   {/* Feature not available yet. */}
                   {/* <li>Display this name and email when sending documents</li> */}
                   {/* <li>View documents associated with this email</li> */}

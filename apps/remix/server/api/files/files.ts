@@ -2,14 +2,14 @@ import { sValidator } from '@hono/standard-validator';
 import type { Prisma } from '@prisma/client';
 import { Hono } from 'hono';
 
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
-import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT } from '@documenso/lib/constants/app';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { verifyEmbeddingPresignToken } from '@documenso/lib/server-only/embedding-presign/verify-embedding-presign-token';
-import { getTeamById } from '@documenso/lib/server-only/team/get-team';
-import { putNormalizedPdfFileServerSide } from '@documenso/lib/universal/upload/put-file.server';
-import { getPresignPostUrl } from '@documenso/lib/universal/upload/server-actions';
-import { prisma } from '@documenso/prisma';
+import { getOptionalSession } from '@docutracker/auth/server/lib/utils/get-session';
+import { APP_DOCUMENT_UPLOAD_SIZE_LIMIT } from '@docutracker/lib/constants/app';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { verifyEmbeddingPresignToken } from '@docutracker/lib/server-only/embedding-presign/verify-embedding-presign-token';
+import { getTeamById } from '@docutracker/lib/server-only/team/get-team';
+import { putNormalizedPdfFileServerSide } from '@docutracker/lib/universal/upload/put-file.server';
+import { getPresignPostUrl } from '@docutracker/lib/universal/upload/server-actions';
+import { prisma } from '@docutracker/prisma';
 
 import type { HonoEnv } from '../../router';
 import { handleEnvelopeItemFileRequest } from './files.helpers';

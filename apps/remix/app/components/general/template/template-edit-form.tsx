@@ -5,28 +5,28 @@ import { useLingui } from '@lingui/react';
 import { useNavigate } from 'react-router';
 import { z } from 'zod';
 
-import { DocumentSignatureType } from '@documenso/lib/constants/document';
-import { isValidLanguageCode } from '@documenso/lib/constants/i18n';
+import { DocumentSignatureType } from '@docutracker/lib/constants/document';
+import { isValidLanguageCode } from '@docutracker/lib/constants/i18n';
 import {
   DO_NOT_INVALIDATE_QUERY_ON_MUTATION,
   SKIP_QUERY_BATCH_META,
-} from '@documenso/lib/constants/trpc';
-import { ZDocumentAccessAuthTypesSchema } from '@documenso/lib/types/document-auth';
-import type { TTemplate } from '@documenso/lib/types/template';
-import { trpc } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Card, CardContent } from '@documenso/ui/primitives/card';
-import { DocumentFlowFormContainer } from '@documenso/ui/primitives/document-flow/document-flow-root';
-import type { DocumentFlowStep } from '@documenso/ui/primitives/document-flow/types';
-import { PDFViewerLazy } from '@documenso/ui/primitives/pdf-viewer/lazy';
-import { Stepper } from '@documenso/ui/primitives/stepper';
-import { AddTemplateFieldsFormPartial } from '@documenso/ui/primitives/template-flow/add-template-fields';
-import type { TAddTemplateFieldsFormSchema } from '@documenso/ui/primitives/template-flow/add-template-fields.types';
-import { AddTemplatePlaceholderRecipientsFormPartial } from '@documenso/ui/primitives/template-flow/add-template-placeholder-recipients';
-import type { TAddTemplatePlacholderRecipientsFormSchema } from '@documenso/ui/primitives/template-flow/add-template-placeholder-recipients.types';
-import { AddTemplateSettingsFormPartial } from '@documenso/ui/primitives/template-flow/add-template-settings';
-import type { TAddTemplateSettingsFormSchema } from '@documenso/ui/primitives/template-flow/add-template-settings.types';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/lib/constants/trpc';
+import { ZDocumentAccessAuthTypesSchema } from '@docutracker/lib/types/document-auth';
+import type { TTemplate } from '@docutracker/lib/types/template';
+import { trpc } from '@docutracker/trpc/react';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Card, CardContent } from '@docutracker/ui/primitives/card';
+import { DocumentFlowFormContainer } from '@docutracker/ui/primitives/document-flow/document-flow-root';
+import type { DocumentFlowStep } from '@docutracker/ui/primitives/document-flow/types';
+import { PDFViewerLazy } from '@docutracker/ui/primitives/pdf-viewer/lazy';
+import { Stepper } from '@docutracker/ui/primitives/stepper';
+import { AddTemplateFieldsFormPartial } from '@docutracker/ui/primitives/template-flow/add-template-fields';
+import type { TAddTemplateFieldsFormSchema } from '@docutracker/ui/primitives/template-flow/add-template-fields.types';
+import { AddTemplatePlaceholderRecipientsFormPartial } from '@docutracker/ui/primitives/template-flow/add-template-placeholder-recipients';
+import type { TAddTemplatePlacholderRecipientsFormSchema } from '@docutracker/ui/primitives/template-flow/add-template-placeholder-recipients.types';
+import { AddTemplateSettingsFormPartial } from '@docutracker/ui/primitives/template-flow/add-template-settings';
+import type { TAddTemplateSettingsFormSchema } from '@docutracker/ui/primitives/template-flow/add-template-settings.types';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 

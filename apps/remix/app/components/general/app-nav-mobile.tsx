@@ -5,13 +5,13 @@ import { Trans } from '@lingui/react/macro';
 import { ReadStatus } from '@prisma/client';
 import { Link } from 'react-router';
 
-import LogoImage from '@documenso/assets/logo.png';
-import { authClient } from '@documenso/auth/client';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { trpc } from '@documenso/trpc/react';
-import { Sheet, SheetContent } from '@documenso/ui/primitives/sheet';
-import { ThemeSwitcher } from '@documenso/ui/primitives/theme-switcher';
+import LogoImage from '@docutracker/assets/logo.png';
+import { authClient } from '@docutracker/auth/client';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { isPersonalLayout } from '@docutracker/lib/utils/organisations';
+import { trpc } from '@docutracker/trpc/react';
+import { Sheet, SheetContent } from '@docutracker/ui/primitives/sheet';
+import { ThemeSwitcher } from '@docutracker/ui/primitives/theme-switcher';
 
 import { useOptionalCurrentTeam } from '~/providers/team';
 
@@ -86,7 +86,7 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
         <Link to="/" onClick={handleMenuItemClick}>
           <img
             src={LogoImage}
-            alt="Documenso Logo"
+            alt="Docutracker Logo"
             className="dark:invert"
             width={170}
             height={25}
@@ -97,13 +97,13 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
           {menuNavigationLinks.map(({ href, text }) => (
             <Link
               key={href}
-              className="text-foreground hover:text-foreground/80 flex items-center gap-2 text-2xl font-semibold"
+              className="flex items-center gap-2 text-2xl font-semibold text-foreground hover:text-foreground/80"
               to={href}
               onClick={() => handleMenuItemClick()}
             >
               {text}
               {href === '/inbox' && unreadCountData && unreadCountData.count > 0 && (
-                <span className="bg-primary text-primary-foreground flex h-6 min-w-[1.5rem] items-center justify-center rounded-full px-1.5 text-xs font-semibold">
+                <span className="flex h-6 min-w-[1.5rem] items-center justify-center rounded-full bg-primary px-1.5 text-xs font-semibold text-primary-foreground">
                   {unreadCountData.count > 99 ? '99+' : unreadCountData.count}
                 </span>
               )}
@@ -111,7 +111,7 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
           ))}
 
           <button
-            className="text-foreground hover:text-foreground/80 text-2xl font-semibold"
+            className="text-2xl font-semibold text-foreground hover:text-foreground/80"
             onClick={async () => authClient.signOut()}
           >
             <Trans>Sign Out</Trans>
@@ -123,8 +123,8 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
             <ThemeSwitcher />
           </div>
 
-          <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Documenso, Inc.
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Docutracker, Inc.
             <br />
             <Trans>All rights reserved.</Trans>
           </p>

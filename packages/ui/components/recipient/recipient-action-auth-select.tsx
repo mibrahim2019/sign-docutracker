@@ -5,10 +5,10 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { InfoIcon } from 'lucide-react';
 
-import { DOCUMENT_AUTH_TYPES } from '@documenso/lib/constants/document-auth';
-import { RecipientActionAuth } from '@documenso/lib/types/document-auth';
-import { MultiSelect, type Option } from '@documenso/ui/primitives/multiselect';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
+import { DOCUMENT_AUTH_TYPES } from '@docutracker/lib/constants/document-auth';
+import { RecipientActionAuth } from '@docutracker/lib/types/document-auth';
+import { MultiSelect, type Option } from '@docutracker/ui/primitives/multiselect';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@docutracker/ui/primitives/tooltip';
 
 import { cn } from '../../lib/utils';
 
@@ -83,7 +83,7 @@ export const RecipientActionAuthSelect = ({
           <InfoIcon className="h-4 w-4" />
         </TooltipTrigger>
 
-        <TooltipContent className="text-foreground max-w-md p-4">
+        <TooltipContent className="max-w-md p-4 text-foreground">
           <h2>
             <strong>
               <Trans>Recipient action authentication</Trans>

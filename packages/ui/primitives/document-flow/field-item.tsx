@@ -9,10 +9,10 @@ import { createPortal } from 'react-dom';
 import { Rnd } from 'react-rnd';
 import { useSearchParams } from 'react-router';
 
-import { useElementBounds } from '@documenso/lib/client-only/hooks/use-element-bounds';
-import { PDF_VIEWER_PAGE_SELECTOR } from '@documenso/lib/constants/pdf-viewer';
-import type { TFieldMetaSchema } from '@documenso/lib/types/field-meta';
-import { ZCheckboxFieldMeta, ZRadioFieldMeta } from '@documenso/lib/types/field-meta';
+import { useElementBounds } from '@docutracker/lib/client-only/hooks/use-element-bounds';
+import { PDF_VIEWER_PAGE_SELECTOR } from '@docutracker/lib/constants/pdf-viewer';
+import type { TFieldMetaSchema } from '@docutracker/lib/types/field-meta';
+import { ZCheckboxFieldMeta, ZRadioFieldMeta } from '@docutracker/lib/types/field-meta';
 
 import { useRecipientColors } from '../../lib/recipient-colors';
 import { cn } from '../../lib/utils';

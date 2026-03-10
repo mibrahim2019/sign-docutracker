@@ -4,12 +4,12 @@ import { Trans, useLingui } from '@lingui/react/macro';
 import { HomeIcon, Loader2, SearchIcon } from 'lucide-react';
 import { useNavigate } from 'react-router';
 
-import { FolderType } from '@documenso/lib/types/folder-type';
-import { formatTemplatesPath } from '@documenso/lib/utils/teams';
-import { trpc } from '@documenso/trpc/react';
-import { type TFolderWithSubfolders } from '@documenso/trpc/server/folder-router/schema';
-import { Button } from '@documenso/ui/primitives/button';
-import { Input } from '@documenso/ui/primitives/input';
+import { FolderType } from '@docutracker/lib/types/folder-type';
+import { formatTemplatesPath } from '@docutracker/lib/utils/teams';
+import { trpc } from '@docutracker/trpc/react';
+import { type TFolderWithSubfolders } from '@docutracker/trpc/server/folder-router/schema';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Input } from '@docutracker/ui/primitives/input';
 
 import { FolderCreateDialog } from '~/components/dialogs/folder-create-dialog';
 import { FolderDeleteDialog } from '~/components/dialogs/folder-delete-dialog';
@@ -78,7 +78,7 @@ export default function TemplatesFoldersPage() {
       </div>
 
       <div className="relative w-full max-w-md py-6">
-        <SearchIcon className="text-muted-foreground absolute left-2 top-9 h-4 w-4" />
+        <SearchIcon className="absolute left-2 top-9 h-4 w-4 text-muted-foreground" />
         <Input
           placeholder={t`Search folders...`}
           value={searchTerm}
@@ -93,7 +93,7 @@ export default function TemplatesFoldersPage() {
 
       {isFoldersLoading ? (
         <div className="mt- flex justify-center">
-          <Loader2 className="text-muted-foreground h-8 w-8 animate-spin" />
+          <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
         </div>
       ) : (
         <>
@@ -128,7 +128,7 @@ export default function TemplatesFoldersPage() {
 
           <div>
             {searchTerm && foldersData?.folders.filter(isFolderMatchingSearch).length === 0 && (
-              <div className="text-muted-foreground mt-6 text-center">
+              <div className="mt-6 text-center text-muted-foreground">
                 <Trans>No folders found matching "{searchTerm}"</Trans>
               </div>
             )}

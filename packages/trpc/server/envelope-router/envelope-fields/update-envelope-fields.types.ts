@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
-import { ZFieldSchema } from '@documenso/lib/types/field';
-import { ZEnvelopeFieldAndMetaSchema } from '@documenso/lib/types/field-meta';
+import { ZFieldSchema } from '@docutracker/lib/types/field';
+import { ZEnvelopeFieldAndMetaSchema } from '@docutracker/lib/types/field-meta';
 
 import type { TrpcRouteMeta } from '../../trpc';
 import { ZCoordinatePositionSchema } from './create-envelope-fields.types';

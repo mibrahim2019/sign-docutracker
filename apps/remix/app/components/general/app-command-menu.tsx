@@ -9,22 +9,22 @@ import { useHotkeys } from 'react-hotkeys-hook';
 import { useNavigate } from 'react-router';
 import { Theme, useTheme } from 'remix-themes';
 
-import { useDebouncedValue } from '@documenso/lib/client-only/hooks/use-debounced-value';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { SUPPORTED_LANGUAGES } from '@documenso/lib/constants/i18n';
+import { useDebouncedValue } from '@docutracker/lib/client-only/hooks/use-debounced-value';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { SUPPORTED_LANGUAGES } from '@docutracker/lib/constants/i18n';
 import {
   DOCUMENTS_PAGE_SHORTCUT,
   SETTINGS_PAGE_SHORTCUT,
   TEMPLATES_PAGE_SHORTCUT,
-} from '@documenso/lib/constants/keyboard-shortcuts';
+} from '@docutracker/lib/constants/keyboard-shortcuts';
 import {
   DO_NOT_INVALIDATE_QUERY_ON_MUTATION,
   SKIP_QUERY_BATCH_META,
-} from '@documenso/lib/constants/trpc';
-import { dynamicActivate } from '@documenso/lib/utils/i18n';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { trpc as trpcReact } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
+} from '@docutracker/lib/constants/trpc';
+import { dynamicActivate } from '@docutracker/lib/utils/i18n';
+import { isPersonalLayout } from '@docutracker/lib/utils/organisations';
+import { trpc as trpcReact } from '@docutracker/trpc/react';
+import { cn } from '@docutracker/ui/lib/utils';
 import {
   CommandDialog,
   CommandEmpty,
@@ -33,8 +33,8 @@ import {
   CommandItem,
   CommandList,
   CommandShortcut,
-} from '@documenso/ui/primitives/command';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/command';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useOptionalCurrentTeam } from '~/providers/team';
 

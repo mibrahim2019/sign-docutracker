@@ -12,7 +12,7 @@ import { upsertSiteSetting } from '../site-settings/upsert-site-setting';
 
 const TELEMETRY_KEY = process.env.NEXT_PRIVATE_TELEMETRY_KEY;
 const TELEMETRY_HOST = process.env.NEXT_PRIVATE_TELEMETRY_HOST;
-const TELEMETRY_DISABLED = !!process.env.DOCUMENSO_DISABLE_TELEMETRY;
+const TELEMETRY_DISABLED = !!process.env.DOCUTRACKER_DISABLE_TELEMETRY;
 
 const NODE_ID_FILENAME = '.documenso-node-id';
 const HEARTBEAT_INTERVAL_MS = 60 * 60 * 1000; // 1 hour
@@ -38,13 +38,13 @@ export class TelemetryClient {
    * This will initialize the PostHog client, load or create the installation ID and node ID,
    * capture a startup event, and start a heartbeat interval.
    *
-   * If telemetry is disabled via `DOCUMENSO_DISABLE_TELEMETRY=true` or credentials are not
+   * If telemetry is disabled via `DOCUTRACKER_DISABLE_TELEMETRY=true` or credentials are not
    * provided, this will be a no-op.
    */
   public static async start(): Promise<void> {
     if (TELEMETRY_DISABLED) {
       console.log(
-        '[Telemetry] Telemetry is disabled. To enable, remove the DOCUMENSO_DISABLE_TELEMETRY environment variable.',
+        '[Telemetry] Telemetry is disabled. To enable, remove the DOCUTRACKER_DISABLE_TELEMETRY environment variable.',
       );
       return;
     }
@@ -105,7 +105,7 @@ export class TelemetryClient {
       '[Telemetry] We collect: app version, installation ID, and node ID. No personal data, document contents, or user information is collected.',
     );
     console.log(
-      '[Telemetry] To disable telemetry, set DOCUMENSO_DISABLE_TELEMETRY=true in your environment variables.',
+      '[Telemetry] To disable telemetry, set DOCUTRACKER_DISABLE_TELEMETRY=true in your environment variables.',
     );
     console.log(
       '[Telemetry] Learn more: https://documenso.com/docs/developers/self-hosting/telemetry',

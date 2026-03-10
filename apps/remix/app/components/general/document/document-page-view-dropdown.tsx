@@ -15,20 +15,20 @@ import {
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import type { TEnvelope } from '@documenso/lib/types/envelope';
-import { isDocumentCompleted } from '@documenso/lib/utils/document';
-import { mapSecondaryIdToDocumentId } from '@documenso/lib/utils/envelope';
-import { formatDocumentsPath } from '@documenso/lib/utils/teams';
-import { DocumentShareButton } from '@documenso/ui/components/document/document-share-button';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import type { TEnvelope } from '@docutracker/lib/types/envelope';
+import { isDocumentCompleted } from '@docutracker/lib/utils/document';
+import { mapSecondaryIdToDocumentId } from '@docutracker/lib/utils/envelope';
+import { formatDocumentsPath } from '@docutracker/lib/utils/teams';
+import { DocumentShareButton } from '@docutracker/ui/components/document/document-share-button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from '@documenso/ui/primitives/dropdown-menu';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/dropdown-menu';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { DocumentDeleteDialog } from '~/components/dialogs/document-delete-dialog';
 import { DocumentDuplicateDialog } from '~/components/dialogs/document-duplicate-dialog';
@@ -69,7 +69,7 @@ export const DocumentPageViewDropdown = ({ envelope }: DocumentPageViewDropdownP
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <MoreHorizontal className="text-muted-foreground h-5 w-5" />
+        <MoreHorizontal className="h-5 w-5 text-muted-foreground" />
       </DropdownMenuTrigger>
 
       <DropdownMenuContent className="w-52" align="end" forceMount>

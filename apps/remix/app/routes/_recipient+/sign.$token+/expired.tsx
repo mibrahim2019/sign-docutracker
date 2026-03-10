@@ -2,13 +2,13 @@ import { Trans } from '@lingui/react/macro';
 import { TimerOffIcon } from 'lucide-react';
 import { Link } from 'react-router';
 
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
-import { useOptionalSession } from '@documenso/lib/client-only/providers/session';
-import { getDocumentAndSenderByToken } from '@documenso/lib/server-only/document/get-document-by-token';
-import { isRecipientAuthorized } from '@documenso/lib/server-only/document/is-recipient-authorized';
-import { getRecipientByToken } from '@documenso/lib/server-only/recipient/get-recipient-by-token';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
+import { getOptionalSession } from '@docutracker/auth/server/lib/utils/get-session';
+import { useOptionalSession } from '@docutracker/lib/client-only/providers/session';
+import { getDocumentAndSenderByToken } from '@docutracker/lib/server-only/document/get-document-by-token';
+import { isRecipientAuthorized } from '@docutracker/lib/server-only/document/is-recipient-authorized';
+import { getRecipientByToken } from '@docutracker/lib/server-only/recipient/get-recipient-by-token';
+import { Badge } from '@docutracker/ui/primitives/badge';
+import { Button } from '@docutracker/ui/primitives/button';
 
 import { DocumentSigningAuthPageView } from '~/components/general/document-signing/document-signing-auth-page';
 import { truncateTitle } from '~/utils/truncate-title';

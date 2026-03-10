@@ -1,8 +1,8 @@
 import { trpcServer } from '@hono/trpc-server';
 
-import { createTrpcContext } from '@documenso/trpc/server/context';
-import { appRouter } from '@documenso/trpc/server/router';
-import { handleTrpcRouterError } from '@documenso/trpc/utils/trpc-error-handler';
+import { createTrpcContext } from '@docutracker/trpc/server/context';
+import { appRouter } from '@docutracker/trpc/server/router';
+import { handleTrpcRouterError } from '@docutracker/trpc/utils/trpc-error-handler';
 
 /**
  * Trpc server for internal routes like /api/trpc/*

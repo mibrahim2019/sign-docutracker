@@ -11,14 +11,14 @@ import { useForm } from 'react-hook-form';
 import { P, match } from 'ts-pattern';
 import { z } from 'zod';
 
-import { type Template } from '@documenso/prisma/types/template-legacy-schema';
-import { trpc } from '@documenso/trpc/react';
+import { type Template } from '@docutracker/prisma/types/template-legacy-schema';
+import { trpc } from '@docutracker/trpc/react';
 import {
   MAX_TEMPLATE_PUBLIC_DESCRIPTION_LENGTH,
   MAX_TEMPLATE_PUBLIC_TITLE_LENGTH,
-} from '@documenso/trpc/server/template-router/schema';
-import { AnimateGenericFadeInOut } from '@documenso/ui/components/animate/animate-generic-fade-in-out';
-import { Button } from '@documenso/ui/primitives/button';
+} from '@docutracker/trpc/server/template-router/schema';
+import { AnimateGenericFadeInOut } from '@docutracker/ui/components/animate/animate-generic-fade-in-out';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogClose,
@@ -28,7 +28,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -36,8 +36,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
 import {
   Table,
   TableBody,
@@ -45,9 +45,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@documenso/ui/primitives/table';
-import { Textarea } from '@documenso/ui/primitives/textarea';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/table';
+import { Textarea } from '@docutracker/ui/primitives/textarea';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { useCurrentTeam } from '~/providers/team';
 
@@ -290,11 +290,11 @@ export const ManagePublicTemplateDialog = ({
                           key={row.id}
                           onClick={() => setSelectedTemplateId(row.id)}
                         >
-                          <TableCell className="text-muted-foreground max-w-[30ch] text-sm">
+                          <TableCell className="max-w-[30ch] text-sm text-muted-foreground">
                             {row.title}
                           </TableCell>
 
-                          <TableCell className="text-muted-foreground text-sm">
+                          <TableCell className="text-sm text-muted-foreground">
                             {i18n.date(row.createdAt)}
                           </TableCell>
 
@@ -381,7 +381,7 @@ export const ManagePublicTemplateDialog = ({
                             </FormControl>
 
                             {!form.formState.errors.publicDescription && (
-                              <p className="text-muted-foreground text-sm">
+                              <p className="text-sm text-muted-foreground">
                                 {remaningLength >= 0 ? (
                                   <Plural
                                     value={remaningLength}

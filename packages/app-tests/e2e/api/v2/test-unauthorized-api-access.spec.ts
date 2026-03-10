@@ -3,14 +3,14 @@ import type { Team, User } from '@prisma/client';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
-import { nanoid } from '@documenso/lib/universal/id';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { createApiToken } from '@docutracker/lib/server-only/public-api/create-api-token';
+import { nanoid } from '@docutracker/lib/universal/id';
 import {
   mapSecondaryIdToDocumentId,
   mapSecondaryIdToTemplateId,
-} from '@documenso/lib/utils/envelope';
-import { prisma } from '@documenso/prisma';
+} from '@docutracker/lib/utils/envelope';
+import { prisma } from '@docutracker/prisma';
 import {
   DocumentStatus,
   DocumentVisibility,
@@ -23,23 +23,23 @@ import {
   SendStatus,
   SigningStatus,
   TeamMemberRole,
-} from '@documenso/prisma/client';
+} from '@docutracker/prisma/client';
 import {
   seedBlankDocument,
   seedCompletedDocument,
   seedDraftDocument,
   seedPendingDocument,
-} from '@documenso/prisma/seed/documents';
-import { seedBlankFolder } from '@documenso/prisma/seed/folders';
-import { seedTeamMember } from '@documenso/prisma/seed/teams';
-import { seedBlankTemplate, seedTemplate } from '@documenso/prisma/seed/templates';
-import { seedUser } from '@documenso/prisma/seed/users';
-import type { TCreateEnvelopeItemsPayload } from '@documenso/trpc/server/envelope-router/create-envelope-items.types';
-import type { TFindEnvelopesResponse } from '@documenso/trpc/server/envelope-router/find-envelopes.types';
+} from '@docutracker/prisma/seed/documents';
+import { seedBlankFolder } from '@docutracker/prisma/seed/folders';
+import { seedTeamMember } from '@docutracker/prisma/seed/teams';
+import { seedBlankTemplate, seedTemplate } from '@docutracker/prisma/seed/templates';
+import { seedUser } from '@docutracker/prisma/seed/users';
+import type { TCreateEnvelopeItemsPayload } from '@docutracker/trpc/server/envelope-router/create-envelope-items.types';
+import type { TFindEnvelopesResponse } from '@docutracker/trpc/server/envelope-router/find-envelopes.types';
 import type {
   TUseEnvelopePayload,
   TUseEnvelopeResponse,
-} from '@documenso/trpc/server/envelope-router/use-envelope.types';
+} from '@docutracker/trpc/server/envelope-router/use-envelope.types';
 
 import { apiSignin } from '../../fixtures/authentication';
 

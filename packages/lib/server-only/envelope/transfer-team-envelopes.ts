@@ -1,4 +1,4 @@
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@docutracker/prisma';
 
 export type TransferTeamEnvelopesOptions = {
   sourceTeamId: number;

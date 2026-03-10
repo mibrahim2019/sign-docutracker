@@ -10,15 +10,15 @@ import {
 } from 'react-router';
 import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from 'remix-themes';
 
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
-import { SessionProvider } from '@documenso/lib/client-only/providers/session';
-import { APP_I18N_OPTIONS, type SupportedLanguageCodes } from '@documenso/lib/constants/i18n';
-import { createPublicEnv } from '@documenso/lib/utils/env';
-import { extractLocaleData } from '@documenso/lib/utils/i18n';
-import { TrpcProvider } from '@documenso/trpc/react';
-import { getOrganisationSession } from '@documenso/trpc/server/organisation-router/get-organisation-session';
-import { Toaster } from '@documenso/ui/primitives/toaster';
-import { TooltipProvider } from '@documenso/ui/primitives/tooltip';
+import { getOptionalSession } from '@docutracker/auth/server/lib/utils/get-session';
+import { SessionProvider } from '@docutracker/lib/client-only/providers/session';
+import { APP_I18N_OPTIONS, type SupportedLanguageCodes } from '@docutracker/lib/constants/i18n';
+import { createPublicEnv } from '@docutracker/lib/utils/env';
+import { extractLocaleData } from '@docutracker/lib/utils/i18n';
+import { TrpcProvider } from '@docutracker/trpc/react';
+import { getOrganisationSession } from '@docutracker/trpc/server/organisation-router/get-organisation-session';
+import { Toaster } from '@docutracker/ui/primitives/toaster';
+import { TooltipProvider } from '@docutracker/ui/primitives/tooltip';
 
 import type { Route } from './+types/root';
 import stylesheet from './app.css?url';
@@ -132,7 +132,7 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
             <div className="mx-auto flex h-auto max-w-screen-xl items-center justify-center px-4 py-3 text-sm font-medium">
               <div className="flex items-center">
                 <AlertTriangleIcon className="mr-2 h-4 w-4" />
-                <Trans>This is an expired license instance of Documenso</Trans>
+                <Trans>This is an expired license instance of Docutracker</Trans>
               </div>
             </div>
           </div>

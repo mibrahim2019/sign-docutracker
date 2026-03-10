@@ -10,10 +10,10 @@ import {
   SendStatus,
 } from '@prisma/client';
 
-import { mailer } from '@documenso/email/mailer';
-import DocumentInviteEmailTemplate from '@documenso/email/templates/document-invite';
-import { isRecipientEmailValidForSending } from '@documenso/lib/utils/recipients';
-import { prisma } from '@documenso/prisma';
+import { mailer } from '@docutracker/email/mailer';
+import DocumentInviteEmailTemplate from '@docutracker/email/templates/document-invite';
+import { isRecipientEmailValidForSending } from '@docutracker/lib/utils/recipients';
+import { prisma } from '@docutracker/prisma';
 
 import { getI18nInstance } from '../../../client-only/providers/i18n-server';
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../../constants/app';

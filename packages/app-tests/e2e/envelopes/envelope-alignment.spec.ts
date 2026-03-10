@@ -8,10 +8,10 @@ import * as pdfjsLib from 'pdfjs-dist/legacy/build/pdf.mjs';
 import pixelMatch from 'pixelmatch';
 import { PNG } from 'pngjs';
 
-import { getEnvelopeItemPdfUrl } from '@documenso/lib/utils/envelope-download';
-import { prisma } from '@documenso/prisma';
-import { seedAlignmentTestDocument } from '@documenso/prisma/seed/initial-seed';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { getEnvelopeItemPdfUrl } from '@docutracker/lib/utils/envelope-download';
+import { prisma } from '@docutracker/prisma';
+import { seedAlignmentTestDocument } from '@docutracker/prisma/seed/initial-seed';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { NEXT_PUBLIC_WEBAPP_URL } from '../../../lib/constants/app';
 import { isBase64Image } from '../../../lib/constants/signatures';

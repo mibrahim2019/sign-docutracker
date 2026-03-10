@@ -3,7 +3,7 @@ import { initContract } from '@ts-rest/core';
 import {
   ZCreateTemplateV2RequestSchema,
   ZCreateTemplateV2ResponseSchema,
-} from '@documenso/trpc/server/template-router/schema';
+} from '@docutracker/trpc/server/template-router/schema';
 
 import {
   ZAuthorizationHeadersSchema,

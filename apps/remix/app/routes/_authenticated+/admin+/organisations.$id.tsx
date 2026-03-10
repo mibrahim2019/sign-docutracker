@@ -9,20 +9,20 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router';
 import type { z } from 'zod';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { SUBSCRIPTION_STATUS_MAP } from '@documenso/lib/constants/billing';
-import { AppError } from '@documenso/lib/errors/app-error';
-import { LicenseClient } from '@documenso/lib/server-only/license/license-client';
-import type { TLicenseClaim } from '@documenso/lib/types/license';
-import { SUBSCRIPTION_CLAIM_FEATURE_FLAGS } from '@documenso/lib/types/subscription';
-import { trpc } from '@documenso/trpc/react';
-import type { TGetAdminOrganisationResponse } from '@documenso/trpc/server/admin-router/get-admin-organisation.types';
-import { ZUpdateAdminOrganisationRequestSchema } from '@documenso/trpc/server/admin-router/update-admin-organisation.types';
-import { Alert, AlertDescription, AlertTitle } from '@documenso/ui/primitives/alert';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
-import { DataTable, type DataTableColumnDef } from '@documenso/ui/primitives/data-table';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { SUBSCRIPTION_STATUS_MAP } from '@docutracker/lib/constants/billing';
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { LicenseClient } from '@docutracker/lib/server-only/license/license-client';
+import type { TLicenseClaim } from '@docutracker/lib/types/license';
+import { SUBSCRIPTION_CLAIM_FEATURE_FLAGS } from '@docutracker/lib/types/subscription';
+import { trpc } from '@docutracker/trpc/react';
+import type { TGetAdminOrganisationResponse } from '@docutracker/trpc/server/admin-router/get-admin-organisation.types';
+import { ZUpdateAdminOrganisationRequestSchema } from '@docutracker/trpc/server/admin-router/update-admin-organisation.types';
+import { Alert, AlertDescription, AlertTitle } from '@docutracker/ui/primitives/alert';
+import { Badge } from '@docutracker/ui/primitives/badge';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
+import { DataTable, type DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
 import {
   Form,
   FormControl,
@@ -31,10 +31,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@documenso/ui/primitives/tooltip';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@docutracker/ui/primitives/tooltip';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { AdminOrganisationMemberUpdateDialog } from '~/components/dialogs/admin-organisation-member-update-dialog';
 import { GenericErrorLayout } from '~/components/general/generic-error-layout';
@@ -651,7 +651,7 @@ const OrganisationAdminForm = ({ organisation, licenseFlags }: OrganisationAdmin
                 <span>¹&nbsp;</span>
                 <Trans>Your current license does not include these features.</Trans>{' '}
                 <Link
-                  to="https://docs.documenso.com/users/licenses/enterprise-edition"
+                  to="https://docs.docutracker.io/users/licenses/enterprise-edition"
                   target="_blank"
                   className="text-foreground underline hover:opacity-80"
                 >

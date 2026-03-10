@@ -7,10 +7,10 @@ import { Loader } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Form,
   FormControl,
@@ -18,16 +18,16 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
-import { Textarea } from '@documenso/ui/primitives/textarea';
+} from '@docutracker/ui/primitives/select';
+import { Textarea } from '@docutracker/ui/primitives/textarea';
 
 import { useOptionalCurrentTeam } from '~/providers/team';
 
@@ -173,7 +173,7 @@ export function BrandingPreferencesForm({
           />
 
           <div className="relative flex w-full flex-col gap-y-4">
-            {!isBrandingEnabled && <div className="bg-background/60 absolute inset-0 z-[9998]" />}
+            {!isBrandingEnabled && <div className="absolute inset-0 z-[9998] bg-background/60" />}
 
             <FormField
               control={form.control}
@@ -185,7 +185,7 @@ export function BrandingPreferencesForm({
                   </FormLabel>
 
                   <div className="flex flex-col gap-4">
-                    <div className="border-border bg-background relative h-48 w-full overflow-hidden rounded-lg border">
+                    <div className="relative h-48 w-full overflow-hidden rounded-lg border border-border bg-background">
                       {previewUrl ? (
                         <img
                           src={previewUrl}
@@ -193,12 +193,12 @@ export function BrandingPreferencesForm({
                           className="h-full w-full object-contain p-4"
                         />
                       ) : (
-                        <div className="bg-muted/20 dark:bg-muted text-muted-foreground relative flex h-full w-full items-center justify-center text-sm">
+                        <div className="relative flex h-full w-full items-center justify-center bg-muted/20 text-sm text-muted-foreground dark:bg-muted">
                           <Trans>Please upload a logo</Trans>
 
                           {!hasLoadedPreview && (
-                            <div className="bg-muted dark:bg-muted absolute inset-0 z-[999] flex items-center justify-center">
-                              <Loader className="text-muted-foreground h-8 w-8 animate-spin" />
+                            <div className="absolute inset-0 z-[999] flex items-center justify-center bg-muted dark:bg-muted">
+                              <Loader className="h-8 w-8 animate-spin text-muted-foreground" />
                             </div>
                           )}
                         </div>
@@ -243,7 +243,7 @@ export function BrandingPreferencesForm({
                           type="button"
                           variant="link"
                           size="sm"
-                          className="text-destructive text-xs"
+                          className="text-xs text-destructive"
                           onClick={() => {
                             setPreviewUrl('');
                             onChange(null);

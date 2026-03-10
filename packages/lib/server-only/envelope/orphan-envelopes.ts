@@ -1,6 +1,6 @@
 import { DocumentStatus, EnvelopeType } from '@prisma/client';
 
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@docutracker/prisma';
 
 import { deletedAccountServiceAccount } from '../user/service-accounts/deleted-account';
 

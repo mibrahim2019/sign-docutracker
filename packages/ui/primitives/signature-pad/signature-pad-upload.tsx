@@ -4,8 +4,8 @@ import { Trans } from '@lingui/react/macro';
 import { motion } from 'framer-motion';
 import { UploadCloudIcon } from 'lucide-react';
 
-import { unsafe_useEffectOnce } from '@documenso/lib/client-only/hooks/use-effect-once';
-import { SIGNATURE_CANVAS_DPI } from '@documenso/lib/constants/signatures';
+import { unsafe_useEffectOnce } from '@docutracker/lib/client-only/hooks/use-effect-once';
+import { SIGNATURE_CANVAS_DPI } from '@docutracker/lib/constants/signatures';
 
 import { cn } from '../../lib/utils';
 
@@ -150,7 +150,7 @@ export const SignaturePadUpload = ({
       >
         {!value && (
           <motion.div>
-            <div className="text-muted-foreground flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center text-muted-foreground">
               <div className="flex flex-col items-center">
                 <UploadCloudIcon className="h-8 w-8" />
                 <span className="text-lg font-semibold">

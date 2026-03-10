@@ -1,9 +1,9 @@
 import { useLingui } from '@lingui/react/macro';
 import { Loader } from 'lucide-react';
 
-import { putFile } from '@documenso/lib/universal/upload/put-file';
-import { trpc } from '@documenso/trpc/react';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { putFile } from '@docutracker/lib/universal/upload/put-file';
+import { trpc } from '@docutracker/trpc/react';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import {
   BrandingPreferencesForm,
@@ -69,7 +69,7 @@ export default function TeamsSettingsPage() {
   if (isLoadingTeam || !teamWithSettings) {
     return (
       <div className="flex items-center justify-center rounded-lg py-32">
-        <Loader className="text-muted-foreground h-6 w-6 animate-spin" />
+        <Loader className="h-6 w-6 animate-spin text-muted-foreground" />
       </div>
     );
   }

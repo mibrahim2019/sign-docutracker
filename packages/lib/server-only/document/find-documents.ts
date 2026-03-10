@@ -3,8 +3,8 @@ import { EnvelopeType, RecipientRole, SigningStatus, TeamMemberRole } from '@pri
 import { DateTime } from 'luxon';
 import { match } from 'ts-pattern';
 
-import { prisma } from '@documenso/prisma';
-import { ExtendedDocumentStatus } from '@documenso/prisma/types/extended-document-status';
+import { prisma } from '@docutracker/prisma';
+import { ExtendedDocumentStatus } from '@docutracker/prisma/types/extended-document-status';
 
 import { DocumentVisibility } from '../../types/document-visibility';
 import { type FindResultResponse } from '../../types/search-params';

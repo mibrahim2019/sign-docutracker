@@ -1,6 +1,6 @@
-import { createCustomer } from '@documenso/ee/server-only/stripe/create-customer';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { prisma } from '@documenso/prisma';
+import { createCustomer } from '@docutracker/ee/server-only/stripe/create-customer';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { prisma } from '@docutracker/prisma';
 
 import { adminProcedure } from '../trpc';
 import {

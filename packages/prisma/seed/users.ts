@@ -1,8 +1,8 @@
 import { OrganisationType, Role } from '@prisma/client';
 import { customAlphabet } from 'nanoid';
 
-import { hashSync } from '@documenso/lib/server-only/auth/hash';
-import { createPersonalOrganisation } from '@documenso/lib/server-only/organisation/create-organisation';
+import { hashSync } from '@docutracker/lib/server-only/auth/hash';
+import { createPersonalOrganisation } from '@docutracker/lib/server-only/organisation/create-organisation';
 
 import { prisma } from '..';
 import { setOrganisationType } from './organisations';

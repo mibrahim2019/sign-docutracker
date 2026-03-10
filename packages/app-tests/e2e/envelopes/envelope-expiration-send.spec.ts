@@ -2,17 +2,17 @@ import { expect, test } from '@playwright/test';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { createApiToken } from '@documenso/lib/server-only/public-api/create-api-token';
-import { prisma } from '@documenso/prisma';
-import { EnvelopeType, RecipientRole } from '@documenso/prisma/client';
-import { seedPendingDocument } from '@documenso/prisma/seed/documents';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { createApiToken } from '@docutracker/lib/server-only/public-api/create-api-token';
+import { prisma } from '@docutracker/prisma';
+import { EnvelopeType, RecipientRole } from '@docutracker/prisma/client';
+import { seedPendingDocument } from '@docutracker/prisma/seed/documents';
+import { seedUser } from '@docutracker/prisma/seed/users';
 import type {
   TCreateEnvelopePayload,
   TCreateEnvelopeResponse,
-} from '@documenso/trpc/server/envelope-router/create-envelope.types';
-import type { TDistributeEnvelopeRequest } from '@documenso/trpc/server/envelope-router/distribute-envelope.types';
+} from '@docutracker/trpc/server/envelope-router/create-envelope.types';
+import type { TDistributeEnvelopeRequest } from '@docutracker/trpc/server/envelope-router/distribute-envelope.types';
 
 import { apiSignin } from '../fixtures/authentication';
 import { openDropdownMenu } from '../fixtures/generic';

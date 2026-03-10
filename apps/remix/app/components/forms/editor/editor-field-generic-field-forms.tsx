@@ -3,27 +3,27 @@ import { useEffect } from 'react';
 import { Trans, useLingui } from '@lingui/react/macro';
 import { type Control, useFormContext } from 'react-hook-form';
 
-import { FIELD_MIN_LINE_HEIGHT } from '@documenso/lib/types/field-meta';
-import { FIELD_MAX_LINE_HEIGHT } from '@documenso/lib/types/field-meta';
-import { FIELD_MIN_LETTER_SPACING } from '@documenso/lib/types/field-meta';
-import { FIELD_MAX_LETTER_SPACING } from '@documenso/lib/types/field-meta';
-import { cn } from '@documenso/ui/lib/utils';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
+import { FIELD_MIN_LINE_HEIGHT } from '@docutracker/lib/types/field-meta';
+import { FIELD_MAX_LINE_HEIGHT } from '@docutracker/lib/types/field-meta';
+import { FIELD_MIN_LETTER_SPACING } from '@docutracker/lib/types/field-meta';
+import { FIELD_MAX_LETTER_SPACING } from '@docutracker/lib/types/field-meta';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
 import {
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@documenso/ui/primitives/select';
+} from '@docutracker/ui/primitives/select';
 
 // Can't seem to get the non-any type to work with correct types.
 // Eg Control<{ fontSize?: number } doesn't seem to work when there are required items.
@@ -255,7 +255,7 @@ export const EditorGenericRequiredField = ({
                 onCheckedChange={field.onChange}
               />
 
-              <label className="text-muted-foreground ml-2 text-sm" htmlFor="field-required">
+              <label className="ml-2 text-sm text-muted-foreground" htmlFor="field-required">
                 <Trans>Required Field</Trans>
               </label>
             </div>
@@ -298,7 +298,7 @@ export const EditorGenericReadOnlyField = ({
                 onCheckedChange={field.onChange}
               />
 
-              <label className="text-muted-foreground ml-2 text-sm" htmlFor="field-read-only">
+              <label className="ml-2 text-sm text-muted-foreground" htmlFor="field-read-only">
                 <Trans>Read Only</Trans>
               </label>
             </div>

@@ -1,4 +1,4 @@
-import { getCertificateStatus } from '@documenso/lib/server-only/cert/cert-status';
+import { getCertificateStatus } from '@docutracker/lib/server-only/cert/cert-status';
 
 export const loader = () => {
   try {

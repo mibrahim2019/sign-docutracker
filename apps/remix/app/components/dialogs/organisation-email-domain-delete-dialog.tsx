@@ -6,9 +6,9 @@ import { Trans } from '@lingui/react/macro';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { trpc } from '@documenso/trpc/react';
-import { Button } from '@documenso/ui/primitives/button';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { trpc } from '@docutracker/trpc/react';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Dialog,
   DialogContent,
@@ -17,7 +17,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
@@ -25,9 +25,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@documenso/ui/primitives/form/form';
-import { Input } from '@documenso/ui/primitives/input';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { Input } from '@docutracker/ui/primitives/input';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 export type OrganisationEmailDomainDeleteDialogProps = {
   emailDomainId: string;
@@ -126,7 +126,7 @@ export const OrganisationEmailDomainDeleteDialog = ({
                     <FormLabel>
                       <Trans>
                         Confirm by typing{' '}
-                        <span className="font-sm text-destructive font-semibold">
+                        <span className="font-sm font-semibold text-destructive">
                           {deleteMessage}
                         </span>
                       </Trans>

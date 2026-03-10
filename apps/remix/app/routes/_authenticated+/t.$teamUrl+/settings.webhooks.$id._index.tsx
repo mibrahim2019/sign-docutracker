@@ -17,24 +17,24 @@ import { useLocation, useSearchParams } from 'react-router';
 import { Link } from 'react-router';
 import { z } from 'zod';
 
-import { useDebouncedValue } from '@documenso/lib/client-only/hooks/use-debounced-value';
-import { useIsMounted } from '@documenso/lib/client-only/hooks/use-is-mounted';
-import { useUpdateSearchParams } from '@documenso/lib/client-only/hooks/use-update-search-params';
-import { ZUrlSearchParamsSchema } from '@documenso/lib/types/search-params';
-import { toFriendlyWebhookEventName } from '@documenso/lib/universal/webhook/to-friendly-webhook-event-name';
-import { trpc } from '@documenso/trpc/react';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
-import { DataTablePagination } from '@documenso/ui/primitives/data-table-pagination';
-import { Input } from '@documenso/ui/primitives/input';
-import { MultiSelectCombobox } from '@documenso/ui/primitives/multi-select-combobox';
-import { Skeleton } from '@documenso/ui/primitives/skeleton';
-import { SpinnerBox } from '@documenso/ui/primitives/spinner';
-import { TableCell } from '@documenso/ui/primitives/table';
-import { Tabs, TabsList, TabsTrigger } from '@documenso/ui/primitives/tabs';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { useDebouncedValue } from '@docutracker/lib/client-only/hooks/use-debounced-value';
+import { useIsMounted } from '@docutracker/lib/client-only/hooks/use-is-mounted';
+import { useUpdateSearchParams } from '@docutracker/lib/client-only/hooks/use-update-search-params';
+import { ZUrlSearchParamsSchema } from '@docutracker/lib/types/search-params';
+import { toFriendlyWebhookEventName } from '@docutracker/lib/universal/webhook/to-friendly-webhook-event-name';
+import { trpc } from '@docutracker/trpc/react';
+import { Badge } from '@docutracker/ui/primitives/badge';
+import { Button } from '@docutracker/ui/primitives/button';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
+import { DataTablePagination } from '@docutracker/ui/primitives/data-table-pagination';
+import { Input } from '@docutracker/ui/primitives/input';
+import { MultiSelectCombobox } from '@docutracker/ui/primitives/multi-select-combobox';
+import { Skeleton } from '@docutracker/ui/primitives/skeleton';
+import { SpinnerBox } from '@docutracker/ui/primitives/spinner';
+import { TableCell } from '@docutracker/ui/primitives/table';
+import { Tabs, TabsList, TabsTrigger } from '@docutracker/ui/primitives/tabs';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { WebhookEditDialog } from '~/components/dialogs/webhook-edit-dialog';
 import { WebhookTestDialog } from '~/components/dialogs/webhook-test-dialog';
@@ -151,10 +151,10 @@ export default function WebhookPage({ params }: Route.ComponentProps) {
         accessorKey: 'event',
         cell: ({ row }) => (
           <div>
-            <p className="text-foreground text-sm font-semibold">
+            <p className="text-sm font-semibold text-foreground">
               {toFriendlyWebhookEventName(row.original.event)}
             </p>
-            <p className="text-muted-foreground text-xs">{row.original.id}</p>
+            <p className="text-xs text-muted-foreground">{row.original.id}</p>
           </div>
         ),
       },
@@ -276,17 +276,17 @@ export default function WebhookPage({ params }: Route.ComponentProps) {
 
           <Tabs value={parsedSearchParams.status || ''} className="flex-shrink-0">
             <TabsList>
-              <TabsTrigger className="hover:text-foreground min-w-[60px]" value="" asChild>
+              <TabsTrigger className="min-w-[60px] hover:text-foreground" value="" asChild>
                 <Link to={getTabHref('')}>
                   <Trans>All</Trans>
                 </Link>
               </TabsTrigger>
-              <TabsTrigger className="hover:text-foreground min-w-[60px]" value="SUCCESS" asChild>
+              <TabsTrigger className="min-w-[60px] hover:text-foreground" value="SUCCESS" asChild>
                 <Link to={getTabHref(WebhookCallStatus.SUCCESS)}>
                   <Trans>Success</Trans>
                 </Link>
               </TabsTrigger>
-              <TabsTrigger className="hover:text-foreground min-w-[60px]" value="FAILED" asChild>
+              <TabsTrigger className="min-w-[60px] hover:text-foreground" value="FAILED" asChild>
                 <Link to={getTabHref(WebhookCallStatus.FAILED)}>
                   <Trans>Failed</Trans>
                 </Link>
@@ -375,7 +375,7 @@ const WebhookEventCombobox = () => {
   return (
     <MultiSelectCombobox
       emptySelectionPlaceholder={
-        <p className="text-muted-foreground font-normal">
+        <p className="font-normal text-muted-foreground">
           <Trans>
             <span className="text-muted-foreground/70">Events:</span> All
           </Trans>

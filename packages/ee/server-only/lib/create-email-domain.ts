@@ -3,13 +3,13 @@ import { EmailDomainStatus } from '@prisma/client';
 import { generateKeyPair } from 'crypto';
 import { promisify } from 'util';
 
-import { DOCUMENSO_ENCRYPTION_KEY } from '@documenso/lib/constants/crypto';
-import { AppError, AppErrorCode } from '@documenso/lib/errors/app-error';
-import { symmetricEncrypt } from '@documenso/lib/universal/crypto';
-import { generateDatabaseId } from '@documenso/lib/universal/id';
-import { generateEmailDomainRecords } from '@documenso/lib/utils/email-domains';
-import { env } from '@documenso/lib/utils/env';
-import { prisma } from '@documenso/prisma';
+import { DOCUTRACKER_ENCRYPTION_KEY } from '@docutracker/lib/constants/crypto';
+import { AppError, AppErrorCode } from '@docutracker/lib/errors/app-error';
+import { symmetricEncrypt } from '@docutracker/lib/universal/crypto';
+import { generateDatabaseId } from '@docutracker/lib/universal/id';
+import { generateEmailDomainRecords } from '@docutracker/lib/utils/email-domains';
+import { env } from '@docutracker/lib/utils/env';
+import { prisma } from '@docutracker/prisma';
 
 export const getSesClient = () => {
   const accessKeyId = env('NEXT_PRIVATE_SES_ACCESS_KEY_ID');
@@ -62,10 +62,10 @@ type DomainRecord = {
 };
 
 export const createEmailDomain = async ({ domain, organisationId }: CreateEmailDomainOptions) => {
-  const encryptionKey = DOCUMENSO_ENCRYPTION_KEY;
+  const encryptionKey = DOCUTRACKER_ENCRYPTION_KEY;
 
   if (!encryptionKey) {
-    throw new Error('Missing DOCUMENSO_ENCRYPTION_KEY');
+    throw new Error('Missing DOCUTRACKER_ENCRYPTION_KEY');
   }
 
   const selector = `documenso-${organisationId}`.replace(/[_.]/g, '-');

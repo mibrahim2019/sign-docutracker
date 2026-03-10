@@ -5,15 +5,15 @@ import { SubscriptionStatus } from '@prisma/client';
 import { Link } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { canExecuteOrganisationAction } from '@documenso/lib/utils/organisations';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
-import type { DataTableColumnDef } from '@documenso/ui/primitives/data-table';
-import { DataTable } from '@documenso/ui/primitives/data-table';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { NEXT_PUBLIC_WEBAPP_URL } from '@docutracker/lib/constants/app';
+import { formatAvatarUrl } from '@docutracker/lib/utils/avatars';
+import { canExecuteOrganisationAction } from '@docutracker/lib/utils/organisations';
+import { AvatarWithText } from '@docutracker/ui/primitives/avatar';
+import { Badge } from '@docutracker/ui/primitives/badge';
+import { Button } from '@docutracker/ui/primitives/button';
+import type { DataTableColumnDef } from '@docutracker/ui/primitives/data-table';
+import { DataTable } from '@docutracker/ui/primitives/data-table';
 
 export const UserBillingOrganisationsTable = () => {
   const { t } = useLingui();
@@ -57,7 +57,7 @@ export const UserBillingOrganisationsTable = () => {
               avatarClass="h-12 w-12"
               avatarFallback={row.original.name.slice(0, 1).toUpperCase()}
               primaryText={
-                <span className="text-foreground/80 font-semibold">{row.original.name}</span>
+                <span className="font-semibold text-foreground/80">{row.original.name}</span>
               }
               secondaryText={`${NEXT_PUBLIC_WEBAPP_URL()}/o/${row.original.url}`}
             />
@@ -91,7 +91,7 @@ export const UserBillingOrganisationsTable = () => {
 
   if (billingOrganisations.length === 0) {
     return (
-      <div className="text-muted-foreground flex flex-col items-center justify-center rounded-lg border border-dashed py-12 text-center">
+      <div className="flex flex-col items-center justify-center rounded-lg border border-dashed py-12 text-center text-muted-foreground">
         <p className="text-sm">
           <Trans>You don't manage billing for any organisations.</Trans>
         </p>

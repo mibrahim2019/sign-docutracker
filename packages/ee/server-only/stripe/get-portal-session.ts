@@ -1,4 +1,4 @@
-import { stripe } from '@documenso/lib/server-only/stripe';
+import { stripe } from '@docutracker/lib/server-only/stripe';
 
 export type GetPortalSessionOptions = {
   customerId: string;

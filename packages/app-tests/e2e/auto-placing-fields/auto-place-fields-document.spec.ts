@@ -1,9 +1,9 @@
 import { type Page, expect, test } from '@playwright/test';
 import path from 'path';
 
-import { prisma } from '@documenso/prisma';
-import { RecipientRole } from '@documenso/prisma/client';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { prisma } from '@docutracker/prisma';
+import { RecipientRole } from '@docutracker/prisma/client';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 

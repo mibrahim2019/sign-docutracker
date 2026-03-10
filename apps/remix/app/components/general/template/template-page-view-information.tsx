@@ -6,8 +6,8 @@ import { Trans } from '@lingui/react/macro';
 import type { User } from '@prisma/client';
 import { DateTime } from 'luxon';
 
-import { useIsMounted } from '@documenso/lib/client-only/hooks/use-is-mounted';
-import { mapSecondaryIdToTemplateId } from '@documenso/lib/utils/envelope';
+import { useIsMounted } from '@docutracker/lib/client-only/hooks/use-is-mounted';
+import { mapSecondaryIdToTemplateId } from '@docutracker/lib/utils/envelope';
 
 export type TemplatePageViewInformationProps = {
   userId: number;
@@ -54,7 +54,7 @@ export const TemplatePageViewInformation = ({
   }, [isMounted, template, userId]);
 
   return (
-    <section className="dark:bg-background text-foreground border-border bg-widget flex flex-col rounded-xl border">
+    <section className="flex flex-col rounded-xl border border-border bg-widget text-foreground dark:bg-background">
       <h1 className="px-4 py-3 font-medium">
         <Trans>Information</Trans>
       </h1>

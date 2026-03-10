@@ -1,5 +1,5 @@
-import { RecipientStatusType } from '@documenso/lib/client-only/recipient-type';
-import { Avatar, AvatarFallback } from '@documenso/ui/primitives/avatar';
+import { RecipientStatusType } from '@docutracker/lib/client-only/recipient-type';
+import { Avatar, AvatarFallback } from '@docutracker/ui/primitives/avatar';
 
 const ZIndexes: { [key: string]: string } = {
   '10': 'z-10',
@@ -47,7 +47,7 @@ export const StackAvatar = ({ first, zIndex, fallbackText = '', type }: StackAva
 
   return (
     <Avatar
-      className={` ${zIndexClass} ${firstClass} dark:border-border h-10 w-10 border-2 border-solid border-white`}
+      className={` ${zIndexClass} ${firstClass} h-10 w-10 border-2 border-solid border-white dark:border-border`}
     >
       <AvatarFallback className={classes}>{fallbackText}</AvatarFallback>
     </Avatar>

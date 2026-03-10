@@ -8,17 +8,17 @@ import { data, isRouteErrorResponse } from 'react-router';
 import { useNavigate } from 'react-router';
 import { match } from 'ts-pattern';
 
-import { ORGANISATION_ACCOUNT_LINK_VERIFICATION_TOKEN_IDENTIFIER } from '@documenso/lib/constants/organisations';
-import { ZOrganisationAccountLinkMetadataSchema } from '@documenso/lib/types/organisation';
-import { formatAvatarUrl } from '@documenso/lib/utils/avatars';
-import { formatOrganisationLoginPath } from '@documenso/lib/utils/organisation-authentication-portal';
-import { extractInitials } from '@documenso/lib/utils/recipient-formatter';
-import { prisma } from '@documenso/prisma';
-import { trpc } from '@documenso/trpc/react';
-import { Alert, AlertDescription } from '@documenso/ui/primitives/alert';
-import { AvatarWithText } from '@documenso/ui/primitives/avatar';
-import { Badge } from '@documenso/ui/primitives/badge';
-import { Button } from '@documenso/ui/primitives/button';
+import { ORGANISATION_ACCOUNT_LINK_VERIFICATION_TOKEN_IDENTIFIER } from '@docutracker/lib/constants/organisations';
+import { ZOrganisationAccountLinkMetadataSchema } from '@docutracker/lib/types/organisation';
+import { formatAvatarUrl } from '@docutracker/lib/utils/avatars';
+import { formatOrganisationLoginPath } from '@docutracker/lib/utils/organisation-authentication-portal';
+import { extractInitials } from '@docutracker/lib/utils/recipient-formatter';
+import { prisma } from '@docutracker/prisma';
+import { trpc } from '@docutracker/trpc/react';
+import { Alert, AlertDescription } from '@docutracker/ui/primitives/alert';
+import { AvatarWithText } from '@docutracker/ui/primitives/avatar';
+import { Badge } from '@docutracker/ui/primitives/badge';
+import { Button } from '@docutracker/ui/primitives/button';
 import {
   Card,
   CardContent,
@@ -26,10 +26,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@documenso/ui/primitives/card';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
-import { Separator } from '@documenso/ui/primitives/separator';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/card';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
+import { Separator } from '@docutracker/ui/primitives/separator';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { GenericErrorLayout, defaultErrorCodeMap } from '~/components/general/generic-error-layout';
 

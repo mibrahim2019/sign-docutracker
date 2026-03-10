@@ -17,10 +17,10 @@ import {
   DEFAULT_STANDARD_FONT_SIZE,
   MIN_HANDWRITING_FONT_SIZE,
   MIN_STANDARD_FONT_SIZE,
-} from '@documenso/lib/constants/pdf';
-import { fromCheckboxValue } from '@documenso/lib/universal/field-checkbox';
-import { isSignatureFieldType } from '@documenso/prisma/guards/is-signature-field';
-import type { FieldWithSignature } from '@documenso/prisma/types/field-with-signature';
+} from '@docutracker/lib/constants/pdf';
+import { fromCheckboxValue } from '@docutracker/lib/universal/field-checkbox';
+import { isSignatureFieldType } from '@docutracker/prisma/guards/is-signature-field';
+import type { FieldWithSignature } from '@docutracker/prisma/types/field-with-signature';
 
 import { NEXT_PRIVATE_INTERNAL_WEBAPP_URL } from '../../constants/app';
 import {

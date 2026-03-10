@@ -4,10 +4,10 @@ import { Trans } from '@lingui/react/macro';
 import { SigningStatus } from '@prisma/client';
 import { useRevalidator } from 'react-router';
 
-import { getOptionalSession } from '@documenso/auth/server/lib/utils/get-session';
-import { getDocumentAndSenderByToken } from '@documenso/lib/server-only/document/get-document-by-token';
-import { getOrganisationClaimByTeamId } from '@documenso/lib/server-only/organisation/get-organisation-claims';
-import { getRecipientByToken } from '@documenso/lib/server-only/recipient/get-recipient-by-token';
+import { getOptionalSession } from '@docutracker/auth/server/lib/utils/get-session';
+import { getDocumentAndSenderByToken } from '@docutracker/lib/server-only/document/get-document-by-token';
+import { getOrganisationClaimByTeamId } from '@docutracker/lib/server-only/organisation/get-organisation-claims';
+import { getRecipientByToken } from '@docutracker/lib/server-only/recipient/get-recipient-by-token';
 
 import { BrandingLogo } from '~/components/general/branding-logo';
 import { DocumentSigningAuthProvider } from '~/components/general/document-signing/document-signing-auth-provider';
@@ -283,7 +283,7 @@ export default function MultisignPage() {
         </DocumentSigningProvider>
 
         {!hidePoweredBy && (
-          <div className="bg-primary text-primary-foreground fixed bottom-0 left-0 z-40 rounded-tr px-2 py-1 text-xs font-medium opacity-60 hover:opacity-100">
+          <div className="fixed bottom-0 left-0 z-40 rounded-tr bg-primary px-2 py-1 text-xs font-medium text-primary-foreground opacity-60 hover:opacity-100">
             <span>
               <Trans>Powered by</Trans>
             </span>
@@ -300,7 +300,7 @@ export default function MultisignPage() {
       <MultiSignDocumentList envelopes={envelopes} onDocumentSelect={onSelectDocument} />
 
       {!hidePoweredBy && (
-        <div className="bg-primary text-primary-foreground fixed bottom-0 left-0 z-40 rounded-tr px-2 py-1 text-xs font-medium opacity-60 hover:opacity-100">
+        <div className="fixed bottom-0 left-0 z-40 rounded-tr bg-primary px-2 py-1 text-xs font-medium text-primary-foreground opacity-60 hover:opacity-100">
           <span>
             <Trans>Powered by</Trans>
           </span>

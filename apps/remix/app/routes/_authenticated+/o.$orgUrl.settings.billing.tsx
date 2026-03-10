@@ -5,9 +5,9 @@ import { Loader } from 'lucide-react';
 import type Stripe from 'stripe';
 import { match } from 'ts-pattern';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { canExecuteOrganisationAction } from '@documenso/lib/utils/organisations';
-import { trpc } from '@documenso/trpc/react';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { canExecuteOrganisationAction } from '@docutracker/lib/utils/organisations';
+import { trpc } from '@docutracker/trpc/react';
 
 import { BillingPlans } from '~/components/general/billing-plans';
 import { OrganisationBillingPortalButton } from '~/components/general/organisations/organisation-billing-portal-button';
@@ -31,7 +31,7 @@ export default function TeamsSettingBillingPage() {
   if (isLoadingSubscription || !subscriptionQuery) {
     return (
       <div className="flex items-center justify-center rounded-lg py-32">
-        <Loader className="text-muted-foreground h-6 w-6 animate-spin" />
+        <Loader className="h-6 w-6 animate-spin text-muted-foreground" />
       </div>
     );
   }
@@ -57,7 +57,7 @@ export default function TeamsSettingBillingPage() {
             <Trans>Billing</Trans>
           </h3>
 
-          <div className="text-muted-foreground mt-2 text-sm">
+          <div className="mt-2 text-sm text-muted-foreground">
             {!organisationSubscription && (
               <p>
                 <Trans>

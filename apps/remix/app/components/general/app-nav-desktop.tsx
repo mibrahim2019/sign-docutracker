@@ -9,10 +9,10 @@ import { AnimatePresence } from 'framer-motion';
 import { Search } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { isPersonalLayout } from '@docutracker/lib/utils/organisations';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
 
 import { useOptionalCurrentTeam } from '~/providers/team';
 
@@ -86,7 +86,7 @@ export const AppNavDesktop = ({
                   key={href}
                   to={href}
                   className={cn(
-                    'text-muted-foreground dark:text-muted-foreground/60 focus-visible:ring-ring ring-offset-background rounded-md font-medium leading-5 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2',
+                    'rounded-md font-medium leading-5 text-muted-foreground ring-offset-background hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring dark:text-muted-foreground/60',
                     {
                       'text-foreground dark:text-muted-foreground': pathname?.startsWith(href),
                     },
@@ -102,7 +102,7 @@ export const AppNavDesktop = ({
 
       <Button
         variant="outline"
-        className="text-muted-foreground flex w-full max-w-96 items-center justify-between rounded-lg"
+        className="flex w-full max-w-96 items-center justify-between rounded-lg text-muted-foreground"
         onClick={() => setIsCommandMenuOpen(true)}
       >
         <div className="flex items-center">
@@ -111,7 +111,7 @@ export const AppNavDesktop = ({
         </div>
 
         <div>
-          <div className="text-muted-foreground bg-muted flex items-center rounded-md px-1.5 py-0.5 text-xs tracking-wider">
+          <div className="flex items-center rounded-md bg-muted px-1.5 py-0.5 text-xs tracking-wider text-muted-foreground">
             {modifierKey}+K
           </div>
         </div>

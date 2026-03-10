@@ -1,9 +1,9 @@
 import { EnvelopeType } from '@prisma/client';
 
-import { DOCUMENT_AUDIT_LOG_TYPE } from '@documenso/lib/types/document-audit-logs';
-import type { ApiRequestMetadata } from '@documenso/lib/universal/extract-request-metadata';
-import { createDocumentAuditLogData } from '@documenso/lib/utils/document-audit-logs';
-import { prisma } from '@documenso/prisma';
+import { DOCUMENT_AUDIT_LOG_TYPE } from '@docutracker/lib/types/document-audit-logs';
+import type { ApiRequestMetadata } from '@docutracker/lib/universal/extract-request-metadata';
+import { createDocumentAuditLogData } from '@docutracker/lib/utils/document-audit-logs';
+import { prisma } from '@docutracker/prisma';
 
 import { AppError, AppErrorCode } from '../../errors/app-error';
 import { canRecipientFieldsBeModified } from '../../utils/recipients';

@@ -2,11 +2,11 @@ import type { Page } from '@playwright/test';
 import { expect, test } from '@playwright/test';
 import { EnvelopeType } from '@prisma/client';
 
-import { getEnvelopeById } from '@documenso/lib/server-only/envelope/get-envelope-by-id';
-import { getRecipientsForDocument } from '@documenso/lib/server-only/recipient/get-recipients-for-document';
-import { mapSecondaryIdToDocumentId } from '@documenso/lib/utils/envelope';
-import { seedBlankDocument } from '@documenso/prisma/seed/documents';
-import { seedUser } from '@documenso/prisma/seed/users';
+import { getEnvelopeById } from '@docutracker/lib/server-only/envelope/get-envelope-by-id';
+import { getRecipientsForDocument } from '@docutracker/lib/server-only/recipient/get-recipients-for-document';
+import { mapSecondaryIdToDocumentId } from '@docutracker/lib/utils/envelope';
+import { seedBlankDocument } from '@docutracker/prisma/seed/documents';
+import { seedUser } from '@docutracker/prisma/seed/users';
 
 import { apiSignin } from '../fixtures/authentication';
 

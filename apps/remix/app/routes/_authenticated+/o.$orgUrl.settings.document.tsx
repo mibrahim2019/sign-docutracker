@@ -2,13 +2,13 @@ import { useLingui } from '@lingui/react/macro';
 import { Loader } from 'lucide-react';
 import { useLoaderData } from 'react-router';
 
-import { useCurrentOrganisation } from '@documenso/lib/client-only/providers/organisation';
-import { useSession } from '@documenso/lib/client-only/providers/session';
-import { IS_AI_FEATURES_CONFIGURED } from '@documenso/lib/constants/app';
-import { DocumentSignatureType } from '@documenso/lib/constants/document';
-import { isPersonalLayout } from '@documenso/lib/utils/organisations';
-import { trpc } from '@documenso/trpc/react';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import { useSession } from '@docutracker/lib/client-only/providers/session';
+import { IS_AI_FEATURES_CONFIGURED } from '@docutracker/lib/constants/app';
+import { DocumentSignatureType } from '@docutracker/lib/constants/document';
+import { isPersonalLayout } from '@docutracker/lib/utils/organisations';
+import { trpc } from '@docutracker/trpc/react';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import {
   DocumentPreferencesForm,

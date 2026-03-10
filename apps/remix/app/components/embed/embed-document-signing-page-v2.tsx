@@ -3,7 +3,7 @@ import { useEffect, useLayoutEffect, useState } from 'react';
 import { useLingui } from '@lingui/react';
 import { EnvelopeType } from '@prisma/client';
 
-import { mapSecondaryIdToDocumentId } from '@documenso/lib/utils/envelope';
+import { mapSecondaryIdToDocumentId } from '@docutracker/lib/utils/envelope';
 
 import { ZSignDocumentEmbedDataSchema } from '~/types/embed-document-sign-schema';
 import { injectCss } from '~/utils/css-vars';

@@ -8,13 +8,13 @@ import { DocumentStatus, EnvelopeType, type Recipient, SigningStatus } from '@pr
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
-import { getRecipientType } from '@documenso/lib/client-only/recipient-type';
-import type { TEnvelope } from '@documenso/lib/types/envelope';
-import { recipientAbbreviation } from '@documenso/lib/utils/recipient-formatter';
-import { trpc as trpcReact } from '@documenso/trpc/react';
-import { cn } from '@documenso/ui/lib/utils';
-import { Button } from '@documenso/ui/primitives/button';
-import { Checkbox } from '@documenso/ui/primitives/checkbox';
+import { getRecipientType } from '@docutracker/lib/client-only/recipient-type';
+import type { TEnvelope } from '@docutracker/lib/types/envelope';
+import { recipientAbbreviation } from '@docutracker/lib/utils/recipient-formatter';
+import { trpc as trpcReact } from '@docutracker/trpc/react';
+import { cn } from '@docutracker/ui/lib/utils';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Checkbox } from '@docutracker/ui/primitives/checkbox';
 import {
   Dialog,
   DialogClose,
@@ -24,15 +24,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@documenso/ui/primitives/dialog';
+} from '@docutracker/ui/primitives/dialog';
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-} from '@documenso/ui/primitives/form/form';
-import { useToast } from '@documenso/ui/primitives/use-toast';
+} from '@docutracker/ui/primitives/form/form';
+import { useToast } from '@docutracker/ui/primitives/use-toast';
 
 import { StackAvatar } from '../general/stack-avatar';
 
