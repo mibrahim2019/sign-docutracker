@@ -66,14 +66,14 @@ Brief description of what this module/feature does and when to use it.
 If there are specific packages or imports needed:
 
 ```bash
-npm install @documenso/package-name
+npm install @docutracker/package-name
 ```
 
 ## Quick Start
 
 ```jsx
 // Minimal working example
-import { Component } from '@documenso/package';
+import { Component } from '@docutracker/package';
 
 const Example = () => {
   return <Component />;
@@ -96,7 +96,7 @@ Description of what it does.
 #### Example
 
 ```jsx
-import { Component } from '@documenso/package';
+import { Component } from '@docutracker/package';
 
 <Component prop="value" optional={true} />;
 ```

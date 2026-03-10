@@ -41,34 +41,34 @@ Documenso is an open-source document signing platform built as a **monorepo** us
 
 | Package                    | Description                                              | Port |
 | -------------------------- | -------------------------------------------------------- | ---- |
-| `@documenso/remix`         | Main application - React Router (Remix) with Hono server | 3000 |
-| `@documenso/documentation` | Documentation site (Next.js + Nextra)                    | 3002 |
-| `@documenso/openpage-api`  | Public analytics API                                     | 3003 |
+| `@docutracker/remix`         | Main application - React Router (Remix) with Hono server | 3000 |
+| `@docutracker/documentation` | Documentation site (Next.js + Nextra)                    | 3002 |
+| `@docutracker/openpage-api`  | Public analytics API                                     | 3003 |
 
 ### Core Packages (`packages/`)
 
 | Package              | Description                                               |
 | -------------------- | --------------------------------------------------------- |
-| `@documenso/lib`     | Core business logic (server-only, client-only, universal) |
-| `@documenso/trpc`    | tRPC API layer with OpenAPI support (API V2)              |
-| `@documenso/api`     | REST API layer using ts-rest (API V1)                     |
-| `@documenso/prisma`  | Database layer (Prisma ORM + Kysely)                      |
-| `@documenso/ui`      | UI component library (Shadcn + Radix + Tailwind)          |
-| `@documenso/email`   | Email templates and mailer (React Email)                  |
-| `@documenso/auth`    | Authentication (OAuth via Arctic, WebAuthn/Passkeys)      |
-| `@documenso/signing` | PDF signing (Local P12, Google Cloud KMS)                 |
-| `@documenso/ee`      | Enterprise Edition features                               |
-| `@documenso/assets`  | Static assets                                             |
+| `@docutracker/lib`     | Core business logic (server-only, client-only, universal) |
+| `@docutracker/trpc`    | tRPC API layer with OpenAPI support (API V2)              |
+| `@docutracker/api`     | REST API layer using ts-rest (API V1)                     |
+| `@docutracker/prisma`  | Database layer (Prisma ORM + Kysely)                      |
+| `@docutracker/ui`      | UI component library (Shadcn + Radix + Tailwind)          |
+| `@docutracker/email`   | Email templates and mailer (React Email)                  |
+| `@docutracker/auth`    | Authentication (OAuth via Arctic, WebAuthn/Passkeys)      |
+| `@docutracker/signing` | PDF signing (Local P12, Google Cloud KMS)                 |
+| `@docutracker/ee`      | Enterprise Edition features                               |
+| `@docutracker/assets`  | Static assets                                             |
 
 ### Supporting Packages
 
 | Package                      | Description               |
 | ---------------------------- | ------------------------- |
-| `@documenso/app-tests`       | E2E tests (Playwright)    |
-| `@documenso/eslint-config`   | Shared ESLint config      |
-| `@documenso/prettier-config` | Shared Prettier config    |
-| `@documenso/tailwind-config` | Shared Tailwind config    |
-| `@documenso/tsconfig`        | Shared TypeScript configs |
+| `@docutracker/app-tests`       | E2E tests (Playwright)    |
+| `@docutracker/eslint-config`   | Shared ESLint config      |
+| `@docutracker/prettier-config` | Shared Prettier config    |
+| `@docutracker/tailwind-config` | Shared Tailwind config    |
+| `@docutracker/tsconfig`        | Shared TypeScript configs |
 
 ## Tech Stack
 
@@ -294,7 +294,7 @@ Hono Server (apps/remix/server/)
 ## Key Directories
 
 ```
-documenso/
+docutracker/
 ├── apps/
 │   └── remix/
 │       ├── app/

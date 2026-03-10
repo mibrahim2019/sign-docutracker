@@ -179,7 +179,7 @@ git clone https://github.com/<your-username>/documenso
 
 ---
 
-- Optional: Seed the database using `npm run prisma:seed -w @documenso/prisma` to create a test user and document.
+- Optional: Seed the database using `npm run prisma:seed -w @docutracker/prisma` to create a test user and document.
 - Optional: Create your own signing certificate.
   - To generate your own using these steps and a Linux Terminal or Windows Subsystem for Linux (WSL), see **[Create your own signing certificate](./SIGNING.md)**.
 
@@ -203,8 +203,8 @@ If you're a visual learner and prefer to watch a video walkthrough of setting up
 
 We provide a Docker container for Docutracker, which is published on both DockerHub and GitHub Container Registry.
 
-- DockerHub: [https://hub.docker.com/r/documenso/documenso](https://hub.docker.com/r/documenso/documenso)
-- GitHub Container Registry: [https://ghcr.io/documenso/documenso](https://ghcr.io/documenso/documenso)
+- DockerHub: [https://hub.docker.com/r/docutracker/docutracker](https://hub.docker.com/r/docutracker/docutracker)
+- GitHub Container Registry: [https://ghcr.io/docutracker/docutracker](https://ghcr.io/docutracker/docutracker)
 
 You can pull the Docker image from either of these registries and run it with your preferred container hosting provider.
 
@@ -224,7 +224,7 @@ First, clone the code from Github:
 git clone https://github.com/documenso/documenso.git
 ```
 
-Then, inside the `documenso` folder, copy the example env file:
+Then, inside the project folder, copy the example env file:
 
 ```
 cp .env.example .env
@@ -266,14 +266,14 @@ You can use a systemd service file to run the app. Here is a simple example of t
 
 ```bash
 [Unit]
-Description=documenso
+Description=docutracker
 After=network.target
 
 [Service]
 Environment=PATH=/path/to/your/node/binaries
 Type=simple
 User=www-data
-WorkingDirectory=/var/www/documenso/apps/remix
+WorkingDirectory=/var/www/docutracker/apps/remix
 ExecStart=/usr/bin/next start -p 3500
 TimeoutSec=15
 Restart=always
@@ -313,15 +313,15 @@ If you are deploying to a cluster that uses only IPv6, You can use a custom comm
 For local docker run
 
 ```bash
-docker run -it documenso:latest npm run start -- -H ::
+docker run -it docutracker:latest npm run start -- -H ::
 ```
 
 For k8s or docker-compose
 
 ```yaml
 containers:
-  - name: documenso
-    image: documenso:latest
+  - name: docutracker
+    image: docutracker:latest
     imagePullPolicy: IfNotPresent
     command:
       - npm

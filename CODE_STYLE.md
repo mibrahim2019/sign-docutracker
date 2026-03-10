@@ -90,10 +90,10 @@ import type { Document, Recipient } from '@prisma/client';
 import { DocumentStatus, RecipientRole } from '@prisma/client';
 import { match } from 'ts-pattern';
 
-// 3. Internal package imports (from @documenso/*)
-import { AppError } from '@documenso/lib/errors/app-error';
-import { prisma } from '@documenso/prisma';
-import { Button } from '@documenso/ui/primitives/button';
+// 3. Internal package imports (from @docutracker/*)
+import { AppError } from '@docutracker/lib/errors/app-error';
+import { prisma } from '@docutracker/prisma';
+import { Button } from '@docutracker/ui/primitives/button';
 
 // 4. Relative imports
 import { getTeamById } from '../team/get-team';
@@ -107,8 +107,8 @@ import type { FindResultResponse } from './types';
 // ✅ Use type imports for types
 import type { Document } from '@prisma/client';
 
-import { Button } from '@documenso/ui/primitives/button';
-import { Input } from '@documenso/ui/primitives/input';
+import { Button } from '@docutracker/ui/primitives/button';
+import { Input } from '@docutracker/ui/primitives/input';
 ```
 
 ---
@@ -340,7 +340,7 @@ onClick={() => void onFormSubmit()}
 
 ```typescript
 // ✅ Blank line after imports
-import { prisma } from '@documenso/prisma';
+import { prisma } from '@docutracker/prisma';
 
 export const findDocuments = async () => {
   // ...
