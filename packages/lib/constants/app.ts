@@ -3,8 +3,16 @@ import { env } from '@documenso/lib/utils/env';
 export const APP_DOCUMENT_UPLOAD_SIZE_LIMIT =
   Number(env('NEXT_PUBLIC_DOCUMENT_SIZE_UPLOAD_LIMIT')) || 50;
 
-export const NEXT_PUBLIC_WEBAPP_URL = () =>
-  env('NEXT_PUBLIC_WEBAPP_URL') ?? 'http://localhost:3000';
+const DEFAULT_WEBAPP_URL = 'http://localhost:3000';
+
+export const NEXT_PUBLIC_WEBAPP_URL = () => {
+  const raw = env('NEXT_PUBLIC_WEBAPP_URL');
+  const url = (typeof raw === 'string' ? raw.trim() : raw) || DEFAULT_WEBAPP_URL;
+  if (url === '/' || url === '') {
+    return DEFAULT_WEBAPP_URL;
+  }
+  return url.replace(/\/+$/, '');
+};
 
 export const NEXT_PUBLIC_SIGNING_CONTACT_INFO = () =>
   env('NEXT_PUBLIC_SIGNING_CONTACT_INFO') ?? NEXT_PUBLIC_WEBAPP_URL();
