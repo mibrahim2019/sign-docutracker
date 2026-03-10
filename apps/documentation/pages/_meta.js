@@ -21,12 +21,12 @@ export default {
     items: {
       changelog: {
         title: 'Changelog',
-        href: 'https://documenso.com/changelog',
+        href: 'https://docutracker.com/changelog',
         newWindow: true,
       },
       blog: {
         title: 'Blog',
-        href: 'https://documenso.com/blog',
+        href: 'https://docutracker.com/blog',
         newWindow: true,
       },
     },

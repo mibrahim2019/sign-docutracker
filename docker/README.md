@@ -13,7 +13,7 @@ Before you begin, ensure that you have the following installed:
 
 This setup includes a PostgreSQL database and the Docutracker application. You will need to provide your own SMTP details via environment variables.
 
-1. Download the Docker Compose file from the Docutracker repository: [compose.yml](https://raw.githubusercontent.com/documenso/documenso/release/docker/production/compose.yml)
+1. Download the Docker Compose file from the Docutracker repository: [compose.yml](https://raw.githubusercontent.com/docutracker/docutracker/release/docker/production/compose.yml)
 2. Navigate to the directory containing the `compose.yml` file.
 3. Create a `.env` file in the same directory and add your SMTP details as well as a few extra environment variables, following the example below:
 

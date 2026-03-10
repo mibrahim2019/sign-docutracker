@@ -1,4 +1,4 @@
-<img src="https://github.com/documenso/documenso/assets/13398220/a643571f-0239-46a6-a73e-6bef38d1228b" alt="Docutracker Logo">
+<img src="https://github.com/docutracker/docutracker/assets/13398220/a643571f-0239-46a6-a73e-6bef38d1228b" alt="Docutracker Logo">
 
 <p align="center" style="margin-top: 20px">
   <p align="center">
@@ -11,7 +11,7 @@
     ·
     <a href="https://docutracker.io">Website</a>
     ·
-    <a href="https://github.com/documenso/documenso/issues">Issues</a>
+    <a href="https://github.com/docutracker/docutracker/issues">Issues</a>
     ·
     <a href="https://documen.so/live">Upcoming Releases</a>
     ·
@@ -21,17 +21,17 @@
 
 <p align="center">
    <a href="https://documen.so/discord"><img src="https://img.shields.io/badge/Discord-documen.so/discord-%235865F2" alt="Join Docutracker on Discord"></a>
-   <a href="https://github.com/documenso/documenso/stargazers"><img src="https://img.shields.io/github/stars/documenso/documenso" alt="Github Stars"></a>
-   <a href="https://github.com/documenso/documenso/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-purple" alt="License"></a>
-   <a href="https://github.com/documenso/documenso/pulse"><img src="https://img.shields.io/github/commit-activity/m/documenso/documenso" alt="Commits-per-month"></a>
-   <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/documenso/documenso">
+   <a href="https://github.com/docutracker/docutracker/stargazers"><img src="https://img.shields.io/github/stars/docutracker/docutracker" alt="Github Stars"></a>
+   <a href="https://github.com/docutracker/docutracker/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-purple" alt="License"></a>
+   <a href="https://github.com/docutracker/docutracker/pulse"><img src="https://img.shields.io/github/commit-activity/m/docutracker/docutracker" alt="Commits-per-month"></a>
+   <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/docutracker/docutracker">
    <img alt="open in devcontainer" src="https://img.shields.io/static/v1?label=Dev%20Containers&message=Enabled&color=blue&logo=visualstudiocode" />
    </a>
    <a href="CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg" alt="Contributor Covenant"></a>
 </p>
 
 <div align="center">
-  <img src="https://github.com/documenso/documenso/assets/13398220/d96ed533-6f34-4a97-be9b-442bdb189c69" style="width: 80%;" />
+  <img src="https://github.com/docutracker/docutracker/assets/13398220/d96ed533-6f34-4a97-be9b-442bdb189c69" style="width: 80%;" />
 </div>
 
 ## About Docutracker
@@ -43,22 +43,22 @@ Join us in creating the next generation of open trust infrastructure.
 ## Recognition
 
 <p align="center">
-  <a href="https://www.producthunt.com/posts/documenso?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-documenso" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=395047&theme=light&period=daily" alt="Docutracker - The&#0032;open&#0032;source&#0032;DocuSign&#0032;alternative | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-  <a href="https://www.producthunt.com/posts/documenso?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-documenso" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=395047&theme=light" alt="Docutracker - The&#0032;Open&#0032;Source&#0032;DocuSign&#0032;Alternative&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+  <a href="https://www.producthunt.com/posts/docutracker?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-docutracker" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=395047&theme=light&period=daily" alt="Docutracker - The&#0032;open&#0032;source&#0032;DocuSign&#0032;alternative | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+  <a href="https://www.producthunt.com/posts/docutracker?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-docutracker" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=395047&theme=light" alt="Docutracker - The&#0032;Open&#0032;Source&#0032;DocuSign&#0032;Alternative&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 </p>
 
 ## Community and Next Steps 🎯
 
 - Check out the first source code release in this repository and test it.
-- Tell us what you think in the [Discussions](https://github.com/documenso/documenso/discussions).
+- Tell us what you think in the [Discussions](https://github.com/docutracker/docutracker/discussions).
 - Join the [Discord server](https://documen.so/discord) for any questions and getting to know to other community members.
 - ⭐ the repository to help us raise awareness.
 - Spread the word on Twitter that Docutracker is working towards a more open signing tool.
-- Fix or create [issues](https://github.com/documenso/documenso/issues), that are needed for the first production release.
+- Fix or create [issues](https://github.com/docutracker/docutracker/issues), that are needed for the first production release.
 
 ## Contributing
 
-- To contribute, please see our [contribution guide](https://github.com/documenso/documenso/blob/main/CONTRIBUTING.md).
+- To contribute, please see our [contribution guide](https://github.com/docutracker/docutracker/blob/main/CONTRIBUTING.md).
 
 ## Contact us
 
@@ -86,7 +86,7 @@ Contact us if you are interested in our Enterprise plan for large organizations 
 - [shadcn/ui](https://ui.shadcn.com/) - Component Library
 - [react-email](https://react.email/) - Email Templates
 - [tRPC](https://trpc.io/) - API
-- [@documenso/pdf-sign](https://www.npmjs.com/package/@documenso/pdf-sign) - PDF Signatures (launching soon)
+- [@docutracker/pdf-sign](https://www.npmjs.com/package/@docutracker/pdf-sign) - PDF Signatures (launching soon)
 - [React-PDF](https://github.com/wojtekmaj/react-pdf) - Viewing PDFs
 - [PDF-Lib](https://github.com/Hopding/pdf-lib) - PDF manipulation
 - [Stripe](https://stripe.com/) - Payments
@@ -114,7 +114,7 @@ Want to get up and running quickly? Follow these steps:
 After forking the repository, clone it to your local device by using the following command:
 
 ```sh
-git clone https://github.com/<your-username>/documenso
+git clone https://github.com/<your-username>/docutracker
 ```
 
 2. Set up your `.env` file using the recommendations in the `.env.example` file. Alternatively, just run `cp .env.example .env` to get started with our handpicked defaults.
@@ -153,7 +153,7 @@ Follow these steps to setup Docutracker on your local machine:
 After forking the repository, clone it to your local device by using the following command:
 
 ```sh
-git clone https://github.com/<your-username>/documenso
+git clone https://github.com/<your-username>/docutracker
 ```
 
 2. Run `npm i` in the root directory
@@ -187,11 +187,11 @@ git clone https://github.com/<your-username>/documenso
 
 - Click below to launch a ready-to-use Gitpod workspace in your browser.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/documenso/documenso)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/docutracker/docutracker)
 
 ### Run in DevContainer
 
-We support DevContainers for VSCode. [Click here to get started.](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/documenso/documenso)
+We support DevContainers for VSCode. [Click here to get started.](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/docutracker/docutracker)
 
 ### Video walkthrough
 
@@ -221,7 +221,7 @@ We support a variety of deployment methods, and are actively working on adding m
 First, clone the code from Github:
 
 ```
-git clone https://github.com/documenso/documenso.git
+git clone https://github.com/docutracker/docutracker.git
 ```
 
 Then, inside the project folder, copy the example env file:
@@ -288,15 +288,15 @@ WantedBy=multi-user.target
 
 ### Render
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/documenso/documenso)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/docutracker/docutracker)
 
 ### Koyeb
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/documenso/documenso&branch=main&name=docutracker-app&builder=dockerfile&dockerfile=/docker/Dockerfile)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/docutracker/docutracker&branch=main&name=docutracker-app&builder=dockerfile&dockerfile=/docker/Dockerfile)
 
 ## Elestio
 
-[![Deploy on Elestio](https://elest.io/images/logos/deploy-to-elestio-btn.png)](https://elest.io/open-source/documenso)
+[![Deploy on Elestio](https://elest.io/images/logos/deploy-to-elestio-btn.png)](https://elest.io/open-source/docutracker)
 
 ## Troubleshooting
 

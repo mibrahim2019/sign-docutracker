@@ -6,13 +6,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: de\n"
-"Project-Id-Version: documenso-app\n"
+"Project-Id-Version: docutracker-app\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2026-02-25 04:37\n"
 "Last-Translator: \n"
 "Language-Team: German\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: documenso-app\n"
+"X-Crowdin-Project: docutracker-app\n"
 "X-Crowdin-Project-ID: 694691\n"
 "X-Crowdin-Language: de\n"
 "X-Crowdin-File: web.po\n"
@@ -924,8 +924,8 @@ msgstr ""
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-email-verification.ts
-msgid "A request to use your email has been initiated by {0} on Documenso"
-msgstr "Eine Anfrage zur Verwendung Ihrer E-Mail wurde von {0} auf Documenso initiiert"
+msgid "A request to use your email has been initiated by {0} on Docutracker"
+msgstr ""
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
 #: apps/remix/app/components/dialogs/webhook-edit-dialog.tsx
@@ -973,8 +973,8 @@ msgid "Accept & Link Account"
 msgstr "Akzeptieren & Konto verknüpfen"
 
 #: packages/email/templates/organisation-invite.tsx
-msgid "Accept invitation to join an organisation on Documenso"
-msgstr "Einladung annehmen, um einer Organisation auf Documenso beizutreten"
+msgid "Accept invitation to join an organisation on Docutracker"
+msgstr "Einladung annehmen, um einer Organisation auf Docutracker beizutreten"
 
 #: packages/email/templates/confirm-team-email.tsx
 msgid "Accept team email request for {teamName} on Docutracker"
@@ -9104,8 +9104,8 @@ msgstr "Team"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/delete-team.ts
-msgid "Team \"{0}\" has been deleted on Documenso"
-msgstr "Team \"{0}\" wurde auf Documenso gelöscht"
+msgid "Team \"{0}\" has been deleted on Docutracker"
+msgstr ""
 
 #: packages/lib/constants/teams-translations.ts
 msgid "Team Admin"
@@ -11922,8 +11922,8 @@ msgstr "Sie wurden von <0>{0}</0> eingeladen, deren Organisation beizutreten."
 
 #. placeholder {0}: organisation.name
 #: packages/lib/server-only/organisation/create-organisation-member-invites.ts
-msgid "You have been invited to join {0} on Documenso"
-msgstr "Du wurdest eingeladen, {0} auf Documenso beizutreten"
+msgid "You have been invited to join {0} on Docutracker"
+msgstr ""
 
 #: packages/email/templates/organisation-invite.tsx
 msgid "You have been invited to join the following organisation"

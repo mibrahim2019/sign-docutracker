@@ -36,7 +36,7 @@ export const OrganisationInviteEmailTemplate = ({
   const { _ } = useLingui();
   const branding = useBranding();
 
-  const previewText = msg`Accept invitation to join an organisation on Documenso`;
+  const previewText = msg`Accept invitation to join an organisation on Docutracker`;
 
   return (
     <Html>
@@ -85,7 +85,7 @@ export const OrganisationInviteEmailTemplate = ({
 
               <Section className="mb-6 mt-6 text-center">
                 <Button
-                  className="inline-flex items-center justify-center rounded-lg bg-documenso-500 px-6 py-3 text-center text-sm font-medium text-black no-underline"
+                  className="bg-docutracker-500 inline-flex items-center justify-center rounded-lg px-6 py-3 text-center text-sm font-medium text-black no-underline"
                   href={`${baseUrl}/organisation/invite/${token}`}
                 >
                   <Trans>Accept</Trans>

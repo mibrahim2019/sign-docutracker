@@ -2,12 +2,12 @@ import type { DocsThemeConfig } from 'nextra-theme-docs';
 import { useConfig } from 'nextra-theme-docs';
 
 const themeConfig: DocsThemeConfig = {
-  logo: <span>Documenso</span>,
+  logo: <span>Docutracker</span>,
   head: function useHead() {
     const config = useConfig();
 
-    const title = `${config.frontMatter.title} | Documenso Docs` || 'Documenso Docs';
-    const description = config.frontMatter.description || 'The official Documenso documentation';
+    const title = `${config.frontMatter.title} | Docutracker Docs` || 'Docutracker Docs';
+    const description = config.frontMatter.description || 'The official Docutracker documentation';
 
     return (
       <>
@@ -45,13 +45,13 @@ const themeConfig: DocsThemeConfig = {
   chat: {
     link: 'https://documen.so/discord',
   },
-  docsRepositoryBase: 'https://github.com/documenso/documenso/tree/main/apps/documentation',
+  docsRepositoryBase: 'https://github.com/docutracker/docutracker/tree/main/apps/documentation',
   footer: {
     content: (
       <span>
         {new Date().getFullYear()} ©{' '}
         <a href="https://documen.so" target="_blank">
-          Documenso
+          Docutracker
         </a>
         .
       </span>
