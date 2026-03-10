@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { Trans, useLingui } from '@lingui/react/macro';
+import type { SubscriptionClaim } from '@prisma/client';
 
 import type { TLicenseClaim } from '@docutracker/lib/types/license';
 import { trpc } from '@docutracker/trpc/react';
@@ -64,10 +65,10 @@ export const ClaimUpdateDialog = ({ claim, trigger, licenseFlags }: ClaimUpdateD
         </DialogHeader>
 
         <SubscriptionClaimForm
-          subscriptionClaim={claim}
+          subscriptionClaim={claim as Omit<SubscriptionClaim, 'id' | 'createdAt' | 'updatedAt'>}
           onFormSubmit={async (data) =>
             await updateClaim({
-              id: claim.id,
+              id: claim.id as string,
               data,
             })
           }

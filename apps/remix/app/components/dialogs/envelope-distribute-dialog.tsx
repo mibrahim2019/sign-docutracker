@@ -3,7 +3,15 @@ import { useEffect, useMemo, useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useLingui } from '@lingui/react/macro';
 import { Trans } from '@lingui/react/macro';
-import { DocumentDistributionMethod, DocumentStatus, EnvelopeType } from '@prisma/client';
+import {
+  DocumentDistributionMethod,
+  DocumentStatus,
+  type Envelope,
+  EnvelopeType,
+  type Field,
+  type Recipient,
+  type RecipientRole,
+} from '@prisma/client';
 import { AnimatePresence, motion } from 'framer-motion';
 import { InfoIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
@@ -13,6 +21,7 @@ import * as z from 'zod';
 
 import { useCurrentEnvelopeEditor } from '@docutracker/lib/client-only/providers/envelope-editor-provider';
 import { useCurrentOrganisation } from '@docutracker/lib/client-only/providers/organisation';
+import type { TEnvelope } from '@docutracker/lib/types/envelope';
 import { extractDocumentAuthMethods } from '@docutracker/lib/utils/document-auth';
 import { getRecipientsWithMissingFields } from '@docutracker/lib/utils/recipients';
 import { trpc, trpc as trpcReact } from '@docutracker/trpc/react';
@@ -83,7 +92,29 @@ export const EnvelopeDistributeDialog = ({
 }: EnvelopeDistributeDialogProps) => {
   const organisation = useCurrentOrganisation();
 
-  const { envelope, syncEnvelope, isAutosaving, autosaveError } = useCurrentEnvelopeEditor();
+  const {
+    envelope: rawEnvelope,
+    syncEnvelope,
+    isAutosaving,
+    autosaveError,
+  } = useCurrentEnvelopeEditor();
+  const envelope = rawEnvelope as TEnvelope;
+  const documentMeta = envelope.documentMeta as {
+    emailId?: string | null;
+    emailReplyTo?: string | null;
+    subject?: string | null;
+    message?: string | null;
+    distributionMethod?: DocumentDistributionMethod;
+  };
+  type RecipientWithIndex = {
+    id: number;
+    name: string;
+    email: string | null;
+    role: RecipientRole;
+    authOptions: Recipient['authOptions'];
+    index?: number;
+  };
+  const recipients = envelope.recipients as RecipientWithIndex[];
 
   const { toast } = useToast();
   const { t } = useLingui();
@@ -97,12 +128,11 @@ export const EnvelopeDistributeDialog = ({
   const form = useForm<TEnvelopeDistributeFormSchema>({
     defaultValues: {
       meta: {
-        emailId: envelope.documentMeta?.emailId ?? null,
-        emailReplyTo: envelope.documentMeta?.emailReplyTo || undefined,
-        subject: envelope.documentMeta?.subject ?? '',
-        message: envelope.documentMeta?.message ?? '',
-        distributionMethod:
-          envelope.documentMeta?.distributionMethod || DocumentDistributionMethod.EMAIL,
+        emailId: documentMeta?.emailId ?? null,
+        emailReplyTo: documentMeta?.emailReplyTo || undefined,
+        subject: documentMeta?.subject ?? '',
+        message: documentMeta?.message ?? '',
+        distributionMethod: documentMeta?.distributionMethod || DocumentDistributionMethod.EMAIL,
       },
     },
     resolver: zodResolver(ZEnvelopeDistributeFormSchema),
@@ -127,16 +157,17 @@ export const EnvelopeDistributeDialog = ({
 
   const recipientsWithIndex = useMemo(
     () =>
-      envelope.recipients.map((recipient, index) => ({
+      recipients.map((recipient, index) => ({
         ...recipient,
         index,
       })),
-    [envelope.recipients],
+    [recipients],
   );
 
+  const envelopeFields = envelope.fields as Pick<Field, 'type' | 'recipientId'>[];
   const recipientsMissingSignatureFields = useMemo(
-    () => getRecipientsWithMissingFields(recipientsWithIndex, envelope.fields),
-    [recipientsWithIndex, envelope.fields],
+    () => getRecipientsWithMissingFields(recipientsWithIndex, envelopeFields),
+    [recipientsWithIndex, envelopeFields],
   );
 
   /**
@@ -145,7 +176,7 @@ export const EnvelopeDistributeDialog = ({
   const recipientsMissingRequiredEmail = useMemo(() => {
     return recipientsWithIndex.filter((recipient) => {
       const auth = extractDocumentAuthMethods({
-        documentAuth: envelope.authOptions,
+        documentAuth: envelope.authOptions as Envelope['authOptions'],
         recipientAuth: recipient.authOptions,
       });
 
@@ -160,7 +191,7 @@ export const EnvelopeDistributeDialog = ({
       return 'MISSING_SIGNATURES';
     }
 
-    if (envelope.recipients.length === 0) {
+    if (recipients.length === 0) {
       return 'MISSING_RECIPIENTS';
     }
 
@@ -169,15 +200,15 @@ export const EnvelopeDistributeDialog = ({
     }
 
     return null;
-  }, [envelope.recipients, recipientsMissingRequiredEmail, recipientsMissingSignatureFields]);
+  }, [recipients, recipientsMissingRequiredEmail, recipientsMissingSignatureFields]);
 
   const onFormSubmit = async ({ meta }: TEnvelopeDistributeFormSchema) => {
     try {
-      await distributeEnvelope({ envelopeId: envelope.id, meta });
+      await distributeEnvelope({ envelopeId: envelope.id as string, meta });
 
       await onDistribute?.();
 
-      let redirectPath = `${documentRootPath}/${envelope.id}`;
+      let redirectPath = `${documentRootPath}/${envelope.id as string}`;
 
       if (meta.distributionMethod === DocumentDistributionMethod.NONE) {
         redirectPath += '?action=copy-links';
@@ -268,7 +299,9 @@ export const EnvelopeDistributeDialog = ({
 
                 <div
                   className={cn('min-h-72', {
-                    'min-h-[23rem]': organisation.organisationClaim.flags.emailDomains,
+                    'min-h-[23rem]': (
+                      organisation.organisationClaim.flags as { emailDomains?: boolean }
+                    )?.emailDomains,
                   })}
                 >
                   <AnimatePresence initial={false} mode="wait">
@@ -293,7 +326,8 @@ export const EnvelopeDistributeDialog = ({
                             className="mt-2 flex flex-col gap-y-4 rounded-lg"
                             disabled={form.formState.isSubmitting}
                           >
-                            {organisation.organisationClaim.flags.emailDomains && (
+                            {(organisation.organisationClaim.flags as { emailDomains?: boolean })
+                              ?.emailDomains && (
                               <FormField
                                 control={form.control}
                                 name="meta.emailId"
