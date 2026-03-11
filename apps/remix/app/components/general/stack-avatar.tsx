@@ -27,19 +27,19 @@ export const StackAvatar = ({ first, zIndex, fallbackText = '', type }: StackAva
 
   switch (type) {
     case RecipientStatusType.UNSIGNED:
-      classes = 'bg-dawn-200 text-dawn-900';
+      classes = 'bg-dawn-900/40 text-dawn-400';
       break;
     case RecipientStatusType.OPENED:
-      classes = 'bg-yellow-200 text-yellow-700';
+      classes = 'bg-yellow-900/40 text-yellow-400';
       break;
     case RecipientStatusType.WAITING:
-      classes = 'bg-water text-water-700';
+      classes = 'bg-water/20 text-water';
       break;
     case RecipientStatusType.COMPLETED:
-      classes = 'bg-documenso-200 text-documenso-800';
+      classes = 'bg-documenso-900/40 text-documenso-400';
       break;
     case RecipientStatusType.REJECTED:
-      classes = 'bg-red-200 text-red-800';
+      classes = 'bg-red-900/40 text-red-400';
       break;
     default:
       break;
@@ -47,7 +47,7 @@ export const StackAvatar = ({ first, zIndex, fallbackText = '', type }: StackAva
 
   return (
     <Avatar
-      className={` ${zIndexClass} ${firstClass} h-10 w-10 border-2 border-solid border-white dark:border-border`}
+      className={` ${zIndexClass} ${firstClass} h-10 w-10 border-2 border-solid border-border`}
     >
       <AvatarFallback className={classes}>{fallbackText}</AvatarFallback>
     </Avatar>

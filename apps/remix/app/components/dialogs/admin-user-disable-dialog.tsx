@@ -98,7 +98,7 @@ export const AdminUserDisableDialog = ({
                 </DialogTitle>
 
                 <Alert variant="destructive">
-                  <AlertDescription className="selection:bg-red-100">
+                  <AlertDescription className="selection:bg-red-900/40">
                     <Trans>
                       This action is reversible, but please be careful as the account may be
                       affected permanently (e.g. their settings and contents not being restored

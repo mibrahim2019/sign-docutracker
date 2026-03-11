@@ -167,7 +167,7 @@ export const DocumentSigningForm = ({
           ) : recipient.role === RecipientRole.ASSISTANT ? (
             <>
               <form onSubmit={assistantForm.handleSubmit(onAssistantFormSubmit)}>
-                <fieldset className="rounded-2xl border border-border bg-white p-3 dark:bg-background">
+                <fieldset className="rounded-2xl border border-border bg-background p-3">
                   <Controller
                     name="selectedSignerId"
                     control={assistantForm.control}

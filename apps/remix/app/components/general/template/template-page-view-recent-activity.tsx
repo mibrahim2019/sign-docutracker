@@ -72,7 +72,7 @@ export const TemplatePageViewRecentActivity = ({
                 </div>
 
                 <div className="relative flex h-6 w-6 flex-none items-center justify-center bg-widget">
-                  <div className="h-1.5 w-1.5 rounded-full bg-widget ring-1 ring-gray-300 dark:ring-neutral-600" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-widget ring-1 ring-neutral-600" />
                 </div>
 
                 <button
@@ -109,12 +109,12 @@ export const TemplatePageViewRecentActivity = ({
                 </div>
 
                 <div className="relative flex h-6 w-6 flex-none items-center justify-center bg-widget text-foreground/40">
-                  <div className="h-1.5 w-1.5 rounded-full bg-widget ring-1 ring-gray-300 dark:ring-neutral-600" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-widget ring-1 ring-neutral-600" />
                 </div>
 
                 <Link
                   to={`${documentRootPath}/${document.envelopeId}`}
-                  className="flex-auto truncate py-0.5 text-xs leading-5 text-muted-foreground dark:text-muted-foreground/70"
+                  className="flex-auto truncate py-0.5 text-xs leading-5 text-muted-foreground/70"
                 >
                   {match(document.source)
                     .with(DocumentSource.DOCUMENT, DocumentSource.TEMPLATE, () => (
@@ -130,7 +130,7 @@ export const TemplatePageViewRecentActivity = ({
                     .exhaustive()}
                 </Link>
 
-                <time className="flex-none py-0.5 text-xs leading-5 text-muted-foreground dark:text-muted-foreground/70">
+                <time className="flex-none py-0.5 text-xs leading-5 text-muted-foreground/70">
                   {DateTime.fromJSDate(document.createdAt).toRelative({ style: 'short' })}
                 </time>
               </li>

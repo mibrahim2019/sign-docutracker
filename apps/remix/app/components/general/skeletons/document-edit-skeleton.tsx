@@ -21,7 +21,7 @@ export default function DocumentEditSkeleton() {
       </div>
 
       <div className="mt-4 grid h-[80vh] max-h-[60rem] w-full grid-cols-12 gap-x-8">
-        <div className="col-span-12 rounded-xl border-2 border-border bg-white/50 p-2 before:rounded-xl lg:col-span-6 xl:col-span-7 dark:bg-background">
+        <div className="col-span-12 rounded-xl border-2 border-border bg-background p-2 before:rounded-xl lg:col-span-6 xl:col-span-7">
           <div className="flex h-[80vh] max-h-[60rem] flex-col items-center justify-center">
             <Loader className="h-12 w-12 animate-spin text-documenso" />
 

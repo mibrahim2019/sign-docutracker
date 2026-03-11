@@ -33,7 +33,7 @@ export const OrganisationInvitations = ({ className }: { className?: string }) =
         <AnimateGenericFadeInOut>
           <Alert variant="secondary" className={className}>
             <div className="flex h-full flex-row items-center p-2">
-              <BellIcon className="mr-4 h-5 w-5 text-blue-800" />
+              <BellIcon className="mr-4 h-5 w-5 text-blue-400" />
 
               <AlertDescription className="mr-2">
                 <Plural
@@ -53,7 +53,7 @@ export const OrganisationInvitations = ({ className }: { className?: string }) =
 
               <Dialog>
                 <DialogTrigger asChild>
-                  <button className="ml-auto text-sm font-medium text-blue-700 hover:text-blue-600">
+                  <button className="ml-auto text-sm font-medium text-blue-400 hover:text-blue-300">
                     <Trans>View invites</Trans>
                   </button>
                 </DialogTrigger>

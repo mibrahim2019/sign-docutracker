@@ -316,7 +316,7 @@ export const EmbedSignDocumentV1ClientPage = ({
                   {isExpanded ? (
                     <Button
                       variant="outline"
-                      className="h-8 w-8 bg-background p-0 md:hidden dark:bg-foreground"
+                      className="h-8 w-8 bg-background p-0 dark:bg-foreground md:hidden"
                       onClick={() => setIsExpanded(false)}
                     >
                       <LucideChevronDown className="h-5 w-5 text-muted-foreground dark:text-background" />
@@ -324,7 +324,7 @@ export const EmbedSignDocumentV1ClientPage = ({
                   ) : pendingFields.length > 0 ? (
                     <Button
                       variant="outline"
-                      className="h-8 w-8 bg-background p-0 md:hidden dark:bg-foreground"
+                      className="h-8 w-8 bg-background p-0 dark:bg-foreground md:hidden"
                       onClick={() => setIsExpanded(true)}
                     >
                       <LucideChevronUp className="h-5 w-5 text-muted-foreground dark:text-background" />
@@ -367,7 +367,7 @@ export const EmbedSignDocumentV1ClientPage = ({
                         <Trans>Signing for</Trans>
                       </Label>
 
-                      <fieldset className="mt-2 rounded-2xl border border-border bg-white p-3 dark:bg-background">
+                      <fieldset className="mt-2 rounded-2xl border border-border bg-background p-3">
                         <RadioGroup
                           className="gap-0 space-y-3 shadow-none"
                           value={selectedSignerId?.toString()}

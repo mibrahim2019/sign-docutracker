@@ -20,7 +20,7 @@ export const AdminLicenseStatusBanner = ({ license }: AdminLicenseStatusBannerPr
 
   return (
     <div
-      className={cn('mb-8 rounded-lg bg-yellow-200 text-yellow-900 dark:bg-yellow-400', {
+      className={cn('mb-8 rounded-lg bg-yellow-900/30 text-yellow-300', {
         'bg-destructive text-destructive-foreground':
           licenseStatus === 'EXPIRED' || licenseStatus === 'UNAUTHORIZED',
       })}
@@ -60,7 +60,7 @@ export const AdminLicenseStatusBanner = ({ license }: AdminLicenseStatusBannerPr
           variant="outline"
           size="sm"
           className={cn({
-            'border-yellow-900/30 text-yellow-900 hover:bg-yellow-100 dark:hover:bg-yellow-500':
+            'border-yellow-400/30 text-yellow-300 hover:bg-yellow-900/50':
               licenseStatus === 'PAST_DUE',
             'border-destructive-foreground/30 text-destructive-foreground hover:bg-destructive/80':
               licenseStatus === 'EXPIRED' || licenseStatus === 'UNAUTHORIZED',

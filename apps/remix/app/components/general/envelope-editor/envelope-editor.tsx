@@ -152,7 +152,7 @@ export default function EnvelopeEditor() {
     envelopeEditorSteps.find((step) => step.id === currentStep) || envelopeEditorSteps[0];
 
   return (
-    <div className="h-screen w-screen bg-gray-50 dark:bg-background">
+    <div className="h-screen w-screen bg-background">
       <EnvelopeEditorHeader />
 
       {/* Main Content Area */}

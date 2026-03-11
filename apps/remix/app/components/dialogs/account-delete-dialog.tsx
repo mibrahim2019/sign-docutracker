@@ -94,14 +94,14 @@ export const AccountDeleteDialog = ({ className }: AccountDeleteDialogProps) => 
                 </DialogTitle>
 
                 <Alert variant="destructive">
-                  <AlertDescription className="selection:bg-red-100">
+                  <AlertDescription className="selection:bg-red-900/40">
                     <Trans>This action is not reversible. Please be certain.</Trans>
                   </AlertDescription>
                 </Alert>
 
                 {hasTwoFactorAuthentication && (
                   <Alert variant="destructive">
-                    <AlertDescription className="selection:bg-red-100">
+                    <AlertDescription className="selection:bg-red-900/40">
                       <Trans>Disable Two Factor Authentication before deleting your account.</Trans>
                     </AlertDescription>
                   </Alert>

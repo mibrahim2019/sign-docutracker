@@ -143,7 +143,7 @@ export function MultiSelectCombobox<T = OptionValue>({
         {showClearButton && !loading && (
           <div className="absolute bottom-0 right-8 top-0 flex items-center justify-center">
             <button
-              className="flex h-4 w-4 items-center justify-center rounded-full bg-gray-300 dark:bg-neutral-700"
+              className="flex h-4 w-4 items-center justify-center rounded-full bg-neutral-700"
               onClick={() => onChange([])}
             >
               <XIcon className="h-3.5 w-3.5 text-muted-foreground" />

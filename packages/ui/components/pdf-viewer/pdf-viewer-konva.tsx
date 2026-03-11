@@ -145,7 +145,7 @@ export const PdfViewerKonva = ({
           }}
           externalLinkTarget="_blank"
           loading={
-            <div className="flex h-[80vh] max-h-[60rem] flex-col items-center justify-center bg-white/50 dark:bg-background">
+            <div className="flex h-[80vh] max-h-[60rem] flex-col items-center justify-center bg-background">
               {pdfError ? (
                 <div className="text-center text-muted-foreground">
                   <p>
@@ -161,7 +161,7 @@ export const PdfViewerKonva = ({
             </div>
           }
           error={
-            <div className="flex h-[80vh] max-h-[60rem] flex-col items-center justify-center bg-white/50 dark:bg-background">
+            <div className="flex h-[80vh] max-h-[60rem] flex-col items-center justify-center bg-background">
               <div className="text-center text-muted-foreground">
                 <p>
                   <Trans>Something went wrong while loading the document.</Trans>

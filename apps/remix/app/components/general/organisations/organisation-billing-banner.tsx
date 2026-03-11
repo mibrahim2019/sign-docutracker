@@ -70,8 +70,7 @@ export const OrganisationBillingBanner = () => {
     <>
       <div
         className={cn({
-          'bg-yellow-200 text-yellow-900 dark:bg-yellow-400':
-            subscriptionStatus === SubscriptionStatus.PAST_DUE,
+          'bg-yellow-900/30 text-yellow-300': subscriptionStatus === SubscriptionStatus.PAST_DUE,
           'bg-destructive text-destructive-foreground':
             subscriptionStatus === SubscriptionStatus.INACTIVE,
         })}
@@ -89,7 +88,7 @@ export const OrganisationBillingBanner = () => {
           <Button
             variant="outline"
             className={cn({
-              'text-yellow-900 hover:bg-yellow-100 dark:hover:bg-yellow-500':
+              'text-yellow-300 hover:bg-yellow-900/50':
                 subscriptionStatus === SubscriptionStatus.PAST_DUE,
               'text-destructive-foreground hover:bg-destructive hover:text-white':
                 subscriptionStatus === SubscriptionStatus.INACTIVE,

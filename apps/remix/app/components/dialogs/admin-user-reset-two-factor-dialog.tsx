@@ -117,7 +117,7 @@ export const AdminUserResetTwoFactorDialog = ({
               </DialogHeader>
 
               <Alert variant="destructive">
-                <AlertDescription className="selection:bg-red-100">
+                <AlertDescription className="selection:bg-red-900/40">
                   <Trans>
                     This action is irreversible. Please ensure you have informed the user before
                     proceeding.
