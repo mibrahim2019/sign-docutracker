@@ -1,5 +1,5 @@
-import { createThemeAction } from 'remix-themes';
+import type { ActionFunctionArgs } from 'react-router';
 
-import { themeSessionResolver } from '~/storage/theme-session.server';
-
-export const action = createThemeAction(themeSessionResolver);
+export const action = (_args: ActionFunctionArgs) => {
+  return new Response(null, { status: 204 });
+};

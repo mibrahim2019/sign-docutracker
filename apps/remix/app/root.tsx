@@ -8,7 +8,6 @@ import {
   isRouteErrorResponse,
   useLoaderData,
 } from 'react-router';
-import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from 'remix-themes';
 
 import { getOptionalSession } from '@docutracker/auth/server/lib/utils/get-session';
 import { SessionProvider } from '@docutracker/lib/client-only/providers/session';
@@ -24,7 +23,6 @@ import type { Route } from './+types/root';
 import stylesheet from './app.css?url';
 import { GenericErrorLayout } from './components/general/generic-error-layout';
 import { langCookie } from './storage/lang-cookie.server';
-import { themeSessionResolver } from './storage/theme-session.server';
 import { appMetaTags } from './utils/meta';
 
 export const links: Route.LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }];
@@ -42,8 +40,6 @@ export const shouldRevalidate = () => false;
 
 export async function loader({ request }: Route.LoaderArgs) {
   const session = await getOptionalSession(request);
-
-  const { getTheme } = await themeSessionResolver(request);
 
   const cookieHeader = request.headers.get('cookie') ?? '';
 
@@ -64,7 +60,6 @@ export async function loader({ request }: Route.LoaderArgs) {
   return data(
     {
       lang,
-      theme: getTheme(),
       disableAnimations,
       session: session.isAuthenticated
         ? {
@@ -84,23 +79,14 @@ export async function loader({ request }: Route.LoaderArgs) {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { theme } = useLoaderData<typeof loader>() || {};
-
-  return (
-    <ThemeProvider specifiedTheme={theme} themeAction="/api/theme">
-      <LayoutContent>{children}</LayoutContent>
-    </ThemeProvider>
-  );
+  return <LayoutContent>{children}</LayoutContent>;
 }
 
 export function LayoutContent({ children }: { children: React.ReactNode }) {
-  const { publicEnv, session, lang, disableAnimations, ...data } =
-    useLoaderData<typeof loader>() || {};
-
-  const [theme] = useTheme();
+  const { publicEnv, session, lang, disableAnimations } = useLoaderData<typeof loader>() || {};
 
   return (
-    <html translate="no" lang={lang} data-theme={theme} className={theme ?? ''}>
+    <html translate="no" lang={lang} data-theme="dark" className="dark">
       <head>
         <meta charSet="utf-8" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -112,8 +98,6 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
         <meta name="google" content="notranslate" />
-        <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} />
-
         {disableAnimations && (
           <style
             dangerouslySetInnerHTML={{

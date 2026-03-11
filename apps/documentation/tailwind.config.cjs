@@ -14,8 +14,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      serif: ['Caveat', 'cursive'],
+      sans: ['OpenAI Sans', 'sans-serif'],
+      serif: ['OpenAI Sans', 'sans-serif'],
     },
   },
 };

@@ -11,7 +11,6 @@ import { useSession } from '@docutracker/lib/client-only/providers/session';
 import { isPersonalLayout } from '@docutracker/lib/utils/organisations';
 import { trpc } from '@docutracker/trpc/react';
 import { Sheet, SheetContent } from '@docutracker/ui/primitives/sheet';
-import { ThemeSwitcher } from '@docutracker/ui/primitives/theme-switcher';
 
 import { useOptionalCurrentTeam } from '~/providers/team';
 
@@ -119,10 +118,6 @@ export const AppNavMobile = ({ isMenuOpen, onMenuOpenChange }: AppNavMobileProps
         </div>
 
         <div className="mt-auto flex w-full flex-col space-y-4 self-end">
-          <div className="w-fit">
-            <ThemeSwitcher />
-          </div>
-
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Docutracker, Inc.
             <br />

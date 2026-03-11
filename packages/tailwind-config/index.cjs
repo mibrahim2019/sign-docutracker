@@ -4,7 +4,7 @@ const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenCo
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['variant', '&:is(.dark:not(.dark-mode-disabled) *)'],
+  darkMode: 'class',
   content: ['src/**/*.{ts,tsx}'],
   theme: {
     extend: {
@@ -67,18 +67,18 @@ module.exports = {
           foreground: 'hsl(var(--widget-foreground))',
         },
         documenso: {
-          DEFAULT: '#A2E771',
+          DEFAULT: '#FFFFFF',
           50: '#FFFFFF',
-          100: '#FDFFFD',
-          200: '#E7F9DA',
-          300: '#D0F3B7',
-          400: '#B9ED94',
-          500: '#A2E771',
-          600: '#83DF41',
-          700: '#66C622',
-          800: '#4D9619',
-          900: '#356611',
-          950: '#284E0D',
+          100: '#F5F5F5',
+          200: '#E5E5E5',
+          300: '#D0D0D0',
+          400: '#B9B9B9',
+          500: '#A3A3A3',
+          600: '#8F8F8F',
+          700: '#737373',
+          800: '#525252',
+          900: '#262626',
+          950: '#0A0A0A',
         },
         dawn: {
           DEFAULT: '#aaa89f',

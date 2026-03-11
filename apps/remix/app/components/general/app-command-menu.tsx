@@ -4,10 +4,9 @@ import type { MessageDescriptor } from '@lingui/core';
 import { msg } from '@lingui/core/macro';
 import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
-import { CheckIcon, Loader, Monitor, Moon, Sun } from 'lucide-react';
+import { CheckIcon, Loader } from 'lucide-react';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { useNavigate } from 'react-router';
-import { Theme, useTheme } from 'remix-themes';
 
 import { useDebouncedValue } from '@docutracker/lib/client-only/hooks/use-debounced-value';
 import { useSession } from '@docutracker/lib/client-only/providers/session';
@@ -258,9 +257,6 @@ export function AppCommandMenu({ open, onOpenChange }: AppCommandMenuProps) {
               <CommandItem className="-mx-2 -my-1 rounded-lg" onSelect={() => addPage('language')}>
                 {_(msg`Change language`)}
               </CommandItem>
-              <CommandItem className="-mx-2 -my-1 rounded-lg" onSelect={() => addPage('theme')}>
-                {_(msg`Change theme`)}
-              </CommandItem>
             </CommandGroup>
 
             {searchResults.length > 0 && (
@@ -271,7 +267,6 @@ export function AppCommandMenu({ open, onOpenChange }: AppCommandMenuProps) {
           </>
         )}
 
-        {currentPage === 'theme' && <ThemeCommands />}
         {currentPage === 'language' && <LanguageCommands />}
       </CommandList>
     </CommandDialog>
@@ -296,29 +291,6 @@ const Commands = ({
     >
       {typeof page.label === 'string' ? page.label : _(page.label)}
       {page.shortcut && <CommandShortcut>{page.shortcut}</CommandShortcut>}
-    </CommandItem>
-  ));
-};
-
-const ThemeCommands = () => {
-  const { _ } = useLingui();
-
-  const [, setTheme] = useTheme();
-
-  const themes = [
-    { label: msg`Light Mode`, theme: Theme.LIGHT, icon: Sun },
-    { label: msg`Dark Mode`, theme: Theme.DARK, icon: Moon },
-    { label: msg`System Theme`, theme: null, icon: Monitor },
-  ] as const;
-
-  return themes.map((theme) => (
-    <CommandItem
-      key={theme.theme}
-      onSelect={() => setTheme(theme.theme)}
-      className="-my-1 mx-2 rounded-lg first:mt-2 last:mb-2"
-    >
-      <theme.icon className="mr-2" />
-      {_(theme.label)}
     </CommandItem>
   ));
 };
