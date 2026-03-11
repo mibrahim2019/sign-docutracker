@@ -1,4 +1,4 @@
-import { type HTMLAttributes, useEffect, useState } from 'react';
+import { type HTMLAttributes, useState } from 'react';
 
 import { ReadStatus } from '@prisma/client';
 import { InboxIcon, MenuIcon, SearchIcon } from 'lucide-react';
@@ -28,7 +28,6 @@ export const Header = ({ className, ...props }: HeaderProps) => {
 
   const [isCommandMenuOpen, setIsCommandMenuOpen] = useState(false);
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
 
   const { data: unreadCountData } = trpc.document.inbox.getCount.useQuery(
     {
@@ -39,21 +38,10 @@ export const Header = ({ className, ...props }: HeaderProps) => {
     },
   );
 
-  useEffect(() => {
-    const onScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
   return (
     <header
       className={cn(
-        'supports-backdrop-blur:bg-background/60 sticky top-0 z-[60] flex h-16 w-full items-center border-b border-b-transparent bg-background/95 backdrop-blur duration-200',
-        scrollY > 5 && 'border-b-border',
+        'supports-backdrop-blur:bg-background/60 sticky top-0 z-[60] flex h-16 w-full items-center border-b border-b-white/20 bg-background/95 backdrop-blur duration-200',
         className,
       )}
       {...props}
@@ -63,7 +51,7 @@ export const Header = ({ className, ...props }: HeaderProps) => {
           to={getRootHref(params)}
           className="hidden rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:inline"
         >
-          <BrandingLogo className="h-6 w-auto" />
+          <BrandingLogo className="h-8 w-auto" />
         </Link>
 
         <AppNavDesktop setIsCommandMenuOpen={setIsCommandMenuOpen} />

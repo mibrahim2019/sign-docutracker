@@ -255,7 +255,7 @@ export const DocumentSigningPageViewV2 = () => {
                   <span>
                     <Trans>Powered by</Trans>
                   </span>
-                  <BrandingLogo className="ml-2 inline-block h-[14px]" />
+                  <BrandingLogo className="ml-2 inline-block h-5" />
                 </a>
               )}
             </div>

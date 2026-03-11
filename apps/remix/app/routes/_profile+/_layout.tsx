@@ -6,7 +6,6 @@ import { PlusIcon } from 'lucide-react';
 import { ChevronLeft } from 'lucide-react';
 import { Link, Outlet, isRouteErrorResponse } from 'react-router';
 
-import LogoIcon from '@docutracker/assets/logo_icon.png';
 import { useOptionalSession } from '@docutracker/lib/client-only/providers/session';
 import { cn } from '@docutracker/ui/lib/utils';
 import { Button } from '@docutracker/ui/primitives/button';
@@ -53,15 +52,7 @@ export default function PublicProfileLayout() {
               to="/"
               className="rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:inline"
             >
-              <BrandingLogo className="hidden h-6 w-auto sm:block" />
-
-              <img
-                src={LogoIcon}
-                alt="Docutracker Logo"
-                width={48}
-                height={48}
-                className="h-10 w-auto sm:hidden dark:invert"
-              />
+              <BrandingLogo className="h-8 w-auto" />
             </Link>
 
             <div className="flex flex-row items-center justify-center">
