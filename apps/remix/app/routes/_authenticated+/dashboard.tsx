@@ -111,7 +111,7 @@ export default function DashboardPage() {
                             {org.avatarImageId && (
                               <AvatarImage src={formatAvatarUrl(org.avatarImageId)} />
                             )}
-                            <AvatarFallback className="text-sm text-gray-400">
+                            <AvatarFallback className="text-sm text-muted-foreground">
                               {org.name.slice(0, 1).toUpperCase()}
                             </AvatarFallback>
                           </Avatar>
@@ -190,7 +190,7 @@ export default function DashboardPage() {
                               {team.avatarImageId && (
                                 <AvatarImage src={formatAvatarUrl(team.avatarImageId)} />
                               )}
-                              <AvatarFallback className="text-sm text-gray-400">
+                              <AvatarFallback className="text-sm text-muted-foreground">
                                 {team.name.slice(0, 1).toUpperCase()}
                               </AvatarFallback>
                             </Avatar>

@@ -69,7 +69,7 @@ export default function PublicProfilePage({ loaderData }: Route.ComponentProps) 
             <AvatarImage src={formatAvatarUrl(publicProfile.avatarImageId)} />
           )}
 
-          <AvatarFallback className="text-sm text-gray-400">
+          <AvatarFallback className="text-sm text-muted-foreground">
             {extractInitials(publicProfile.name)}
           </AvatarFallback>
         </Avatar>

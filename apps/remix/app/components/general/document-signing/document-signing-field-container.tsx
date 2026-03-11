@@ -150,7 +150,7 @@ export const DocumentSigningFieldContainer = ({
             className="absolute -bottom-10 flex items-center justify-evenly rounded-md border bg-gray-900 opacity-0 group-hover:opacity-100"
             onClick={() => void onClearCheckBoxValues(type)}
           >
-            <span className="rounded-md p-1 text-gray-400 transition-colors hover:bg-white/10 hover:text-gray-100">
+            <span className="rounded-md p-1 text-foreground/70 transition-colors hover:bg-white/10 hover:text-foreground">
               <X className="h-4 w-4" />
             </span>
           </button>
@@ -178,7 +178,7 @@ export const DocumentSigningFieldContainer = ({
           field.fieldMeta?.label && (
             <div
               className={cn(
-                'absolute -top-16 left-0 right-0 rounded-md p-2 text-center text-xs text-gray-700',
+                'absolute -top-16 left-0 right-0 rounded-md p-2 text-center text-xs text-foreground',
                 {
                   'border border-border bg-foreground/5': !field.inserted,
                 },

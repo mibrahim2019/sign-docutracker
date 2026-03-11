@@ -160,7 +160,7 @@ export const AvatarImageForm = ({ className, team, organisation }: AvatarImageFo
                     <div className="relative">
                       <Avatar className="h-16 w-16 border-2 border-solid">
                         {avatarImageId && <AvatarImage src={formatAvatarUrl(avatarImageId)} />}
-                        <AvatarFallback className="text-sm text-gray-400">
+                        <AvatarFallback className="text-sm text-muted-foreground">
                           {initials}
                         </AvatarFallback>
                       </Avatar>

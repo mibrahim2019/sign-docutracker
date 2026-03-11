@@ -311,7 +311,7 @@ export const EnvelopeEditorFieldDragDrop = ({
             selectedField === FieldType.SIGNATURE && 'font-signature',
             {
               '-rotate-6 scale-90 opacity-50 dark:bg-black/20': !isFieldWithinBounds,
-              'dark:text-black/60': isFieldWithinBounds,
+              'text-foreground/80': isFieldWithinBounds,
             },
           )}
           style={{

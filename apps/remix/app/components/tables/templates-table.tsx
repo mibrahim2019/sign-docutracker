@@ -303,7 +303,7 @@ export const TemplatesTable = ({
 
       {isPending && (
         <div className="absolute inset-0 flex items-center justify-center bg-white/50">
-          <Loader className="h-8 w-8 animate-spin text-gray-500" />
+          <Loader className="h-8 w-8 animate-spin text-foreground/80" />
         </div>
       )}
     </div>

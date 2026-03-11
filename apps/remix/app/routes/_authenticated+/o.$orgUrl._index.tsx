@@ -136,7 +136,7 @@ export default function OrganisationSettingsTeamsPage() {
                     {team.avatarImageId && (
                       <AvatarImage src={formatAvatarUrl(team.avatarImageId)} />
                     )}
-                    <AvatarFallback className="text-sm text-gray-400">
+                    <AvatarFallback className="text-sm text-muted-foreground">
                       {team.name.slice(0, 1).toUpperCase()}
                     </AvatarFallback>
                   </Avatar>

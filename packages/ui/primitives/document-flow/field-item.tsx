@@ -268,7 +268,7 @@ export const FieldItem = ({
         field.fieldMeta?.label && (
           <div
             className={cn(
-              'absolute -top-16 left-0 right-0 rounded-md p-2 text-center text-xs text-gray-700',
+              'absolute -top-16 left-0 right-0 rounded-md p-2 text-center text-xs text-foreground',
               {
                 'border border-primary bg-foreground/5': !fieldHasCheckedValues,
                 'border border-primary bg-documenso-200': fieldHasCheckedValues,
@@ -363,7 +363,7 @@ export const FieldItem = ({
             {advancedField && (
               <button
                 title={_(msg`Advanced settings`)}
-                className="rounded-sm p-1.5 text-gray-400 transition-colors hover:bg-white/10 hover:text-gray-100"
+                className="rounded-sm p-1.5 text-foreground/70 transition-colors hover:bg-white/10 hover:text-foreground"
                 onClick={onAdvancedSettings}
                 onTouchEnd={onAdvancedSettings}
               >
@@ -373,7 +373,7 @@ export const FieldItem = ({
 
             <button
               title={_(msg`Duplicate`)}
-              className="rounded-sm p-1.5 text-gray-400 transition-colors hover:bg-white/10 hover:text-gray-100"
+              className="rounded-sm p-1.5 text-foreground/70 transition-colors hover:bg-white/10 hover:text-foreground"
               onClick={onDuplicate}
               onTouchEnd={onDuplicate}
             >
@@ -382,7 +382,7 @@ export const FieldItem = ({
 
             <button
               title={_(msg`Duplicate on all pages`)}
-              className="rounded-sm p-1.5 text-gray-400 transition-colors hover:bg-white/10 hover:text-gray-100"
+              className="rounded-sm p-1.5 text-foreground/70 transition-colors hover:bg-white/10 hover:text-foreground"
               onClick={onDuplicateAllPages}
               onTouchEnd={onDuplicateAllPages}
             >
@@ -391,7 +391,7 @@ export const FieldItem = ({
 
             <button
               title={_(msg`Remove`)}
-              className="rounded-sm p-1.5 text-gray-400 transition-colors hover:bg-white/10 hover:text-gray-100"
+              className="rounded-sm p-1.5 text-foreground/70 transition-colors hover:bg-white/10 hover:text-foreground"
               onClick={onRemove}
               onTouchEnd={onRemove}
             >

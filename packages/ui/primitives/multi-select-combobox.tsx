@@ -120,7 +120,7 @@ export function MultiSelectCombobox<T = OptionValue>({
             <AnimatePresence>
               {loading ? (
                 <div className="flex items-center justify-center">
-                  <Loader className="h-5 w-5 animate-spin text-gray-500 dark:text-gray-100" />
+                  <Loader className="h-5 w-5 animate-spin text-foreground" />
                 </div>
               ) : (
                 <AnimateGenericFadeInOut className="flex w-full justify-between">

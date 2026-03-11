@@ -57,7 +57,7 @@ export const EnvelopeItemTitleInput = ({
       {/* Hidden span to measure text width */}
       <span
         ref={measureRef}
-        className="pointer-events-none absolute left-0 top-0 whitespace-nowrap text-sm font-medium text-gray-600 opacity-0"
+        className="pointer-events-none absolute left-0 top-0 whitespace-nowrap text-sm font-medium text-foreground opacity-0"
         style={{ font: 'inherit' }}
       >
         {envelopeItemTitle || placeholder}

@@ -529,7 +529,7 @@ export const ConfigureFieldsView = ({
                   selectedRecipientStyles.base,
                   {
                     '-rotate-6 scale-90 opacity-50 dark:bg-black/20': !isFieldWithinBounds,
-                    'dark:text-black/60': isFieldWithinBounds,
+                    'text-foreground/80': isFieldWithinBounds,
                   },
                   selectedField === 'SIGNATURE' && 'font-signature',
                 )}

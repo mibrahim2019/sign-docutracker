@@ -25,7 +25,7 @@ const CustomTooltip = ({
         <p className="">{label}</p>
         <p className="text-documenso">
           {`${tooltip} : `}
-          <span className="text-black">{payload[0].value}</span>
+          <span className="text-foreground">{payload[0].value}</span>
         </p>
       </div>
     );

@@ -143,7 +143,7 @@ export const SettingsPublicProfileTemplatesTable = () => {
 
               <div>
                 <p className="text-sm">{template.publicTitle}</p>
-                <p className="text-xs text-neutral-400">{template.publicDescription}</p>
+                <p className="text-xs text-muted-foreground">{template.publicDescription}</p>
               </div>
             </div>
 

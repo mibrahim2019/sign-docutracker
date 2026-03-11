@@ -624,13 +624,13 @@ export default function EnvelopeEditorFieldsPageRenderer() {
             zIndex: 50,
           }}
           // Don't use darkmode for this component, it should look the same for both light/dark modes.
-          className="grid w-max grid-cols-5 gap-x-1 gap-y-0.5 rounded-md border border-gray-300 bg-white p-1 text-gray-500 shadow-sm"
+          className="grid w-max grid-cols-5 gap-x-1 gap-y-0.5 rounded-md border border-border bg-card p-1 text-foreground/80 shadow-sm"
         >
           {fieldButtonList.map((field) => (
             <button
               key={field.type}
               onClick={() => createFieldFromPendingTemplate(pendingFieldCreation, field.type)}
-              className="col-span-1 w-full flex-shrink-0 rounded-sm px-2 py-1 text-xs hover:bg-gray-100 hover:text-gray-600"
+              className="col-span-1 w-full flex-shrink-0 rounded-sm px-2 py-1 text-xs hover:bg-secondary hover:text-foreground"
             >
               {t(field.name)}
             </button>
@@ -716,7 +716,7 @@ const FieldActionButtons = ({
       <div className="group flex w-fit items-center justify-evenly gap-x-1 rounded-md border bg-gray-900 p-0.5">
         <button
           title={t`Change Recipient`}
-          className="rounded-sm p-1.5 text-gray-400 transition-colors hover:bg-white/10 hover:text-gray-100"
+          className="rounded-sm p-1.5 text-foreground/70 transition-colors hover:bg-white/10 hover:text-foreground"
           onClick={() => setShowRecipientSelector(true)}
           onTouchEnd={() => setShowRecipientSelector(true)}
         >
@@ -725,7 +725,7 @@ const FieldActionButtons = ({
 
         <button
           title={t`Duplicate`}
-          className="rounded-sm p-1.5 text-gray-400 transition-colors hover:bg-white/10 hover:text-gray-100"
+          className="rounded-sm p-1.5 text-foreground/70 transition-colors hover:bg-white/10 hover:text-foreground"
           onClick={handleDuplicateSelectedFields}
           onTouchEnd={handleDuplicateSelectedFields}
         >
@@ -734,7 +734,7 @@ const FieldActionButtons = ({
 
         <button
           title={t`Duplicate on all pages`}
-          className="rounded-sm p-1.5 text-gray-400 transition-colors hover:bg-white/10 hover:text-gray-100"
+          className="rounded-sm p-1.5 text-foreground/70 transition-colors hover:bg-white/10 hover:text-foreground"
           onClick={handleDuplicateSelectedFieldsOnAllPages}
           onTouchEnd={handleDuplicateSelectedFieldsOnAllPages}
         >
@@ -743,7 +743,7 @@ const FieldActionButtons = ({
 
         <button
           title={t`Remove`}
-          className="rounded-sm p-1.5 text-gray-400 transition-colors hover:bg-white/10 hover:text-gray-100"
+          className="rounded-sm p-1.5 text-foreground/70 transition-colors hover:bg-white/10 hover:text-foreground"
           onClick={handleDeleteSelectedFields}
           onTouchEnd={handleDeleteSelectedFields}
         >

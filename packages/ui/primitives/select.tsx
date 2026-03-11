@@ -23,7 +23,7 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      'flex h-10 w-full items-center justify-between rounded-md border border-input bg-transparent px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+      'flex h-10 w-full items-center justify-between rounded-md border border-input bg-transparent px-3 py-2 text-sm text-foreground ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
       className,
     )}
     disabled={loading || props.disabled}
@@ -32,7 +32,7 @@ const SelectTrigger = React.forwardRef<
     <AnimatePresence>
       {loading ? (
         <div className="flex w-full items-center justify-center">
-          <Loader className="h-5 w-5 animate-spin text-gray-500 dark:text-gray-100" />
+          <Loader className="h-5 w-5 animate-spin text-foreground" />
         </div>
       ) : (
         <AnimateGenericFadeInOut className="flex w-full justify-between">
