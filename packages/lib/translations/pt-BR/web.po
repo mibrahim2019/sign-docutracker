@@ -919,7 +919,7 @@ msgstr ""
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-email-verification.ts
-msgid "A request to use your email has been initiated by {0} on Docutracker"
+msgid "A request to use your email has been initiated by {0} on Documenso"
 msgstr ""
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
@@ -2373,10 +2373,6 @@ msgstr ""
 msgid "Change Recipient"
 msgstr "Alterar Destinatário"
 
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Change theme"
-msgstr ""
-
 #: apps/remix/app/components/forms/editor/editor-field-text-form.tsx
 msgid "Character limit"
 msgstr "Limite de caracteres"
@@ -3148,10 +3144,6 @@ msgstr ""
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups._index.tsx
 msgid "Custom Organisation Groups"
 msgstr "Grupos de Organização Personalizados"
-
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Dark Mode"
-msgstr "Modo Escuro"
 
 #: apps/remix/app/routes/_authenticated+/dashboard.tsx
 msgid "Dashboard"
@@ -5826,10 +5818,6 @@ msgstr ""
 #: apps/remix/app/components/general/admin-license-card.tsx
 msgid "License synced"
 msgstr ""
-
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Light Mode"
-msgstr "Modo Claro"
 
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Like to have your own public profile with agreements?"
@@ -9085,10 +9073,6 @@ msgstr "Campos inseridos automaticamente pelo sistema"
 msgid "System Requirements"
 msgstr "Requisitos do Sistema"
 
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "System Theme"
-msgstr "Tema do Sistema"
-
 #: apps/remix/app/components/tables/admin-user-teams-table.tsx
 #: apps/remix/app/components/tables/organisation-insights-table.tsx
 #: apps/remix/app/components/tables/organisation-teams-table.tsx
@@ -9099,7 +9083,7 @@ msgstr "Equipe"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/delete-team.ts
-msgid "Team \"{0}\" has been deleted on Docutracker"
+msgid "Team \"{0}\" has been deleted on Documenso"
 msgstr ""
 
 #: packages/lib/constants/teams-translations.ts
@@ -11917,7 +11901,7 @@ msgstr "Você foi convidado por <0>{0}</0> para participar da organização dele
 
 #. placeholder {0}: organisation.name
 #: packages/lib/server-only/organisation/create-organisation-member-invites.ts
-msgid "You have been invited to join {0} on Docutracker"
+msgid "You have been invited to join {0} on Documenso"
 msgstr ""
 
 #: packages/email/templates/organisation-invite.tsx

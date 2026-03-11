@@ -919,8 +919,8 @@ msgstr "A request has been made to link your Docutracker account"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-email-verification.ts
-msgid "A request to use your email has been initiated by {0} on Docutracker"
-msgstr "A request to use your email has been initiated by {0} on Docutracker"
+msgid "A request to use your email has been initiated by {0} on Documenso"
+msgstr "A request to use your email has been initiated by {0} on Documenso"
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
 #: apps/remix/app/components/dialogs/webhook-edit-dialog.tsx
@@ -2373,10 +2373,6 @@ msgstr "Change language"
 msgid "Change Recipient"
 msgstr "Change Recipient"
 
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Change theme"
-msgstr "Change theme"
-
 #: apps/remix/app/components/forms/editor/editor-field-text-form.tsx
 msgid "Character limit"
 msgstr "Character limit"
@@ -3148,10 +3144,6 @@ msgstr "Custom duration"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups._index.tsx
 msgid "Custom Organisation Groups"
 msgstr "Custom Organisation Groups"
-
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Dark Mode"
-msgstr "Dark Mode"
 
 #: apps/remix/app/routes/_authenticated+/dashboard.tsx
 msgid "Dashboard"
@@ -5826,10 +5818,6 @@ msgstr "License Payment Overdue - Please update your payment to avoid service di
 #: apps/remix/app/components/general/admin-license-card.tsx
 msgid "License synced"
 msgstr "License synced"
-
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Light Mode"
-msgstr "Light Mode"
 
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Like to have your own public profile with agreements?"
@@ -9085,10 +9073,6 @@ msgstr "System auto inserted fields"
 msgid "System Requirements"
 msgstr "System Requirements"
 
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "System Theme"
-msgstr "System Theme"
-
 #: apps/remix/app/components/tables/admin-user-teams-table.tsx
 #: apps/remix/app/components/tables/organisation-insights-table.tsx
 #: apps/remix/app/components/tables/organisation-teams-table.tsx
@@ -9099,8 +9083,8 @@ msgstr "Team"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/delete-team.ts
-msgid "Team \"{0}\" has been deleted on Docutracker"
-msgstr "Team \"{0}\" has been deleted on Docutracker"
+msgid "Team \"{0}\" has been deleted on Documenso"
+msgstr "Team \"{0}\" has been deleted on Documenso"
 
 #: packages/lib/constants/teams-translations.ts
 msgid "Team Admin"
@@ -11917,8 +11901,8 @@ msgstr "You have been invited by <0>{0}</0> to join their organisation."
 
 #. placeholder {0}: organisation.name
 #: packages/lib/server-only/organisation/create-organisation-member-invites.ts
-msgid "You have been invited to join {0} on Docutracker"
-msgstr "You have been invited to join {0} on Docutracker"
+msgid "You have been invited to join {0} on Documenso"
+msgstr "You have been invited to join {0} on Documenso"
 
 #: packages/email/templates/organisation-invite.tsx
 msgid "You have been invited to join the following organisation"

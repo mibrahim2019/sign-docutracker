@@ -924,7 +924,7 @@ msgstr ""
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-email-verification.ts
-msgid "A request to use your email has been initiated by {0} on Docutracker"
+msgid "A request to use your email has been initiated by {0} on Documenso"
 msgstr ""
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
@@ -2378,10 +2378,6 @@ msgstr ""
 msgid "Change Recipient"
 msgstr "Zmień odbiorcę"
 
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Change theme"
-msgstr ""
-
 #: apps/remix/app/components/forms/editor/editor-field-text-form.tsx
 msgid "Character limit"
 msgstr "Limit znaków"
@@ -3153,10 +3149,6 @@ msgstr "Niestandardowy czas"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups._index.tsx
 msgid "Custom Organisation Groups"
 msgstr "Niestandardowe grupy w organizacji"
-
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Dark Mode"
-msgstr "Tryb ciemny"
 
 #: apps/remix/app/routes/_authenticated+/dashboard.tsx
 msgid "Dashboard"
@@ -5831,10 +5823,6 @@ msgstr "Zaległa płatność za licencję – Zaktualizuj płatność, aby unikn
 #: apps/remix/app/components/general/admin-license-card.tsx
 msgid "License synced"
 msgstr "Licencja została zsynchronizowana"
-
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Light Mode"
-msgstr "Tryb jasny"
 
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Like to have your own public profile with agreements?"
@@ -9090,10 +9078,6 @@ msgstr "System automatycznie uzupełnił pole"
 msgid "System Requirements"
 msgstr "Wymagania systemowe"
 
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "System Theme"
-msgstr "Motyw systemowy"
-
 #: apps/remix/app/components/tables/admin-user-teams-table.tsx
 #: apps/remix/app/components/tables/organisation-insights-table.tsx
 #: apps/remix/app/components/tables/organisation-teams-table.tsx
@@ -9104,7 +9088,7 @@ msgstr "Zespół"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/delete-team.ts
-msgid "Team \"{0}\" has been deleted on Docutracker"
+msgid "Team \"{0}\" has been deleted on Documenso"
 msgstr ""
 
 #: packages/lib/constants/teams-translations.ts
@@ -11924,7 +11908,7 @@ msgstr "Organizacja <0>{0}</0> zaprasza Cię do dołączenia do nich."
 
 #. placeholder {0}: organisation.name
 #: packages/lib/server-only/organisation/create-organisation-member-invites.ts
-msgid "You have been invited to join {0} on Docutracker"
+msgid "You have been invited to join {0} on Documenso"
 msgstr ""
 
 #: packages/email/templates/organisation-invite.tsx

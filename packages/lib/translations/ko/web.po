@@ -924,7 +924,7 @@ msgstr ""
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/create-team-email-verification.ts
-msgid "A request to use your email has been initiated by {0} on Docutracker"
+msgid "A request to use your email has been initiated by {0} on Documenso"
 msgstr ""
 
 #: apps/remix/app/components/dialogs/webhook-create-dialog.tsx
@@ -2378,10 +2378,6 @@ msgstr ""
 msgid "Change Recipient"
 msgstr "수신자 변경"
 
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Change theme"
-msgstr ""
-
 #: apps/remix/app/components/forms/editor/editor-field-text-form.tsx
 msgid "Character limit"
 msgstr "문자 수 제한"
@@ -3153,10 +3149,6 @@ msgstr "사용자 지정 기간"
 #: apps/remix/app/routes/_authenticated+/o.$orgUrl.settings.groups._index.tsx
 msgid "Custom Organisation Groups"
 msgstr "사용자 지정 조직 그룹"
-
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Dark Mode"
-msgstr "다크 모드"
 
 #: apps/remix/app/routes/_authenticated+/dashboard.tsx
 msgid "Dashboard"
@@ -5831,10 +5823,6 @@ msgstr "라이선스 결제 연체 - 서비스 중단을 방지하려면 결제 
 #: apps/remix/app/components/general/admin-license-card.tsx
 msgid "License synced"
 msgstr "라이선스가 동기화되었습니다"
-
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "Light Mode"
-msgstr "라이트 모드"
 
 #: apps/remix/app/routes/_profile+/_layout.tsx
 msgid "Like to have your own public profile with agreements?"
@@ -9090,10 +9078,6 @@ msgstr "시스템이 자동으로 필드를 삽입함"
 msgid "System Requirements"
 msgstr "시스템 요구 사항"
 
-#: apps/remix/app/components/general/app-command-menu.tsx
-msgid "System Theme"
-msgstr "시스템 테마"
-
 #: apps/remix/app/components/tables/admin-user-teams-table.tsx
 #: apps/remix/app/components/tables/organisation-insights-table.tsx
 #: apps/remix/app/components/tables/organisation-teams-table.tsx
@@ -9104,7 +9088,7 @@ msgstr "팀"
 
 #. placeholder {0}: team.name
 #: packages/lib/server-only/team/delete-team.ts
-msgid "Team \"{0}\" has been deleted on Docutracker"
+msgid "Team \"{0}\" has been deleted on Documenso"
 msgstr ""
 
 #: packages/lib/constants/teams-translations.ts
@@ -11922,7 +11906,7 @@ msgstr "<0>{0}</0> 조직에서 귀하를 초대했습니다."
 
 #. placeholder {0}: organisation.name
 #: packages/lib/server-only/organisation/create-organisation-member-invites.ts
-msgid "You have been invited to join {0} on Docutracker"
+msgid "You have been invited to join {0} on Documenso"
 msgstr ""
 
 #: packages/email/templates/organisation-invite.tsx
